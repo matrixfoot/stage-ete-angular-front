@@ -1,0 +1,67 @@
+.container {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.user-image {
+  width: 210px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  background-color: #e0e7ff;
+  width: 350px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info-item img {
+  width: 60px;
+  height: 60px;
+  margin-right: 25px;
+  opacity: 50%;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.edit-btn, .save-btn {
+  background-color: #bdf72d;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+  flex: 1;
+}
+
+.edit-btn{
+  margin: 10px;
+}
+.save-btn {
+  background-color: #03b62d;
+  margin: 30px;
+}
