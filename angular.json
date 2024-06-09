@@ -30,10 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/angular-calendar/css/angular-calendar.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
@@ -102,8 +101,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "055a08c0-b113-44a7-bcb9-0bebf0abd08f"
   }
 }
