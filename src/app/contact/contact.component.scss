@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .container {
   font-family: 'Poppins', sans-serif;
@@ -172,7 +172,10 @@
           flex-direction: column;
           width: 50%;
           margin-left: 20px;
-
+          background-color: #ffffff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           @media (max-width: 768px) {
             width: 100%;
             margin-left: 0;
@@ -271,5 +274,9 @@
   height: 35px; /* Adjust the height to maintain aspect ratio */
   margin-left: 10px;
 }
-
+.invalid-feedback {
+  font-size: 0.8rem; /* Adjust font size of error messages */
+  margin-top: 5px; /* Add some space between error messages */
+  color: red;
+}
   
