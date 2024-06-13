@@ -1,7 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
@@ -12,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ClickOutsideDirective } from './click-outside.directive';
+
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AboutComponent,
     AjouterEventComponent,
     ProfilComponent,
-    
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,
