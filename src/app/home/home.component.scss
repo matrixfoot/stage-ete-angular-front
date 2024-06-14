@@ -5,6 +5,7 @@
   width: 100%;
 }
 
+<<<<<<< HEAD
 
 .page{
   padding-top: 5%;
@@ -21,10 +22,167 @@
   color : rgb(239, 255, 132);
   text-align: center;
   font-size: 3vw;
+=======
+.logoHeader {
+  height: 13%;
+  width: 13%;
+}
+
+.page {
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+
+.buttonContainer {
+  width: 25%;
+  height: 75%;
+  background-color: white;
+  margin: 1%;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.boutonSInscrire {
+  margin-left: 1.5%;
+  width: 10vw;
+  height: 2.3vw;
+  border-radius: 3vw;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  background-color: #D11317;
+  border: none;
+}
+
+.boutonSeConnecter {
+  margin-left: 1.5%;
+  width: 10vw;
+  height: 2.3vw;
+  border-radius: 3vw;
+  font-weight: bold;
+  border: none;
+  font-size: 1vw;
+  background-color: #061B3C;
+  color: white;
+}
+
+.menu-container {
+  position: relative; 
+  top: 75%;
+  left: 19%; 
+  background-color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  padding: 0.7vw 0;
+  z-index: 1000;
+}
+
+.menu-item:hover {
+  background-color: rgb(161, 161, 161);
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;  
+  background-color: white; 
+  width: 150%; 
+  font-size: 1.2vw;
+  font-weight: 600;
+  padding: 10%;
+}
+
+.menu-item ul :hover{
+  background-color: #a6a6a6;
+  font-weight: normal;
+  color : black;
+}
+
+.menuIcon {
+  height: 40%; 
+  width: 40%; 
+  margin-right: 2vw; 
+  margin-left: 1vw;
+  background-size: cover;
+  margin-bottom: 0.2vw;
+  vertical-align: middle;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 0.7vw;
+}
+
+.navbar ul li.active a {
+  font-weight: bold;
+  color: blue;
+  background-color: rgb(222, 222, 222);
+  border-radius: 3vw;
+}
+
+.navbar ul li:hover {
+  color: #061B3C;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 0.7vw;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.navDiv {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  position: fixed;
+  background-color: white;
+  padding-bottom: 0.5%;
+  height: fit-content;
+}
+
+.boutonNav {
+  width: 100%;
+  font-size: 0.85vw;
+  height: 100%;
+  font-weight: bold;
+  border-radius: 1vw;
+}
+
+.title {
+  color: rgb(239, 255, 132);
+  text-align: center;
+  font-size: 2.5vw;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   font-weight: bold;
   margin: 0;
 }
 
+<<<<<<< HEAD
 .subtitle{
   text-align: center;
   font-size:2.5vw;
@@ -38,14 +196,34 @@
   margin-top: 0;
   padding-top: 0;
   width : 55%;
+=======
+.subtitle {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #DFDFDF;
+}
+
+.phrase {
+  font-size: 3.5vw;
+  margin-top: 0;
+  padding-top: 0;
+  width: 55%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   color: #E5FF45;
   padding-left: 3%;
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 .actualite{
   color :#ffffff;
   font-size:2.1vw ;
+=======
+.actualite {
+  color: #ffffff;
+  font-size: 2.1vw;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   margin-left: 0.5%;
   margin-right: 0.5%;
   display: inline;
@@ -53,18 +231,31 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .flecheImage{
+=======
+.flecheImage {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   width: 5%;
   height: 5%;
   vertical-align: middle;
   display: inline;
   margin-top: 3%;
 }
+<<<<<<< HEAD
 .flecheImage:hover{
   cursor: pointer;
 }
 
 .actualiteContainer{
+=======
+
+.flecheImage:hover {
+  cursor: pointer;
+}
+
+.actualiteContainer {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: flex;
   vertical-align: middle;
   width: 100%;
@@ -73,10 +264,18 @@
 .pageRappelezVous {
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
 }
 
 .page{
   padding:5%;
+=======
+  width: 100%;
+}
+
+.page {
+  padding: 5%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
 }
 
 .pageRappelezVous::before {
@@ -95,7 +294,10 @@
   background-position-y: center;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
 .date {
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -107,19 +309,31 @@
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
 
 
 .ligne{
+=======
+.ligne {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   font-size: 1.3vw;
   margin-left: 5%;
   margin-right: 5%;
 }
 
+<<<<<<< HEAD
 .pageNosValeurs{
   background-color: #b8b8b8;
 }
 
 .valeursContainer{
+=======
+.pageNosValeurs {
+  background-color: #b8b8b8;
+}
+
+.valeursContainer {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,14 +341,21 @@
   margin-left: 5%;
 }
 
+<<<<<<< HEAD
 .valeur{
   width:20%;
   height:33%;
+=======
+.valeur {
+  width: 20%;
+  height: 33%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   text-align: center;
   margin-bottom: 1%;
   margin-top: 1%;
 }
 
+<<<<<<< HEAD
 .pageAboutUs{
   background-color: #061B3C;
 }
@@ -144,15 +365,31 @@
   font-weight: bold;
   color: #ffff;
   width : 60%;
+=======
+.pageAboutUs {
+  background-color: #061B3C;
+}
+
+.aboutUs {
+  font-size: 3vw;
+  font-weight: bold;
+  color: #ffff;
+  width: 60%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: inline-block;
   padding-left: 5%;
 }
 
+<<<<<<< HEAD
 .aboutUsParagraph{
+=======
+.aboutUsParagraph {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   vertical-align: top;
   display: inline-block;
   padding-left: 7%;
   font-size: 1.4vw;
+<<<<<<< HEAD
   color:#ffff;
   width : 80%;
   display: inline-block;
@@ -161,6 +398,14 @@
 
 
 .enSavoirPlus{
+=======
+  color: #ffff;
+  width: 80%;
+  display: inline-block;
+}
+
+.enSavoirPlus {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: block;
   margin-left: 25%;
   font-size: 1.1vw;
@@ -174,18 +419,30 @@
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .aboutUsImage{
+=======
+.aboutUsImage {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: inline;
   width: 18vw;
   height: 16vw;
   margin-left: 2.5%;
 }
 
+<<<<<<< HEAD
 .pageNotreProjet{
   background-color: white;
 }
 
 .videoPresentation{
+=======
+.pageNotreProjet {
+  background-color: white;
+}
+
+.videoPresentation {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   width: 60%;
   height: 60%;
   display: block;
@@ -193,6 +450,7 @@
   margin-right: auto;
 }
 
+<<<<<<< HEAD
 
 .pageNosServices{
   background-color: #b8b8b8;
@@ -201,6 +459,14 @@
 
 .service{
   width : 35%;
+=======
+.pageNosServices {
+  background-color: #b8b8b8;
+}
+
+.service {
+  width: 35%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   height: 35%;
   margin-left: 7.5%;
   margin-right: 7.5%;
@@ -208,6 +474,7 @@
   margin-bottom: 6.5%;
   padding-top: 5%;
   padding-bottom: 5%;
+<<<<<<< HEAD
   border:0.2em solid rgb(78, 0, 0);
 }
 
@@ -217,11 +484,26 @@
 }
 
 .serviceNom{
+=======
+  border: 0.2em solid rgb(78, 0, 0);
+}
+
+.serviceImage {
+  width: 20%;
+  height: 20%;
+}
+
+.serviceNom {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   font-weight: bold;
   font-size: 2vw;
 }
 
+<<<<<<< HEAD
 .serviceDescription{
+=======
+.serviceDescription {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   font-size: 1.2vw;
 }
 
