@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ParametrageAdminComponent } from './parametrage-admin/parametrage-admin.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AboutComponent,
     AjouterEventComponent,
     ProfilComponent,
+    ParametrageAdminComponent,
     
   ],
   imports: [
