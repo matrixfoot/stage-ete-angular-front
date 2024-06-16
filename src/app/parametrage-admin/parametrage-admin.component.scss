@@ -1,6 +1,6 @@
 .parametrage-admin {
   font-family: Poppins, sans-serif;
-  background-color: #f5f5f5;
+  // background-color: #f5f5f5;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -135,6 +135,7 @@
     width: 50%;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 60px;
 
     table {
       tbody {
@@ -169,11 +170,7 @@
   }
 }
 
-.line {
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  background-color: var(--divider, #ebeff2);
-  min-height: 1px;
-}
+ 
 
 .parametrage-change {
   padding: 20px;
@@ -185,12 +182,15 @@
     margin-bottom: 20px;
     color: #333;
     font-weight: 600;
+    
   }
 
   .filter-section {
     margin-top: 20px;
+    margin-left: 120px;
 
     .filter-group {
+       
       display: flex;
       align-items: center;
       gap: 20px; // Adjust the spacing between items as needed
@@ -206,7 +206,8 @@
         display: flex;
         align-items: center;
         gap: 5px; // Adjust the spacing between label, input, and icon as needed
-
+        margin-left: 40px;
+        // margin-right: 40px;
         label {
           font-size: 1rem;
           color: #333;
@@ -236,10 +237,11 @@
         cursor: pointer;
         transition: background-color 0.3s;
         font-weight: 500;
+        margin-left: 30px;
 
         .icon {
           margin-left: 10px;
-          font-size: 1.2rem;
+        
         }
 
         &:hover {
@@ -286,6 +288,8 @@
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 60px;
    
   th, td {
     // border-bottom: 5px solid #ddd;
@@ -402,6 +406,7 @@
   display: flex;
   flex-direction: column;
   
+  
 
   .buttons {
     display: flex;
@@ -409,6 +414,7 @@
     align-items: left;
     margin-left: 65px;
     margin-top: 10px;
+    margin-bottom: 40px;
 
 
     .ajouter-btn {
@@ -442,6 +448,7 @@
     border-radius: 8px;
     overflow: hidden;
     align-items: center;
+    margin-bottom: 30px;
 
     .slider-table {
       border-collapse: collapse;
@@ -482,8 +489,7 @@
 
  
   
-  
-  &.supprimer-tous-btn {
+  .supprimer-tous-btn {
     border: none;
     padding: 7px 10px;
     border-radius: 4px;
