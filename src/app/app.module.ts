@@ -1,4 +1,5 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -19,7 +20,7 @@ import { ConnectedHomeNavComponent } from './connected-home-nav/connected-home-n
 import { ConnectedNotHomeNavComponent } from './connected-not-home-nav/connected-not-home-nav.component';
 import { NavbarSwitcherComponent } from './navbar-switcher/navbar-switcher.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
