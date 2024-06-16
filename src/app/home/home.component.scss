@@ -5,6 +5,24 @@
   width: 100%;
 }
 
+<<<<<<< HEAD
+
+.page{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+@media (max-width: 991px) {
+  .div {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+
+.title{
+  color : rgb(239, 255, 132);
+  text-align: center;
+  font-size: 3vw;
+=======
 .logoHeader {
   height: 13%;
   width: 13%;
@@ -165,10 +183,26 @@ body, html {
   color: rgb(239, 255, 132);
   text-align: center;
   font-size: 2.5vw;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   font-weight: bold;
   margin: 0;
 }
 
+<<<<<<< HEAD
+.subtitle{
+  text-align: center;
+  font-size:2.5vw;
+  font-weight: bold;
+  text-align: center;
+  color :#DFDFDF;
+}
+
+.phrase{
+  font-size: 4.5vw;
+  margin-top: 0;
+  padding-top: 0;
+  width : 55%;
+=======
 .subtitle {
   text-align: center;
   font-size: 2vw;
@@ -181,14 +215,21 @@ body, html {
   margin-top: 0;
   padding-top: 0;
   width: 55%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   color: #E5FF45;
   padding-left: 3%;
   font-weight: bold;
 }
 
+<<<<<<< HEAD
+.actualite{
+  color :#ffffff;
+  font-size:2.1vw ;
+=======
 .actualite {
   color: #ffffff;
   font-size: 2.1vw;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   margin-left: 0.5%;
   margin-right: 0.5%;
   display: inline;
@@ -196,19 +237,31 @@ body, html {
   text-align: center;
 }
 
+<<<<<<< HEAD
+.flecheImage{
+=======
 .flecheImage {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   width: 5%;
   height: 5%;
   vertical-align: middle;
   display: inline;
   margin-top: 3%;
 }
+<<<<<<< HEAD
+.flecheImage:hover{
+  cursor: pointer;
+}
+
+.actualiteContainer{
+=======
 
 .flecheImage:hover {
   cursor: pointer;
 }
 
 .actualiteContainer {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: flex;
   vertical-align: middle;
   width: 100%;
@@ -217,11 +270,18 @@ body, html {
 .pageRappelezVous {
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
+}
+
+.page{
+  padding:5%;
+=======
   width: 100%;
 }
 
 .page {
   padding: 5%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
 }
 
 .pageRappelezVous::before {
@@ -240,6 +300,10 @@ body, html {
   background-position-y: center;
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
 .date {
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -251,17 +315,31 @@ body, html {
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
+
+
+.ligne{
+=======
 .ligne {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   font-size: 1.3vw;
   margin-left: 5%;
   margin-right: 5%;
 }
 
+<<<<<<< HEAD
+.pageNosValeurs{
+  background-color: #b8b8b8;
+}
+
+.valeursContainer{
+=======
 .pageNosValeurs {
   background-color: #b8b8b8;
 }
 
 .valeursContainer {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,14 +347,31 @@ body, html {
   margin-left: 5%;
 }
 
+<<<<<<< HEAD
+.valeur{
+  width:20%;
+  height:33%;
+=======
 .valeur {
   width: 20%;
   height: 33%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   text-align: center;
   margin-bottom: 1%;
   margin-top: 1%;
 }
 
+<<<<<<< HEAD
+.pageAboutUs{
+  background-color: #061B3C;
+}
+
+.aboutUs{
+  font-size: 3vw;
+  font-weight: bold;
+  color: #ffff;
+  width : 60%;
+=======
 .pageAboutUs {
   background-color: #061B3C;
 }
@@ -286,21 +381,37 @@ body, html {
   font-weight: bold;
   color: #ffff;
   width: 60%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: inline-block;
   padding-left: 5%;
 }
 
+<<<<<<< HEAD
+.aboutUsParagraph{
+=======
 .aboutUsParagraph {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   vertical-align: top;
   display: inline-block;
   padding-left: 7%;
   font-size: 1.4vw;
+<<<<<<< HEAD
+  color:#ffff;
+  width : 80%;
+  display: inline-block;
+}
+
+
+
+.enSavoirPlus{
+=======
   color: #ffff;
   width: 80%;
   display: inline-block;
 }
 
 .enSavoirPlus {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: block;
   margin-left: 25%;
   font-size: 1.1vw;
@@ -314,18 +425,30 @@ body, html {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+.aboutUsImage{
+=======
 .aboutUsImage {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   display: inline;
   width: 18vw;
   height: 16vw;
   margin-left: 2.5%;
 }
 
+<<<<<<< HEAD
+.pageNotreProjet{
+  background-color: white;
+}
+
+.videoPresentation{
+=======
 .pageNotreProjet {
   background-color: white;
 }
 
 .videoPresentation {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   width: 60%;
   height: 60%;
   display: block;
@@ -333,12 +456,23 @@ body, html {
   margin-right: auto;
 }
 
+<<<<<<< HEAD
+
+.pageNosServices{
+  background-color: #b8b8b8;
+}
+
+
+.service{
+  width : 35%;
+=======
 .pageNosServices {
   background-color: #b8b8b8;
 }
 
 .service {
   width: 35%;
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   height: 35%;
   margin-left: 7.5%;
   margin-right: 7.5%;
@@ -346,6 +480,17 @@ body, html {
   margin-bottom: 6.5%;
   padding-top: 5%;
   padding-bottom: 5%;
+<<<<<<< HEAD
+  border:0.2em solid rgb(78, 0, 0);
+}
+
+.serviceImage{
+  width : 20%;
+  height: 20%;
+}
+
+.serviceNom{
+=======
   border: 0.2em solid rgb(78, 0, 0);
 }
 
@@ -355,11 +500,16 @@ body, html {
 }
 
 .serviceNom {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   font-weight: bold;
   font-size: 2vw;
 }
 
+<<<<<<< HEAD
+.serviceDescription{
+=======
 .serviceDescription {
+>>>>>>> cebcc906ecfe9ba64e0bdaff4631d550b72055b1
   font-size: 1.2vw;
 }
 
