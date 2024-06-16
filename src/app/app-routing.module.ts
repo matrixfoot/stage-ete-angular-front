@@ -7,6 +7,7 @@ import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ModiEventComponent } from './modi-event/modi-event.component';
 import { PourquoiComponent } from './pourquoi/pourquoi.component';
+import { NavbarSwitcherComponent } from './navbar-switcher/navbar-switcher.component';
 
 const routes: Routes = [
   {path:'calendar',component:CalendarComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'ajouterEvent', component : AjouterEventComponent},
   {path:'profil',component:ProfilComponent},
   {path:'modifierEvent',component:ModiEventComponent},
-  {path : 'pourquoi', component : PourquoiComponent}
+  {path : 'pourquoi', component : PourquoiComponent},
+  {path : 'navbars',component:NavbarSwitcherComponent}
 ];
 
 @NgModule({

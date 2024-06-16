@@ -12,6 +12,12 @@ import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ClickOutsideDirective } from './click-outside.directive';
+import { DisconnectedHomeNavComponent } from './disconnected-home-nav/disconnected-home-nav.component';
+import { DisconnectedNotHomeNavComponent } from './disconnected-not-home-nav/disconnected-not-home-nav.component';
+import { ConnectedHomeNavComponent } from './connected-home-nav/connected-home-nav.component';
+import { ConnectedNotHomeNavComponent } from './connected-not-home-nav/connected-not-home-nav.component';
+import { NavbarSwitcherComponent } from './navbar-switcher/navbar-switcher.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -23,7 +29,13 @@ import { ClickOutsideDirective } from './click-outside.directive';
     AboutComponent,
     AjouterEventComponent,
     ProfilComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    DisconnectedHomeNavComponent,
+    DisconnectedNotHomeNavComponent,
+    ConnectedHomeNavComponent,
+    ConnectedNotHomeNavComponent,
+    NavbarSwitcherComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
