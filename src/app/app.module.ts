@@ -2,7 +2,13 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AddCollabComponent } from './add-collab/add-collab.component';
+import { MaterialModule } from './material/material.module';
+import { CompleteComponent } from './complete/complete.component';
+import { ModifyPComponent } from './modify-p/modify-p.component';
+import { MUserAdminComponent } from './m-user-admin/m-user-admin.component';
+import { AffichageFormComponent } from './affichage-form/affichage-form.component';
+import { InclureParamComponent } from './inclure-param/inclure-param.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
@@ -21,6 +27,9 @@ import { ConnectedNotHomeNavComponent } from './connected-not-home-nav/connected
 import { NavbarSwitcherComponent } from './navbar-switcher/navbar-switcher.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import {CareerComponent} from './career/career.component';
+import {ContactComponent} from './contact/contact.component';
+import {UserBordComponent} from './user-bord/user-bord.component';
 
 
 @NgModule({
@@ -29,6 +38,7 @@ import { AboutComponent } from './about/about.component';
     CalendarComponent,
     HomeComponent,
     AboutComponent,
+    ModiEventComponent,
     AjouterEventComponent,
     ProfilComponent,
     ClickOutsideDirective,
@@ -37,7 +47,13 @@ import { AboutComponent } from './about/about.component';
     ConnectedHomeNavComponent,
     ConnectedNotHomeNavComponent,
     NavbarSwitcherComponent,
-    FooterComponent
+    FooterComponent,
+    AddCollabComponent,
+    CompleteComponent,
+    ModifyPComponent,
+    MUserAdminComponent,
+    AffichageFormComponent,
+    InclureParamComponent,CareerComponent,ContactComponent,UserBordComponent
     
   ],
   imports: [
@@ -48,7 +64,8 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' }
@@ -56,3 +73,12 @@ import { AboutComponent } from './about/about.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+
+
+
+
+
+
