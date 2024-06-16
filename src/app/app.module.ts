@@ -8,11 +8,10 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { ModiEventComponent } from './modi-event/modi-event.component';
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ParametrageAdminComponent } from './parametrage-admin/parametrage-admin.component';
 
 
 @NgModule({
@@ -23,10 +22,11 @@ import { ParametrageAdminComponent } from './parametrage-admin/parametrage-admin
     AboutComponent,
     AjouterEventComponent,
     ProfilComponent,
-    ParametrageAdminComponent,
     
   ],
   imports: [
+    ReactiveFormsModule,
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule ,
     AppRoutingModule,
