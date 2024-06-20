@@ -20,18 +20,16 @@ import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
   declarations: [
     AppComponent,
     CalendarComponent,
-    HomeComponent,
+     
     ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent, ComptabiliteComponent
   ],
   imports: [
-    ReactiveFormsModule,
-    CommonModule,
+    
     BrowserModule,
     BrowserAnimationsModule ,
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
-    ReactiveFormsModule,
-    FormsModule
+    
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' }
