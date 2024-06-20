@@ -1,12 +1,11 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-connected-not-home-nav',
+  templateUrl: './connected-not-home-nav.component.html',
+  styleUrls: ['./connected-not-home-nav.component.scss']
 })
-export class HomeComponent implements OnInit {
-
+export class ConnectedNotHomeNavComponent {
   isMenuOpened: boolean = false;
 
   toggleMenu(): void {
@@ -39,16 +38,6 @@ export class HomeComponent implements OnInit {
     this.isProfileOpened=false;
   }
 
-  itemsUserSpaceVisible:boolean=false;
-  displayUserSpaceItems():void{
-    this.itemsUserSpaceVisible=!this.itemsUserSpaceVisible;
-  }
-
-  itemsServicesVisible: boolean=false;
-  displayServicesItems():void{
-    this.itemsServicesVisible=!this.itemsServicesVisible;
-  }
-
   clickedOutside(): void {
       this.isMenuOpened= false;
       console.log('clicked outside');
@@ -65,31 +54,14 @@ export class HomeComponent implements OnInit {
     this.isUserSpaceOpened=!this.isUserSpaceOpened;
   }
 
-  isOverlayVisible: boolean = false;
-
-  displayOverlay() {
-    this.isOverlayVisible = true;
-  }
-
   isSectionsMenuOpened = false;
-
-
-  hideOverlay() {
-    this.isOverlayVisible = false;
-  }
 
   isNotifOpened : boolean = false;
 
   displayNotif(){
     this.isNotifOpened = !this.isNotifOpened;
   }
-
-  itemsSectionVisible: boolean = false;
-
-  displaySectionItems() : void {
-    this.itemsSectionVisible = !this.itemsSectionVisible;
-  }
-
+  
   sections = [
     { id: 'actualite', name: 'Actualité' },
     { id: 'rappelez-vous', name: 'Rappelez Vous!' },
@@ -98,28 +70,4 @@ export class HomeComponent implements OnInit {
     { id: 'notre-projet', name: 'Notre projet' },
     { id: 'nos-services', name: 'Nos services' }
   ];
-  activeSection: string = '';
-
-  ngOnInit() {
-    this.onScroll();
-  }
-
-  scrollToSection(id: string) {
-    document.getElementById(id)!.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    let currentSection = '';
-    this.sections.forEach(section => {
-      const element = document.getElementById(section.id);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= 175 && rect.bottom > 175) {
-          currentSection = section.id;
-        }
-      }
-    });
-    this.activeSection = currentSection;
-  }
 }

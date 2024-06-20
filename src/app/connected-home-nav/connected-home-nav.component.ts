@@ -1,32 +1,18 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component,HostListener, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-connected-home-nav',
+  templateUrl: './connected-home-nav.component.html',
+  styleUrls: ['./connected-home-nav.component.scss']
 })
-export class HomeComponent implements OnInit {
 
+export class ConnectedHomeNavComponent implements OnInit {
   isMenuOpened: boolean = false;
 
   toggleMenu(): void {
     this.isMenuOpened = !this.isMenuOpened;
     console.log('clicked inside');
     console.log(this.isMenuOpened);
-  }
-
-  clickedOutsideUserSpace(): void{
-    this.isUserSpaceOpened=false;
-  }
-
-  isServicesOpened:boolean=false;
-
-  openServices():void{
-    this.isServicesOpened=!this.isServicesOpened;
-  }
-
-  clickedOutsideServices():void{
-    this.isServicesOpened=false;
   }
 
   isProfileOpened:boolean=false;
@@ -59,24 +45,6 @@ export class HomeComponent implements OnInit {
     this.isNotifOpened=false;
   }
 
-  isUserSpaceOpened: boolean = false;
-
-  openUserSpace():void{
-    this.isUserSpaceOpened=!this.isUserSpaceOpened;
-  }
-
-  isOverlayVisible: boolean = false;
-
-  displayOverlay() {
-    this.isOverlayVisible = true;
-  }
-
-  isSectionsMenuOpened = false;
-
-
-  hideOverlay() {
-    this.isOverlayVisible = false;
-  }
 
   isNotifOpened : boolean = false;
 
@@ -98,7 +66,8 @@ export class HomeComponent implements OnInit {
     { id: 'notre-projet', name: 'Notre projet' },
     { id: 'nos-services', name: 'Nos services' }
   ];
-  activeSection: string = '';
+
+   activeSection: string = '';
 
   ngOnInit() {
     this.onScroll();
