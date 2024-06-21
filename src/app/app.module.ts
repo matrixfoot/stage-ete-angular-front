@@ -21,7 +21,9 @@ import { ConnectedNotHomeNavComponent } from './connected-not-home-nav/connected
 import { NavbarSwitcherComponent } from './navbar-switcher/navbar-switcher.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
-
+import { UserBordComponent } from './user-bord/user-bord.component';
+import { FiscalityComponent } from './fiscality/fiscality.component';
+import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +39,10 @@ import { AboutComponent } from './about/about.component';
     ConnectedHomeNavComponent,
     ConnectedNotHomeNavComponent,
     NavbarSwitcherComponent,
-    FooterComponent
-    
+    FooterComponent,
+    UserBordComponent,
+    FiscalityComponent,
+    ComptabiliteComponent
   ],
   imports: [
     ReactiveFormsModule,

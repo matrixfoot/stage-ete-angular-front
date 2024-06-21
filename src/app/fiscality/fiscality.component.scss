@@ -36,8 +36,8 @@ color:#8C1C13;
  
 }
 .table th{
-     
-    color: black ;
+    
+    color: rgb(0, 0, 0) ;
     font-weight: bold;
     text-align: left;
     position:sticky;
@@ -49,7 +49,7 @@ color:#8C1C13;
 }
 .table th , .table td {
     padding: 2px 4px ;
-    
+    font-size: 0.95vw;
     height: 10%;
     width: 10%;
 }
@@ -69,8 +69,7 @@ color:#8C1C13;
   .table td:last-child {
    /* Ajustez cette valeur pour compenser la largeur de la barre de défilement */
     padding-right: 0; /* Ajoutez un padding pour l'espace entre la dernière colonne et la barre de défilement */
-    font-size: 9px;
-    width: 200px;
+    font-size: 0.95vw;
 }
 .btn {
     background-color: white;
@@ -79,7 +78,7 @@ color:#8C1C13;
    width:5vw;
    height: 5vh;
     padding: auto;
-    font-size: 14px;
+    font-size: 1vw;
     font-weight: bolder;
     cursor: pointer;
     margin-left:22% ;   
