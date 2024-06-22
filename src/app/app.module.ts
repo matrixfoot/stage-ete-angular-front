@@ -32,6 +32,7 @@ import {ContactComponent} from './contact/contact.component';
 import {UserBordComponent} from './user-bord/user-bord.component';
 import {FiscalityComponent} from './fiscality/fiscality.component';
 import {ComptabiliteComponent} from './comptabilite/comptabilite.component';
+import { CollabBoardComponent } from './collab-board/collab-board.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import {ComptabiliteComponent} from './comptabilite/comptabilite.component';
     MUserAdminComponent,
     ModifyPComponent,
     ClickOutsideDirective,
+    CollabBoardComponent,
 
   ],
   imports: [

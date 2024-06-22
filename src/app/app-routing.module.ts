@@ -20,10 +20,11 @@ import { ContactComponent } from './contact/contact.component';
 import { FiscalityComponent } from './fiscality/fiscality.component';
 import { ParametrageAdminComponent } from './parametrage-admin/parametrage-admin.component';
 import { UserBordComponent } from './user-bord/user-bord.component';
-
+import { CollabBoardComponent } from './collab-board/collab-board.component';
 
 
 const routes: Routes = [
+  {path:'collab-board',component:CollabBoardComponent},
   {path:'calendar',component:CalendarComponent},
   {path:'',component:HomeComponent},
   {path:'about',component:AboutComponent},
