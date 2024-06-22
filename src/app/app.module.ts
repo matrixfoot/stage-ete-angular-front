@@ -30,6 +30,8 @@ import { AboutComponent } from './about/about.component';
 import {CareerComponent} from './career/career.component';
 import {ContactComponent} from './contact/contact.component';
 import {UserBordComponent} from './user-bord/user-bord.component';
+import {FiscalityComponent} from './fiscality/fiscality.component';
+import {ComptabiliteComponent} from './comptabilite/comptabilite.component';
 
 
 @NgModule({
@@ -37,11 +39,31 @@ import {UserBordComponent} from './user-bord/user-bord.component';
     AppComponent,
     CalendarComponent,
     HomeComponent,
-    ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent, ComptabiliteComponent
+    ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent, ComptabiliteComponent,
+    CareerComponent,
+    ContactComponent,
+    CompleteComponent,
+    NavbarSwitcherComponent,
+    FooterComponent,
+    DisconnectedNotHomeNavComponent,
+    ConnectedNotHomeNavComponent,
+    DisconnectedHomeNavComponent,
+    ConnectedHomeNavComponent,
+    InclureParamComponent,
+    AddCollabComponent,
+    AffichageFormComponent,
+    MUserAdminComponent,
+    ModifyPComponent,
+    ClickOutsideDirective,
+
   ],
   imports: [
     
     BrowserModule,
+    CommonModule,
+    MaterialModule,
+
+
     BrowserAnimationsModule ,
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
