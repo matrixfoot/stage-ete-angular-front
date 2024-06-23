@@ -20,7 +20,8 @@ import { FiscalityComponent } from './fiscality/fiscality.component';
 import { ParametrageAdminComponent } from './parametrage-admin/parametrage-admin.component';
 import { UserBordComponent } from './user-bord/user-bord.component';
 import { CollabBoardComponent } from './collab-board/collab-board.component';
-
+import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
+import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
 
 const routes: Routes = [
   {path:'collab-board',component:CollabBoardComponent},
@@ -42,7 +43,9 @@ const routes: Routes = [
   {path : 'fiscality',component :FiscalityComponent},
   {path : 'pAdmin',component :ParametrageAdminComponent},
   {path : 'userbord',component :UserBordComponent},
-  
+  {path : 'saisiecomptab',component :SaisieComptableComponent},
+  {path : 'saisieman',component :SaisieManuelComponent},
+
 ];
 
 @NgModule({

@@ -32,6 +32,8 @@ import {UserBordComponent} from './user-bord/user-bord.component';
 import {FiscalityComponent} from './fiscality/fiscality.component';
 import {ComptabiliteComponent} from './comptabilite/comptabilite.component';
 import { CollabBoardComponent } from './collab-board/collab-board.component';
+import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
+import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { CollabBoardComponent } from './collab-board/collab-board.component';
     CompleteComponent,
     NavbarSwitcherComponent,
     FooterComponent,
+    SaisieComptableComponent,
+    SaisieManuelComponent,
     DisconnectedNotHomeNavComponent,
     ConnectedNotHomeNavComponent,
     DisconnectedHomeNavComponent,
