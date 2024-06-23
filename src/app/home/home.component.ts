@@ -15,10 +15,73 @@ export class HomeComponent implements OnInit {
     console.log(this.isMenuOpened);
   }
 
+  clickedOutsideUserSpace(): void{
+    this.isUserSpaceOpened=false;
+  }
+
+  isServicesOpened:boolean=false;
+
+  openServices():void{
+    this.isServicesOpened=!this.isServicesOpened;
+  }
+
+  clickedOutsideServices():void{
+    this.isServicesOpened=false;
+  }
+
+  isProfileOpened:boolean=false;
+
+  openProfile():void{
+    this.isProfileOpened=!this.isProfileOpened;
+  }
+
+  clickedOutsideProfile():void{
+    this.isProfileOpened=false;
+  }
+
+  itemsUserSpaceVisible:boolean=false;
+  displayUserSpaceItems():void{
+    this.itemsUserSpaceVisible=!this.itemsUserSpaceVisible;
+  }
+
+  itemsServicesVisible: boolean=false;
+  displayServicesItems():void{
+    this.itemsServicesVisible=!this.itemsServicesVisible;
+  }
+
   clickedOutside(): void {
-    this.isMenuOpened = false; // Close the menu when clicked outside
-    console.log('clicked outside');
-    console.log(this.isMenuOpened);
+      this.isMenuOpened= false;
+      console.log('clicked outside');
+      console.log(this.isMenuOpened);
+  }
+
+  clickedOutsideNotif() : void{
+    this.isNotifOpened=false;
+  }
+
+  isUserSpaceOpened: boolean = false;
+
+  openUserSpace():void{
+    this.isUserSpaceOpened=!this.isUserSpaceOpened;
+  }
+
+  isOverlayVisible: boolean = false;
+
+  displayOverlay() {
+    this.isOverlayVisible = true;
+  }
+
+  isSectionsMenuOpened = false;
+
+
+  hideOverlay() {
+    this.isOverlayVisible = false;
+  }
+
+  isNotifOpened : boolean = false;
+
+  displayNotif(){
+    this.isNotifOpened = !this.isNotifOpened;
   }
 
   itemsSectionVisible: boolean = false;
