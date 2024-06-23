@@ -1,0 +1,266 @@
+<div class="container">
+  <!-- Navigation Steps -->
+  <div class="steps-navigation">
+    <span [class.active]="step === 1" class="step-circle" [class.completed]="step > 1">1</span>
+    <span [class.active]="step === 2" class="step-circle" [class.completed]="step > 2">2</span>
+    <span [class.active]="step === 3" class="step-circle">3</span>
+  </div>
+
+  <!-- Step 1: Choix de l'année et du mois -->
+  <div *ngIf="step === 1" class="step-container">
+    <h2>Choix de l'année et du mois</h2>
+    <div class="form-group">
+      <select id="year" [(ngModel)]="selectedYear" (change)="onYearChange()">
+        <option [ngValue]="null" disabled selected>Sélectionner année</option>
+        <option *ngFor="let year of years" [ngValue]="year">{{ year }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select id="month" [(ngModel)]="selectedMonth" (change)="onMonthChange()" [disabled]="!selectedYear">
+        <option [ngValue]="null" disabled selected>Sélectionner mois</option>
+        <option *ngFor="let month of months" [ngValue]="month">{{ month }}</option>
+      </select>
+    </div>
+    <button [disabled]="!selectedYear || !selectedMonth">Sauvegarder</button>
+  </div>
+
+  <!-- Step 2: Liste des données à saisir -->
+  <div *ngIf="step === 2" class="step-container">
+    <h2>Liste des données à saisir</h2>
+    <label *ngFor="let data of dataList" class="form-group2">
+      <input type="checkbox" [(ngModel)]="data.selected" (change)="onDataSelect(data)" />
+      {{ data.name }}
+    </label>
+  </div>
+
+  <!-- Step 3: Détails de la saisie -->
+  <div *ngIf="step === 3" class="step-container">
+    <label *ngFor="let data of dataList" class="form-group2">
+      <input type="checkbox" [(ngModel)]="data.selected" (change)="onDataSelect(data)" />
+      {{ data.name }}
+    </label>
+    <div [ngSwitch]="selectedData">
+
+      <!-- Partie chiffre d'affaires -->
+      <div *ngSwitchCase="'Chiffre d\'affaires'">
+        <p>factures du mois</p>
+          <div class="div">
+            <!-- table 2-->
+            <table class="salary-table">
+              <thead>
+                <tr>
+                  <th>N° piece</th>
+                  <th>Jour</th>
+                  <th>Date complete</th>
+                  <th>Type</th>
+                  <th>N°</th>
+                  <th>Montant TVA</th>
+                  <th>droit de timbre</th>
+                  <th>Montant TTC</th>
+                  <th>client</th>
+                  <th>annuler</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="text"  placeholder="1"/></td>
+                  <td><input type="text"  placeholder="Jour"/></td>
+                  <td><input type="text"  placeholder="Date"/></td>
+                  <td>
+                    <select>
+                    <option value=""></option>
+                    <option value="alm">facture</option>
+                    <option value="S">avoir</option>
+                    </select>
+                  </td>
+                  <td><input type="text"  placeholder="0"/></td>
+                  <td><input type="text" placeholder="0"/></td>
+                  <td><input type="text"  placeholder="0.000"/></td>
+                  <td><input type="text" placeholder="0.000"/></td>
+                  <td>
+                    <select>
+                    <option value=""></option>
+                    <option value="S">autre</option>
+                    </select>
+                  </td>
+                  <td><input type="checkbox"  /></td>
+                </tr>
+                <tr>
+                  <td colspan="5"><strong>Total</strong></td>
+                  <td><input type="text" placeholder="0.000"/></td>
+                  <td><input type="text" placeholder="0.000"/></td>
+                  <td><input type="text" placeholder="0.000"/></td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="add-btn" (click)="addSalary()"></button>
+          </div>
+
+      </div>
+
+      <!-- Partie Achats -->
+      <div class="salary-management" *ngSwitchCase="'Achats'">
+        <p>Gestion des factures d'Achats</p>
+        <div class="div1">
+          <div *ngIf="salaryType === 'autre'">
+            <input type="text" placeholder="Décrire le type de salaire" [(ngModel)]="otherSalaryType" />
+          </div>
+          <table class="salary-table">
+            <thead>
+              <tr>
+                <th>N° pièce</th>
+                <th>Jour</th>
+                <th>Date complete</th>
+                <th>Fournisseur</th>
+                <th>type pièce</th>
+                <th>N°</th>
+                <th>Nature de l'achat</th>
+                <th>Montant HT</th>
+                <th>Montant devise</th>
+                <th>Montant TVA</th>
+                <th>droit de timbre</th>
+                <th>Montant TTC</th>
+                <th>Moyen de reglement</th>
+                <th>Contient Document</th>
+                <th>Documents jointes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text"  placeholder="1"/></td>
+                <td><input type="text"  placeholder="Jour"/></td>
+                <td><input type="text"  placeholder="Date"/></td>
+                <td>
+                  <select>
+                  <option value=""></option>
+                  <option value="S">autre</option>
+                  </select>
+                </td>
+                <td>
+                  <select>
+                  <option value="">facture</option>
+                  <option value="S">autre</option>
+                  </select>
+                </td>
+                <td><input type="text"  placeholder="facture"/></td>
+                <td>
+                  <select>
+                  <option value=""></option>
+                  <option value="S">autre</option>
+                  </select>
+                </td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td>
+                  <select>
+                  <option value="TND">TND</option>
+                  <option value="EURO">EURO</option>
+                  <option value="GBP">GBP</option>
+                  <option value="USD">USD</option>
+                  <option value="DZD">DZD</option>
+                  <option value="SAR">SAR</option>
+                  </select>
+                  <input type="text" placeholder="0.000">
+                </td>
+                <td><input type="text" placeholder="0.000"></td>
+                <td><input type="text" placeholder="0"></td>
+                <td><input type="text" placeholder="0.000"></td>
+                <td>
+                  <select>
+                  <option value="TND"></option>
+                  <option value="EURO">espèce</option>
+                  <option value="GBP">chèque</option>
+                  <option value="USD">traite</option>
+                  <option value="DZD">non reglé</option>
+                  </select>
+                </td>
+                <td><input type="checkbox"  /></td>
+                <td><input type="file"></td>
+              </tr>
+              <tr>
+                <td colspan="7"><strong>Total</strong></td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td><input type="text" placeholder="0.000"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="add-btn" (click)="addSalary()"></button>
+        </div>
+
+      </div>
+
+      <!-- Partie banques-->
+      <div *ngSwitchCase="'Banques'">
+        <div class="choix-banques"> 
+          <h1>Veuillez Choisir Le Mode De Saisie Des Relevés Bancaires!</h1>
+          <button (click)="setMode('manual')" class="btn-manual">Saisie Manuelle</button>
+          <button (click)="setMode('upload')" class="btn-upload">Téléchargement De Document</button>
+        </div>
+      </div>
+
+      <!-- Partie Salaires -->
+      <div class="salary-management" *ngSwitchCase="'Salaires'">
+        <p>Gestion des salaires</p>
+        <div class="div">
+          <p>Type de Salaire :</p>
+          <div class="salary-form-header">
+            <label></label>
+            <select [(ngModel)]="salaryType" (change)="onSalaryTypeChange()">
+              <option value=""></option>
+              <option value="paie normal">Paie normal</option>
+              <option value="prime">Prime</option>
+              <option value="remuneration">Réménuration</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div *ngIf="salaryType === 'autre'">
+            <input type="text" placeholder="Décrire le type de salaire" [(ngModel)]="otherSalaryType" />
+          </div>
+          <table class="salary-table">
+            <thead>
+              <tr>
+                <th>Matricule</th>
+                <th>Nom et prénom</th>
+                <th>Nature du contrat</th>
+                <th>Fiche contrat</th>
+                <th>Salaire Brut</th>
+                <th>Salaire Net</th>
+                <th>Actions fiche</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let salary of salaries; let i = index">
+                <td><input type="text" [(ngModel)]="salary.matricule" placeholder="Matricule" /></td>
+                <td><input type="text" [(ngModel)]="salary.nomPrenom" placeholder="Nom Prenom" /></td>
+                <td><input type="text" [(ngModel)]="salary.natureContrat" placeholder="client" /></td>
+                <td><input type="text" [(ngModel)]="salary.ficheContrat" /></td>
+                <td><input type="number" [(ngModel)]="salary.salaireBrut" /></td>
+                <td><input type="number" [(ngModel)]="salary.salaireNet" /></td>
+                <td>
+                  <button class="modify-btn" (click)="modifySalary(i)">Modifier</button>
+                  <button class="delete-btn" (click)="deleteSalary(i)">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4"><strong>Total</strong></td>
+                <td><strong>{{ calculateTotal('salaireBrut') }}</strong></td>
+                <td><strong>{{ calculateTotal('salaireNet') }}</strong></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="add-btn" (click)="addSalary()">Ajouter</button>
+        </div>
+        <button class="add-btn0" (click)="addSalaryGroup()">Ajouter autre type de salaire</button>
+      </div>
+    </div>
+    
+    <button (click)="reset()" class="btn-reset">Réinitialiser</button>
+    <button (click)="save()">Sauvegarder</button>
+  </div>
+</div>
+
+
