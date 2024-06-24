@@ -30,6 +30,9 @@ import { AboutComponent } from './about/about.component';
 import {CareerComponent} from './career/career.component';
 import {ContactComponent} from './contact/contact.component';
 import {UserBordComponent} from './user-bord/user-bord.component';
+import { ViewDecFiscComponent } from './view-dec-fisc/view-dec-fisc.component';
+import { PdfInterfaceComponent } from './pdf-interface/pdf-interface.component';
+import { ViewDecompComponent } from './view-decomp/view-decomp.component';
 
 
 @NgModule({
@@ -37,16 +40,35 @@ import {UserBordComponent} from './user-bord/user-bord.component';
     AppComponent,
     CalendarComponent,
     HomeComponent,
-    ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent, ComptabiliteComponent
+    AboutComponent,
+    ModiEventComponent,
+    AjouterEventComponent,
+    ProfilComponent,
+    ClickOutsideDirective,
+    DisconnectedHomeNavComponent,
+    DisconnectedNotHomeNavComponent,
+    ConnectedHomeNavComponent,
+    ConnectedNotHomeNavComponent,
+    NavbarSwitcherComponent,
+    FooterComponent,
+    AddCollabComponent,
+    CompleteComponent,
+    ModifyPComponent,
+    MUserAdminComponent,
+    AffichageFormComponent,
+    InclureParamComponent,CareerComponent,ContactComponent,UserBordComponent, ViewDecFiscComponent, PdfInterfaceComponent, ViewDecompComponent
+    
   ],
   imports: [
-    
+    ReactiveFormsModule,
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule ,
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MaterialModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' }
@@ -54,7 +76,6 @@ import {UserBordComponent} from './user-bord/user-bord.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 
 
 

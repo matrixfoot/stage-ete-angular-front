@@ -20,6 +20,8 @@ import { ContactComponent } from './contact/contact.component';
 import { FiscalityComponent } from './fiscality/fiscality.component';
 import { ParametrageAdminComponent } from './parametrage-admin/parametrage-admin.component';
 import { UserBordComponent } from './user-bord/user-bord.component';
+import { ViewDecFiscComponent } from './view-dec-fisc/view-dec-fisc.component';
+import { ViewDecompComponent } from './view-decomp/view-decomp.component';
 
 
 
@@ -43,6 +45,8 @@ const routes: Routes = [
   {path : 'fiscality',component :FiscalityComponent},
   {path : 'pAdmin',component :ParametrageAdminComponent},
   {path : 'userbord',component :UserBordComponent},
+  {path : 'viewFis',component :ViewDecFiscComponent},
+  {path : 'viewDec',component :ViewDecompComponent},
   
 ];
 
