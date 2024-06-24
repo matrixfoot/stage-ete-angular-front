@@ -13,7 +13,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-import { CalendarComponent } from './calendar/calendar.component';
 import { HomeComponent } from './home/home.component';
 import { ModiEventComponent } from './modi-event/modi-event.component';
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
@@ -33,12 +32,16 @@ import {UserBordComponent} from './user-bord/user-bord.component';
 import { ViewDecFiscComponent } from './view-dec-fisc/view-dec-fisc.component';
 import { PdfInterfaceComponent } from './pdf-interface/pdf-interface.component';
 import { ViewDecompComponent } from './view-decomp/view-decomp.component';
+import {FiscalityComponent} from './fiscality/fiscality.component';
+import {ComptabiliteComponent} from './comptabilite/comptabilite.component';
+import { CollabBoardComponent } from './collab-board/collab-board.component';
+import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
+import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalendarComponent,
     HomeComponent,
     AboutComponent,
     ModiEventComponent,
@@ -56,13 +59,37 @@ import { ViewDecompComponent } from './view-decomp/view-decomp.component';
     ModifyPComponent,
     MUserAdminComponent,
     AffichageFormComponent,
-    InclureParamComponent,CareerComponent,ContactComponent,UserBordComponent, ViewDecFiscComponent, PdfInterfaceComponent, ViewDecompComponent
+    InclureParamComponent,CareerComponent,ContactComponent,UserBordComponent, ViewDecFiscComponent, PdfInterfaceComponent, ViewDecompComponent,
     
+    ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent, ComptabiliteComponent,
+    CareerComponent,
+    ContactComponent,
+    CompleteComponent,
+    NavbarSwitcherComponent,
+    FooterComponent,
+    SaisieComptableComponent,
+    SaisieManuelComponent,
+    DisconnectedNotHomeNavComponent,
+    ConnectedNotHomeNavComponent,
+    DisconnectedHomeNavComponent,
+    ConnectedHomeNavComponent,
+    InclureParamComponent,
+    AddCollabComponent,
+    AffichageFormComponent,
+    MUserAdminComponent,
+    ModifyPComponent,
+    ClickOutsideDirective,
+    CollabBoardComponent,
+
   ],
   imports: [
     ReactiveFormsModule,
     CommonModule,
     BrowserModule,
+    CommonModule,
+    MaterialModule,
+
+
     BrowserAnimationsModule ,
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
@@ -76,6 +103,7 @@ import { ViewDecompComponent } from './view-decomp/view-decomp.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 
 
 

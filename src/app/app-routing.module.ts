@@ -2,7 +2,6 @@
 import { InclureParamComponent } from './inclure-param/inclure-param.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CalendarComponent } from './calendar/calendar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
@@ -24,9 +23,12 @@ import { ViewDecFiscComponent } from './view-dec-fisc/view-dec-fisc.component';
 import { ViewDecompComponent } from './view-decomp/view-decomp.component';
 
 
+import { CollabBoardComponent } from './collab-board/collab-board.component';
+import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
+import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
 
 const routes: Routes = [
-  {path:'calendar',component:CalendarComponent},
+  {path:'collab-board',component:CollabBoardComponent},
   {path:'',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'ajouterEvent', component : AjouterEventComponent},
@@ -48,6 +50,9 @@ const routes: Routes = [
   {path : 'viewFis',component :ViewDecFiscComponent},
   {path : 'viewDec',component :ViewDecompComponent},
   
+  {path : 'saisiecomptab',component :SaisieComptableComponent},
+  {path : 'saisieman',component :SaisieManuelComponent},
+
 ];
 
 @NgModule({
