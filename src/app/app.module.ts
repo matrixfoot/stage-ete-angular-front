@@ -13,8 +13,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppComponent } from './app.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+<<<<<<< HEAD
 import { CalendarComponent } from './calendar/calendar.component';
  import { ModiEventComponent } from './modi-event/modi-event.component';
+=======
+import { HomeComponent } from './home/home.component';
+import { ModiEventComponent } from './modi-event/modi-event.component';
+>>>>>>> 0522e5838c2304c135efa976ae1d54645fd852ff
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -26,6 +31,7 @@ import { ConnectedNotHomeNavComponent } from './connected-not-home-nav/connected
 import { NavbarSwitcherComponent } from './navbar-switcher/navbar-switcher.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+<<<<<<< HEAD
   import {UserBordComponent} from './user-bord/user-bord.component';
 import { DeclarationFiscaleComponent } from './declaration-fiscale/declaration-fiscale.component';
 import { FiscalityComponent } from './fiscality/fiscality.component';
@@ -51,25 +57,90 @@ import { RubComponent } from './rub/rub.component';
 import { Select1Component } from './select1/select1.component';
  
   
+=======
+import {CareerComponent} from './career/career.component';
+import {ContactComponent} from './contact/contact.component';
+import {UserBordComponent} from './user-bord/user-bord.component';
+import { ViewDecFiscComponent } from './view-dec-fisc/view-dec-fisc.component';
+import { PdfInterfaceComponent } from './pdf-interface/pdf-interface.component';
+import { ViewDecompComponent } from './view-decomp/view-decomp.component';
+import {FiscalityComponent} from './fiscality/fiscality.component';
+import {ComptabiliteComponent} from './comptabilite/comptabilite.component';
+import { CollabBoardComponent } from './collab-board/collab-board.component';
+import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
+import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
+>>>>>>> 0522e5838c2304c135efa976ae1d54645fd852ff
 
  @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     CalendarComponent,
     
     ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent,
      ComptabiliteComponent, DeclarationFiscaleComponent,  DeclarationmensuelleComponent, ListeComponent, RetenueSourceComponent,
       SelectComponent, PartieCommuneComponent, LoyerComponent, HoraireComponent, MontantComponent, RubriqueComponent, 
       TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component,    
+=======
+    HomeComponent,
+    AboutComponent,
+    ModiEventComponent,
+    AjouterEventComponent,
+    ProfilComponent,
+    ClickOutsideDirective,
+    DisconnectedHomeNavComponent,
+    DisconnectedNotHomeNavComponent,
+    ConnectedHomeNavComponent,
+    ConnectedNotHomeNavComponent,
+    NavbarSwitcherComponent,
+    FooterComponent,
+    AddCollabComponent,
+    CompleteComponent,
+    ModifyPComponent,
+    MUserAdminComponent,
+    AffichageFormComponent,
+    InclureParamComponent,CareerComponent,ContactComponent,UserBordComponent, ViewDecFiscComponent, PdfInterfaceComponent, ViewDecompComponent,
+    
+    ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent, ComptabiliteComponent,
+    CareerComponent,
+    ContactComponent,
+    CompleteComponent,
+    NavbarSwitcherComponent,
+    FooterComponent,
+    SaisieComptableComponent,
+    SaisieManuelComponent,
+    DisconnectedNotHomeNavComponent,
+    ConnectedNotHomeNavComponent,
+    DisconnectedHomeNavComponent,
+    ConnectedHomeNavComponent,
+    InclureParamComponent,
+    AddCollabComponent,
+    AffichageFormComponent,
+    MUserAdminComponent,
+    ModifyPComponent,
+    ClickOutsideDirective,
+    CollabBoardComponent,
+
+>>>>>>> 0522e5838c2304c135efa976ae1d54645fd852ff
   ],
   imports: [
-    
+    ReactiveFormsModule,
+    CommonModule,
     BrowserModule,
+    CommonModule,
+    MaterialModule,
+
+
     BrowserAnimationsModule ,
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     ReactiveFormsModule,
+<<<<<<< HEAD
     FormsModule, MatSnackBarModule
+=======
+    FormsModule,
+    MaterialModule,
+>>>>>>> 0522e5838c2304c135efa976ae1d54645fd852ff
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' }

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="contentToConvert">
+        <div class="hez">
+          <h1 class="text-center mt-5 text-danger text-decoration-none fs-2">
+            Détails traitement: 01-2022
+          </h1>
+
+          <p class="mt-4 text-primary text-decoration-none fs-3">
+            Informations de Fichier :
+          </p>
+          <table class="table table-bordered mt-4">
+            <thead>
+              <tr>
+                <th scope="col">Date de création</th>
+                <th scope="col">Date de modification</th>
+                <th scope="col">Date d'ouverture du dossier</th>
+                <th scope="col">Durée de traitement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08-06-2024 12:54 PM</td>
+                <td>17-06-2024 06:37 PM</td>
+                <td>17-06-2024 10:29 AM</td>
+                <td>1188 minutes</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="mt-4 text-primary text-decoration-none fs-3">
+            Informations Personnelles :
+          </p>
+          <table class="table table-bordered mt-4">
+            <thead>
+              <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Nature</th>
+                <th scope="col">Mois</th>
+                <th scope="col">Année</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Omar</td>
+                <td>Abdelkader</td>
+                <td>Comptabilité</td>
+                <td>01</td>
+                <td>2022</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="mt-4 text-primary text-decoration-none fs-3">
+            Statuts et Motifs :
+          </p>
+          <table class="table table-bordered mt-4">
+            <thead>
+              <tr>
+                <th scope="col">Statuts</th>
+                <th scope="col">Date de traitement</th>
+                <th scope="col">Durée de traitement</th>
+                <th scope="col">Traité par</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Déposé par le client</td>
+                <td>08-06-2024 12:54 PM</td>
+                <td>147</td>
+                <td>Client</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="mt-4 text-primary text-decoration-none fs-3">Totaux :</p>
+          <table class="table table-bordered mt-4">
+            <thead>
+              <tr>
+                <th scope="col">Total traitement</th>
+                <th scope="col">Total honoraires</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0.000 dinars</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="mt-4 text-primary text-decoration-none fs-3">
+            Edition de notes d'honoraires :
+          </p>
+          <table class="table table-bordered mt-4">
+            <thead>
+              <tr>
+                <th scope="col">N° pièce</th>
+                <th scope="col">Jour</th>
+                <th scope="col">Date complète</th>
+                <th scope="col">N° Note d'honoraire</th>
+                <th scope="col">Type pièce</th>
+                <th scope="col">Montant TVA</th>
+                <th scope="col">Montant DT</th>
+                <th scope="col">Montant TTC</th>
+                <th scope="col">Règlement</th>
+              </tr>
+
+              <tr>
+                <td scope="col">1</td>
+                <td scope="col">1</td>
+                <td scope="col">Date complète</td>
+                <td scope="col">01/01/2022</td>
+                <td scope="col">facture</td>
+                <td scope="col">19.760</td>
+                <td scope="col">0.600</td>
+                <td scope="col">172.360</td>
+                <td scope="col"></td>
+              </tr>
+              <tr>
+                <td
+                  scope="col"
+                  colspan="5"
+                  style="text-align: center; font-size: 19px"
+                >
+                  Totaux
+                </td>
+
+                <td scope="col">0.000</td>
+                <td scope="col">19.760</td>
+                <td scope="col">0.600</td>
+                <td scope="col">172.360</td>
+              </tr>
+            </thead>
+          </table>
+          <p class="mt-4 text-primary text-decoration-none fs-3">Totaux :</p>
+          <table class="table table-bordered mt-4">
+            <thead>
+              <tr>
+                <th scope="col">Total traitement</th>
+                <th scope="col">Total honoraires</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0.000 dinars</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        style="font-style: Monaco"
+        class="btn btn-danger fs-5 mx-auto d-block rounded-pill mt-4 mb-3"
+        (click)="generatePDF()"
+      >
+        Generer facture
+      </button>
+
+      <!--  <div *ngIf="loading">Chargement...</div>
+      <table *ngIf="!loading && pdfData.length > 0">
+        <thead>
+          <tr>
+            <th *ngFor="let header of pdfData[0]">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of pdfData.slice(1)">
+            <td *ngFor="let cell of row">{{ cell }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="!loading && pdfData.length === 0">Aucune donnée trouvée.</div> -->
+
+      <div id="fichierA">
+        <app-pdf-interface>
+          <tr>
+            <th colspan="11"></th>
+          </tr>
+          <tr>
+            <th colspan="11"></th>
+          </tr>
+          <tr id="row1">
+            <th
+              style="text-align: center; border: none; font-size: 22px"
+              colspan="11"
+              class="text-danger"
+            >
+              االأداء على التكوين المهني
+            </th>
+          </tr>
+          <tr>
+            <th colspan="11"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="7" class="i">
+              الانتفاع بالتسبقةعلى الأداء على التكوين المهني
+            </th>
+            <th class="i">نعم</th>
+            <th class="i"></th>
+            <th class="i">لا</th>
+            <th class="i"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">البيــــــــــانـــــــــــــــات</th>
+            <th class="i">أساس الأداء</th>
+            <th class="i">النسبة</th>
+            <th class="i">الأداء المستوجب</th>
+            <th class="i" colspan="2">الأداء القابل للطرح</th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">* الصناعات المعملية</th>
+            <th class="i"></th>
+            <th class="i">1%</th>
+            <th class="i"></th>
+            <th class="i" colspan="2"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">* الأنشطة الأخرى</th>
+            <th class="i">5100.000</th>
+            <th class="i">2%</th>
+            <th class="i">102.000</th>
+            <th class="i" colspan="2"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">طرح مبلغ التسبقة</th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i" colspan="2"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">
+              طرح مبلغ فائض التسبقة الذي لم يتسن طرحه
+            </th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i" colspan="2"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">طرح مبلغ العائدات التي لم يتسن طرحها</th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i" colspan="2"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">
+              مبالغ إضافية للطرح بعنوان التسبقة أو العائدات
+            </th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i" colspan="2"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">
+              مبالغ للطرح من فائض العائدات التي لم يتسن طرحها
+            </th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i" colspan="2"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">المجمـــــــــــــــــــــوع</th>
+            <th class="i"></th>
+            <th class="i"></th>
+            <th class="i">102.000</th>
+            <th class="i" colspan="2"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="6" class="i">الباقي : (ب) مستوجب أو (ف) فائض</th>
+            <th class="i" colspan="2">P</th>
+            <th class="i" colspan="4"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="7" class="i">مؤسسة معفاة</th>
+            <th class="i">نعم</th>
+            <th class="i"></th>
+            <th class="i">لا</th>
+            <th class="i"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="3" class="i">
+              قرار المصادقة في المبالغ النهائية بعنوان طرح التسبقة
+            </th>
+            <th class="i">رفض</th>
+            <th class="i"></th>
+            <th class="i">قبول</th>
+            <th class="i"></th>
+            <th class="i" colspan="4">تاريخ استلام مقرر المصادقة</th>
+          </tr>
+          <tr id="row1">
+            <th colspan="7" class="i"></th>
+            <th class="i">اليوم</th>
+            <th class="i">الشهر</th>
+            <th class="i" colspan="4">السنة</th>
+          </tr>
+          <tr id="row1">
+            <th colspan="7" class="i">مؤسسة معفاة</th>
+            <th class="i">نعم</th>
+            <th class="i"></th>
+            <th class="i">لا</th>
+            <th class="i"></th>
+          </tr>
+          <tr>
+            <th colspan="11"></th>
+          </tr>
+          <tr id="row1">
+            <th
+              style="text-align: center; border: none; font-size: 22px"
+              colspan="11"
+              class="text-danger"
+            >
+              المساهمة في صندوق النهوض بالمسكن لفائدة الأجراء
+            </th>
+          </tr>
+          <tr>
+            <th colspan="11"></th>
+          </tr>
+          <tr id="row1">
+            <th colspan="4" class="i">المساهمة</th>
+            <th class="i" colspan="3">النسبة</th>
+            <th class="i" colspan="4">المساهمة المستوجبة</th>
+          </tr>
+          <tr id="row1">
+            <th colspan="4" class="i">5100.000</th>
+            <th class="i" colspan="3">1%</th>
+            <th class="i" colspan="4">51.000</th>
+          </tr>
+          <tr>
+            <th colspan="11"></th>
+          </tr>
+        </app-pdf-interface>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-6 d-flex align-items-center mt-3">
+          <button
+            type="button"
+            style="font-style: Monaco"
+            class="btn btn-success fs-5 rounded-pill me-1"
+            (click)="generatePDF2()"
+          >
+            Generer déclaration
+          </button>
+          <button
+            type="button"
+            style="font-style: Monaco"
+            class="btn btn-danger mx-3 fs-5 rounded-pill"
+          >
+            Supprimer déclaration
+          </button>
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-end mb-4">
+          <label for="validationDefaultActivity1" class="form-label fs-5"
+            >Gérer les Status</label
+          >
+          <select class="form-select" id="validationDefaultActivity1" required>
+            <option>choisir statut</option>
+            <option>Supprimer le dernier status collaborateur</option>
+            <option>Supprimer le dernier status Admin</option>
+            <option>Supprimer le dernier status paremitrage</option>
+          </select>
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-end">
+          <label for="validationDefaultActivity2" class="form-label fs-5"
+            >Affecter Collaborateur</label
+          >
+          <select class="form-select" id="validationDefaultActivity2" required>
+            <option>affecter à</option>
+            <option>Faycel ben Ayed</option>
+            <option>Omar Kammoun</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
