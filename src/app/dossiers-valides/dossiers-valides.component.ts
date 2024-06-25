@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class DossiersValidesComponent implements OnInit {
   dossiers = [
     {
-      nom: 'Jean Dupont',
+      nom: 'Omar KAMMOUN',
       raisonSociale: 'Société A',
-      de: 'John Smith',
+      de: '',
       moisAnnee: 'Janvier 2023',
       type: 'Type A',
       origine: 'Origine A',
@@ -19,9 +19,9 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-01-2023'
     },
     {
-      nom: 'Jean Dupont',
+      nom: 'Omar ABDELKADER',
       raisonSociale: 'Société A',
-      de: 'John Smith',
+      de: '',
       moisAnnee: 'Janvier 2023',
       type: 'Type A',
       origine: 'Origine A',
@@ -30,9 +30,9 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-01-2023'
     },
     {
-      nom: 'Marie Curie',
+      nom: 'Nour HASNAOUI',
       raisonSociale: 'Société B',
-      de: 'Jane Doe',
+      de: '',
       moisAnnee: 'Février 2023',
       type: 'Type B',
       origine: 'Origine B',
@@ -41,9 +41,9 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-02-2023'
     },
     {
-      nom: 'Albert Einstein',
+      nom: 'Salma MHADHBI',
       raisonSociale: 'Société C',
-      de: 'Bob Smith',
+      de: '',
       moisAnnee: 'Mars 2023',
       type: 'Type C',
       origine: 'Origine C',
@@ -52,9 +52,9 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-03-2023'
     },
     {
-      nom: 'Isaac Newton',
+      nom: 'Yassmine MAHJOUBI',
       raisonSociale: 'Société D',
-      de: 'Alice Johnson',
+      de: '',
       moisAnnee: 'Avril 2023',
       type: 'Type D',
       origine: 'Origine D',
@@ -63,9 +63,9 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-04-2023'
     },
     {
-      nom: 'Nikola Tesla',
+      nom: 'Aymen BELHADJ',
       raisonSociale: 'Société E',
-      de: 'John Doe',
+      de: '',
       moisAnnee: 'Mai 2023',
       type: 'Type E',
       origine: 'Origine E',
@@ -74,9 +74,9 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-05-2023'
     },
     {
-      nom: 'Thomas Edison',
+      nom: 'Omar KAMMOUN',
       raisonSociale: 'Société F',
-      de: 'Jane Smith',
+      de: '',
       moisAnnee: 'Juin 2023',
       type: 'Type F',
       origine: 'Origine F',
@@ -85,9 +85,9 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-06-2023'
     },
     {
-      nom: 'Leonardo da Vinci',
+      nom: 'Omar ABDELKADER',
       raisonSociale: 'Société G',
-      de: 'Bob Johnson',
+      de: '',
       moisAnnee: 'Juillet 2023',
       type: 'Type G',
       origine: 'Origine G',
@@ -96,9 +96,9 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-07-2023'
     },
     {
-      nom: 'Galileo Galilei',
+      nom: 'Nour HASNAOUI',
       raisonSociale: 'Société H',
-      de: 'Alice Doe',
+      de: '',
       moisAnnee: 'Août 2023',
       type: 'Type H',
       origine: 'Origine H',
@@ -107,6 +107,7 @@ export class DossiersValidesComponent implements OnInit {
       dateModification: '02-08-2023'
     }
   ];
+  ;
   
   currentPage = 1;
   pageSize = 8;

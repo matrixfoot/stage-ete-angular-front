@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class DossiersInstanceComponent implements OnInit {
   dossiers = [
     {
-      nom: 'John Doe',
+      nom: 'Omar KAMMOUN',
       raisonSociale: 'Société A',
-      de: 'Jean Dupont',
+      de: '',
       moisAnnee: 'Janvier 2023',
       type: 'Type A',
       origine: 'Origine A',
@@ -19,9 +19,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-01-2023'
     },
     {
-      nom: 'Marie Curie',
+      nom: 'Omar ABDELKADER',
       raisonSociale: 'Société B',
-      de: 'Jane Doe',
+      de: '',
       moisAnnee: 'Février 2023',
       type: 'Type B',
       origine: 'Origine B',
@@ -30,9 +30,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-02-2023'
     },
     {
-      nom: 'Albert Einstein',
+      nom: 'Nour HASNAOUI',
       raisonSociale: 'Société C',
-      de: 'Bob Smith',
+      de: '',
       moisAnnee: 'Mars 2023',
       type: 'Type C',
       origine: 'Origine C',
@@ -41,9 +41,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-03-2023'
     },
     {
-      nom: 'Isaac Newton',
+      nom: 'Yassmine MAHJOUBI',
       raisonSociale: 'Société D',
-      de: 'Alice Johnson',
+      de: '',
       moisAnnee: 'Avril 2023',
       type: 'Type D',
       origine: 'Origine D',
@@ -52,9 +52,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-04-2023'
     },
     {
-      nom: 'Nikola Tesla',
+      nom: 'Salma MHADHBI',
       raisonSociale: 'Société E',
-      de: 'John Doe',
+      de: 'Propriétaire X',
       moisAnnee: 'Mai 2023',
       type: 'Type E',
       origine: 'Origine E',
@@ -63,9 +63,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-05-2023'
     },
     {
-      nom: 'Thomas Edison',
+      nom: 'Yassin BELHADJ',
       raisonSociale: 'Société F',
-      de: 'Jane Smith',
+      de: '',
       moisAnnee: 'Juin 2023',
       type: 'Type F',
       origine: 'Origine F',
@@ -74,9 +74,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-06-2023'
     },
     {
-      nom: 'Leonardo da Vinci',
+      nom: 'Arij BELHADJ',
       raisonSociale: 'Société G',
-      de: 'Bob Johnson',
+      de: 'Proriétaire Y',
       moisAnnee: 'Juillet 2023',
       type: 'Type G',
       origine: 'Origine G',
@@ -85,9 +85,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-07-2023'
     },
     {
-      nom: 'Galileo Galilei',
+      nom: 'Omar KAMMOUN',
       raisonSociale: 'Société H',
-      de: 'Alice Doe',
+      de: '',
       moisAnnee: 'Août 2023',
       type: 'Type H',
       origine: 'Origine H',
@@ -96,9 +96,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-08-2023'
     },
     {
-      nom: 'Galileo Galilei',
+      nom: 'Omar ABDELKADER',
       raisonSociale: 'Société H',
-      de: 'Alice Doe',
+      de: 'Propriétaire Z',
       moisAnnee: 'Août 2023',
       type: 'Type H',
       origine: 'Origine H',
@@ -107,9 +107,9 @@ export class DossiersInstanceComponent implements OnInit {
       dateModification: '02-08-2023'
     },
     {
-      nom: 'Galileo Galilei',
+      nom: 'Nour HASNAOUI',
       raisonSociale: 'Société H',
-      de: 'Alice Doe',
+      de: 'Propriétaire A',
       moisAnnee: 'Août 2023',
       type: 'Type H',
       origine: 'Origine H',

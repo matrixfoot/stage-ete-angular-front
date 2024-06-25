@@ -1,142 +1,167 @@
 .page-container {
   background-color: gray;
   padding: 20px;
+}
 
-  .top-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-    
-    .logo {
-      text-align: center;
-      flex: 1;
-      
-      img {
-        max-width: 250px; /* Adjust as necessary */
-      }
-    }
+.page-container .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
 
-    .quick-search {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
+.page-container .top-section .logo {
+  text-align: center;
+  flex: 1;
+}
 
-      input {
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-      }
-    }
-  }
+.page-container .top-section .logo img {
+  max-width: 250px; /* Adjust as necessary */
+}
 
-  .declarations-fiscales-en-cours-execution-container {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
+.page-container .top-section .quick-search {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
+.page-container .top-section .quick-search input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-      .search-bar {
-        input {
-          padding: 10px;
-          font-size: 16px;
-        }
-      }
+.page-container .declarations-fiscales-en-cours-execution-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
 
-      .title {
-        font-size: 24px;
-        font-weight: bold;
-        color: black;
-      }
+.page-container .declarations-fiscales-en-cours-execution-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-      .filter {
-        select {
-          padding: 10px;
-          font-size: 16px;
-        }
-      }
-    }
+.page-container .declarations-fiscales-en-cours-execution-container .header .search-bar input {
+  padding: 10px;
+  font-size: 16px;
+}
 
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
+.page-container .declarations-fiscales-en-cours-execution-container .header .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
+.page-container .declarations-fiscales-en-cours-execution-container .header .filter select {
+  padding: 10px;
+  font-size: 16px;
+}
 
-        th, td {
-          padding: 10px;
-          text-align: left;
-        }
+.page-container .declarations-fiscales-en-cours-execution-container .table-container {
+  width: 100%;
+  overflow-x: auto;
+}
 
-        thead {
-          th {
-            background-color: #f1f1f1;
-            color: gray;
-          }
-        }
+.page-container .declarations-fiscales-en-cours-execution-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-        tbody {
-          tr {
-            border-bottom: 1px solid #e0e0e0;
+.page-container .declarations-fiscales-en-cours-execution-container th,
+.page-container .declarations-fiscales-en-cours-execution-container td {
+  padding: 10px;
+  text-align: left;
+}
 
-            td {
-              color: black;
-            }
-          }
-        }
-      }
-    }
+.page-container .declarations-fiscales-en-cours-execution-container thead th {
+  background-color: #f1f1f1;
+  color: gray;
+}
 
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
+.page-container .declarations-fiscales-en-cours-execution-container tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
 
-      .info {
-        font-size: 14px;
-        color: gray;
-      }
+.page-container .declarations-fiscales-en-cours-execution-container tbody td {
+  color: black;
+}
 
-      .pagination {
-        button {
-          padding: 5px 10px;
-          margin: 0 5px;
-          font-size: 14px;
-          cursor: pointer;
+.page-container .declarations-fiscales-en-cours-execution-container .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
 
-          &:disabled {
-            cursor: not-allowed;
-            opacity: 0.5;
-          }
-        }
+.page-container .declarations-fiscales-en-cours-execution-container .footer .info {
+  font-size: 14px;
+  color: gray;
+}
 
-        span {
-          margin: 0 5px;
-          cursor: pointer;
+.page-container .declarations-fiscales-en-cours-execution-container .footer .pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-          &.active {
-            font-weight: bold;
-          }
-        }
-      }
-    }
-  }
+.page-container .declarations-fiscales-en-cours-execution-container .footer .pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 
+.page-container .declarations-fiscales-en-cours-execution-container .footer .pagination span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-container .declarations-fiscales-en-cours-execution-container .footer .pagination span.active {
+  font-weight: bold;
 }
 
 .searchIcon {
   max-width: 40px;
   margin-right: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .page-container .top-section {
+    flex-direction: column;
+  }
+
+  .page-container .top-section .logo img {
+    max-width: 200px; /* Adjust logo size for smaller screens */
+  }
+
+  .page-container .top-section .quick-search {
+    justify-content: flex-start;
+  }
+
+  .page-container .declarations-fiscales-en-cours-execution-container .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container .top-section .quick-search {
+    flex-direction: column;
+    align-items: stretch;
+
+    input {
+      margin-bottom: 10px;
+    }
+  }
+
+  .page-container .declarations-fiscales-en-cours-execution-container .table-container {
+    overflow-x: auto;
+  }
 }

@@ -1,12 +1,16 @@
-import { Component,Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-menu-lateral',
-  templateUrl: './menu-lateral.component.html',
-  styleUrls: ['./menu-lateral.component.scss']
+  selector: 'app-admin-dashboard',
+  templateUrl: './admin-dashboard.component.html',
+  styleUrls: ['./admin-dashboard.component.scss']
 })
-export class MenuLateralComponent {
-  @Input() isMenuOpen = false;
+export class AdminDashboardComponent implements OnInit {
+
+  ngOnInit() {
+    
+  }
+  isMenuOpen = false;
   sections = [
     {
       image:'../../assets/listeDossiers.png',

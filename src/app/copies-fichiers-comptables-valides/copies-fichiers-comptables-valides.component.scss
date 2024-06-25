@@ -1,156 +1,182 @@
 .page-container {
   background-color: gray;
   padding: 20px;
+}
 
-  .top-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-    
-    .logo {
-      text-align: center;
-      flex: 1;
-      
-      img {
-        max-width: 250px; /* Adjust as necessary */
-      }
-    }
+.page-container .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
 
-    .quick-search {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
+.page-container .top-section .logo {
+  text-align: center;
+  flex: 1;
+}
 
-      input {
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-      }
-    }
+.page-container .top-section .logo img {
+  max-width: 250px; /* Adjust as necessary */
+}
+
+.page-container .top-section .quick-search {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-container .top-section .quick-search input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.page-container .copies-fichiers-comptables-valides-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.page-container .copies-fichiers-comptables-valides-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-container .copies-fichiers-comptables-valides-container .header .search-bar input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.page-container .copies-fichiers-comptables-valides-container .header .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.page-container .copies-fichiers-comptables-valides-container .header .filter select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.page-container .copies-fichiers-comptables-valides-container .table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.page-container .copies-fichiers-comptables-valides-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page-container .copies-fichiers-comptables-valides-container th,
+.page-container .copies-fichiers-comptables-valides-container td {
+  padding: 10px;
+  text-align: left;
+}
+
+.page-container .copies-fichiers-comptables-valides-container thead th {
+  background-color: #f1f1f1;
+  color: gray;
+}
+
+.page-container .copies-fichiers-comptables-valides-container tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-container .copies-fichiers-comptables-valides-container tbody td {
+  color: black;
+}
+
+.page-container .copies-fichiers-comptables-valides-container tbody td .consulter-button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
   }
+}
 
-  .copies-fichiers-comptables-valides-container {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
+.page-container .copies-fichiers-comptables-valides-container .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
+.page-container .copies-fichiers-comptables-valides-container .footer .info {
+  font-size: 14px;
+  color: gray;
+}
 
-      .search-bar {
-        input {
-          padding: 10px;
-          font-size: 16px;
-        }
-      }
+.page-container .copies-fichiers-comptables-valides-container .footer .pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-      .title {
-        font-size: 24px;
-        font-weight: bold;
-        color: black;
-      }
+.page-container .copies-fichiers-comptables-valides-container .footer .pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 
-      .filter {
-        select {
-          padding: 10px;
-          font-size: 16px;
-        }
-      }
-    }
+.page-container .copies-fichiers-comptables-valides-container .footer .pagination span {
+  margin: 0 5px;
+  cursor: pointer;
+}
 
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-
-        th, td {
-          padding: 10px;
-          text-align: left;
-        }
-
-        thead {
-          th {
-            background-color: #f1f1f1;
-            color: gray;
-          }
-        }
-
-        tbody {
-          tr {
-            border-bottom: 1px solid #e0e0e0;
-
-            td {
-              color: black;
-            }
-
-            .consulter-button {
-              background-color: #007bff;
-              color: white;
-              font-weight: bold;
-              border: none;
-              padding: 8px 16px;
-              border-radius: 4px;
-              cursor: pointer;
-
-              &:hover {
-                background-color: #0056b3;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
-
-      .info {
-        font-size: 14px;
-        color: gray;
-      }
-
-      .pagination {
-        button {
-          padding: 5px 10px;
-          margin: 0 5px;
-          font-size: 14px;
-          cursor: pointer;
-
-          &:disabled {
-            cursor: not-allowed;
-            opacity: 0.5;
-          }
-        }
-
-        span {
-          margin: 0 5px;
-          cursor: pointer;
-
-          &.active {
-            font-weight: bold;
-          }
-        }
-      }
-    }
-  }
-
+.page-container .copies-fichiers-comptables-valides-container .footer .pagination span.active {
+  font-weight: bold;
 }
 
 .searchIcon {
   max-width: 40px;
   margin-right: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .page-container .top-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-container .top-section .logo {
+    margin-bottom: 10px;
+  }
+
+  .page-container .top-section .quick-search {
+    justify-content: flex-start;
+  }
+
+  .page-container .copies-fichiers-comptables-valides-container .header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container .top-section .quick-search {
+    flex-direction: column;
+    align-items: stretch;
+
+    input {
+      margin-bottom: 10px;
+    }
+  }
+
+  .page-container .copies-fichiers-comptables-valides-container .table-container {
+    overflow-x: auto;
+  }
 }

@@ -1,11 +1,11 @@
 .sidebar {
-  width: 250px;
+  width: 300px;
   background-color: #f8f9fa;
   color: black;
   position:fixed; 
   top: 95px; 
   left: 0;
-  height: calc(100% - 50px); 
+  height: calc(100% - 100px); 
   overflow-y: auto;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -37,6 +37,23 @@
           color: #2f80ed; 
           background-color: #eeeeee;
         }
+        a {
+            display: block;
+            padding: 5px 10px;
+            color: black;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+              background-color: #eeeeee;
+              color: #2f80ed;
+            }
+
+            &.active-link {
+              background-color: #2f80ed;
+              color: white;
+            }
+          }
       }
 
       ul {
@@ -75,4 +92,25 @@
   top: 2px; 
   left: 15px; 
   z-index: 1000; 
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+
+  .menuLateralImage {
+    width: 40px; /* Adjust icon size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px; /* Adjust width for even smaller screens */
+  }
+
+  .menuLateralImage {
+    width: 30px; /* Adjust icon size for even smaller screens */
+  }
 }

@@ -1,11 +1,16 @@
+<div  clickOutside (clickOutside)="clickedOutsideMenu();">
 <img src="../../assets/menu.png" (click)="toggleSidebar()" alt="Toggle Menu" class="menuLateralImage">
-<div class="sidebar" [ngClass]="{'sidebar-open': isMenuOpen}" style="font-weight: 600;">
+<div class="sidebar" [ngClass]="{'sidebar-open': isMenuOpen}" style="font-weight: 600;" >
   <ul>
     <li *ngFor="let section of sections" (click)="toggleSection(section)">
-      <div class="section-title" [ngClass]="{'section-open': section.isOpen}">{{ section.title }}</div>
+      <div class="section-title" [ngClass]="{'section-open': section.isOpen}" ><img src={{section.image}} alt="" style="width:25px;margin-right: 2%;"> {{ section.title }}</div>
       <ul [ngClass]="{'open': section.isOpen}">
-        <li *ngFor="let subSection of section.subSections" [ngClass]="{'visible': section.isOpen}">{{ subSection }}</li>
+        <li *ngFor="let subSection of section.subSections" [ngClass]="{'visible': section.isOpen}">
+          <a [routerLink]="getRouterLink(subSection)" routerLinkActive="active-link">{{ subSection }}</a>
+        </li>
       </ul>
     </li>
   </ul>
 </div>
+</div>
+

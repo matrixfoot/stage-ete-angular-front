@@ -22,7 +22,7 @@
       
       <div class="filter">
         <label for="tri">Trié par: &nbsp;</label>
-        <select id="tri">
+        <select id="tri" [(ngModel)]="selectedSortOption" (change)="sortDossiers()">
           <option value="date">Date</option>
           <option value="type">Type</option>
           <option value="statut">Statut</option>

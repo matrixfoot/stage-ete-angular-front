@@ -184,3 +184,118 @@
   }
 }
 
+.sidebar {
+  border-radius: 15px;
+  width: 33%;
+  background-color: #f8f9fa;
+  color: black;
+  top: 95px; 
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+
+  &.sidebar-open {
+    transform: translateX(0);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10% 0;
+
+    li {
+
+      .section-title {
+        border-radius: 25px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #eeeeee;
+          color: #2f80ed;
+        }
+
+        &.section-open {
+          color: #2f80ed; 
+          background-color: #eeeeee;
+        }
+        a {
+            display: block;
+            padding: 5px 10px;
+            color: black;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+              background-color: #eeeeee;
+              color: #2f80ed;
+            }
+
+            &.active-link {
+              background-color: #2f80ed;
+              color: white;
+            }
+          }
+      }
+
+      ul {
+        padding-left: 20px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+
+        &.open {
+          max-height: 500px; /* Adjust max-height as needed */
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        li {
+          padding: 5px 0;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+          transform: translateY(-20px);
+          opacity: 0;
+
+          &.visible {
+            transform: translateY(0);
+            opacity: 1;
+            color: #2f80ed;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menuLateralImage {
+  width: 50px;
+  cursor: pointer;
+  position: relative;
+  top: 2px; 
+  left: 15px; 
+  z-index: 1000; 
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+
+  .menuLateralImage {
+    width: 40px; /* Adjust icon size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px; /* Adjust width for even smaller screens */
+  }
+
+  .menuLateralImage {
+    width: 30px; /* Adjust icon size for even smaller screens */
+  }
+}

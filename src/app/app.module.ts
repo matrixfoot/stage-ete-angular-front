@@ -54,8 +54,7 @@ import { CandidaturesValideesComponent } from './candidatures-validees/candidatu
 import { CandidaturesEnCoursExecutionComponent } from './candidatures-en-cours-execution/candidatures-en-cours-execution.component';
 import { ReclamationsTraiteesComponent } from './reclamations-traitees/reclamations-traitees.component';
 import { ReclamationsEnCoursComponent } from './reclamations-en-cours/reclamations-en-cours.component';
-import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
-import { ChartsModule } from 'ng2-charts';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -104,7 +103,7 @@ import { ChartsModule } from 'ng2-charts';
     CandidaturesEnCoursExecutionComponent,
     ReclamationsTraiteesComponent,
     ReclamationsEnCoursComponent,
-    StatistiquesDetailleesComponent
+    AdminDashboardComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -114,8 +113,7 @@ import { ChartsModule } from 'ng2-charts';
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     ReactiveFormsModule,
-    FormsModule,
-    ChartsModule
+    FormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' }
