@@ -1,0 +1,45 @@
+<h1>Liste Des Impôts à Déclarer:</h1>
+<div class="checkbox-group">
+    <div class="checkbox-container" [class.checked]="selectedCheckbox === 0" (click)="toggleCheckbox(0)">
+        <div class="custom-checkbox">
+            <span class="checkmark" *ngIf="checkboxStates[0]">✔</span>
+        </div>
+        <label>Retenue à la source</label>
+    </div>
+    <div class="checkbox-container" [class.checked]="selectedCheckbox === 1" (click)="toggleCheckbox(1)">
+        <div class="custom-checkbox">
+            <span class="checkmark" *ngIf="checkboxStates[1]">✔</span>
+        </div>
+        <label>TFP</label>
+    </div>
+    <div class="checkbox-container" [class.checked]="selectedCheckbox === 2" (click)="toggleCheckbox(2)">
+        <div class="custom-checkbox">
+            <span class="checkmark" *ngIf="checkboxStates[2]">✔</span>
+        </div>
+        <label>Foprolos</label>
+    </div>
+    <div class="checkbox-container" [class.checked]="selectedCheckbox === 3" (click)="toggleCheckbox(3)">
+        <div class="custom-checkbox">
+            <span class="checkmark" *ngIf="checkboxStates[3]">✔</span>
+        </div>
+        <label>TVA</label>
+    </div>
+    <div class="checkbox-container" [class.checked]="selectedCheckbox === 4" (click)="toggleCheckbox(4)">
+        <div class="custom-checkbox">
+            <span class="checkmark" *ngIf="checkboxStates[4]">✔</span>
+        </div>
+        <label>Droit de timbre</label>
+    </div>
+    <div class="checkbox-container" [class.checked]="selectedCheckbox === 5" (click)="toggleCheckbox(5)">
+        <div class="custom-checkbox">
+            <span class="checkmark" *ngIf="checkboxStates[5]">✔</span>
+        </div>
+        <label>TCL</label>
+    </div>
+</div> 
+
+<div class="dynamic-component-container">
+  <ng-template #dynamicComponentContainer></ng-template>
+  
+</div>
+ 

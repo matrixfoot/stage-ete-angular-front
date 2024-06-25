@@ -1,0 +1,44 @@
+  
+ 
+ <div class="contenu">
+    <div class="container" *ngIf="showChoicesContainer">
+      <label class="R" for="choices">Choix:</label>
+      <select id="choices" name="choices" (change)="onChoiceChange($event)">
+        <option value="" selected disabled hidden>-- Sélectionnez un choix --</option>
+        <option *ngFor="let choice of availableChoices" [value]="choice.value">{{ choice.label }}</option>
+      </select>
+    </div>
+  
+    <div *ngIf="selectedChoice === 'option1'">
+      <div class="marron">
+      <app-retenue-source></app-retenue-source>
+      <app-plus></app-plus>
+      
+    </div>
+    </div>
+    <div *ngIf="selectedChoice === 'option2'">
+       <app-loyer></app-loyer>
+       <app-plus></app-plus>
+        
+    </div>
+    <div *ngIf="selectedChoice === 'option3'">
+      <app-horaire></app-horaire>
+      <app-plus></app-plus>
+      
+  
+    </div>
+    <div *ngIf="selectedChoice === 'option4'">
+      <app-montant></app-montant>
+      <app-plus></app-plus>
+      
+    </div>
+    <div *ngIf="selectedChoice === 'option5'">
+      <app-rubrique></app-rubrique>
+      <app-plus></app-plus>
+        
+    </div>
+      <div >
+      <app-partie-commune></app-partie-commune>
+    </div>
+     
+   

@@ -1,0 +1,19 @@
+ 
+   <div *ngIf="showSoumistvaa"></div> <div class="rubrique">
+        <h2>Rubrique {{ rubriqueNumber }} :</h2>        
+          <label for="titre" class="lab2">titre :</label>
+          <input id="titre" type="text" placeholder="désignation montant" class="inp2">
+      
+        
+          <label for="montant" class="lab3">Montant :</label>
+          <input id="montant" type="text" placeholder="0.000" class="inp3">
+        
+          <label for="description" class="lab4">Description:</label>
+          <textarea id="description" placeholder="décrivez ce montant" class="inp4"></textarea>
+        </div>
+        <button class="add-button" (click)="showSoumistvaComponent()"  >ajouter montant</button>
+        <button class="delete-button"   (click)="deleteRubrique()"  >supprimer montant</button>
+        <div *ngIf="showSoumistva" class="r">
+            <app-rub [rubriqueNumber]="rubriqueCount"></app-rub>
+          </div>
+        
