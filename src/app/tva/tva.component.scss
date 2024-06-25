@@ -1,0 +1,277 @@
+h1
+{
+    font-weight:bolder;
+    margin-left: 11%;
+    font-size: 1.2vw;
+    margin-bottom: 3%;
+padding-top: 2.5%;
+}
+ 
+.traitement {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1%;
+    margin-left: 8%;
+  }
+  
+  .input-group1,.input-group2  {
+     
+    display: flex;
+    align-items: center;
+    margin-right: 18%;
+    width: 35%;
+    }
+    .input-group0  {
+     
+        display: flex;
+        align-items: center;
+        margin-right: 18%;
+        width: 35%;
+        }
+  .lab1  {
+    color: black;
+    margin-right: -11%;
+    margin-left: 9%;
+    font-size: 1vw;
+    white-space: nowrap;
+    font-weight: bold;
+    width: 40%;
+
+  }
+  .lab2 {
+    color: black;
+    margin-right: 7%;
+    margin-left: -23%;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+   
+  } .lab3 {
+    color: black;
+    margin-right: -11%;
+    margin-left:9%;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+  }
+  .lab4 {
+    color: black;
+    margin-right: 7%;
+    margin-left: -23%;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+  }
+  .inp1{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 27%;
+    width: 33.5%;
+    height: 3.5vh;
+  } .inp2{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 2%;
+    width: 33.5%;
+  }
+  .inp3{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 27%;
+    width: 33%;
+    height: 3.5vh;
+
+  }
+  .inp4{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color:black  ;background-color: transparent;
+    width: 33.5%;
+    margin-left: 2%;
+  }
+  .tooltip-text {
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 1;
+    width: 20%;
+    
+  }
+  
+  .input-group1,
+  .input-group2 ,.input-group0 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input-group1:hover .tooltip-text,
+  .input-group2:hover .tooltip-text , .input-group0:hover .tooltip-text{
+    display: block;
+  }
+  .input-group0
+  {
+    margin-left:8%;
+    padding-top: 2%;
+  }
+  .all {
+    margin: 20px;
+  }
+  
+  .traitement {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1%;
+    margin-left: 8%;
+  }
+  
+  .input-group1,
+  .input-group2 {
+    display: flex;
+    align-items: center;
+    margin-right: 18%;
+    width: 35%;
+  }
+  
+  .lab1 {
+    color: grey;
+    margin-right: -11%;
+    margin-left: 9%;
+    font-size: 1vw;
+    white-space: nowrap;
+     
+    width: 40%;
+  }
+  
+  .lab2 {
+    color: grey;
+    margin-right: 7%;
+    margin-left: -23%;
+    font-size: 1vw;
+    
+    width: 40%;
+    white-space: nowrap;
+  }
+  
+  .lab3 {
+    color: grey;
+    margin-right: -11%;
+    margin-left: 9%;
+    font-size: 1vw;
+   
+    width: 40%;
+    white-space: nowrap;
+  }
+  
+  .lab4 {
+    color: grey;
+    margin-right: 7%;
+    margin-left: -23%;
+    font-size: 1vw;
+    
+    width: 40%;
+    white-space: nowrap;
+  }
+  
+  .inp1,
+  .inp2,
+  .inp3,
+  .inp4 {
+    border-radius: 0.5vw;
+    border-style: solid;
+    border-color: black;
+    background-color: transparent;
+    width: 33.5%;
+    height: 3.5vh;
+  }
+  
+  .tooltip-text {
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 1;
+    width: 200px;
+    top: -5px;
+    left: 105%;
+  }
+  
+  .tooltip-container {
+    position: relative;
+  }
+  
+  .tooltip-container input:hover + .tooltip-text {
+    display: block;
+  }
+  
+  table {
+    width: 73%;
+    border-collapse: collapse;
+    margin-left: 10%;
+    font-size: 18px;
+    text-align: left;
+  
+    th {
+      background-color: #004d00; /* Green background for header */
+      color: white;
+      text-align: center;
+      padding: 1%;
+      border: 1px solid #ddd;
+      height: 15px;
+    }
+  
+    th[colspan="2"] {
+      text-align: center; /* Center-align column headers */
+    }
+  
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+      width: 5%;
+    }
+  
+    td:first-child {
+      text-align: left; /* Align first column's text to the left */
+    }
+  
+    input {
+      width: 100px;
+      padding: 5px;
+      text-align: right;
+    }
+  
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2; /* Light grey background for even rows */
+    }
+  }
+  .dec
+  {
+    margin-left: 71%;
+    margin-top: 6%;
+    height: 1.7%;
+    width: 1.9%;
+  }
+  .plus
+  {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1vw;
+    margin-left: 1%;
+    
+    margin-left: 75%;
+    margin-top: -1.9%;
+  }

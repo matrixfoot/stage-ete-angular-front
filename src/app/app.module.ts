@@ -2,14 +2,19 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { AppRoutingModule } from './app-routing.module';
+ 
+import { MaterialModule } from './material/material.module';
+import { CompleteComponent } from './complete/complete.component';
+import { ModifyPComponent } from './modify-p/modify-p.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+ 
+ 
+ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { CalendarComponent } from './calendar/calendar.component';
-import { HomeComponent } from './home/home.component';
-import { ModiEventComponent } from './modi-event/modi-event.component';
+ import { ModiEventComponent } from './modi-event/modi-event.component';
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -55,11 +60,30 @@ import { CandidaturesEnCoursExecutionComponent } from './candidatures-en-cours-e
 import { ReclamationsTraiteesComponent } from './reclamations-traitees/reclamations-traitees.component';
 import { ReclamationsEnCoursComponent } from './reclamations-en-cours/reclamations-en-cours.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { DeclarationFiscaleComponent } from './declaration-fiscale/declaration-fiscale.component';
+ import { DeclarationmensuelleComponent } from './declarationmensuelle/declarationmensuelle.component';
+import { ListeComponent } from './liste/liste.component';
+import { RetenueSourceComponent } from './retenue-source/retenue-source.component';
+import { SelectComponent } from './select/select.component';
+import { PartieCommuneComponent } from './partie-commune/partie-commune.component';
+import { LoyerComponent } from './loyer/loyer.component';
+import { HoraireComponent } from './horaire/horaire.component';
+import { MontantComponent } from './montant/montant.component';
+import { RubriqueComponent } from './rubrique/rubrique.component';
+import { TFPComponent } from './tfp/tfp.component';
+import { FoprolosComponent } from './foprolos/foprolos.component';
+import { TVAComponent } from './tva/tva.component';
+import { TclComponent } from './tcl/tcl.component';
+import { TimbreComponent } from './timbre/timbre.component';
+import { SoutenutvaComponent } from './soutenutva/soutenutva.component';
+import { PlusComponent } from './plus/plus.component';
+import { PlustvaComponent } from './plustva/plustva.component';
+import { RubComponent } from './rub/rub.component';
+import { Select1Component } from './select1/select1.component';
 @NgModule({
   declarations: [
     AppComponent,
     CalendarComponent,
-    HomeComponent,
     AboutComponent,
     AjouterEventComponent,
     ProfilComponent,
@@ -104,16 +128,21 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     ReclamationsTraiteesComponent,
     ReclamationsEnCoursComponent,
     AdminDashboardComponent,
+    AppComponent,
+    CalendarComponent,
+    ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent,
+     ComptabiliteComponent, DeclarationFiscaleComponent,  DeclarationmensuelleComponent, ListeComponent, RetenueSourceComponent,PlusComponent,
+      SelectComponent, PartieCommuneComponent, LoyerComponent, HoraireComponent, MontantComponent, RubriqueComponent, Select1Component,
+      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component,    
   ],
   imports: [
-    ReactiveFormsModule,
-    CommonModule,
+    
     BrowserModule,
     BrowserAnimationsModule ,
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule, MatSnackBarModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' }
@@ -121,3 +150,12 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<h1>TFP:</h1>
+
+<div class="all">
+  <div class="traitement">
+    <div class="input-group1">
+      <label for="input1" class="lab1">Salaires Non Soumis TFP</label>
+      <input id="input1" class="inp1" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="Montant en Dt et 3 chiffres après la virguille ">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input2" class="lab2">Taux</label>
+      <input id="input2" class="inp2" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <div class="traitement">
+    <div class="input-group1">
+      <label for="input3" class="lab3">Montant de l'avance</label>
+      <input id="input3" class="inp3" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="2%">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input4" class="lab4">TFP à payer</label>
+      <input id="input4" class="inp4" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0 ">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <div class="traitement">
+    <div class="input-group1">
+      <label for="input5" class="lab1">Base de la TFP</label>
+      <input id="input5" class="inp1" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input6" class="lab2">Montant de la TFP du mois</label>
+      <input id="input6" class="inp2" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <div class="traitement">
+    <div class="input-group1">
+      <label for="input7" class="lab3">Report de TFP du mois précédent</label>
+      <input id="input7" class="inp3" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input8" class="lab4">TFP à reporter</label>
+      <input id="input8" class="inp4" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"   data-tooltip="Montant en Dt et 3 chiffres après la virguille ">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <app-partie-commune></app-partie-commune>
+</div>

@@ -1,34 +1,36 @@
-<div class="section">
-  <div class="container">
-          <div class="column1">
-                                <div class="item">
-                                  <div class="cadre"   [ngClass]="{'enlarged': isColumn1Enlarged}" (click)="toggleColumn1()">
-                                                 
-                                                    <div class="description1">                            déclarations fiscales générées manuellement</div>
-                                                    <img src="../assets/Icon pack.png" class="icon1" width="7%" height="7%"    >
-                                                    <a class="show-button" *ngIf="isColumn1Enlarged" routerLink="/fisc">liste des déclarations</a>
-
-                                   </div>
-                                   <div class="imm">
-                               
-                                <img loading="lazy"  src="../assets/6.png" class="image-secondary"  width="40%" height="40%" /></div>
-                                </div>
-                             
-        </div>
-          <div class="column2">
-
-                            <div class="item">
-                                                                    <div class="cadre"  [ngClass]="{'enlarged': isColumn2Enlarged}" (click)="toggleColumn2()"  >
-                                                                     
-                                                                    <div class="description2">                            maquettes de génération de déclarations fiscales</div>
-                                                                    <img src="../assets/Icon pack.png" class="icon2" width="7%" height="7%"   >
-                                                                    
-                                                                    <a class="show-button"  *ngIf="isColumn2Enlarged" routerLink="/comptab"> liste de fichiers comptables</a>
-
-                                                                  </div>
-                         
-                            <img loading="lazy"  src="../assets/comptabilite.png"  class="image-secondary2"  width="40%" height="40%">
-                            </div>
-        </div>
-        </div>
+ 
+    <div class="section">
+      <div class="container">
+              <div class="column1">
+                                    <div class="item">
+                                      <div class="cadre"   [ngClass]="{'enlarged': isColumn1Enlarged}" (click)="toggleColumn1()">
+                                        <div class="container">
+                                                        <div class="description1">                            déclarations fiscales générées manuellement</div>
+                                                        <img src="../assets/Icon pack.png" class="icon1" width="7%" height="7%"    >
+                                                        <a class="show-button" *ngIf="isColumn1Enlarged" routerLink="/fisc">liste des déclarations</a>
 </div>
+                                       </div>
+                                       <div class="imm">
+                                   
+                                    <img loading="lazy"  src="../assets/6.png" class="image-secondary"  width="40%" height="40%" /></div>
+                                    </div>
+                                 
+            </div>
+              <div class="column2">
+
+                                <div class="item">
+                                                                        <div class="cadre"  [ngClass]="{'enlarged': isColumn2Enlarged}" (click)="toggleColumn2()"  >
+                                                                          <div class="container">  
+                                                                        <div class="description2">                            maquettes de génération de déclarations fiscales</div>
+                                                                        <img src="../assets/Icon pack.png" class="icon2" width="7%" height="7%"   >
+                                                                     
+                                                                        <a class="show-button"  *ngIf="isColumn2Enlarged" routerLink="/comptab"> liste de fichiers comptables</a>
+                                                                      </div>
+                                                                      </div>
+                             
+                                <img loading="lazy"  src="../assets/comptabilite.png"  class="image-secondary2"  width="40%" height="40%">
+                                </div>
+            </div>
+            </div>
+    </div>
+ 

@@ -1,0 +1,28 @@
+<div *ngIf="selectedIndex !== -1" class="selected-label">
+    <div class="checkbox-container"  >
+    <div class="custom-checkbox"  [class.checked]="checkboxStates[selectedIndex]">
+        <span *ngIf= "checkboxStates[selectedIndex]"  class="checkmark">✔</span>
+      </div>
+      <label class="l"> {{ labels[selectedIndex] }}</label>
+    
+  </div>
+  <div class="an">
+    <label for="annee" class="lan"> sélectionner une année :</label>
+    <select id="annee"        class="optionan"            [(ngModel)]="selectedYear">
+      <option  *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select>
+  </div>
+  
+  <div class="mois">
+    <label  class="Lmois" for="mois"> sélectionner un moix  :</label>
+    <select id="mois" class="option"   [(ngModel)]="selectedMonth">
+      <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+    </select>
+  </div>
+  <div class="question">
+    Comment voulez vous établir votre déclaration?
+  </div>
+  <div class="div-19">
+    <button class="btn1" routerLink="/liste">manuellement </button>
+    <button class="btn2">façon guidée</button>
+  </div>

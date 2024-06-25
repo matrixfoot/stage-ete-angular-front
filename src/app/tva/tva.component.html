@@ -1,0 +1,77 @@
+<div class="input-group0">
+    <label for="input1" class="lab1">Chiffres d'affaires HT</label>
+    <input id="input1" class="inp1" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="Montant en Dt et 3 chiffres après la virguille">
+    <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+</div>
+<h1>TVA Collecté</h1>
+
+<div class="all">
+  <div class="traitement">
+    <div class="input-group1">
+      <label for="input1" class="lab1">Chiffres d'affaires HT</label>
+      <input id="input1" class="inp1" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="Montant en Dt et 3 chiffres après la virguille">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input2" class="lab2">Taux</label>
+      <input id="input2" class="inp2" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <div class="traitement">
+    <div class="input-group1">
+      <label for="input3" class="lab3">Montant TVA</label>
+      <input id="input3" class="inp3" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input4" class="lab4">Chiffre d'affaire TTC</label>
+      <input id="input4" class="inp4" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"  data-tooltip="Montant en Dt et 3 chiffres après la virguille">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <h1> TVA récupérable </h1>
+  <div class="all">
+    <table>
+        <thead>
+          <tr>
+            <th rowspan="2"></th>
+            <th colspan="2">Achats locaux</th>
+            <th colspan="2">Achats importés</th>
+          </tr>
+          <tr>
+            <th>Hors Taxes</th>
+            <th>TVA</th>
+            <th>Hors Taxes</th>
+            <th>TVA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Achat Équipements</td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+          </tr>
+          <tr>
+            <td>Autre Achats</td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+          </tr>
+          <tr>
+            <td>Achats Immobiliers</td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+            <td><input type="text" data-tooltip="Montant en Dt et 3 chiffres après la virguille" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<app-plustva></app-plustva>

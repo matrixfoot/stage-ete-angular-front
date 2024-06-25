@@ -1,0 +1,126 @@
+.checkbox-container {
+    display: flex;
+    align-items: center;
+   
+    margin-bottom: 1%;
+    user-select: none; /* Prevent text selection */
+    outline: none; /* Remove focus outline */
+  }
+  .custom-checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid #00b5ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #fff;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .custom-checkbox.checked {
+    background-color: #00b5ad;
+    border-color: #00b5ad;
+  }
+  
+  .custom-checkbox .checkmark {
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1;
+  }
+  
+  label {
+    font-size: 1.3vw;
+    color: #5570F1;
+    font-weight: 420;
+  }
+  .selected-label
+  {
+    margin-left: 38%;
+    margin-top: 6%;
+    text-align: center;
+  }
+  .an 
+  {
+    margin-left: -123%;
+    margin-top: 8%;
+  }
+  .mois
+  {
+    margin-right: 23%;
+    margin-top: -3%;
+  }
+  .option
+  {
+    width: 88px;
+    height: 25px;
+  }
+  .optionan
+  {
+    height: 25px;
+  }
+  .l 
+  {
+    color: black;
+  }
+  .question
+  {
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2vw;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-top: 15%;
+    margin-left: -68%;
+  }
+  .div-19 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 21%;
+    margin-left: -30%;
+  }
+  
+  .btn1,
+  .btn2 {
+    
+    
+    color: black; /* Texte en blanc */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; /* Ajoutez le border-radius */
+    font-size: 0.7rem; /* Ajustez la taille de la police selon vos besoins */
+    cursor: pointer;
+    width: 14%; 
+    text-align: center;;
+    
+  }
+  
+  /* Styles spécifiques pour les boutons */
+  .btn1 {
+    background-color: red;
+    margin-left: 28%;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-right: -71%;
+  }
+  
+  .btn2 {
+    background-color: blue; /* Bouton "Ajouter" en bleu */
+    margin-right:27%;
+    padding-right: 1.1%;
+    padding-left: 1.1%;
+    padding-top: 1.1%;
+    padding-bottom: 1.1%;
+  
+  }
+  
+  /* Ajoutez de l'espace fixe entre les boutons */
+  .btn1 + .btn2 {
+    margin-left: 20px; /* Ajustez cette valeur selon la distance souhaitée */
+  }
