@@ -36,7 +36,7 @@ export class ListeComponent {
     let componentFactory;
     switch (index) {
       case 0:
-        componentFactory = this.resolver.resolveComponentFactory(SelectComponent);
+        componentFactory = this.resolver.resolveComponentFactory(Select1Component);
         break;
       case 1:
         componentFactory = this.resolver.resolveComponentFactory(TFPComponent);

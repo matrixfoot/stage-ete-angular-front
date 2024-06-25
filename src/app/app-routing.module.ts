@@ -8,7 +8,7 @@ import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ModiEventComponent } from './modi-event/modi-event.component';
 import { PourquoiComponent } from './pourquoi/pourquoi.component';
- 
+ import { Select1Component } from './select1/select1.component';
 import { CompleteComponent } from './complete/complete.component';
 import { ModifyPComponent } from './modify-p/modify-p.component';
  
@@ -45,6 +45,7 @@ const routes: Routes = [
   {path : 'pourquoi', component : PourquoiComponent},
    {path : 'complete', component : CompleteComponent},
   {path : 'modifyP', component : ModifyPComponent},
+  {path : 'select1', component : Select1Component},
 
   
    
