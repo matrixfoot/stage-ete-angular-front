@@ -1,0 +1,44 @@
+.page-container {
+  background-color: gray;
+  padding: 20px;
+
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    .logo {
+      text-align: center;
+      flex: 1;
+
+      img {
+        max-width: 250px; /* Ajustez selon vos besoins */
+      }
+    }
+  }
+
+  .statistiques-detaillees-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .chart {
+      width: 45%;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      mat-card {
+        width: 100%;
+      }
+    }
+  }
+}

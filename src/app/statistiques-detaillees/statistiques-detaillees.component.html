@@ -1,0 +1,31 @@
+<div class="page-container">
+  <div class="top-section">
+    <app-menu-lateral></app-menu-lateral>
+    <div class="logo">
+      <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+    </div>
+    <div><h1>Statistiques détaillées</h1></div>
+  </div>
+
+  <div class="statistiques-detaillees-container">
+    <div class="chart">
+      <h2>Nombre de réclamations par statut</h2>
+      <mat-card>
+        <mat-card-content>
+          <mat-chart [type]="'bar'" [data]="barChartData" [options]="barChartOptions"></mat-chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="chart">
+      <h2>Nombre de factures par mois</h2>
+      <mat-card>
+        <mat-card-content>
+          <mat-chart [type]="'line'" [data]="lineChartData" [options]="lineChartOptions"></mat-chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
+  </div>
+</div>

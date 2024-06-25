@@ -1,0 +1,76 @@
+<div class="page-container">
+  <div class="top-section">
+    <app-menu-lateral></app-menu-lateral>
+    <div class="logo">
+      <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+    </div>
+    <div><h1>Tableau de bord administrateur</h1></div>
+    <div class="quick-search">
+      <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+      <input type="text" placeholder="Recherche rapide">
+    </div>
+  </div>
+  <div class="reclamations-en-cours-container">
+    <div class="header">
+      <div class="title">
+        Liste des réclamations en cours d'exécution
+      </div>
+      <div class="search-bar">
+        <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+        <input type="text" placeholder="Rechercher">
+      </div>
+      
+      <div class="filter">
+        <label for="tri">Trié par: &nbsp;</label>
+        <select id="tri">
+          <option value="dateCreation">Date et heure de création</option>
+          <option value="email">Email</option>
+          <option value="prenomNom">Prénom et Nom</option>
+          <option value="fichierJoint">Fichier joint</option>
+          <option value="mobile">Mobile</option>
+          <option value="description">Description</option>
+          <option value="statutAdmin">Statut Admin</option>
+          <option value="statutCollaborateur">Statut Collaborateur</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Date et heure de création</th>
+            <th>Email</th>
+            <th>Prénom et Nom</th>
+            <th>Fichier joint</th>
+            <th>Mobile</th>
+            <th>Description</th>
+            <th>Statut Admin</th>
+            <th>Statut Collaborateur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reclamation of paginatedReclamations">
+            <td>{{ reclamation.dateCreation }}</td>
+            <td>{{ reclamation.email }}</td>
+            <td>{{ reclamation.prenomNom }}</td>
+            <td>{{ reclamation.fichierJoint }}</td>
+            <td>{{ reclamation.mobile }}</td>
+            <td>{{ reclamation.description }}</td>
+            <td>{{ reclamation.statutAdmin }}</td>
+            <td>{{ reclamation.statutCollaborateur }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <div class="info">
+        {{ currentPage | displayRange: pageSize: totalReclamations }} 
+      </div>
+      <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+        <span *ngFor="let page of pages" (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">></button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<img src="../../assets/menu.png" (click)="toggleSidebar()" alt="Toggle Menu" class="menuLateralImage">
+<div class="sidebar" [ngClass]="{'sidebar-open': isMenuOpen}" style="font-weight: 600;">
+  <ul>
+    <li *ngFor="let section of sections" (click)="toggleSection(section)">
+      <div class="section-title" [ngClass]="{'section-open': section.isOpen}">{{ section.title }}</div>
+      <ul [ngClass]="{'open': section.isOpen}">
+        <li *ngFor="let subSection of section.subSections" [ngClass]="{'visible': section.isOpen}">{{ subSection }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
