@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { SelectionService } from '../selection.service';
 
 @Component({
-  selector: 'app-select',
+  selector: 'app-select1',
   templateUrl: './select1.component.html',
   styleUrls: ['./select1.component.scss']
 })

@@ -17,12 +17,15 @@ export class PlusComponent implements OnInit {
   storeLastChoice() {
     // Retrieve last selected choice from localStorage
     const lastSelectedChoice = localStorage.getItem('selectedChoice');
+    console.log('Image clicked');
 
     // Check if there's already a stored array or container in localStorage
     let storedChoices = JSON.parse(localStorage.getItem('storedChoices') || '[]');
 
     // Add the last selected choice to the stored choices array
-    storedChoices.push(lastSelectedChoice);
+    if (lastSelectedChoice) {
+      storedChoices.push(lastSelectedChoice);
+    }
 
     // Update localStorage with the new stored choices
     localStorage.setItem('storedChoices', JSON.stringify(storedChoices));

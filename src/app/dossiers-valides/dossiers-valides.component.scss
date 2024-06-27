@@ -1,0 +1,263 @@
+.page-container {
+  background-color: gray;
+  padding: 20px;
+}
+
+.page-container .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.page-container .top-section .logo {
+  text-align: center;
+  flex: 1;
+}
+
+.page-container .top-section .logo img {
+  max-width: 250px; /* Adjust as necessary */
+}
+
+.page-container .top-section .quick-search {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-container .top-section .quick-search input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.page-container .dossiers-execution-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.page-container .dossiers-execution-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-container .dossiers-execution-container .header .search-bar input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.page-container .dossiers-execution-container .header .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.page-container .dossiers-execution-container .header .filter select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.page-container .dossiers-execution-container .table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.page-container .dossiers-execution-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page-container .dossiers-execution-container th,
+.page-container .dossiers-execution-container td {
+  padding: 10px;
+  text-align: left;
+}
+
+.page-container .dossiers-execution-container thead th {
+  background-color: #f1f1f1;
+  color: gray;
+}
+
+.page-container .dossiers-execution-container tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-container .dossiers-execution-container tbody td {
+  color: black;
+}
+
+.page-container .dossiers-execution-container tbody td.action-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container .dossiers-execution-container tbody td.action-buttons button {
+  margin: 5px 0;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.page-container .dossiers-execution-container .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.page-container .dossiers-execution-container .footer .info {
+  font-size: 14px;
+  color: gray;
+}
+
+.page-container .dossiers-execution-container .footer .pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.page-container .dossiers-execution-container .footer .pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.page-container .dossiers-execution-container .footer .pagination span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-container .dossiers-execution-container .footer .pagination span.active {
+  font-weight: bold;
+}
+
+.consulter {
+  background-color: #16C098;
+  border-color: #008767;
+  color: #008767;
+  border-radius: 5px;
+}
+
+.modifier {
+  background-color: #FFC5C5;
+  color: #DF0404;
+  border-color: #DF0404;
+  border-radius: 5px;
+}
+
+.searchIcon {
+  max-width: 40px;
+  margin-right: 15px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .page-container .top-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-container .top-section .logo {
+    margin-bottom: 20px;
+  }
+
+  .page-container .top-section .quick-search {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .page-container .dossiers-execution-container .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-container .dossiers-execution-container .header .title {
+    margin-bottom: 10px;
+  }
+
+  .page-container .dossiers-execution-container .header .search-bar,
+  .page-container .dossiers-execution-container .header .filter {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .page-container .dossiers-execution-container .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-container .dossiers-execution-container .footer .pagination {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-container .top-section {
+    padding: 10px;
+  }
+
+  .page-container .dossiers-execution-container {
+    padding: 10px;
+  }
+
+  .page-container .top-section .quick-search input {
+    width: 100%;
+  }
+
+  .page-container .dossiers-execution-container .header .title {
+    font-size: 20px;
+  }
+
+  .page-container .dossiers-execution-container .footer .info {
+    margin-bottom: 10px;
+  }
+
+  .page-container .dossiers-execution-container .footer .pagination {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-container {
+    padding: 10px;
+  }
+
+  .page-container .top-section {
+    padding: 10px;
+  }
+
+  .page-container .dossiers-execution-container {
+    padding: 10px;
+  }
+
+  .page-container .top-section .quick-search input {
+    font-size: 14px;
+  }
+
+  .page-container .dossiers-execution-container .header .title {
+    font-size: 18px;
+  }
+
+  .page-container .dossiers-execution-container .header .search-bar input,
+  .page-container .dossiers-execution-container .header .filter select {
+    font-size: 14px;
+  }
+
+  .page-container .dossiers-execution-container .footer .info {
+    font-size: 12px;
+  }
+
+  .page-container .dossiers-execution-container .footer .pagination button {
+    font-size: 12px;
+  }
+}

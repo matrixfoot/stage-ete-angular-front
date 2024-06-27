@@ -10,7 +10,7 @@ export class RubComponent {
   showSoumistvaa: boolean = false; // Contrôle l'affichage du composant soumistva
   rubriqueNumber: number;
   static rubriqueCount: number =2; // Commence à partir de 1 pour le premier élément
-
+  showComponent: boolean = true;
   
   constructor() {
     this.rubriqueNumber = RubComponent.rubriqueCount;
@@ -23,5 +23,12 @@ export class RubComponent {
 
   deleteRubrique() {
     this.showSoumistvaa = false; // Masque le composant lorsque supprimé
+  }
+  ngOnInit(): void {
+    // Initialize component
+  }
+
+  deleteComponent() {
+    this.showComponent = false;
   }
 }

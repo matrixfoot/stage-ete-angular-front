@@ -1,0 +1,82 @@
+<div class="page-container">
+  <div class="top-section">
+    <app-menu-lateral></app-menu-lateral>
+    <div class="logo">
+      <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+    </div>
+    <div><h1>Tableau de bord administrateur</h1></div>
+    <div class="quick-search">
+      <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+      <input type="text" placeholder="Recherche rapide">
+    </div>
+  </div>
+  <div class="declarations-fiscales-en-cours-execution-container">
+    <div class="header">
+      <div class="title">
+        Liste des déclarations fiscales en cours d'exécution
+      </div>
+      <div class="search-bar">
+        <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+        <input type="text" placeholder="Rechercher">
+      </div>
+      
+      <div class="filter">
+        <label for="tri">Trié par: &nbsp;</label>
+        <select id="tri">
+          <option value="code">Code</option>
+          <option value="nature">Nature</option>
+          <option value="moisAnnee">Mois-Année</option>
+          <option value="prenomNom">Prénom et Nom</option>
+          <option value="origine">Origine</option>
+          <option value="statutAdmin">Statut Admin</option>
+          <option value="statutCollaborateur">Statut Collaborateur</option>
+          <option value="dateCreation">Date et heure de création</option>
+          <option value="dateModification">Date et heure de modification</option>
+          <option value="affecteA">Affecté à</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Nature</th>
+            <th>Mois-Année</th>
+            <th>Prénom et Nom</th>
+            <th>Origine</th>
+            <th>Statut Admin</th>
+            <th>Statut Collaborateur</th>
+            <th>Date et heure de création</th>
+            <th>Date et heure de modification</th>
+            <th>Affecté à</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let declaration of paginatedDeclarations">
+            <td>{{ declaration.code }}</td>
+            <td>{{ declaration.nature }}</td>
+            <td>{{ declaration.moisAnnee }}</td>
+            <td>{{ declaration.prenomNom }}</td>
+            <td>{{ declaration.origine }}</td>
+            <td>{{ declaration.statutAdmin }}</td>
+            <td>{{ declaration.statutCollaborateur }}</td>
+            <td>{{ declaration.dateCreation }}</td>
+            <td>{{ declaration.dateModification }}</td>
+            <td>{{ declaration.affecteA }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <div class="info">
+        {{ currentPage | displayRange: pageSize: totalDeclarations }}
+      </div>
+      <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+        <span *ngFor="let page of pages" (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">></button>
+      </div>
+    </div>
+  </div>
+</div>
