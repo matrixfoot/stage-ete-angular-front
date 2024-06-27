@@ -7,9 +7,9 @@ import { MaterialModule } from './material/material.module';
 import { CompleteComponent } from './complete/complete.component';
 import { ModifyPComponent } from './modify-p/modify-p.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
- 
- 
- import { AppRoutingModule } from './app-routing.module';
+import { ChartModule} from 'angular-highcharts';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
@@ -80,8 +80,13 @@ import { PlusComponent } from './plus/plus.component';
 import { PlustvaComponent } from './plustva/plustva.component';
 import { RubComponent } from './rub/rub.component';
 import { Select1Component } from './select1/select1.component';
+import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
+import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
+import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
+import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
 @NgModule({
   declarations: [
+    StatistiquesDetailleesComponent,
     AppComponent,
     CalendarComponent,
     AboutComponent,
@@ -133,10 +138,11 @@ import { Select1Component } from './select1/select1.component';
     ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent,
      ComptabiliteComponent, DeclarationFiscaleComponent,  DeclarationmensuelleComponent, ListeComponent, RetenueSourceComponent,PlusComponent,
       SelectComponent, PartieCommuneComponent, LoyerComponent, HoraireComponent, MontantComponent, RubriqueComponent, Select1Component,
-      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component,    
+      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component, StatistiquesDetailleesComponent, StatistiquesDernierMoisComponent, StatistiquesDernierJourComponent, ListeTransactionsComponent,    
   ],
   imports: [
-    
+    HighchartsChartModule,
+    ChartModule,
     BrowserModule,
     BrowserAnimationsModule ,
     AppRoutingModule,
