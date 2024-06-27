@@ -74,8 +74,15 @@ import { ViewDecompComponent } from './view-decomp/view-decomp.component';
  import { TimbreComponent } from './timbre/timbre.component';
  import { SoutenutvaComponent } from './soutenutva/soutenutva.component';
  import { PlusComponent } from './plus/plus.component';
-
+  import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
+  import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
+import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
+import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
 const routes: Routes = [
+  {path:'• Liste des transactions',component:ListeTransactionsComponent},
+  {path:'• Statistiques dernier jour',component:StatistiquesDernierJourComponent},
+  {path:'• Statistiques dernier mois',component:StatistiquesDernierMoisComponent},
+  {path:'• Statistiques détaillées',component:StatistiquesDetailleesComponent},
   {path:'adminDashboard',component:AdminDashboardComponent},
   {path:'• Réclamations en cours d\'execution',component:ReclamationsEnCoursComponent},
   {path:'• Réclamations traités',component:ReclamationsTraiteesComponent},

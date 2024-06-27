@@ -7,9 +7,9 @@ import { MaterialModule } from './material/material.module';
 import { CompleteComponent } from './complete/complete.component';
 import { ModifyPComponent } from './modify-p/modify-p.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
- 
- 
- import { AppRoutingModule } from './app-routing.module';
+import { ChartModule} from 'angular-highcharts';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
@@ -85,55 +85,13 @@ import { PlusComponent } from './plus/plus.component';
 import { PlustvaComponent } from './plustva/plustva.component';
 import { RubComponent } from './rub/rub.component';
 import { Select1Component } from './select1/select1.component';
+import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
+import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
+import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
+import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
 @NgModule({
   declarations: [
-    AppComponent,
-<<<<<<< HEAD
-    CalendarComponent,
-    AboutComponent,
-    AjouterEventComponent,
-    ProfilComponent,
-    ClickOutsideDirective,
-    DisconnectedHomeNavComponent,
-    DisconnectedNotHomeNavComponent,
-    ConnectedHomeNavComponent,
-    ConnectedNotHomeNavComponent,
-    NavbarSwitcherComponent,
-    FooterComponent,
-    UserBordComponent,
-    FiscalityComponent,
-    ComptabiliteComponent,
-    MenuLateralComponent,
-    DossiersInstanceComponent,
-    DossiersValidesComponent,
-    DossiersExecutionComponent,
-    DossiersOuvertsComponent,
-    DisplayRangePipe,
-    DsPasEncoreReglesComponent,
-    DsReglesComponent,
-    DsMarquesPayesComponent,
-    FacturePerformatComponent,
-    FactureRegleesComponent,
-    ClientsAvecImpayesComponent,
-    TousUtilisateursComponent,
-    UtilisateursConnectesComponent,
-    UtilisateursActifsComponent,
-    UtilisateursBloquesComponent,
-    ClientsSupprimesTemporairementComponent,
-    CollaborateursComponent,
-    ConsultantsComponent,
-    CandidatsComponent,
-    DeclarationsFiscalesValidesComponent,
-    DeclarationsFiscalesEnCoursExecutionComponent,
-    CopiesDeclarationsFiscalesValidesComponent,
-    FichiersComptablesValidesComponent,
-    FichiersComptablesEnCoursExecutionComponent,
-    CopiesFichiersComptablesValidesComponent,
-    CandidaturesValideesComponent,
-    CandidaturesEnCoursExecutionComponent,
-    ReclamationsTraiteesComponent,
-    ReclamationsEnCoursComponent,
-    AdminDashboardComponent,
+    StatistiquesDetailleesComponent,
     AppComponent,
     CalendarComponent,
     AboutComponent,
@@ -185,52 +143,11 @@ import { Select1Component } from './select1/select1.component';
     ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent,
      ComptabiliteComponent, DeclarationFiscaleComponent,  DeclarationmensuelleComponent, ListeComponent, RetenueSourceComponent,PlusComponent,
       SelectComponent, PartieCommuneComponent, LoyerComponent, HoraireComponent, MontantComponent, RubriqueComponent, Select1Component,
-      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component,    
-=======
-    HomeComponent,
-    AboutComponent,
-    ModiEventComponent,
-    AjouterEventComponent,
-    ProfilComponent,
-    ClickOutsideDirective,
-    DisconnectedHomeNavComponent,
-    DisconnectedNotHomeNavComponent,
-    ConnectedHomeNavComponent,
-    ConnectedNotHomeNavComponent,
-    NavbarSwitcherComponent,
-    FooterComponent,
-    AddCollabComponent,
-    CompleteComponent,
-    ModifyPComponent,
-    MUserAdminComponent,
-    AffichageFormComponent,
-    InclureParamComponent,CareerComponent,ContactComponent,UserBordComponent, ViewDecFiscComponent, PdfInterfaceComponent, ViewDecompComponent,
-    
-    ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent, ComptabiliteComponent,
-    CareerComponent,
-    ContactComponent,
-    CompleteComponent,
-    NavbarSwitcherComponent,
-    FooterComponent,
-    SaisieComptableComponent,
-    SaisieManuelComponent,
-    DisconnectedNotHomeNavComponent,
-    ConnectedNotHomeNavComponent,
-    DisconnectedHomeNavComponent,
-    ConnectedHomeNavComponent,
-    InclureParamComponent,
-    AddCollabComponent,
-    AffichageFormComponent,
-    MUserAdminComponent,
-    ModifyPComponent,
-    ClickOutsideDirective,
-    CollabBoardComponent,
-
->>>>>>> 0522e5838c2304c135efa976ae1d54645fd852ff
+      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component, StatistiquesDetailleesComponent, StatistiquesDernierMoisComponent, StatistiquesDernierJourComponent, ListeTransactionsComponent,    
   ],
   imports: [
-    ReactiveFormsModule,
-    CommonModule,
+    HighchartsChartModule,
+    ChartModule,
     BrowserModule,
     CommonModule,
     MaterialModule,
