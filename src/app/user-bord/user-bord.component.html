@@ -1,0 +1,1003 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <mat-card class="col-md-3 feature-card feature-background-1" *ngIf="decfiscmenss.length > 0 && user && usertype === 'Client'" (mouseenter)="hoverFeature = 'decfiscmenss'" (mouseleave)="hoverFeature = ''">
+      <mat-card-header>
+        <button mat-button (click)="collapse1 = !collapse1">
+          <mat-icon>assignment</mat-icon>
+          {{ user.regimefiscalimpot !== 'Forfait D\'assiette' ? 'Declarations fiscales' : 'Declarations fiscales générées manuellement' }}
+        </button>
+      </mat-card-header>
+      <mat-card-content *ngIf="collapse1">
+        <ul>
+          <li (click)="click7()">
+            <mat-icon>list</mat-icon>
+            <span class="badge">{{ decfiscmensnumber }}</span> Liste des déclarations
+          </li>
+        </ul>
+      </mat-card-content>
+      <mat-card-footer *ngIf="hoverFeature === 'decfiscmenss'">
+        <p>Gérez vos déclarations fiscales efficacement.</p>
+      </mat-card-footer>
+    </mat-card>
+
+    <mat-card class="col-md-3 feature-card feature-background-2" *ngIf="deccomptabilites.length > 0 && user && usertype === 'Client'" (mouseenter)="hoverFeature = 'deccomptabilites'" (mouseleave)="hoverFeature = ''">
+      <mat-card-header>
+        <button mat-button (click)="collapse2 = !collapse2">
+          <mat-icon>folder</mat-icon>
+          {{ user.regimefiscalimpot !== 'Forfait D\'assiette' ? 'Fichiers comptables' : 'Maquettes de génération des déclarations fiscales' }}
+        </button>
+      </mat-card-header>
+      <mat-card-content *ngIf="collapse2">
+        <ul>
+          <li (click)="click6()">
+            <mat-icon>list</mat-icon>
+            <span class="badge">{{ deccomptabilitenumber }}</span> Liste des fichiers comptables
+          </li>
+        </ul>
+      </mat-card-content>
+      <mat-card-footer *ngIf="hoverFeature === 'deccomptabilites'">
+        <p>Accédez et gérez vos fichiers comptables.</p>
+      </mat-card-footer>
+    </mat-card>
+
+    <mat-card class="col-md-3 feature-card feature-background-3" *ngIf="getalldsuser()[1] > 0 && usertype === 'Client'" (mouseenter)="hoverFeature = 'demandesDeServices'" (mouseleave)="hoverFeature = ''">
+      <mat-card-header>
+        <button mat-button (click)="collapse3 = !collapse3">
+          <mat-icon>assignment_turned_in</mat-icon>
+          <span class="badge bg-danger">{{ getalldsuser()[1] }}</span> Liste des demandes de services
+        </button>
+      </mat-card-header>
+      <mat-card-content *ngIf="collapse3">
+        <ul>
+          <li (click)="click8()">
+            <mat-icon>hourglass_empty</mat-icon>
+            <span class="badge bg-danger">{{ getalldsusernonpaye()[1] }}</span> Liste des demandes de services pas encore réglées
+          </li>
+          <li (click)="click9()">
+            <mat-icon>check_circle</mat-icon>
+            <span class="badge bg-danger">{{ getalldsuserpaye()[1] }}</span> Liste des demandes de services réglées
+          </li>
+        </ul>
+      </mat-card-content>
+      <mat-card-footer *ngIf="hoverFeature === 'demandesDeServices'">
+        <p>Suivez vos demandes de services et leur statut.</p>
+      </mat-card-footer>
+    </mat-card>
+
+    <mat-card class="col-md-3 feature-card feature-background-4" *ngIf="invoices.length > 0 && usertype === 'Client'" (mouseenter)="hoverFeature = 'factures'" (mouseleave)="hoverFeature = ''">
+      <mat-card-header>
+        <button mat-button (click)="collapse4 = !collapse4">
+          <mat-icon>receipt</mat-icon>
+          <span class="badge bg-danger">{{ invoices.length }}</span> Liste des factures
+        </button>
+      </mat-card-header>
+      <mat-card-content *ngIf="collapse4">
+        <ul>
+          <li (click)="click10()">
+            <mat-icon>check</mat-icon>
+            <span class="badge bg-danger">{{ invoices.length }}</span> Liste des factures réglées
+          </li>
+        </ul>
+      </mat-card-content>
+      <mat-card-footer *ngIf="hoverFeature === 'factures'">
+        <p>Consultez et gérez vos factures.</p>
+      </mat-card-footer>
+    </mat-card>
+
+    <mat-card class="col-md-3 feature-card feature-background-5" *ngIf="condidates.length > 0 && usertype === 'Candidat'" (mouseenter)="hoverFeature = 'candidatures'" (mouseleave)="hoverFeature = ''">
+      <mat-card-header>
+        <button mat-button (click)="collapse5 = !collapse5">
+          <mat-icon>people</mat-icon>
+          Liste des Candidatures
+        </button>
+      </mat-card-header>
+      <mat-card-content *ngIf="collapse5">
+        <ul>
+          <li (click)="click11()">
+            <mat-icon>close</mat-icon>
+            <span class="badge">{{ condval }}</span> Clôture
+          </li>
+          <li (click)="click12()">
+            <mat-icon>hourglass_empty</mat-icon>
+            <span class="badge">{{ condnonal }}</span> En cours d'exécution
+          </li>
+        </ul>
+      </mat-card-content>
+      <mat-card-footer *ngIf="hoverFeature === 'candidatures'">
+        <p>Gérez vos candidatures et suivez leur statut.</p>
+      </mat-card-footer>
+    </mat-card>
+
+    <mat-card class="col-md-3 feature-card feature-background-6" *ngIf="contacts.length > 0" (mouseenter)="hoverFeature = 'reclamations'" (mouseleave)="hoverFeature = ''">
+      <mat-card-header>
+        <button mat-button (click)="collapse6 = !collapse6">
+          <mat-icon>report_problem</mat-icon>
+          Liste des réclamations
+        </button>
+      </mat-card-header>
+      <mat-card-content *ngIf="collapse6">
+        <ul>
+          <li (click)="click13()">
+            <mat-icon>close</mat-icon>
+            <span class="badge">{{ contval }}</span> Clôture
+          </li>
+          <li (click)="click14()">
+            <mat-icon>hourglass_empty</mat-icon>
+            <span class="badge">{{ contnonval }}</span> En cours d'exécution
+          </li>
+        </ul>
+      </mat-card-content>
+      <mat-card-footer *ngIf="hoverFeature === 'reclamations'">
+        <p>Gérez vos réclamations et suivez leur statut.</p>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>
+<mat-tab-group (selectedTabChange)="onTabChange($event)">
+  <mat-tab label="liste des ds pas encore rêglées"*ngIf="alldssusernonpayewindow&&getalldsusernonpaye()[0]">
+      <mat-table [dataSource]="getalldsusernonpaye()" matSort>
+
+          <ng-container matColumnDef="code">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Code</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">{{dsnonpaye._id}}</mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="nature">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Nature</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">
+              <span *ngIf="dsnonpaye.nature">{{dsnonpaye.nature}}</span>
+              <span *ngIf="!dsnonpaye.nature">Autre demande de service</span>
+            </mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="mois">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Mois</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">{{dsnonpaye.mois}}</mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="annee">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Année</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">{{dsnonpaye.annee}}</mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="prenom">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Prenom</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">{{dsnonpaye.prenom}}</mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="nom">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Nom</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">{{dsnonpaye.nom}}</mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="statut">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Statut</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">
+              <span *ngIf="dsnonpaye.statutadmin && dsnonpaye.statutadmin.length > 0">
+                {{ dsnonpaye.statutadmin[dsnonpaye.statutadmin.length - 1].statut }}
+              </span>
+            </mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="totalHonoraireHT">
+            <mat-header-cell *matHeaderCellDef>Total honoraire HT</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">{{dsnonpaye.totalhonoraire | number:'1.3-3' }}</mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="dateCreation">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Date de création</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">{{dsnonpaye.created }}</mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="payement">
+            <mat-header-cell *matHeaderCellDef>Payement</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye; let i = index">
+              <mat-checkbox (change)="shownotehonoraire()" id="{{ 'dsnonpayecheckbox' + i }}"></mat-checkbox>
+            </mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+            <mat-cell *matCellDef="let dsnonpaye">
+              <button mat-raised-button color="primary" (click)="getNavigationautreds('view-autreds', dsnonpaye._id)" *ngIf="!dsnonpaye.nature">Consulter</button>
+              <button mat-raised-button color="primary" (click)="getNavigation('view-deccomptabilite', dsnonpaye._id)" *ngIf="dsnonpaye.nature === 'comptabilite'">Consulter</button>
+              <button mat-raised-button color="primary" (click)="getNavigationdecfiscmens('view-decfiscmens', dsnonpaye._id)" *ngIf="dsnonpaye.nature === 'Déclaration Mensuelle'">Consulter</button>
+            </mat-cell>
+          </ng-container>
+        
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        
+        </mat-table>
+        
+        <div class="totals">
+          <div>TotalHT: {{shownotehonoraire()[0] + shownotehonoraire()[6] | number:'1.3-3' }}</div>
+          <div>TotalTVA(19%): {{shownotehonoraire()[1] | number:'1.3-3' }}</div>
+          <div>Timbrefiscal: {{shownotehonoraire()[2] | number:'1.3-3' }}</div>
+          <div>TotalTTC: {{shownotehonoraire()[7] | number:'1.3-3' }}</div>
+          <button mat-raised-button color="accent" (click)="previewnotehonoraire()" *ngIf="shownotehonoraire()[3] != 1">Aperçu Note d'honoraires</button>
+        </div>
+        
+  </mat-tab>
+  <mat-tab label="liste des déclarations fiscales" *ngIf="decfiscmenswindow&&decfiscmenss">
+      <table mat-table [dataSource]="decfiscmenss" matSort class="mat-elevation-z8">
+
+          <!-- Code Column -->
+          <ng-container matColumnDef="code">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Code </th>
+            <td mat-cell *matCellDef="let decfiscmens"> {{ decfiscmens._id }} </td>
+          </ng-container>
+        
+          <!-- Nature Column -->
+          <ng-container matColumnDef="nature">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nature </th>
+            <td mat-cell *matCellDef="let decfiscmens"> {{ decfiscmens.nature }} </td>
+          </ng-container>
+        
+          <!-- Mois Column -->
+          <ng-container matColumnDef="mois">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Mois </th>
+            <td mat-cell *matCellDef="let decfiscmens"> {{ decfiscmens.mois }} </td>
+          </ng-container>
+        
+          <!-- Année Column -->
+          <ng-container matColumnDef="annee">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Année </th>
+            <td mat-cell *matCellDef="let decfiscmens"> {{ decfiscmens.annee }} </td>
+          </ng-container>
+        
+          <!-- Prenom Column -->
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Prenom </th>
+            <td mat-cell *matCellDef="let decfiscmens"> {{ decfiscmens.prenom }} </td>
+          </ng-container>
+        
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+            <td mat-cell *matCellDef="let decfiscmens"> {{ decfiscmens.nom }} </td>
+          </ng-container>
+        
+          <!-- Origine Column -->
+          <ng-container matColumnDef="origine">
+            <th mat-header-cell *matHeaderCellDef> Origine </th>
+            <td mat-cell *matCellDef="let decfiscmens"> {{ decfiscmens.origine }} </td>
+          </ng-container>
+        
+          <!-- Source Column -->
+          <ng-container matColumnDef="source">
+            <th mat-header-cell *matHeaderCellDef> Source </th>
+            <td mat-cell *matCellDef="let decfiscmens"> <span *ngIf="decfiscmens.source"> {{ decfiscmens.source }} </span> </td>
+          </ng-container>
+        
+          <!-- Statut Column -->
+          <ng-container matColumnDef="statut">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Statut </th>
+            <td mat-cell *matCellDef="let decfiscmens">
+              <span *ngIf="decfiscmens.statutadmin && decfiscmens.statutadmin.length > 0">
+                {{ decfiscmens.statutadmin[decfiscmens.statutadmin.length - 1].statut }}
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Date de création Column -->
+          <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de création </th>
+            <td mat-cell *matCellDef="let decfiscmens"> {{ decfiscmens.created  }} </td>
+          </ng-container>
+        
+          <!-- Actions Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let decfiscmens">
+              <span *ngIf="decfiscmens.statutadmin.length > 0">
+                <ng-container *ngIf="decfiscmens.statutadmin[decfiscmens.statutadmin.length - 1].statut == 'clôturé' && decfiscmens.affecte">
+                  <button mat-raised-button color="primary" (click)="getNavigationdecfiscmens('view-decfiscmens', decfiscmens._id)">Consulter</button>
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Modifier/Compléter Column -->
+          <ng-container matColumnDef="modifier">
+            <th mat-header-cell *matHeaderCellDef> Modifier/Compléter </th>
+            <td mat-cell *matCellDef="let decfiscmens" >
+              <button mat-raised-button color="primary"
+                      [ngStyle]="{
+                        'color': (verifyexercicecloture(decfiscmens.annee)) ? 'black' : 'black',
+                        'background-color': (verifyexercicecloture(decfiscmens.annee)) ? 'white' : 'green'
+                      }"
+                      [disabled]="verifyexercicecloture(decfiscmens.annee)"
+                      (click)="getNavigationdecfiscmens('modify-decfiscmens', decfiscmens._id)">
+                Modifier/Compléter
+              </button>
+            </td>
+          </ng-container>
+        
+          <!-- Table Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        
+  </mat-tab>
+  <mat-tab label="liste des fichiers comptables" *ngIf="deccomptabilitewindow&&deccomptabilites">
+      <table mat-table [dataSource]="deccomptabilites" matSort class="mat-elevation-z8">
+
+          <!-- Code Column -->
+          <ng-container matColumnDef="code">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Code </th>
+            <td mat-cell *matCellDef="let deccomptabilite"> {{ deccomptabilite._id }} </td>
+          </ng-container>
+        
+          <!-- Nature Column -->
+          <ng-container matColumnDef="nature">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nature </th>
+            <td mat-cell *matCellDef="let deccomptabilite"> {{ deccomptabilite.nature }} </td>
+          </ng-container>
+        
+          <!-- Mois Column -->
+          <ng-container matColumnDef="mois">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Mois </th>
+            <td mat-cell *matCellDef="let deccomptabilite"> {{ deccomptabilite.mois }} </td>
+          </ng-container>
+        
+          <!-- Année Column -->
+          <ng-container matColumnDef="annee">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Année </th>
+            <td mat-cell *matCellDef="let deccomptabilite"> {{ deccomptabilite.annee }} </td>
+          </ng-container>
+        
+          <!-- Prenom Column -->
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Prenom </th>
+            <td mat-cell *matCellDef="let deccomptabilite"> {{ prenom }} </td> <!-- Replace with actual data -->
+          </ng-container>
+        
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+            <td mat-cell *matCellDef="let deccomptabilite"> {{ nom }} </td> <!-- Replace with actual data -->
+          </ng-container>
+        
+          <!-- Statut Column -->
+          <ng-container matColumnDef="statut">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Statut </th>
+            <td mat-cell *matCellDef="let deccomptabilite">
+              <span *ngIf="deccomptabilite.statutadmin && deccomptabilite.statutadmin.length > 0">
+                {{ deccomptabilite.statutadmin[deccomptabilite.statutadmin.length - 1].statut }}
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Source Column -->
+          <ng-container matColumnDef="source">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Source </th>
+            <td mat-cell *matCellDef="let deccomptabilite"> {{ deccomptabilite.source }} </td>
+          </ng-container>
+        
+          <!-- Date de création Column -->
+          <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de création </th>
+            <td mat-cell *matCellDef="let deccomptabilite"> {{ deccomptabilite.created  }} </td>
+          </ng-container>
+        
+          <!-- Actions Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let deccomptabilite">
+              <span *ngIf="deccomptabilite.statutadmin.length > 0">
+                <ng-container *ngIf="deccomptabilite.statutadmin[deccomptabilite.statutadmin.length - 1].statut == 'clôturé' && deccomptabilite.affecte">
+                  <button mat-raised-button color="primary" (click)="getNavigation('view-deccomptabilite', deccomptabilite._id)">Consulter</button>
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Modifier/Compléter Column -->
+          <ng-container matColumnDef="modifier">
+            <th mat-header-cell *matHeaderCellDef> Modifier/Compléter </th>
+            <td mat-cell *matCellDef="let deccomptabilite">
+              <button mat-raised-button color="primary"
+                      [ngStyle]="{
+                        'color': (verifyexercicecloture(deccomptabilite.annee)) ? 'black' : 'black',
+                        'background-color': (verifyexercicecloture(deccomptabilite.annee)) ? 'white' : 'green'
+                      }"
+                      [disabled]="verifyexercicecloture(deccomptabilite.annee)"
+                      *ngIf="!deccomptabilite.source"
+                      (click)="getNavigation('modify-deccomptabilite', deccomptabilite._id)">
+                Modifier/Compléter
+              </button>
+            </td>
+          </ng-container>
+        
+          <!-- Table Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        
+  </mat-tab>
+  <mat-tab label="liste des Candidatures clôturés" *ngIf="candidaturevalide&&condidates">
+      <table mat-table [dataSource]="getcondidatevalide()" matSort class="mat-elevation-z8">
+
+          <!-- Email Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.email }} </td>
+          </ng-container>
+        
+          <!-- Prenom Column -->
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Prenom </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.firstname }} </td>
+          </ng-container>
+        
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.lastname }} </td>
+          </ng-container>
+        
+          <!-- Adresse Column -->
+          <ng-container matColumnDef="adresse">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Adresse </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.adresse }} </td>
+          </ng-container>
+        
+          <!-- Mobile Column -->
+          <ng-container matColumnDef="mobile">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.mobile }} </td>
+          </ng-container>
+        
+          <!-- Statut Admin Column -->
+          <ng-container matColumnDef="statutadmin">
+            <th mat-header-cell *matHeaderCellDef> Statut Admin </th>
+            <td mat-cell *matCellDef="let condidate">
+              <span *ngIf="condidate.statutadmin">
+                <ng-container *ngFor="let statut of condidate.statutadmin">
+                  {{ statut.statut }}
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Statut Collaborateur Column -->
+          <ng-container matColumnDef="statutcollab">
+            <th mat-header-cell *matHeaderCellDef> Statut Collaborateur </th>
+            <td mat-cell *matCellDef="let condidate">
+              <span *ngIf="condidate.statutcollab">
+                <ng-container *ngFor="let statut of condidate.statutcollab">
+                  {{ statut.statutcoll }}
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- CV Column -->
+          <ng-container matColumnDef="cv">
+            <th mat-header-cell *matHeaderCellDef> CV </th>
+            <td mat-cell *matCellDef="let condidate">
+              <a mat-button href="{{ condidate.ficheUrl }}" target="_blank">Aperçu CV</a>
+            </td>
+          </ng-container>
+        
+          <!-- Date de creation Column -->
+          <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de création </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.created }} </td>
+          </ng-container>
+        
+          <!-- Consulter Column -->
+          <ng-container matColumnDef="consulter">
+            <th mat-header-cell *matHeaderCellDef> Consulter </th>
+            <td mat-cell *matCellDef="let condidate">
+              <button mat-raised-button color="primary" (click)="getNavigationcondidates('view-condidate', condidate._id)">Consulter</button>
+            </td>
+          </ng-container>
+        
+          <!-- Table Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        
+  </mat-tab>
+  <mat-tab label="liste des Candidatures" *ngIf="candidaturenonvalide&&condidates">
+      <table mat-table [dataSource]="getcondidatenonvalide()" matSort class="mat-elevation-z8">
+
+          <!-- Email Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.email }} </td>
+          </ng-container>
+        
+          <!-- Prenom Column -->
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Prenom </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.firstname }} </td>
+          </ng-container>
+        
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.lastname }} </td>
+          </ng-container>
+        
+          <!-- Adresse Column -->
+          <ng-container matColumnDef="adresse">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Adresse </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.adresse }} </td>
+          </ng-container>
+        
+          <!-- Mobile Column -->
+          <ng-container matColumnDef="mobile">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.mobile }} </td>
+          </ng-container>
+        
+          <!-- Statut Admin Column -->
+          <ng-container matColumnDef="statutadmin">
+            <th mat-header-cell *matHeaderCellDef> Statut Admin </th>
+            <td mat-cell *matCellDef="let condidate">
+              <span *ngIf="condidate.statutadmin">
+                <ng-container *ngFor="let statut of condidate.statutadmin">
+                  {{ statut.statut }}
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Statut Collaborateur Column -->
+          <ng-container matColumnDef="statutcollab">
+            <th mat-header-cell *matHeaderCellDef> Statut Collaborateur </th>
+            <td mat-cell *matCellDef="let condidate">
+              <span *ngIf="condidate.statutcollab">
+                <ng-container *ngFor="let statut of condidate.statutcollab">
+                  {{ statut.statutcoll }}
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- CV Column -->
+          <ng-container matColumnDef="cv">
+            <th mat-header-cell *matHeaderCellDef> CV </th>
+            <td mat-cell *matCellDef="let condidate">
+              <a mat-button href="{{ condidate.ficheUrl }}" target="_blank">Aperçu CV</a>
+            </td>
+          </ng-container>
+        
+          <!-- Date de creation Column -->
+          <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de création </th>
+            <td mat-cell *matCellDef="let condidate"> {{ condidate.created }} </td>
+          </ng-container>
+        
+          <!-- Consulter Column -->
+          <ng-container matColumnDef="consulter">
+            <th mat-header-cell *matHeaderCellDef> Consulter </th>
+            <td mat-cell *matCellDef="let condidate">
+              <button mat-raised-button color="primary" (click)="getNavigationcondidates('view-condidate', condidate._id)">Consulter</button>
+            </td>
+          </ng-container>
+        
+          <!-- Table Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        
+  </mat-tab>
+  <mat-tab label="liste des réclamations" *ngIf="reclamationtraite&&contacts">
+      <table mat-table [dataSource]="getcontactvalide()" matSort class="mat-elevation-z8">
+
+          <!-- Date Creation Column -->
+          <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Creation </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.created }} </td>
+          </ng-container>
+        
+          <!-- Email Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.email }} </td>
+          </ng-container>
+        
+          <!-- Prenom Column -->
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Prenom </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.firstname }} </td>
+          </ng-container>
+        
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.lastname }} </td>
+          </ng-container>
+        
+          <!-- Fichier Joint Column -->
+          <ng-container matColumnDef="fichierjoint">
+            <th mat-header-cell *matHeaderCellDef> Fichier Joint </th>
+            <td mat-cell *matCellDef="let contact"> <a mat-button href="{{ contact.ficheUrl }}" target="_blank">Aperçu Fichier</a> </td>
+          </ng-container>
+        
+          <!-- Mobile Column -->
+          <ng-container matColumnDef="mobile">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.mobile }} </td>
+          </ng-container>
+        
+          <!-- Description Column -->
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.description }} </td>
+          </ng-container>
+        
+          <!-- Statut Admin Column -->
+          <ng-container matColumnDef="statutadmin">
+            <th mat-header-cell *matHeaderCellDef> Statut Admin </th>
+            <td mat-cell *matCellDef="let contact">
+              <span *ngIf="contact.statutadmin">
+                <ng-container *ngFor="let statut of contact.statutadmin">
+                  {{ statut.statut }}
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Statut Collaborateur Column -->
+          <ng-container matColumnDef="statutcollab">
+            <th mat-header-cell *matHeaderCellDef> Statut Collaborateur </th>
+            <td mat-cell *matCellDef="let contact">
+              <span *ngIf="contact.statutcollab">
+                <ng-container *ngFor="let statut of contact.statutcollab">
+                  {{ statut.statutcoll }}
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Consulter Column -->
+          <ng-container matColumnDef="consulter">
+            <th mat-header-cell *matHeaderCellDef> Consulter </th>
+            <td mat-cell *matCellDef="let contact">
+              <button mat-raised-button color="primary" (click)="getNavigationcontacts('view-contactreq', contact._id)">Consulter</button>
+            </td>
+          </ng-container>
+        
+          <!-- Table Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        
+  </mat-tab>
+  <mat-tab label="liste des réclamations en cours" *ngIf="reclamationnontraite&&contacts">
+      <table mat-table [dataSource]="getcontactnonvalide()" class="mat-elevation-z8">
+
+          <!-- Email Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.email }} </td>
+          </ng-container>
+        
+          <!-- Prenom Column -->
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef> Prenom </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.firstname }} </td>
+          </ng-container>
+        
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef> Nom </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.lastname }} </td>
+          </ng-container>
+        
+          <!-- Adresse Column -->
+          <ng-container matColumnDef="adresse">
+            <th mat-header-cell *matHeaderCellDef> Adresse </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.adresse }} </td>
+          </ng-container>
+        
+          <!-- Mobile Column -->
+          <ng-container matColumnDef="mobile">
+            <th mat-header-cell *matHeaderCellDef> Mobile </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.mobile }} </td>
+          </ng-container>
+        
+          <!-- Decision Column -->
+          <ng-container matColumnDef="decision">
+            <th mat-header-cell *matHeaderCellDef> Decision </th>
+            <td mat-cell *matCellDef="let contact"> {{ contact.decision }} </td>
+          </ng-container>
+        
+          <!-- CV Column -->
+          <ng-container matColumnDef="cv">
+            <th mat-header-cell *matHeaderCellDef> CV </th>
+            <td mat-cell *matCellDef="let contact">
+              <a mat-button href="{{ contact.ficheUrl }}" target="_blank">Aperçu CV</a>
+            </td>
+          </ng-container>
+        
+          <!-- Consulter Column -->
+          <ng-container matColumnDef="consulter">
+            <th mat-header-cell *matHeaderCellDef> Consulter </th>
+            <td mat-cell *matCellDef="let contact">
+              <button mat-raised-button color="primary" (click)="getNavigationcontacts('view-contact', contact._id)">Consulter</button>
+            </td>
+          </ng-container>
+        
+          <!-- Table Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        
+  </mat-tab>
+  <mat-tab label="liste des ds rêglées"*ngIf="alldssuserpayewindow&&getalldsuserpaye()[0]">
+      <table mat-table [dataSource]="getalldsuserpaye()[0]" class="mat-elevation-z8">
+
+          <!-- Code Column -->
+          <ng-container matColumnDef="_id">
+            <th mat-header-cell *matHeaderCellDef> Code <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let dspaye"> {{ dspaye._id }} </td>
+          </ng-container>
+        
+          <!-- Nature Column -->
+          <ng-container matColumnDef="nature">
+            <th mat-header-cell *matHeaderCellDef> Nature <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let dspaye">
+              <span *ngIf="dspaye.nature">{{ dspaye.nature }}</span>
+              <span *ngIf="!dspaye.nature">Autre demande de service</span>
+            </td>
+          </ng-container>
+        
+          <!-- Mois Column -->
+          <ng-container matColumnDef="mois">
+            <th mat-header-cell *matHeaderCellDef> Mois <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let dspaye"> {{ dspaye.mois }} </td>
+          </ng-container>
+        
+          <!-- Année Column -->
+          <ng-container matColumnDef="annee">
+            <th mat-header-cell *matHeaderCellDef> Année <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let dspaye"> {{ dspaye.annee }} </td>
+          </ng-container>
+        
+          <!-- Prenom Column -->
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef> Prenom </th>
+            <td mat-cell *matCellDef="let dspaye"> {{ prenom }} </td>
+          </ng-container>
+        
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef> Nom </th>
+            <td mat-cell *matCellDef="let dspaye"> {{ nom }} </td>
+          </ng-container>
+        
+          <!-- Statut Column -->
+          <ng-container matColumnDef="statut">
+            <th mat-header-cell *matHeaderCellDef> Statut <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let dspaye">
+              <span *ngIf="dspaye.statutadmin">
+                <ng-container *ngFor="let statut of dspaye.statutadmin; let j = index">
+                  <span *ngIf="j === dspaye.statutadmin.length - 1">{{ statut.statut }}</span>
+                </ng-container>
+              </span>
+            </td>
+          </ng-container>
+        
+          <!-- Total honoraire HT Column -->
+          <ng-container matColumnDef="totalhonoraire">
+            <th mat-header-cell *matHeaderCellDef> Total honoraire HT </th>
+            <td mat-cell *matCellDef="let dspaye"> {{ dspaye.totalhonoraire | number:'1.3-3'  }} </td>
+          </ng-container>
+        
+          <!-- Date de création Column -->
+          <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef> Date de création <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let dspaye"> {{ dspaye.created  }} </td>
+          </ng-container>
+        
+          <!-- Actions Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let dspaye">
+              <button mat-raised-button color="primary" *ngIf="!dspaye.nature" (click)="getNavigationautreds('view-autreds', dspaye._id)">Consulter</button>
+              <button mat-raised-button color="primary" *ngIf="dspaye.nature === 'comptabilite'" (click)="getNavigation('view-deccomptabilite', dspaye._id)">Consulter</button>
+              <button mat-raised-button color="primary" *ngIf="dspaye.nature === 'Déclaration Mensuelle'" (click)="getNavigationdecfiscmens('view-decfiscmens', dspaye._id)">Consulter</button>
+              <img *ngIf="dspaye.marquepaye" src="../../assets/free.png" id="logo" alt="image-DGI" style="width: 40%; height: 40%; border: none;">
+            </td>
+          </ng-container>
+        
+          <!-- Table Header Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        
+  </mat-tab>
+  <mat-tab label="liste des factures règlées"*ngIf="invoicewindow&&invoices">
+      <table mat-table [dataSource]="invoices" class="mat-elevation-z8">
+
+          <!-- Code Column -->
+          <ng-container matColumnDef="code">
+            <th mat-header-cell *matHeaderCellDef> Code <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let inv"> F{{ inv.prefixe }}/{{ inv.ref }} </td>
+          </ng-container>
+        
+          <!-- Prenom Column -->
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef> Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let inv"> {{ prenom }} </td>
+          </ng-container>
+        
+          <!-- Nom Column -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef> Nom <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let inv"> {{ nom }} </td>
+          </ng-container>
+        
+          <!-- Date de création Column -->
+          <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef> Date de création <i class="fa fa-sort" aria-hidden="true"></i></th>
+            <td mat-cell *matCellDef="let inv"> {{ inv.created  }} </td>
+          </ng-container>
+        
+          <!-- Actions Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let inv">
+              <button mat-raised-button color="primary" (click)="getNavigationinvoice('view-invoice', inv._id)">Consulter</button>
+            </td>
+          </ng-container>
+        
+          <!-- Table Header Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        
+  </mat-tab>
+</mat-tab-group> 
+   <!-- modal for Note d'honoraires-->
+  <div class="modal-signup" [ngStyle]="{'display':displaynote}">
+      <div class="modal-content">
+        <div class="right-section-signup">
+          <div class="container-fluid" style="position: relative; height: 500px;overflow-y: auto;" >
+            <div class="card"id="honoraireuser">
+              <div class="card-header bg-black"></div>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <img src="../../assets/img/Frame 2177.png" id="logo" class="navbar-left" alt="image-DGI">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-12">
+                    <ul class="list-unstyled float-end">
+                        <li>Tunis le {{today}}</li>
+                        <li>A l'attention de: &nbsp;<span *ngIf="user.nature=='Personne Physique'"> <span *ngIf="user.civilite=='Monsieur'"> Mr </span> <span *ngIf="user.civilite=='Madame'"> Mme </span> {{user.firstname}} &nbsp;{{ user.lastname }}</span> <span *ngIf="user.nature!='Personne Physique'">{{ user.raisonsociale }}</span> &nbsp;<span>({{user.clientcode| uppercase}})</span></li>
+                        <li>{{user.matriculefiscale| uppercase}}</li>
+                        <li>{{user.adresseactivite| uppercase}}</li> 
+                    </ul>
+                    </div>
+                  </div>
+                  <div class="row text-center">
+                    <h3 class="text-uppercase text-center mt-3" style="font-size: 40px;">Note d'honoraires N°:{{option0value}} (Proforma)</h3>
+                  </div>
+                  <div class="row mx-3">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">N° DS</th>
+                          <th scope="col">Désignation</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Durée</th>
+                          <th scope="col">Taux/minute</th>
+                          <th scope="col">Montant HT</th>
+                        </tr>
+                      </thead>
+                      <tbody  >
+                        <tr *ngFor="let dsnonpaye of shownotehonoraire()[4]; let i = index">
+                          <td>{{dsnonpaye._id| uppercase}}</td>
+                          <td><span *ngIf="dsnonpaye.nature">{{dsnonpaye.nature}}</span> <span *ngIf="!dsnonpaye.nature">{{dsnonpaye.libelle}}</span></td>
+                          <td><span *ngIf="dsnonpaye.nature">{{dsnonpaye.mois}}/{{dsnonpaye.annee}}</span> <span *ngIf="!dsnonpaye.nature">{{dsnonpaye.description}}</span></td>
+                          <td><span *ngIf="dsnonpaye.nature">{{dsnonpaye.totaltime}}</span><span *ngIf="!dsnonpaye.nature&&dsnonpaye.duree!=0">{{dsnonpaye.duree}}</span> <span *ngIf="!dsnonpaye.nature&&dsnonpaye.duree==0">N/A</span></td>
+                          <td><span *ngIf="dsnonpaye.nature&&dsnonpaye.totaltime==0">N/A</span><span *ngIf="!dsnonpaye.nature&&dsnonpaye.duree==0">N/A</span><span *ngIf="dsnonpaye.nature&&dsnonpaye.totaltime!=0||!dsnonpaye.nature&&dsnonpaye.duree!=0">{{dsnonpaye.tauxapplique| number:'1.3-3'}}</span> </td>
+                          <td>{{dsnonpaye.totalhonoraire| number:'1.3-3'}}</td>
+                        </tr>
+                      <tr>
+                        <td colspan="5"> Total HT:</td>
+                        <td> {{shownotehonoraire()[0]| number:'1.3-3'}}</td>
+                      </tr>
+                      <tr>
+                        <td colspan="5">TVA (19%):</td>
+                        <td>{{shownotehonoraire()[1]| number:'1.3-3'}}</td>
+                      </tr>
+                      <tr>
+                        <td colspan="5">Sous total1:</td>
+                        <td>{{shownotehonoraire()[3]| number:'1.3-3'}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="row mx-3">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">N° DS</th>
+                          <th scope="col">Désignation</th>
+                          <th scope="col">Description</th>
+                          <th></th>
+                          <th></th>                           
+                          <th scope="col">Montant HT</th>
+                        </tr>
+                      </thead>
+                      <tbody  >
+                        <tr *ngFor="let dsnonpaye of shownotehonoraire()[5]; let i = index">
+                          <td>{{dsnonpaye._id| uppercase}}</td>
+                          <td><span *ngIf="dsnonpaye.nature">{{dsnonpaye.nature}}</span> <span *ngIf="!dsnonpaye.nature">{{dsnonpaye.libelle}}</span></td> 
+                          <td><span *ngIf="dsnonpaye.nature">{{dsnonpaye.mois}}/{{dsnonpaye.annee}}</span> <span *ngIf="!dsnonpaye.nature">{{dsnonpaye.description}}</span></td>
+                          <td></td>
+                          <td></td>
+                          <td>{{dsnonpaye.totalhonoraire| number:'1.3-3'}}</td>
+                        </tr>
+                        <tr>
+                          <td colspan="5">Sous Total2:</td>
+                          <td>{{shownotehonoraire()[6]| number:'1.3-3'}}</td>
+                        </tr>
+                        <tr>
+                          <td colspan="5">Timbre fiscal:</td>
+                          <td> {{shownotehonoraire()[2]| number:'1.3-3'}}</td>
+                        </tr>
+                        <tr>
+                          <td colspan="5">Total général:</td>
+                          <td>{{shownotehonoraire()[7]| number:'1.3-3'| currency:'TND'}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="top-info">
+                    <small class="me-3 " style="color: black;"><a href="#"><i class="fas fa-solid fa-phone me-2 " style = "color:#D11317"></i></a>98 35 05 75</small>
+                    <small class="me-3"style="color: black;"><a href="#"><i class="fas fa-envelope me-2" style = "color:#D11317"></i></a>macompta@macompta.com.tn</small>
+                    <small class="me-3 "style="color: black;"><a href="#"><i class="bi bi-house-door-fill" style = "color:#D11317"></i></a>Ariana center Bureau A318 Ariana 2080</small>
+                    
+                  </div>
+                  <div class="row mt-2 mb-5">
+                    <p class="fw-bold mt-3">Signature:</p>
+                  </div>
+            
+                </div>
+            
+            
+            
+              </div>
+              <div class="card-footer bg-black"></div>
+            </div>
+          </div>
+         
+          <div class="btn-signup-section">
+              <div style="width: 30%; text-align: end;">
+                  <button class="reinstaller-btn-modal" (click)="closecopPopup()">Annuler</button>
+              </div>
+              <div style="width: 35%;">
+                  <button class="signup-btn-modal" (click)="printinvoice()">Générer facture</button>
+              </div>
+              <div style="width: 35%">
+                <button class="reinstaller-btn-modal"style="background-color: lightgreen;" (click)="payinvoice()"><i class="fa fa-spinner" *ngIf="submitting"></i>Règler facture</button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Close Button (Top-left corner) -->
+        <div class="close-button" (click)="closecopPopup()" style="background-color: #F8F8F9;">
+          <i class="fa fa-times" style="color: red; padding-right: 10px;"></i> <!-- Replace with your icon class or element -->
+        </div>
+      </div>
+  </div>

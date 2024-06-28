@@ -1,0 +1,99 @@
+.ctotal 
+{
+height:100vh;
+margin-bottom: -50vh;
+
+
+}
+.form-container {
+  position: relative;
+  border: 0.2vw solid #000;
+  border-radius: 15px;
+  padding: 40px 20px 20px 20px;
+  width: 43%;
+  margin-top: 10%;
+  text-align: center;
+  margin-left: 25%;
+  height: 11%;
+}
+
+.form-title {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  margin: 0;
+  font-size: 1vw;
+  margin-left: -25%;
+  font-weight: bolder;
+}
+
+.form-description {
+  color: red;
+  font-size: 1.2vw;
+  font-weight: bold;
+  margin-top: -2%;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1%;
+  user-select: none; /* Prevent text selection */
+  outline: none; /* Remove focus outline */
+}
+.checkbox-container:focus,
+.checkbox-container:active {
+  outline: none; /* Remove focus outline */
+}
+.checks
+{
+  margin-left: 22%;
+  margin-top: 4%;
+}
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid #00b5ad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  background-color: #fff;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.custom-checkbox.checked {
+  background-color: #00b5ad;
+  border-color: #00b5ad;
+}
+
+.custom-checkbox .checkmark {
+  color: #fff;
+  font-size: 1.5vw;
+  line-height: 1;
+}
+
+label {
+  font-size: 1.3vw;
+  color: #3a2a2a;
+  font-weight: 420;
+}
+.dec 
+{
+  vertical-align: middle;
+  width: 4%;
+  height: 6%;
+  margin-top: 5%;
+  margin-left: 70%;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+/*css ll panel eli feha message */
+  /* styles.scss or styles.css */
+  @import '~@angular/material/prebuilt-themes/purple-green.css';
+ 

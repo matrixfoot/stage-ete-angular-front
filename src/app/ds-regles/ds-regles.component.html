@@ -1,0 +1,73 @@
+<div class="page-container">
+  <div class="top-section">
+    <app-menu-lateral></app-menu-lateral>
+    <div class="logo">
+      <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+    </div>
+    <div><h1>Tableau de bord administrateur</h1></div>
+    <div class="quick-search">
+      <img src="../../assets/quickSearch.png" alt="search icon" class="searchIcon">
+      <input type="text" placeholder="Recherche rapide">
+    </div>
+  </div>
+  <div class="ds-regles-container">
+    <div class="header">
+      <div class="title">
+        Liste des demandes de services réglées
+      </div>
+      <div class="search-bar">
+        <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+        <input type="text" placeholder="Rechercher">
+      </div>
+      
+      <div class="filter">
+        <label for="tri">Trié par: &nbsp;</label>
+        <select id="tri">
+          <option value="date">Date</option>
+          <option value="nature">Nature</option>
+          <option value="statut">Statut</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Nature</th>
+            <th>Mois-Année</th>
+            <th>Prénom et nom</th>
+            <th>Statut</th>
+            <th>Total honoraire HT</th>
+            <th>Date de création</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let demande of paginatedDemandes">
+            <td>{{ demande.code }}</td>
+            <td>{{ demande.nature }}</td>
+            <td>{{ demande.moisAnnee }}</td>
+            <td>{{ demande.nom }}</td>
+            <td>{{ demande.statut }}</td>
+            <td>{{ demande.totalHonoraire }}</td>
+            <td>{{ demande.dateCreation }}</td>
+            <td class="action-buttons">
+              <button class="consulter">Consulter</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <div class="info">
+        {{ currentPage | displayRange: pageSize: totalDemandes }}
+      </div>
+      <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+        <span *ngFor="let page of pages" (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">></button>
+      </div>
+    </div>
+  </div>
+</div>

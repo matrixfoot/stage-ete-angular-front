@@ -1,0 +1,157 @@
+h1
+{
+    font-weight:bolder;
+    margin-left: 12%;
+    font-size: 1.2vw;
+    margin-bottom: 0%;
+    margin-top: 2%;
+}
+
+
+.all
+{
+    margin-left: 4%;
+}
+  /**css traitement */
+  .traitement {
+    margin-top: 4vh;
+    padding: 10px;
+    margin-left: 5%;
+     
+    
+  }
+  .traitement {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input-group1,.input-group2  {
+     
+    display: flex;
+    align-items: center;
+    margin-right: 22%;
+    width: 30vw;
+    margin-left: 0%;
+    }
+    .input-group3  {
+     
+      display: flex;
+      align-items: center;
+      margin-right: 33%;
+      width: 35%;
+      margin-left: 3%;
+      }
+      .input-group4  {
+     
+        display: flex;
+        align-items: center;
+        margin-right: 33%;
+        width: 30vw;
+        margin-left: 0.5%;
+        }
+  .lab1  {
+    color: black ; 
+    margin-right: 8%;
+    margin-left: 9%;
+    font-size: 1.2vw;
+    white-space: nowrap;
+
+  }
+  .lab2 {
+    color: black;
+    margin-right: 12%;
+    margin-left: -18%;
+    font-size: 1.2vw;
+    white-space: nowrap;
+
+   
+  } .lab3 {
+    margin-right: 0;
+    margin-left: 7%;
+    font-size: 1.2vw;
+    white-space: nowrap;
+  }
+  .lab4 {
+    color: black;
+    margin-right: 7%;
+    margin-left: -66%;
+    font-size: 1.2vw;
+    white-space: nowrap;
+  }
+  .inp1{
+    background-color: transparent;
+    margin-left: 45%;
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+
+
+  } .inp2{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color:black  ;
+    background-color: transparent;
+    margin-left: 11%;
+
+  }
+  .inp3{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 11%;
+
+  }
+  .inp4{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 4%;
+   
+  }
+  .dec
+  {
+    margin-left: 71%;
+    margin-top: 6%;
+    height: 1.7%;
+    width: 1.9%;
+  }
+  .plus
+  {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1vw;
+    margin-left: 1%;
+    
+    margin-left: 75%;
+    margin-top: -1.9%;
+  }
+  
+  .input-container {
+     
+     position: relative;
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    width: auto;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .input-container:hover .tooltip {
+    visibility: visible;
+    opacity: 0.7;
+    width: 160%;
+  }

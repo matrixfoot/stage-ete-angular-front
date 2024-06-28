@@ -1,0 +1,81 @@
+<div class="page-container">
+  <div class="top-section">
+    <app-menu-lateral></app-menu-lateral>
+    <div class="logo">
+      <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+    </div>
+    <div><h1>Tableau de bord administrateur</h1></div>
+    <div class="quick-search">
+      <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+      <input type="text" placeholder="Recherche rapide">
+    </div>
+  </div>
+  <div class="clients-supprimes-temporairement-container">
+    <div class="header">
+      <div class="title">
+        Liste des clients supprimés temporairement
+      </div>
+      <div class="search-bar">
+        <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+        <input type="text" placeholder="Rechercher">
+      </div>
+      
+      <div class="filter">
+        <label for="tri">Trié par: &nbsp;</label>
+        <select id="tri">
+          <option value="email">Email</option>
+          <option value="prenomNom">Prénom et Nom</option>
+          <option value="type">Type</option>
+          <option value="mobile">Mobile</option>
+          <option value="codeClient">Code client</option>
+          <option value="natureActivite">Nature-Activité</option>
+          <option value="activite">Activité</option>
+          <option value="sousActivite">Sous-Activité</option>
+          <option value="role">Rôle</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Prénom et Nom</th>
+            <th>Type</th>
+            <th>Mobile</th>
+            <th>Code client</th>
+            <th>Nature-Activité</th>
+            <th>Activité</th>
+            <th>Sous-Activité</th>
+            <th>Rôle</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of paginatedClients">
+            <td>{{ client.email }}</td>
+            <td>{{ client.prenomNom }}</td>
+            <td>{{ client.type }}</td>
+            <td>{{ client.mobile }}</td>
+            <td>{{ client.codeClient }}</td>
+            <td>{{ client.natureActivite }}</td>
+            <td>{{ client.activite }}</td>
+            <td>{{ client.sousActivite }}</td>
+            <td>{{ client.role }}</td>
+            <td><button class="action-button">Consulter</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <div class="info">
+         {{ currentPage | displayRange: pageSize: totalClients }}
+      </div>
+      <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+        <span *ngFor="let page of pages" (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">></button>
+      </div>
+    </div>
+  </div>
+</div>

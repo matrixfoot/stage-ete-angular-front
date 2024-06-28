@@ -1,0 +1,27 @@
+<h1>Droit de Timbre :</h1>
+
+<div class="all">
+  <div class="traitement1">
+    <div class="input-group1">
+      <label for="input1" class="lab1">Nombre de notes d'honoraires  </label>
+      <input id="input1" class="inp1" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"  data-tooltip="Montant en Dt et 3 chiffres après la virguille " size="10">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input2" class="lab2">Droit de Timbre unitaire  </label>
+      <input id="input2" class="inp2" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"  data-tooltip="Montant en Dt et 3 chiffres après la virguille " size="10" >
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <div class="traitement2">
+    <div class="input-group1">
+      <label for="input3" class="lab3">Total de droit de Timbre </label>
+      <input id="input3" class="inp3" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()"  data-tooltip="Montant en Dt et 3 chiffres après la virguille " size="10" >
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    
+  </div>
+
+  <app-partie-commune></app-partie-commune>
+</div>

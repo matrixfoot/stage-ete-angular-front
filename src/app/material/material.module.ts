@@ -12,10 +12,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const materials = [MatSlideToggleModule,MatCheckboxModule,MatDatepickerModule,MatFormFieldModule,MatNativeDateModule,MatTabsModule,   MatTableModule,
   MatIconModule,
-  MatButtonModule,
+  MatButtonModule,MatCardModule,MatBadgeModule,MatExpansionModule,
   FormsModule,MatSelectModule,MatInputModule];
 
 @NgModule({
@@ -26,7 +29,7 @@ const materials = [MatSlideToggleModule,MatCheckboxModule,MatDatepickerModule,Ma
     MatFormFieldModule,MatNativeDateModule,MatTabsModule,MatCheckboxModule,
     MatTableModule,
     MatIconModule,
-    MatButtonModule,
+    MatButtonModule,MatCardModule,MatBadgeModule,MatExpansionModule,
     FormsModule,MatSelectModule,MatInputModule
   ],
   exports: [materials]
