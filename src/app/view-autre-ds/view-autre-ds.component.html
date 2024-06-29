@@ -1,0 +1,30 @@
+<div class="view-autre-ds-container">
+    <h1>Voir Autre DS</h1>
+    <div class="line"></div>
+    <div class="table-container">
+      <h2>Détails De La demande de service!</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>libelle</th>
+            <th>description</th>
+            <th>durée</th>
+            <th>total honoraire</th>
+            <th>Sousmis/Non sousmis</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let service of orderServiceList">
+            <td>{{ service.libelle }}</td>
+            <td>{{ service.description }}</td>
+            <td>{{ service.duree }}</td>
+            <td>{{ service.total_honoraire }}</td>
+            <td>{{ service.etat }}</td>
+            <td><span class="statut-label non-regle">{{ service.statut }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

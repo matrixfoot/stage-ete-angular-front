@@ -45,6 +45,8 @@ import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
 import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AjoutAutreDsComponent } from './ajout-autre-ds/ajout-autre-ds.component';
+import { ViewAutreDsComponent } from './view-autre-ds/view-autre-ds.component';
 =======
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { DossiersInstanceComponent } from './dossiers-instance/dossiers-instance.component';
@@ -111,7 +113,9 @@ import { ListeTransactionsComponent } from './liste-transactions/liste-transacti
     AboutComponent,FiscalityComponent,
     ComptabiliteComponent,
     SaisieComptableComponent,
-    SaisieManuelComponent
+    SaisieManuelComponent,
+    AjoutAutreDsComponent,
+    ViewAutreDsComponent
   ],
   imports: [
     MatSnackBarModule,
