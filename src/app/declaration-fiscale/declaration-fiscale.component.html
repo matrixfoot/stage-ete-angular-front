@@ -1,0 +1,60 @@
+<div class="ctotal"><div class="form-container">
+    <h3 class="form-title">Déposer Votre Déclaration Fiscale</h3>
+    <p class="form-description">Veuillez Cochez Le Type De Déclaration Que Vous Souhaitez Faire</p>
+  </div>
+ <div class="checks">
+  <div class="checkbox-container" (click)="toggleCheck(0)">
+    <div class="custom-checkbox" [class.checked]="checkboxStates[0]">
+      <span *ngIf="checkboxStates[0]" class="checkmark">✔</span>
+    </div>
+    <label>Déclaration Mensuelle</label>
+  </div>
+  
+  <div class="checkbox-container" (click)="toggleCheck(1)">
+    <div class="custom-checkbox" [class.checked]="checkboxStates[1]">
+      <span *ngIf="checkboxStates[1]" class="checkmark">✔</span>
+    </div>
+    <label>Acomptes provisionnels</label>
+  </div>
+  
+  <div class="checkbox-container" (click)="toggleCheck(2)">
+    <div class="custom-checkbox" [class.checked]="checkboxStates[2]">
+      <span *ngIf="checkboxStates[2]" class="checkmark">✔</span>
+    </div>
+    <label>Déclaration annuelle (I/R ou I/S)</label>
+  </div>
+  
+  <div class="checkbox-container" (click)="toggleCheck(3)">
+    <div class="custom-checkbox" [class.checked]="checkboxStates[3]">
+      <span *ngIf="checkboxStates[3]" class="checkmark">✔</span>
+    </div>
+    <label>Déclaration de l'employeur</label>
+  </div>
+  
+  <div class="checkbox-container" (click)="toggleCheck(4)">
+    <div class="custom-checkbox" [class.checked]="checkboxStates[4]">
+      <span *ngIf="checkboxStates[4]" class="checkmark">✔</span>
+    </div>
+    <label>Liasse fiscale</label>
+  </div>
+  
+  <div class="checkbox-container" (click)="toggleCheck(5)">
+    <div class="custom-checkbox" [class.checked]="checkboxStates[5]">
+      <span *ngIf="checkboxStates[5]" class="checkmark">✔</span>
+    </div>
+    <label>Déclaration trimestrielle des achats en suspension de T.V.A (Apurement des BC visés)</label>
+  </div>
+  
+  <div class="checkbox-container" (click)="toggleCheck(6)">
+    <div class="custom-checkbox" [class.checked]="checkboxStates[6]">
+      <span *ngIf="checkboxStates[6]" class="checkmark">✔</span>
+    </div>
+    <label>Déclaration trimestrielle des ventes en suspension des taxes sur le chiffre d'affaires</label>
+  </div>
+
+</div> 
+<img
+              
+    src="assets/dec.png"
+    class="dec" width="6vw" height="8vh"  (click)="redirectToDeclaration()"
+  /></div>

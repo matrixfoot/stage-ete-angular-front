@@ -1,0 +1,74 @@
+<div class="page-container">
+  <div class="top-section">
+    <app-menu-lateral></app-menu-lateral>
+    <div class="logo">
+      <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+    </div>
+    <div><h1>Tableau de bord administrateur</h1></div>
+    <div class="quick-search">
+      <img src="../../assets/quickSearch.png" alt="search icon" class="searchIcon">
+      <input type="text" placeholder="Recherche rapide">
+    </div>
+  </div>
+  <div class="clients-avec-impayes-container">
+    <div class="header">
+      <div class="title">
+        Liste des clients avec des impayés
+      </div>
+      <div class="search-bar">
+        <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+        <input type="text" placeholder="Rechercher">
+      </div>
+      
+      <div class="filter">
+        <label for="tri">Trié par: &nbsp;</label>
+        <select id="tri">
+          <option value="totalImpayé">Total Impayé</option>
+          <option value="prenom">Prénom</option>
+          <option value="nom">Nom</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Raison sociale</th>
+            <th>Prénom et Nom</th>
+            <th>Code client</th>
+            <th>Total impayé</th>
+            <th>Seuil impayé</th>
+            <th>Tendance</th>
+            <th>Notifications</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of paginatedClients">
+            <td>{{ client.raisonSociale }}</td>
+            <td>{{ client.nom }}</td>
+            <td>{{ client.codeClient }}</td>
+            <td>{{ client.totalImpaye }}</td>
+            <td>{{ client.seuilImpaye }}</td>
+            <td>{{ client.tendance }}</td>
+            <td>{{ client.notifications }}</td>
+            <td class="action-buttons">
+              <button class="consulter-details">Consulter détails</button>
+              <button class="notifier-client">Notifier client</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <div class="info">
+        {{ currentPage | displayRange: pageSize: totalClients }}
+      </div>
+      <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+        <span *ngFor="let page of pages" (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">></button>
+      </div>
+    </div>
+  </div>
+</div>

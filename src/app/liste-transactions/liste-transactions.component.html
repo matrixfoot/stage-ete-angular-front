@@ -1,0 +1,62 @@
+<!-- <div class="page-container">
+<div class="top-section">
+  <app-menu-lateral style="position: relative; z-index: 500;"></app-menu-lateral>
+  <div class="logo">
+    <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+  </div>
+  <div><h1>Tableau de bord administrateur</h1></div>
+  <div class="quick-search">
+    <img src="../../assets/quickSearch.png" alt="search icon" class="searchIcon">
+    <input type="text" placeholder="Recherche rapide">
+  </div>
+  </div>
+<div class="chart-container" style="display: block; ">
+  <h2>Liste des transactions</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date et Heure</th>
+        <th>Type</th>
+        <th>Montant (en DT)</th>
+        <th>Description</th>
+        <th>Client</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.date }}</td>
+        <td>{{ transaction.type }}</td>
+        <td>{{ transaction.montant }}</td>
+        <td>{{ transaction.description }}</td>
+        <td>{{ transaction.client }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="chart-container" style="display: block; z-index: 100; ">
+ 
+    <highcharts-chart
+      [Highcharts]="Highcharts"
+      [options]="barChartOptions"
+      style="width: 100%; height: 400px; display: block; margin-bottom: 7%; ">
+    </highcharts-chart>
+
+  
+ 
+      <highcharts-chart
+        [Highcharts]="Highcharts"
+        [options]="lineChartOptions"
+        style="width: 100%; height: 400px; display: block; margin-bottom: 7%;">
+      </highcharts-chart>
+    
+    
+    
+      <highcharts-chart
+        [Highcharts]="Highcharts"
+        [options]="pieChartOptions"
+        style="width: 100%; height: 400px; display: block;margin-bottom: 7%;">
+      </highcharts-chart>
+
+  </div>
+</div>
+
+</div> -->

@@ -1,0 +1,27 @@
+<h1>TCL:</h1>
+
+<div class="all">
+  <div class="traitement1">
+    <div class="input-group1">
+      <label for="input1" class="lab1">Chiffre d'affaire TTC </label>
+      <input id="input1" class="inp1" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0" size="10">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input2" class="lab2">Taux</label>
+      <input id="input2" class="inp2" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0.2" size="10" >
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <div class="traitement2">
+    <div class="input-group1">
+      <label for="input3" class="lab3">TCL à payer</label>
+      <input id="input3" class="inp3" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="0" size="10" >
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    
+  </div>
+
+  <app-partie-commune></app-partie-commune>
+</div>

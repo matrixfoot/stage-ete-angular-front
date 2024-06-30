@@ -1,0 +1,32 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="page-container">
+  <div class="top-section">
+    <div class="logo">
+      <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+    </div>
+    <div><h1>Tableau de bord administrateur</h1></div>
+    <div class="quick-search">
+      <img src="../../assets/quickSearch.png" alt="search icon" class="searchIcon">
+      <input type="text" placeholder="Recherche rapide">
+    </div>
+  </div>
+  <div style="display: flex;">
+  <div class="sidebar" [ngClass]="{'sidebar-open': isMenuOpen}" style="font-weight: 600; margin-right: 2%;" >
+    <ul>
+      <li *ngFor="let section of sections" (click)="toggleSection(section)">
+        <div class="section-title" [ngClass]="{'section-open': section.isOpen}" ><img src={{section.image}} alt="" style="width:25px;margin-right: 2%;">{{ section.title }}</div>
+        <ul [ngClass]="{'open': section.isOpen}">
+          <li *ngFor="let subSection of section.subSections" [ngClass]="{'visible': section.isOpen}">
+            <a [routerLink]="getRouterLink(subSection)" routerLinkActive="active-link">{{ subSection }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div style="background-color: white; width : 65% ; display:inline; border-radius: 15px;">
+    <p style="margin-top: 15%; margin-left: 10%; font-size: 5vw; width: 90%;">Re-bienvenue , Aymen !</p>
+  </div>
+</div>
+</div>

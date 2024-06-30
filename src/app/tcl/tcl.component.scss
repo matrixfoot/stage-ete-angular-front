@@ -1,0 +1,122 @@
+h1
+{
+    font-weight:bolder;
+    margin-left: 22%;
+    font-size: 1.5vw;
+    margin-bottom: 3%;
+    padding-top: 5%;
+  
+}
+ 
+.traitement1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    margin-left: 20%;
+  }
+  .traitement2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -1%;
+    margin-left: 33%;
+    margin-top: 6%;
+  }
+  .input-group1,.input-group2  {
+     
+    display: flex;
+    align-items: center;
+    margin-right: 18%;
+    width: 35%;
+    }
+  .lab1  {
+    color: black;
+    margin-right: -11%;
+    margin-left: 9%;
+    font-size: 1vw;
+    white-space: nowrap;
+    font-weight: bold;
+    width: 40%;
+
+  }
+  .lab2 {
+    color: black;
+    margin-right: 7%;
+    margin-left: -23%;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+   
+  } .lab3 {
+    color: black;
+    margin-right: 3%;
+    margin-left: 21%;
+    font-size: 0.9vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+    padding-right: 0;
+  }
+  .lab4 {
+    color: black;
+    margin-right: 3%;
+    margin-left: 5%;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+  }
+  .inp1{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 10%;
+    width: 33.5%;
+    height: 3.5vh;
+  } .inp2{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: -30%;
+    width: 33.5%;
+  }
+  .inp3{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: -5%;
+    width: 33%;
+    height: 3.5vh;
+
+  }
+  .inp4{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color:black  ;background-color: transparent;
+    width: 33.5%;
+    margin-left: 0%;
+  }
+  .tooltip-text {
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 1;
+    margin-right: 0;
+  }
+  
+  .input-group1,
+  .input-group2 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input-group1:hover .tooltip-text,
+  .input-group2:hover .tooltip-text {
+    display: block;
+  }

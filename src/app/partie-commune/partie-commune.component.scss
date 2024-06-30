@@ -1,0 +1,75 @@
+
+.reset-button {
+    /* display: flex; */
+    align-items: center;
+    padding-left: 0%;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9vw;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+    background-color: #D3D3CB;
+    margin-left: 31%;
+    margin-top: 6%;
+    height: 4vh;
+    width: 8%;
+    margin-bottom: 10%;
+
+ &:hover {
+   background-color: #cfcfcf;
+ }
+}
+
+.reset-icon {
+ 
+  margin-right: 0%;
+  width: 10%;
+  margin-right: 7%;
+}
+.btn2
+{
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9vw;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+  background-color: #E5FF45;
+  margin-left: 3%;
+  margin-top: 6%;
+  height: 4vh;
+  width: 9%;
+  padding: 0px;
+  margin-bottom: 10%;
+}
+.btn3
+{
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9vw;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+  background-color: #27AE60;
+  margin-left: 3%;
+  margin-top: 6%;
+  height: 4vh;
+  width: 8%;
+  padding: 0;
+  margin-bottom: 10%;
+
+}
+.fl {       vertical-align: middle;
+  width: 2%;
+  margin-left: 11%;
+  margin-right: -13%;
+  margin-top: 1%;
+  
+
+
+}

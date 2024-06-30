@@ -1,0 +1,31 @@
+<h1>Foprolos:</h1>
+
+<div class="all">
+  <div class="traitement">
+    <div class="input-group1">
+      <label for="input1" class="lab1">Salaires non soumis au Foprolos</label>
+      <input id="input1" class="inp1" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="Entrez le montant des salaires non soumis au FOPROLOS">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input2" class="lab2">Base Du Foprolos</label>
+      <input id="input2" class="inp2" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="Entrez la base du FOPROLOS">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <div class="traitement">
+    <div class="input-group1">
+      <label for="input3" class="lab3">Taux</label>
+      <input id="input3" class="inp3" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="Entrez le taux du FOPROLOS">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+    <div class="input-group2">
+      <label for="input4" class="lab4">Montant du Foprolos</label>
+      <input id="input4" class="inp4" type="text" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()" data-tooltip="Entrez le montant du FOPROLOS">
+      <span class="tooltip-text" *ngIf="isTooltipVisible">{{ tooltipText }}</span>
+    </div>
+  </div>
+
+  <app-partie-commune></app-partie-commune>
+</div>
