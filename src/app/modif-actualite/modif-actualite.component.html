@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5 text-danger text-decoration-none fs-2">
+        Formulaire de modification d'actualités
+      </h1>
+
+      <div class="row">
+        <div class="col">
+          <form class="row g-3 ps-4 pt-5">
+            <div class="col-md-6">
+              <label for="validationDefaultName" class="form-label"
+                ><b>Titre Actualité :</b></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="validationDefaultName"
+                value="Loi de finances 2023"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefaultName" class="form-label"
+                ><b>Rang :</b></label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="validationDefaultName"
+                value="1"
+                required
+              />
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">
+                <b>Commentaire :</b></label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              >
+Augmentation du plafond des crédits accordés par la BTS aux diplômés de l’enseignement supérieur de 150.000 DT à 200.000 DT
+</textarea
+              >
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">
+                <b>Description :</b></label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <div class="col-md-8">
+              <div class="input-group mt-3">
+                <label for="exampleFormControlTextarea1" class="form-label">
+                  <b>Attacher votre document joint</b></label
+                >
+                <input
+                  type="file"
+                  class="form-control mx-4"
+                  id="inputGroupFile01"
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <!-- Colonne pour aligner à droite et en dessous -->
+              <div class="d-flex justify-content-end mt-3">
+                <button class="btn btn-danger me-3" type="submit">
+                  Modifier Actualité
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -26,6 +26,10 @@ import { ViewDecompComponent } from './view-decomp/view-decomp.component';
 import { CollabBoardComponent } from './collab-board/collab-board.component';
 import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
 import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { ViewCondidateComponent } from './view-condidate/view-condidate.component';
+import { ViewReclamationComponent } from './view-reclamation/view-reclamation.component';
+import { ModifActualiteComponent } from './modif-actualite/modif-actualite.component';
 
 const routes: Routes = [
   {path:'collab-board',component:CollabBoardComponent},
@@ -49,6 +53,10 @@ const routes: Routes = [
   {path : 'userbord',component :UserBordComponent},
   {path : 'viewFis',component :ViewDecFiscComponent},
   {path : 'viewDec',component :ViewDecompComponent},
+  {path : 'coming-soon',component :ComingSoonComponent},
+  {path : 'viewCond',component :ViewCondidateComponent},
+  {path : 'viewRec',component :ViewReclamationComponent},
+  {path : 'modifA',component :ModifActualiteComponent},
   
   {path : 'saisiecomptab',component :SaisieComptableComponent},
   {path : 'saisieman',component :SaisieManuelComponent},

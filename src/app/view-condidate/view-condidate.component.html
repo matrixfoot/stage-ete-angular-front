@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .info-label {
+        color: rgba(20, 0, 255, 1);
+        margin-right: 5px;
+      }
+      .info-data {
+        margin-left: 5px;
+        color: black; /* Change the color here */
+      }
+      .info-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    </style>
+    <title>Informations Générales</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="title mb-3">Informations générales :</div>
+          <div class="title2 mt-3">
+            <span
+              style="font-size: 28px; color: rgba(255, 0, 0, 1)"
+              class="mx-3"
+              >Données Candidature :</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 info-container mb-3">
+        <div class="col-md-8">
+          <div class="section1 fs-4 px-3">
+            <p>
+              <span class="info-label">Crée le (heure GMT) :</span>
+              <span class="info-data">2024-06-24T10:01:39.238Z</span>
+            </p>
+            <p>
+              <span class="info-label"
+                >Dernière modification le (heure GMT) :</span
+              >
+              <span class="info-data">2024-06-25T08:28:45.147Z</span>
+            </p>
+            <p>
+              <span class="info-label">Nom et Prénom :</span>
+              <span class="info-data">omar kammoun</span>
+            </p>
+            <p>
+              <span class="info-label">Mobile :</span>
+              <span class="info-data">22898965</span>
+            </p>
+            <p>
+              <span class="info-label">CV :</span>
+              <a
+                href="https://macompta.com.tn/omar1719223299236.pdf"
+                style="text-decoration: underline"
+                target="_blank"
+                class="info-data"
+                >Aperçu CV</a
+              >
+            </p>
+            <p>
+              <span class="info-label">Spécialité Demandée :</span>
+              <span class="info-data">Comptabilité</span>
+            </p>
+            <p>
+              <span class="info-label">Adresse :</span>
+              <span class="info-data">ghazela</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="../../assets/ae.png"
+            alt="Image"
+            style="max-width: 100%; height: 277px"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11">
+          <table class="table table-bordered mt-4">
+            <thead>
+              <tr>
+                <th scope="col">date ouverture dossier:</th>
+                <th scope="col">durée de traitement:</th>
+                <th scope="col">Statuts:</th>
+                <th scope="col">Durée de traitement</th>
+                <th scope="col">Motifs:</th>
+                <th scope="col">date traitement:</th>
+                <th scope="col">durée cumulée de traitement:</th>
+                <th scope="col">traité par:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>25-06-2024--10-28 AM</td>
+                <td>{{ count }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Boutons d'action -->
+        <div
+          class="col-md-6 d-flex flex-column flex-md-row align-items-center mt-3"
+        >
+          <button
+            type="button"
+            style="font-family: Monaco; padding: 10px 20px"
+            class="btn btn-success btn-lg rounded-pill mb-3 mb-md-0 me-md-1 text-nowrap"
+          >
+            Modifier statut candidature (Admin)
+          </button>
+          <button
+            type="button"
+            style="font-family: Monaco"
+            class="btn btn-danger fs-5 btn-lg rounded-pill ms-md-3 pe-2 text-nowrap"
+          >
+            Supprimer candidature
+          </button>
+        </div>
+
+        <!-- Affectation de Collaborateur -->
+        <div class="col-md-3 d-flex flex-column align-items-start mb-4">
+          <label for="validationDefaultActivity2" class="form-label fs-5"
+            >Affecter Collaborateur</label
+          >
+          <select class="form-select" id="validationDefaultActivity2" required>
+            <option>Affecter à</option>
+            <option>Faycel ben Ayed</option>
+            <option>Omar Kammoun</option>
+          </select>
+        </div>
+
+        <!-- Gestion des Statuts -->
+        <div class="col-md-3 d-flex flex-column align-items-start">
+          <label for="validationDefaultActivity1" class="form-label fs-5"
+            >Gérer les Statuts</label
+          >
+          <select class="form-select" id="validationDefaultActivity1" required>
+            <option>Choisir statut</option>
+            <option>Supprimer le dernier statut collaborateur</option>
+            <option>Supprimer le dernier statut Admin</option>
+            <option>Supprimer le dernier statut paramétrage</option>
+          </select>
+        </div>
+
+        <!-- Bouton d'Affectation -->
+        <div class="col-12 d-flex justify-content-end mt-2">
+          <button
+            type="button"
+            style="font-family: Monaco; width: 150px"
+            class="btn btn-warning fs-5 mt-3 text-dark rounded-pill"
+          >
+            Affecter
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

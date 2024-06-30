@@ -37,6 +37,10 @@ import {ComptabiliteComponent} from './comptabilite/comptabilite.component';
 import { CollabBoardComponent } from './collab-board/collab-board.component';
 import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
 import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { ViewCondidateComponent } from './view-condidate/view-condidate.component';
+import { ViewReclamationComponent } from './view-reclamation/view-reclamation.component';
+import { ModifActualiteComponent } from './modif-actualite/modif-actualite.component';
 
 
 @NgModule({
@@ -80,6 +84,10 @@ import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
     ModifyPComponent,
     ClickOutsideDirective,
     CollabBoardComponent,
+    ComingSoonComponent,
+    ViewCondidateComponent,
+    ViewReclamationComponent,
+    ModifActualiteComponent,
 
   ],
   imports: [
