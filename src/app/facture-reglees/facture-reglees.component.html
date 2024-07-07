@@ -1,0 +1,67 @@
+<div class="page-container">
+  <div class="top-section">
+    <app-menu-lateral></app-menu-lateral>
+    <div class="logo">
+      <img src="../../assets/logoMaCompta.png" alt="Company Logo">
+    </div>
+    <div><h1>Tableau de bord administrateur</h1></div>
+    <div class="quick-search">
+      <img src="../../assets/quickSearch.png" alt="search icon" class="searchIcon">
+      <input type="text" placeholder="Recherche rapide">
+    </div>
+  </div>
+  <div class="facture-reglees-container">
+    <div class="header">
+      <div class="title">
+        Liste des factures réglées
+      </div>
+      <div class="search-bar">
+        <img src="../../assets/search.png" alt="search icon" class="searchIcon">
+        <input type="text" placeholder="Rechercher">
+      </div>
+      
+      <div class="filter">
+        <label for="tri">Trié par: &nbsp;</label>
+        <select id="tri">
+          <option value="date">Date</option>
+          <option value="prenom">Prénom</option>
+          <option value="nom">Nom</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Prénom et Nom</th>
+            <th>Total facture</th>
+            <th>Date de création</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let facture of paginatedFactures">
+            <td>{{ facture.code }}</td>
+            <td>{{ facture.nom }}</td>
+            <td>{{ facture.totalFacture }}</td>
+            <td>{{ facture.dateCreation }}</td>
+            <td class="action-buttons">
+              <button class="consulter">Consulter</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <div class="info">
+        {{ currentPage | displayRange: pageSize: totalFactures }}
+      </div>
+      <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+        <span *ngFor="let page of pages" (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">></button>
+      </div>
+    </div>
+  </div>
+</div>

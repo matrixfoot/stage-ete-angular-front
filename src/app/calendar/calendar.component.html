@@ -1,0 +1,37 @@
+<div id="calendar-container">
+  <!-- Navigation Buttons -->
+  <div class="cal-date-nav-buttons">
+    <button id="hier" mwlCalendarPreviousView [(viewDate)]="viewDate" [view]="view">hier</button>
+    <button id="Aujourd'hui" mwlCalendarToday [(viewDate)]="viewDate">Aujourd'hui</button>
+    <button id="demain" mwlCalendarNextView [(viewDate)]="viewDate" [view]="view">demain</button>
+
+    <!-- View Change Buttons -->
+    <span id="changer">
+      <button id="mois" (click)="setView(CalendarView.Month)">Mois</button>
+      <button id="semaine" (click)="setView(CalendarView.Week)">Semaine</button>
+      <button id="jour" (click)="setView(CalendarView.Day)">Jour</button>
+    </span>
+  </div>
+
+  <!-- Current Date Field -->
+  <div id="cal-date-field">{{ viewDate | calendarDate: (view + 'ViewTitle'):'fr' }}</div>
+
+  <!-- Calendar Views -->
+  <span [ngSwitch]="view">
+    <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month"
+                             [events]="events" [viewDate]="viewDate"
+                             [activeDayIsOpen]="activeDayIsOpen"
+                             (dayClicked)="dayClicked($event.day)">
+    </mwl-calendar-month-view>
+
+    <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week"
+                            [events]="events" [dayStartHour]="9"
+                            [dayEndHour]="17" [viewDate]="viewDate">
+    </mwl-calendar-week-view>
+
+    <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day"
+                           [dayStartHour]="9" [dayEndHour]="17"
+                           [events]="events" [viewDate]="viewDate">
+    </mwl-calendar-day-view>
+  </span>
+</div>

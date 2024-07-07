@@ -1,0 +1,114 @@
+h1
+{
+    font-weight:bolder;
+    margin-left: 7%;
+    font-size: 1.2vw;
+    margin-bottom: 3%;
+    padding-top: 5%;
+  
+}
+ 
+.traitement {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    margin-left: 8%;
+  }
+  
+  .input-group1,.input-group2  {
+     
+    display: flex;
+    align-items: center;
+    margin-right: 18%;
+    width: 35%;
+    }
+  .lab1  {
+    color: black;
+    margin-right: -11%;
+    margin-left: 9%;
+    font-size: 1vw;
+    white-space: nowrap;
+    font-weight: bold;
+    width: 40%;
+
+  }
+  .lab2 {
+    color: black;
+    margin-right: 7%;
+    margin-left: -23%;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+   
+  } .lab3 {
+    color: black;
+    margin-right: -11%;
+    margin-left:9%;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+  }
+  .lab4 {
+    color: black;
+    margin-right: 7%;
+    margin-left: -23%;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 40%;
+    white-space: nowrap;
+  }
+  .inp1{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 27%;
+    width: 33.5%;
+    height: 3.5vh;
+  } .inp2{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 2%;
+    width: 33.5%;
+  }
+  .inp3{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color: black;
+    background-color: transparent;
+    margin-left: 27%;
+    width: 33%;
+    height: 3.5vh;
+
+  }
+  .inp4{
+    border-radius: 0.5vw;
+    border-style: solid bold;
+    border-color:black  ;background-color: transparent;
+    width: 33.5%;
+    margin-left: 2%;
+  }
+  .tooltip-text {
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 1;
+  }
+  
+  .input-group1,
+  .input-group2 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input-group1:hover .tooltip-text,
+  .input-group2:hover .tooltip-text {
+    display: block;
+  }

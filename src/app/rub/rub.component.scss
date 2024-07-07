@@ -1,0 +1,156 @@
+.container {
+    margin-top: 3%;
+    width: 100%;
+    margin-left: 13%;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 3%;}
+  
+  .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .inp1{
+    border-style: solid;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: black;
+    margin-left: -2%;
+    border-radius: 5px;
+    width: 23%;
+    
+  }
+  .inp2
+  {
+
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 14.7%;
+    margin-left: 2%;
+    
+    border-radius: 5px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: black;
+  }
+  .inp3
+  {
+    width: 6%;
+    text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: black;
+    margin-left: 2%;
+    
+  }
+  .inp4
+  {
+    width: 15%;
+    /* height: 8vh; */
+    height: 4vh;
+     
+    border-style: solid;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: black;
+    border-width: 0.12vw;
+    margin-top: 5%;
+    margin-left: 1%;
+  }
+  .lab1
+  {
+    font-weight: bolder;
+    margin-right: 3%;
+    /* border-radius: 16px; */
+    text-align: left;
+  }
+  .lab2
+  {
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2vw;
+  }
+  .lab3
+  {
+    margin-left: 7%;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2vw;
+  }
+  .lab4
+  {
+    margin-left: 10%;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2vw;
+    padding-bottom: 0;
+    
+
+  }
+  h2{
+    margin-top:4%;
+  }
+  
+  .add-button {
+    background-color: #0047ab;
+   
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 11%;
+    height: 5vh;
+    font-size: 0.9vw;
+    white-space: nowrap;
+    padding: 0;
+    margin-left: 65%;
+    margin-top: 2%;
+  }
+  
+  .add-button:hover {
+    background-color: #003a8a;
+    
+  }
+  
+  .delete-button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 11%;
+    height: 5vh;
+    font-size: 0.9vw;
+    white-space: nowrap;
+    padding: 0;
+    margin-left: 65%;
+    margin-top: 3%;
+  }
+  
+  .delete-button:hover {
+    background-color: #cc0000;
+  }
+  
+  .rubrique h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .rubrique{
+    margin-left: -5%;
+  }

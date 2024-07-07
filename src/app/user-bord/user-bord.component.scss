@@ -1,0 +1,45 @@
+.feature-card {
+  margin: 15px;
+  transition: transform 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  mat-card-footer {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 4px 4px;
+  }
+
+  &:hover mat-card-footer {
+    display: block;
+  }
+}
+
+.feature-background-1 {
+  background-color: #f0f4c3;
+}
+
+.feature-background-2 {
+  background-color: #e1bee7;
+}
+
+.feature-background-3 {
+  background-color: #b3e5fc;
+}
+
+.feature-background-4 {
+  background-color: #ffccbc;
+}
+
+.feature-background-5 {
+  background-color: #dcedc8;
+}
+
+.feature-background-6 {
+  background-color: #ffcdd2;
+}

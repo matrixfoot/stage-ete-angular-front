@@ -163,116 +163,97 @@
               <td>
                 <select [(ngModel)]="achatsData[i].moyenPaiement">
                   <option value="TND"></option>
-                  <option value="EURO">Espèce</option>
-                  <option value="GBP">Chèque</option>
-                  <option value="USD">Traite</option>
-                  <option value="DZD">Non réglé</option>
-                </select>
-              </td>
-              <td><input type="checkbox" [(ngModel)]="achatsData[i].contientDocument" /></td>
-              <td><input type="file" [(ngModel)]="achatsData[i].documentsJoints" /></td>
-              <td><button (click)="removeRow('achats', i)">Supprimer</button></td>
-            </tr>
-            <tr>
-              <td colspan="7"><strong>Total</strong></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-            </tr>
-          </tbody>
-        </table>
-        <button class="add-btn" (click)="addRow('achats')">Ajouter</button>
+                  <option value="EURO">espèce</option>
+                  <option value="GBP">chèque</option>
+                  <option value="USD">traite</option>
+                  <option value="DZD">non reglé</option>
+                  </select>
+                </td>
+                <td><input type="checkbox"  /></td>
+                <td><input type="file"></td>
+              </tr>
+              <tr>
+                <td colspan="7"><strong>Total</strong></td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td><input type="text" placeholder="0.000"/></td>
+                <td><input type="text" placeholder="0.000"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="add-btn" (click)="addSalary()"></button>
+        </div>
+
       </div>
-    </div>
-  
-    <div *ngIf="selectedData === 'Banques'">
-      <h2>Détails de la saisie - Banques</h2>
-      <div class="details-container">
-        <div class="choix-banques">
-          <h3>Veuillez choisir le mode de saisie des relevés bancaires :</h3>
+
+      <!-- Partie banques-->
+      <div *ngSwitchCase="'Banques'">
+        <div class="choix-banques"> 
+          <h1>Veuillez Choisir Le Mode De Saisie Des Relevés Bancaires!</h1>
           <button (click)="setMode('manual')" class="btn-manual">Saisie Manuelle</button>
-          <button (click)="setMode('upload')" class="btn-upload">Téléchargement de document</button>
+          <button (click)="setMode('upload')" class="btn-upload">Téléchargement De Document</button>
         </div>
       </div>
-    </div>
-  
-    <div *ngIf="selectedData === 'Salaires'">
-      <h2>Détails de la saisie - Salaires</h2>
-      <div class="details-container">
-        <p>Type salaire :</p>
-        <select>
-          <option value="0">Choisir</option>
-          <option value="1">Mensuel</option>
-          <option value="2">15 Jours</option>
-          <option value="3">Ponctuel</option>
-        </select>
-        <table class="salary-table">
-          <thead>
-            <tr>
-              <th>Nom</th>
-              <th>Prénom</th>
-              <th>CIN</th>
-              <th>Date début</th>
-              <th>Date fin</th>
-              <th>Salaire brut</th>
-              <th>Prime</th>
-              <th>CNSS</th>
-              <th>Salaire imposable</th>
-              <th>IRPP</th>
-              <th>Salaire net</th>
-              <th>Moyen de paiement</th>
-              <th>Contient document</th>
-              <th>Documents joints</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of salairesData; let i = index">
-              <td><input type="text" [(ngModel)]="salairesData[i].nom" placeholder="Nom" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].prenom" placeholder="Prénom" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].cin" placeholder="CIN" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].dateDebut" placeholder="Date début" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].dateFin" placeholder="Date fin" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].salaireBrut" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].prime" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].cnss" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].salaireImposable" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].irpp" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].salaireNet" placeholder="0.000" /></td>
-              <td>
-                <select [(ngModel)]="salairesData[i].moyenPaiement">
-                  <option value="TND">Chèque</option>
-                  <option value="EURO">Espèce</option>
-                  <option value="GBP">Virement</option>
-                  <option value="USD">Traite</option>
-                </select>
-              </td>
-              <td><input type="checkbox" [(ngModel)]="salairesData[i].contientDocument" /></td>
-              <td><input type="file" [(ngModel)]="salairesData[i].documentsJoints" /></td>
-              <td><button (click)="removeRow('salaires', i)">Supprimer</button></td>
-            </tr>
-            <tr>
-              <td colspan="5"><strong>Total</strong></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-            </tr>
-          </tbody>
-        </table>
-        <button class="add-btn" (click)="addRow('salaires')">Ajouter</button>
+
+      <!-- Partie Salaires -->
+      <div class="salary-management" *ngSwitchCase="'Salaires'">
+        <p>Gestion des salaires</p>
+        <div class="div">
+          <p>Type de Salaire :</p>
+          <div class="salary-form-header">
+            <label></label>
+            <select [(ngModel)]="salaryType" (change)="onSalaryTypeChange()">
+              <option value=""></option>
+              <option value="paie normal">Paie normal</option>
+              <option value="prime">Prime</option>
+              <option value="remuneration">Réménuration</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div *ngIf="salaryType === 'autre'">
+            <input type="text" placeholder="Décrire le type de salaire" [(ngModel)]="otherSalaryType" />
+          </div>
+          <table class="salary-table">
+            <thead>
+              <tr>
+                <th>Matricule</th>
+                <th>Nom et prénom</th>
+                <th>Nature du contrat</th>
+                <th>Fiche contrat</th>
+                <th>Salaire Brut</th>
+                <th>Salaire Net</th>
+                <th>Actions fiche</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let salary of salaries; let i = index">
+                <td><input type="text" [(ngModel)]="salary.matricule" placeholder="Matricule" /></td>
+                <td><input type="text" [(ngModel)]="salary.nomPrenom" placeholder="Nom Prenom" /></td>
+                <td><input type="text" [(ngModel)]="salary.natureContrat" placeholder="client" /></td>
+                <td><input type="text" [(ngModel)]="salary.ficheContrat" /></td>
+                <td><input type="number" [(ngModel)]="salary.salaireBrut" /></td>
+                <td><input type="number" [(ngModel)]="salary.salaireNet" /></td>
+                <td>
+                  <button class="modify-btn" (click)="modifySalary(i)">Modifier</button>
+                  <button class="delete-btn" (click)="deleteSalary(i)">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4"><strong>Total</strong></td>
+                <td><strong>{{ calculateTotal('salaireBrut') }}</strong></td>
+                <td><strong>{{ calculateTotal('salaireNet') }}</strong></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="add-btn" (click)="addSalary()">Ajouter</button>
+        </div>
+        <button class="add-btn0" (click)="addSalaryGroup()">Ajouter autre type de salaire</button>
       </div>
     </div>
-  </div>
-
-  <!-- Navigation Buttons -->
-  <div class="buttons">
-    <button *ngIf="step > 1" (click)="previousStep()" class="btn-suivant"><--</button>
-    <button *ngIf="step < 3" (click)="nextStep()" [disabled]="!isNextEnabled()" class="btn-suivant">--></button>
-    <button *ngIf="step === 3" (click)="saveData()" >Sauvegarder</button>
-    <button *ngIf="step >= 2" (click)="reset()" class="btn-r">Réinitialiser</button>
+    
+    <button (click)="reset()" class="btn-reset">Réinitialiser</button>
+    <button (click)="save()">Sauvegarder</button>
   </div>
 </div>

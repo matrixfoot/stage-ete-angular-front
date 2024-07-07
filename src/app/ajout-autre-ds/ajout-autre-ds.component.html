@@ -1,0 +1,55 @@
+<div class="ajout-autre-ds">
+    <h1>Ajout Autre DS</h1>
+    <div class="line"></div>
+    <div class="form-group">
+      <!-- <label for="client-select">Sélectionner client:</label> -->
+      <select id="client-select" (change)="onClientChange($event)">
+        <option *ngFor="let client of clients">{{ client }}</option>
+      </select>
+    </div>
+  
+    <div *ngIf="selectedClient !== 'Sélectionner client:'" class="additional-section">
+    <!-- <div class="additional-section"> -->
+      <h2>Ajouter nouveau autre DS</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>libelle</th>
+            <th>description</th>
+            <th>durée</th>
+            <th>total honoraire</th>
+            <th>Soumis/Non soumis</th>
+            <th>Statut</th>
+            <th>timing</th>
+            <th>Chronométrage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><select>
+              <option>Choisir un libelle</option>
+            </select></td>
+            
+            <td><input type="text" placeholder="durée"></td>
+            <td><input type="text" placeholder="total honoraire"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="text" placeholder="statut"></td>
+            <td><input type="text" placeholder="timing"></td>
+            <td>
+              <!-- Add chronométrage control buttons here -->
+              <!-- <button class="btn view-btn">Start</button> -->
+              <button class="btn demarrer-btn"><img   src="../../assets/demarrer.png"> </button>
+              <button class="btn refresh-btn"><img   src="../../assets/refresh.png"> </button>
+              <button class="btn pause-btn"><img   src="../../assets/pause.png"> </button>
+              <button class="btn supprimer-btn"><img   src="../../assets/supprimer.png"> </button>
+              <!-- <button class="btn view-btn">Pause</button> -->
+              <!-- <button class="btn view-btn">Reset</button> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn ajouter-btn"><img src="../../assets/ajouter.png"> </button>
+    </div>
+    <button *ngIf="selectedClient !== 'Sélectionner client:'" class="btn create-ds">Créer autre DS</button>
+  </div>
+  

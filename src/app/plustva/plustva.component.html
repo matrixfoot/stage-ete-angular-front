@@ -1,0 +1,10 @@
+ 
+<div class="d">
+    <img src="assets/plus.png" class="dec" (click)="showSoumistvaComponent()" />
+    <div class="plus"> Autres revenus accessoires soumis à la TVA </div>
+  </div>
+  
+  <div *ngIf="showSoumistva">
+    <app-soutenutva></app-soutenutva> 
+  </div>
+  <app-partie-commune></app-partie-commune>

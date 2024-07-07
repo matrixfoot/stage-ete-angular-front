@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    min-height: 918px;
+    margin-bottom: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 100%;
+        margin-bottom: 40px;
+        padding: 0 20px;
+    }
+}
+
+ .img {
+     position: absolute;
+     inset: 0;
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     object-position: center;
+ }
+
+.image-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 264px 0 350px 0;
+}
+
+@media (max-width: 991px) {
+    .image-wrapper {
+        margin: 40px 0;
+    }
+}
+
+.message {
+    color: #000;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    align-self: center;
+    margin: 203px 0 0 0;
+    font: 500 25px/24px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+    .message {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.message {
+    color: #000;
+    font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+    align-self: center;
+    margin: 203px 0 0 0;
+}
+
+.message h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.message p {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+}

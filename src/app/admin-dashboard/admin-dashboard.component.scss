@@ -1,0 +1,301 @@
+.page-container {
+  background-color: gray;
+  padding: 20px;
+
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    .logo {
+      text-align: center;
+      flex: 1;
+      
+      img {
+        max-width: 250px; /* Adjust as necessary */
+      }
+    }
+
+    .quick-search {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+
+      input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+
+  .candidats-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .search-bar {
+        input {
+          padding: 10px;
+          font-size: 16px;
+        }
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+      }
+
+      .filter {
+        select {
+          padding: 10px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+          padding: 10px;
+          text-align: left;
+        }
+
+        thead {
+          th {
+            background-color: #f1f1f1;
+            color: gray;
+          }
+        }
+
+        tbody {
+          tr {
+            border-bottom: 1px solid #e0e0e0;
+
+            td {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+
+      .info {
+        font-size: 14px;
+        color: gray;
+      }
+
+      .pagination {
+        button {
+          padding: 5px 10px;
+          margin: 0 5px;
+          font-size: 14px;
+          cursor: pointer;
+
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+          }
+        }
+
+        span {
+          margin: 0 5px;
+          cursor: pointer;
+
+          &.active {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.searchIcon {
+  max-width: 40px;
+  margin-right: 15px;
+}
+
+/* For smaller screens, adjust padding and font sizes */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 10px;
+  }
+
+  .top-section {
+    flex-direction: column;
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .quick-search {
+      justify-content: flex-start;
+    }
+  }
+
+  .candidats-container .header {
+    flex-direction: column;
+
+    .search-bar {
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+  }
+}
+
+/* Adjustments for even smaller screens */
+@media (max-width: 480px) {
+  .quick-search {
+    flex-direction: column;
+    align-items: stretch;
+
+    input {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.sidebar {
+  border-radius: 15px;
+  width: 33%;
+  background-color: #f8f9fa;
+  color: black;
+  top: 95px; 
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+
+  &.sidebar-open {
+    transform: translateX(0);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10% 0;
+
+    li {
+
+      .section-title {
+        border-radius: 25px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #eeeeee;
+          color: #2f80ed;
+        }
+
+        &.section-open {
+          color: #2f80ed; 
+          background-color: #eeeeee;
+        }
+        a {
+            display: block;
+            padding: 5px 10px;
+            color: black;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+              background-color: #eeeeee;
+              color: #2f80ed;
+            }
+
+            &.active-link {
+              background-color: #2f80ed;
+              color: white;
+            }
+          }
+      }
+
+      ul {
+        padding-left: 20px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+
+        &.open {
+          max-height: 500px; /* Adjust max-height as needed */
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        li {
+          padding: 5px 0;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+          transform: translateY(-20px);
+          opacity: 0;
+
+          &.visible {
+            transform: translateY(0);
+            opacity: 1;
+            color: #2f80ed;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menuLateralImage {
+  width: 50px;
+  cursor: pointer;
+  position: relative;
+  top: 2px; 
+  left: 15px; 
+  z-index: 1000; 
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+
+  .menuLateralImage {
+    width: 40px; /* Adjust icon size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px; /* Adjust width for even smaller screens */
+  }
+
+  .menuLateralImage {
+    width: 30px; /* Adjust icon size for even smaller screens */
+  }
+}

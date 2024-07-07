@@ -1,0 +1,41 @@
+<h1>Traitement et salaires :</h1>
+<div class="all"><div class="traitement">
+    <div class="input-group1">
+      <label for="input1" class="lab1">Total des salaires brut </label>
+      <div class="input-container">
+        <input id="input1" class="inp1" type="text" data-tooltip="0.000" size="12" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()">
+        <div class="tooltip" *ngIf="isTooltipVisible">{{tooltipText}}</div>
+      </div>
+     
+    </div>
+    <div class="input-group2">
+      <label for="input2" class="lab2" >Total des salaires imposables </label>
+      <div class="input-container">
+        <input id="input2" type="text" class="inp2" data-tooltip="Montant en DT à 3 chiffres après la virgule" size="20" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()">
+        <div class="tooltip" *ngIf="isTooltipVisible">{{tooltipText}}</div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="traitement">
+    <div class="input-group4">
+      <label for="input1" class="lab3">Total des revenues à la source</label>
+      <div class="input-container">
+        <input id="input3" class="inp3" type="text" data-tooltip="Entrez le total des revenus à la source en DT" size="12" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()">
+        <div class="tooltip" *ngIf="isTooltipVisible">{{tooltipText}}</div>
+      </div>
+      
+    </div>
+    <div class="input-group3">
+      <label for="input2" class="lab4" >Contribution sociale de solidarité</label>
+      <div class="input-container">
+        <input id="input4" type="text" class="inp4" data-tooltip="Montant en DT à 3 chiffres après la virgule" size="20" (mouseenter)="showTooltip($event)" (mouseleave)="hideTooltip()">
+        <div class="tooltip" *ngIf="isTooltipVisible">{{tooltipText}}</div>
+      </div>
+     
+    </div>
+  </div>
+ 
+  <ng-template #dynamicComponentContainer></ng-template>
+
+    

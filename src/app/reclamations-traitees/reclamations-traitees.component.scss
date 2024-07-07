@@ -1,0 +1,232 @@
+.page-container {
+  background-color: gray;
+  padding: 20px;
+}
+
+.page-container .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.page-container .top-section .logo {
+  text-align: center;
+  flex: 1;
+}
+
+.page-container .top-section .logo img {
+  max-width: 100%; /* Adjust to ensure responsiveness */
+  height: auto;
+  max-height: 80px; /* Limit logo height if necessary */
+}
+
+.page-container .top-section .quick-search {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-container .top-section .quick-search input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%; /* Ensures input fills available space */
+}
+
+.page-container .reclamations-traitees-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.page-container .reclamations-traitees-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-container .reclamations-traitees-container .header .search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%; /* Ensures input fills available space */
+}
+
+.page-container .reclamations-traitees-container .header .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.page-container .reclamations-traitees-container .header .filter select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.page-container .reclamations-traitees-container .table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.page-container .reclamations-traitees-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page-container .reclamations-traitees-container th,
+.page-container .reclamations-traitees-container td {
+  padding: 10px;
+  text-align: left;
+}
+
+.page-container .reclamations-traitees-container thead th {
+  background-color: #f1f1f1;
+  color: gray;
+}
+
+.page-container .reclamations-traitees-container tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-container .reclamations-traitees-container tbody td {
+  color: black;
+}
+
+.page-container .reclamations-traitees-container tbody td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.page-container .reclamations-traitees-container tbody td a:hover {
+  text-decoration: underline;
+}
+
+.page-container .reclamations-traitees-container .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.page-container .reclamations-traitees-container .footer .info {
+  font-size: 14px;
+  color: gray;
+}
+
+.page-container .reclamations-traitees-container .footer .pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.page-container .reclamations-traitees-container .footer .pagination span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-container .reclamations-traitees-container .footer .pagination span.active {
+  font-weight: bold;
+}
+
+.searchIcon {
+  max-width: 40px;
+  margin-right: 15px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .page-container .top-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-container .top-section .logo img {
+    max-width: 200px; /* Adjust as necessary */
+  }
+
+  .page-container .top-section .quick-search {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .page-container .reclamations-traitees-container .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-container .reclamations-traitees-container .header .search-bar,
+  .page-container .reclamations-traitees-container .header .filter {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    padding: 10px;
+  }
+
+  .page-container .top-section {
+    padding: 10px;
+  }
+
+  .page-container .reclamations-traitees-container {
+    padding: 10px;
+  }
+
+  .page-container .top-section .logo img {
+    max-width: 150px; /* Adjust as necessary */
+  }
+
+  .page-container .top-section .quick-search input {
+    font-size: 14px;
+  }
+
+  .page-container .reclamations-traitees-container .header .title {
+    font-size: 20px;
+  }
+
+  .page-container .reclamations-traitees-container .footer .info {
+    margin-top: 10px;
+  }
+
+  .page-container .reclamations-traitees-container .footer .pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-container .top-section .logo img {
+    max-width: 120px; /* Adjust as necessary */
+  }
+
+  .page-container .reclamations-traitees-container .header .title {
+    font-size: 18px;
+  }
+
+  .page-container .reclamations-traitees-container .header .search-bar input,
+  .page-container .reclamations-traitees-container .header .filter select {
+    font-size: 14px;
+  }
+
+  .page-container .reclamations-traitees-container .footer .info {
+    font-size: 12px;
+  }
+
+  .page-container .reclamations-traitees-container .footer .pagination button {
+    font-size: 12px;
+  }
+}
