@@ -110,6 +110,8 @@ const routes: Routes = [
   {path:'aj',component:  AjouterEventComponent},
   {path:'prof',component:   ProfilComponent},
     {path:'about',component:   AboutComponent  },
+   /*  {path:'fichierdeclaration',component:   FichierDeclarationComponent  }, */
+    {path:'fichierrecap',component:   FichiersComptablesEnCoursExecutionComponent  },
     {path:'fisc',component:  FiscalityComponent     },
     {path:'comptab',component:   ComptabiliteComponent     },{ path: 'saisie-comptable', component: SaisieComptableComponent },
      // Optionnel: redirection vers saisie-comptable par défaut
@@ -212,6 +214,7 @@ const routes: Routes = [
   {path : 'saisiecomptab',component :SaisieComptableComponent},
   {path : 'saisieman',component :SaisieManuelComponent},
   {path : 'TT',component :TaxWizardComponentComponent },
+    {path:'comptab',component:   ComptabiliteComponent     },
 
 
 ];

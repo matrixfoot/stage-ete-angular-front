@@ -1,8 +1,18 @@
 <div class="container">
   <!-- Navigation Steps -->
   <div class="steps-navigation">
-    <span [class.active]="step === 1" class="step-circle" [class.completed]="step > 1">1</span>
-    <span [class.active]="step === 2" class="step-circle" [class.completed]="step > 2">2</span>
+    <span
+      [class.active]="step === 1"
+      class="step-circle"
+      [class.completed]="step > 1"
+      >1</span
+    >
+    <span
+      [class.active]="step === 2"
+      class="step-circle"
+      [class.completed]="step > 2"
+      >2</span
+    >
     <span [class.active]="step === 3" class="step-circle">3</span>
   </div>
 
@@ -16,28 +26,44 @@
       </select>
     </div>
     <div class="form-group">
-      <select id="month" [(ngModel)]="selectedMonth" (change)="onMonthChange()" [disabled]="!selectedYear">
+      <select
+        id="month"
+        [(ngModel)]="selectedMonth"
+        (change)="onMonthChange()"
+        [disabled]="!selectedYear"
+      >
         <option [ngValue]="null" disabled selected>Sélectionner mois</option>
-        <option *ngFor="let month of months" [ngValue]="month">{{ month }}</option>
+        <option *ngFor="let month of months" [ngValue]="month">
+          {{ month }}
+        </option>
       </select>
     </div>
+    <button (click)="goToNextStep()">Suivant</button>
   </div>
 
   <!-- Step 2: Liste des données à saisir -->
   <div *ngIf="step === 2" class="step-container">
     <h2>Liste des données à saisir</h2>
-    <label *ngFor="let data of dataList" class="form-group2">
-      <input type="checkbox" [(ngModel)]="data.selected" (change)="onDataSelect(data)" />
+    <div class="form-group2" *ngFor="let data of dataList">
+      <input
+        type="checkbox"
+        [(ngModel)]="data.selected"
+        (change)="onDataSelect(data)"
+      />
       {{ data.name }}
-    </label>
+    </div>
+    <button (click)="goToNextStep()">Suivant</button>
+    <button (click)="goToPreviousStep()">Précédent</button>
   </div>
 
   <!-- Step 3: Détails de la saisie -->
   <div *ngIf="step === 3" class="step-container">
     <div class="tabs">
-      <button *ngFor="let data of dataList" 
-              [disabled]="!data.selected" 
-              (click)="selectTab(data.name)">
+      <button
+        *ngFor="let data of dataList"
+        [disabled]="!data.selected"
+        (click)="selectTab(data.name)"
+      >
         {{ data.name }}
       </button>
     </div>
@@ -50,7 +76,7 @@
         <table class="salary-table">
           <thead>
             <tr>
-              <th>N° piece</th>
+              <th>N° pièce</th>
               <th>Jour</th>
               <th>Date complète</th>
               <th>Type</th>
@@ -63,34 +89,145 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><input type="text" placeholder="1" matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000" [matTooltipDisabled]="!isTextOverflow('1')"/></td>
-              <td><input type="text" placeholder="Jour" matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000" [matTooltipDisabled]="!isTextOverflow('Jour')"/></td>
-              <td><input type="text" placeholder="Date" matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000" [matTooltipDisabled]="!isTextOverflow('Date')"/></td>
+            <tr *ngFor="let item of chiffreAffairesData; let i = index">
               <td>
-                <select matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000">
+                <input
+                  type="text"
+                  [(ngModel)]="chiffreAffairesData[i].numeroPiece"
+                  placeholder="1"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                  [matTooltipDisabled]="
+                    !isTextOverflow(chiffreAffairesData[i].numeroPiece)
+                  "
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="chiffreAffairesData[i].jour"
+                  placeholder="Jour"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                  [matTooltipDisabled]="
+                    !isTextOverflow(chiffreAffairesData[i].jour)
+                  "
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="chiffreAffairesData[i].dateComplete"
+                  placeholder="Date"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                  [matTooltipDisabled]="
+                    !isTextOverflow(chiffreAffairesData[i].dateComplete)
+                  "
+                />
+              </td>
+              <td>
+                <select
+                  [(ngModel)]="chiffreAffairesData[i].type"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                >
                   <option value=""></option>
                   <option value="alm">Facture</option>
                   <option value="S">Avoir</option>
                 </select>
               </td>
-              <td><input type="text" placeholder="0" matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000" [matTooltipDisabled]="!isTextOverflow('0')"/></td>
-              <td><input type="text" placeholder="0" matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000" [matTooltipDisabled]="!isTextOverflow('0')"/></td>
-              <td><input type="text" placeholder="0.000" matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000" [matTooltipDisabled]="!isTextOverflow('0.000')"/></td>
-              <td><input type="text" placeholder="0.000" matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000" [matTooltipDisabled]="!isTextOverflow('0.000')"/></td>
               <td>
-                <select matTooltip="Tooltip avec un texte long pour démonstration" [matTooltipShowDelay]="1000">
+                <input
+                  type="text"
+                  [(ngModel)]="chiffreAffairesData[i].numero"
+                  placeholder="0"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                  [matTooltipDisabled]="
+                    !isTextOverflow(chiffreAffairesData[i].numero)
+                  "
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="chiffreAffairesData[i].montantTVA"
+                  placeholder="0"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                  [matTooltipDisabled]="
+                    !isTextOverflow(chiffreAffairesData[i].montantTVA)
+                  "
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="chiffreAffairesData[i].droitTimbre"
+                  placeholder="0.000"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                  [matTooltipDisabled]="
+                    !isTextOverflow(chiffreAffairesData[i].droitTimbre)
+                  "
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="chiffreAffairesData[i].montantTTC"
+                  placeholder="0.000"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                  [matTooltipDisabled]="
+                    !isTextOverflow(chiffreAffairesData[i].montantTTC)
+                  "
+                />
+              </td>
+              <td>
+                <select
+                  [(ngModel)]="chiffreAffairesData[i].client"
+                  matTooltip="Tooltip avec un texte long pour démonstration"
+                  [matTooltipShowDelay]="1000"
+                >
                   <option value=""></option>
                   <option value="S">Autre</option>
                 </select>
               </td>
-              <td><input type="checkbox" /></td>
+              <td>
+                <input
+                  type="checkbox"
+                  [(ngModel)]="chiffreAffairesData[i].annuler"
+                />
+              </td>
             </tr>
             <tr>
               <td colspan="5"><strong>Total</strong></td>
-              <td><input type="text" placeholder="0.000"/></td>
-              <td><input type="text" placeholder="0.000"/></td>
-              <td><input type="text" placeholder="0.000"/></td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="totalMontantTVA"
+                  placeholder="0.000"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="totalDroitTimbre"
+                  placeholder="0.000"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="totalMontantTTC"
+                  placeholder="0.000"
+                  readonly
+                />
+              </td>
             </tr>
           </tbody>
         </table>
@@ -123,9 +260,27 @@
           </thead>
           <tbody>
             <tr *ngFor="let item of achatsData; let i = index">
-              <td><input type="text" [(ngModel)]="achatsData[i].numeroPiece" placeholder="N° pièce" /></td>
-              <td><input type="text" [(ngModel)]="achatsData[i].jour" placeholder="Jour" /></td>
-              <td><input type="text" [(ngModel)]="achatsData[i].dateComplete" placeholder="Date complète" /></td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].numeroPiece"
+                  placeholder="N° pièce"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].jour"
+                  placeholder="Jour"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].dateComplete"
+                  placeholder="Date complète"
+                />
+              </td>
               <td>
                 <select [(ngModel)]="achatsData[i].fournisseur">
                   <option value=""></option>
@@ -138,14 +293,26 @@
                   <option value="S">Autre</option>
                 </select>
               </td>
-              <td><input type="text" [(ngModel)]="achatsData[i].numero" placeholder="N°" /></td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].numero"
+                  placeholder="N°"
+                />
+              </td>
               <td>
                 <select [(ngModel)]="achatsData[i].natureAchat">
                   <option value=""></option>
                   <option value="S">Autre</option>
                 </select>
               </td>
-              <td><input type="text" [(ngModel)]="achatsData[i].montantHT" placeholder="0.000" /></td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].montantHT"
+                  placeholder="0.000"
+                />
+              </td>
               <td>
                 <select [(ngModel)]="achatsData[i].devise">
                   <option value="TND">TND</option>
@@ -155,125 +322,199 @@
                   <option value="DZD">DZD</option>
                   <option value="SAR">SAR</option>
                 </select>
-                <input type="text" [(ngModel)]="achatsData[i].montantDevise" placeholder="0.000" />
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].montantDevise"
+                  placeholder="0.000"
+                />
               </td>
-              <td><input type="text" [(ngModel)]="achatsData[i].montantTVA" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="achatsData[i].droitTimbre" placeholder="0" /></td>
-              <td><input type="text" [(ngModel)]="achatsData[i].montantTTC" placeholder="0.000" /></td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].montantTVA"
+                  placeholder="0.000"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].droitTimbre"
+                  placeholder="0"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="achatsData[i].montantTTC"
+                  placeholder="0.000"
+                />
+              </td>
               <td>
                 <select [(ngModel)]="achatsData[i].moyenPaiement">
-                  <option value="TND"></option>
-                  <option value="EURO">Espèce</option>
-                  <option value="GBP">Chèque</option>
-                  <option value="USD">Traite</option>
-                  <option value="DZD">Non réglé</option>
+                  <option value=""></option>
+                  <option value="espèce">espèce</option>
+                  <option value="chèque">chèque</option>
+                  <option value="traite">traite</option>
+                  <option value="non reglé">non reglé</option>
                 </select>
               </td>
-              <td><input type="checkbox" [(ngModel)]="achatsData[i].contientDocument" /></td>
-              <td><input type="file" [(ngModel)]="achatsData[i].documentsJoints" /></td>
-              <td><button (click)="removeRow('achats', i)" class="btn-delete">Supprimer</button></td>
+              <td>
+                <input
+                  type="checkbox"
+                  [(ngModel)]="achatsData[i].contientDocument"
+                />
+              </td>
+              <td><input type="file" (change)="onFileSelect($event, i)" /></td>
             </tr>
             <tr>
               <td colspan="7"><strong>Total</strong></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="totalMontantHT"
+                  placeholder="0.000"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="totalMontantDevise"
+                  placeholder="0.000"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="totalMontantTVA"
+                  placeholder="0.000"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="totalDroitTimbre"
+                  placeholder="0.000"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="totalMontantTTC"
+                  placeholder="0.000"
+                  readonly
+                />
+              </td>
             </tr>
           </tbody>
         </table>
-        <button class="add-btn" (click)="addRow('achats')">Ajouter</button>
+        <button class="add-btn" (click)="addRow()">Ajouter</button>
       </div>
     </div>
-  
+
     <div *ngIf="selectedData === 'Banques'">
-      <h2>Détails de la saisie - Banques</h2>
-      <div class="details-container">
-        <div class="choix-banques">
-          <h3>Veuillez choisir le mode de saisie des relevés bancaires :</h3>
-          <button (click)="setMode('manual')" class="btn-manual">Saisie Manuelle</button>
-          <button (click)="setMode('upload')" class="btn-upload">Téléchargement de document</button>
-        </div>
+      <div class="choix-banques">
+        <h1>Veuillez Choisir Le Mode De Saisie Des Relevés Bancaires!</h1>
+        <button (click)="setMode('manual')" class="btn-manual">
+          Saisie Manuelle
+        </button>
+        <button (click)="setMode('upload')" class="btn-upload">
+          Téléchargement De Document
+        </button>
       </div>
     </div>
-  
+
     <div *ngIf="selectedData === 'Salaires'">
-      <h2>Détails de la saisie - Salaires</h2>
-      <div class="details-container">
-        <p>Type salaire :</p>
-        <select>
-          <option value="-1"></option>
-          <option value="0">Paie normal</option>
-          <option value="1">Prime</option>
-          <option value="2">Rénumération</option>
-          <option value="3">Autre</option>
-        </select>
+      <p>Gestion des salaires</p>
+      <div class="div">
+        <p>Type de Salaire :</p>
+        <div class="salary-form-header">
+          <label></label>
+          <select [(ngModel)]="salaryType" (change)="onSalaryTypeChange()">
+            <option value=""></option>
+            <option value="paie normal">Paie normal</option>
+            <option value="prime">Prime</option>
+            <option value="remuneration">Réménuration</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div *ngIf="salaryType === 'autre'">
+          <input
+            type="text"
+            placeholder="Décrire le type de salaire"
+            [(ngModel)]="otherSalaryType"
+          />
+        </div>
         <table class="salary-table">
           <thead>
             <tr>
-              <th>Nom</th>
-              <th>Prénom</th>
-              <th>CIN</th>
-              <th>Date début</th>
-              <th>Date fin</th>
-              <th>Salaire brut</th>
-              <th>Prime</th>
-              <th>CNSS</th>
-              <th>Salaire imposable</th>
-              <th>IRPP</th>
-              <th>Salaire net</th>
-              <th>Moyen de paiement</th>
-              <th>Contient document</th>
-              <th>Documents joints</th>
+              <th>Matricule</th>
+              <th>Nom et prénom</th>
+              <th>Nature du contrat</th>
+              <th>Fiche contrat</th>
+              <th>Salaire Brut</th>
+              <th>Salaire Net</th>
+              <th>Actions fiche</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of salairesData; let i = index">
-              <td><input type="text" [(ngModel)]="salairesData[i].nom" placeholder="Nom" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].prenom" placeholder="Prénom" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].cin" placeholder="CIN" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].dateDebut" placeholder="Date début" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].dateFin" placeholder="Date fin" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].salaireBrut" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].prime" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].cnss" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].salaireImposable" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].irpp" placeholder="0.000" /></td>
-              <td><input type="text" [(ngModel)]="salairesData[i].salaireNet" placeholder="0.000" /></td>
+            <tr *ngFor="let salary of salaries; let i = index">
               <td>
-                <select [(ngModel)]="salairesData[i].moyenPaiement">
-                  <option value="TND">Chèque</option>
-                  <option value="EURO">Espèce</option>
-                  <option value="GBP">Virement</option>
-                  <option value="USD">Traite</option>
-                </select>
+                <input
+                  type="text"
+                  [(ngModel)]="salary.matricule"
+                  placeholder="Matricule"
+                />
               </td>
-              <td><input type="checkbox" [(ngModel)]="salairesData[i].contientDocument" /></td>
-              <td><input type="file" [(ngModel)]="salairesData[i].documentsJoints" /></td>
-              <td><button (click)="removeRow('salaires', i)" class="btn-delete">Supprimer</button></td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="salary.nomPrenom"
+                  placeholder="Nom Prenom"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  [(ngModel)]="salary.natureContrat"
+                  placeholder="client"
+                />
+              </td>
+              <td><input type="text" [(ngModel)]="salary.ficheContrat" /></td>
+              <td><input type="number" [(ngModel)]="salary.salaireBrut" /></td>
+              <td><input type="number" [(ngModel)]="salary.salaireNet" /></td>
+              <td>
+                <button class="modify-btn" (click)="modifySalary(i)">
+                  Modifier
+                </button>
+                <button class="delete-btn" (click)="deleteSalary(i)">
+                  Supprimer
+                </button>
+              </td>
             </tr>
             <tr>
-              <td colspan="5"><strong>Total</strong></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
-              <td><input type="text" placeholder="0.000" disabled /></td>
+              <td colspan="4"><strong>Total</strong></td>
+              <td>
+                <strong>{{ calculateTotal("salaireBrut") }}</strong>
+              </td>
+              <td>
+                <strong>{{ calculateTotal("salaireNet") }}</strong>
+              </td>
+              <td></td>
             </tr>
           </tbody>
         </table>
-        <button class="add-btn" (click)="addRow('salaires')">Ajouter</button>
+        <button class="add-btn" (click)="addSalary()">Ajouter</button>
       </div>
+      <button class="add-btn0" (click)="addSalaryGroup()">
+        Ajouter autre type de salaire
+      </button>
     </div>
-  </div>
 
-  <!-- Navigation Buttons -->
-  <div class="buttons">
-    <button *ngIf="step > 1" (click)="previousStep()" class="btn-suivant"><--</button>
-    <button *ngIf="step < 3" (click)="nextStep()" [disabled]="!isNextEnabled()" class="btn-suivant">--></button>
-    <button *ngIf="step === 3" (click)="saveData()" >Sauvegarder</button>
-    <button *ngIf="step >= 2" (click)="reset()" class="btn-r">Réinitialiser</button>
+    <button (click)="reset()" class="btn-reset">Réinitialiser</button>
+    <button (click)="saveData()">Sauvegarder</button>
   </div>
 </div>
