@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-right-ar {
+        text-align: right;
+        direction: rtl;
+      }
+
+      .text-left-fr {
+        text-align: left;
+        direction: ltr;
+      }
+      .d-flex {
+        display: flex;
+      }
+      .justify-content-between {
+        justify-content: space-between;
+      }
+      .align-items-center {
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mt-5 text-danger fs-2">
+        الأداء على التكوين المهني
+      </h1>
+      <h1 class="text-center mt-3 text-danger fs-2">
+        TAXE DE FORMATION PROFESSIONNELLE
+      </h1>
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">الأداء القابل للطرح</th>
+            <th scope="col" class="text-center">الأداء المستوجب</th>
+            <th scope="col" class="text-center">النسبة</th>
+            <th scope="col" class="text-center">أساس الأداء</th>
+            <th scope="col" colspan="2"></th>
+          </tr>
+          <tr>
+            <th scope="col" class="text-center">Taxe Déductible</th>
+            <th scope="col" class="text-center">Taxe due</th>
+            <th scope="col" class="text-center">Taux</th>
+            <th scope="col" class="text-center">Assiette de la taxe</th>
+            <th scope="col" colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">1%</td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="2">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>الصّناعات المعملية</span>
+                <span class="text-left-fr">Industrie manufacturière</span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">2%</td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="2">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>الأنشطة الأخرى </span>
+                <span class="text-left-fr">Autres activités </span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-right-ar" colspan="2">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>مبلغ فائض 9 التسبقة الذي لم يتسن طرحه </span>
+                <span class="text-left-fr"
+                  >Excédent de l'avance qui n'a pas pu être deduit</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-right-ar" colspan="2">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> طرح مبلغ g العائدات التي لم يتسن طرحها</span>
+                <span class="text-left-fr"
+                  >Deduction des ristournes qui n'ont pas pu être déduites</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-right-ar" colspan="2">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>مبالغ إضافية للطرح بعنوان العائدات </span>
+                <span class="text-left-fr"
+                  >Montant complémentaire à déduire au titre des
+                  ristournes</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-right-ar" colspan="2">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>مبالغ إضافية للطرح بعنوان العائدات</span>
+                <span class="text-left-fr"
+                  >Montant à déduire du crédit de ristournes qui n'ont pas pu
+                  être déduites</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>المجموع </span>
+                <span class="text-left-fr"> TOTAL</span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">P</td>
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> الباقي : (ب)</span>
+                <span class="text-left-fr"
+                  >Reste : (P) à payer ou (R) à reporter</span
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr>
+            <th scope="col" colspan="4" class="text-center">
+              <table class="table table-borderless">
+                <tr>
+                  <td>السنة</td>
+                  <td>الشهر</td>
+                  <td>اليوم</td>
+                </tr>
+                <tr>
+                  <td>année</td>
+                  <td>mois</td>
+                  <td>jour</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="number"
+                      name="year"
+                      id="year"
+                      placeholder="السنة / année"
+                      min="1900"
+                      max="2100"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="month"
+                      name="month"
+                      id="month"
+                      placeholder="الشهر / mois"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="day"
+                      id="day"
+                      placeholder="اليوم / jour"
+                      min="1"
+                      max="31"
+                    />
+                  </td>
+                </tr>
+              </table>
+            </th>
+            <th scope="col" class="text-center">لا</th>
+            <th scope="col" class="text-center">نعم</th>
+            <th scope="col" colspan="4" class="text-right">
+              تاريخ استلام مقرر المصادقة في المبالغ النهائية بعنوان طرح التسبقة
+            </th>
+          </tr>
+          <tr>
+            <th scope="col" colspan="4" class="text-center"></th>
+            <th scope="col" class="text-center">Non</th>
+            <th scope="col" class="text-center">Oui</th>
+            <th scope="col" colspan="4" class="text-right">
+              Date de réception de la décision d'approbation au titre de
+              l'avance
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4"></td>
+            <td class="text-center">
+              <input type="radio" name="approval" value="non" />
+            </td>
+            <td class="text-center">
+              <input type="radio" name="approval" value="oui" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr>
+            <th class="text-center">Non لا</th>
+            <th class="text-center">Oui نعم</th>
+            <th class="text-center">معفى</th>
+            <th class="text-center" colspan="2" rowspan="2">
+              <input type="number" />
+            </th>
+            <th class="text-center" colspan="2">عدد المنتفعين</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <input type="radio" name="approval" value="non" />
+            </td>
+            <td class="text-center">
+              <input type="radio" name="approval" value="oui" />
+            </td>
+            <td class="text-center">Exonéré</td>
+            <td colspan="2" class="text-center"></td>
+            <td class="text-center">Nb bénéficiaires</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row wizard-buttons">
+        <div class="col d-flex justify-content-center align-items-center">
+          <button type="button" class="btn btn-outline-primary mx-2">
+            موافق Valider
+          </button>
+          <button
+            (click)="next()"
+            type="button"
+            class="btn btn-outline-primary mx-2"
+          >
+            الموالي Suivant
+          </button>
+          <button
+            (click)="previous()"
+            type="button"
+            class="btn btn-outline-primary mx-2"
+          >
+            السابق Precedent
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

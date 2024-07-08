@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نموذج إدخال البيانات</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5 text-danger fs-2">
+        التصريح الشهري بالأداعات
+      </h1>
+      <h1 class="text-center mt-3 text-danger fs-2">
+        DECLARATION MENSUELLE D'IMPOTS
+      </h1>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 mt-5">
+          <div class="table-responsive p-3 mt-3">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <td scope="col">السنة</td>
+                  <td rowspan="2">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Enter year"
+                    />
+                  </td>
+                  <td scope="col">الشهر</td>
+                  <td rowspan="2">
+                    <input type="month" class="form-control" />
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Année</td>
+                  <td></td>
+                  <td>Mois</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <table class="table table-bordered mt-5">
+          <thead>
+            <tr>
+              <th scope="col">رمز التصريح</th>
+              <th scope="col">المعرف الجبائي</th>
+              <th scope="col">معرف أ.ق.م</th>
+              <th scope="col">رمز الصنف</th>
+              <th scope="col">الموسسة الثانوية</th>
+            </tr>
+            <tr>
+              <th scope="col">Acte</th>
+              <th scope="col">Matricule fiscal</th>
+              <th scope="col">Code T.V.A</th>
+              <th scope="col">Code categorie</th>
+              <th scope="col">No etablissement secondaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select name="s" id="ss">
+                  <option value="">Initiale</option>
+                  <option value="">Autres</option>
+                </select>
+              </td>
+              <td>
+                <input type="text" value="0373010Y STE 'MACOMPTA'" />
+              </td>
+              <td>
+                <input type="text" value="A" />
+              </td>
+              <td>
+                <input type="text" value="M" />
+              </td>
+              <td>
+                <input type="text" value="000" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered mt-5">
+          <thead>
+            <tr>
+              <th scope="col">الإسم و اللقب أو الإسم الإجتماعي</th>
+              <th scope="col">عنوان المقرّ الإجتماعي</th>
+              <th scope="col">النشاط الأصلي</th>
+            </tr>
+            <tr>
+              <th scope="col">Nom et prenom ou raison sociale</th>
+              <th scope="col">Adresse</th>
+              <th scope="col">Activite principale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>STE "MACOMPTA"</td>
+              <td>ARIANA CENTER B A318 ARIANA 000</td>
+              <td>COMPTABLE</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <tr class="mt-3">
+          <th class="text-primary">ضع علامة في القسيمة المناسبة</th>
+          <th class="text-primary">Cocher la case correspondante</th>
+        </tr>
+
+        <table class="table table-bordered mt-5">
+          <tr id="row1">
+            <th>لخصم من المورد</th>
+            <th>لأداء على التكوين المهني</th>
+            <th>لالمساهمة في صندوق النهوض بالمسكن لفائدة الأجراء</th>
+            <th>المعلوم على الاستهلاك</th>
+            <th>لأداء على القيمة المضافة</th>
+            <th>معاليم أخرى على رقم المعاملات</th>
+            <th>المعاليم على التأمين</th>
+            <th>معلوم الطابع الجبائي</th>
+            <th>المعلوم على المؤسسات</th>
+            <th>لمعلوم على النزل</th>
+            <th>معلوم الإجازة</th>
+          </tr>
+          <tr id="row1">
+            <th>RS</th>
+            <th>TFP</th>
+            <th>FOPROLOS</th>
+            <th>DC</th>
+            <th>TVA</th>
+            <th>Autres Taxes sur CA</th>
+            <th>Taxes sur les Assurances</th>
+            <th>DT</th>
+            <th>TCL</th>
+            <th>TH</th>
+            <th>DL</th>
+          </tr>
+          <tr id="row1">
+            <td><input type="checkbox" value="RS" /></td>
+            <td><input type="checkbox" value="TFP" /></td>
+            <td><input type="checkbox" value="FOPROLOS" /></td>
+            <td><input type="checkbox" value="DC" /></td>
+            <td><input type="checkbox" value="TVA" /></td>
+            <td><input type="checkbox" value="Autres Taxes sur CA" /></td>
+            <td>
+              <input type="checkbox" value="Taxes sur les Assurances" />
+            </td>
+            <td><input type="checkbox" value="DT" /></td>
+            <td><input type="checkbox" value="TCL" /></td>
+            <td><input type="checkbox" value="TH" /></td>
+            <td><input type="checkbox" value="DL" /></td>
+          </tr>
+        </table>
+        <div class="col d-flex justify-content-center align-items-center">
+          <button
+            (click)="previous()"
+            type="button"
+            class="btn btn-outline-primary mx-2"
+          >
+            السابق Precedent
+          </button>
+          <button
+            (click)="next()"
+            type="button"
+            class="btn btn-outline-primary mx-2"
+          >
+            الموالي Suivant
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

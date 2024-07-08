@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table td,
+      .table th {
+        vertical-align: middle;
+      }
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mt-5 text-danger fs-2">
+        المعلوم على المؤسسات ذات التبغة الصناعيّة أو التّجاريّة أو المهنية
+      </h1>
+      <h1 class="text-center mt-3 text-danger fs-2">T. C. L.</h1>
+    </div>
+    <hr class="border border-danger border-2 my-4 opacity-50" />
+
+    <table class="table table-bordered mt-5">
+      <thead>
+        <tr>
+          <th scope="col" colspan="5" class="text-center">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Autres entreprises</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </th>
+          <th scope="col" class="text-center">طبيعة قاعدة المعلوم</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="5"></td>
+          <td class="text-center">Nature de l'assiette</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr class="border border-danger border-2 mt-4 opacity-50" />
+    <div class="row wizard-buttons">
+      <div class="col d-flex justify-content-center align-items-center">
+        <button
+          (click)="next()"
+          type="button"
+          class="btn btn-outline-primary mx-2"
+        >
+          الموالي Suivant
+        </button>
+        <button
+          (click)="previous()"
+          type="button"
+          class="btn btn-outline-primary mx-2"
+        >
+          السابق Precedent
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

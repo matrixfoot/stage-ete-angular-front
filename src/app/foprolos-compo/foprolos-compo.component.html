@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-right-ar {
+        text-align: right;
+        direction: rtl;
+      }
+    </style>
+    <!-- Include Bootstrap CSS for better styling -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mt-5 text-danger fs-2">
+        المساهمة في صندوق النسوض بالمسكن لفائدة الأجراء
+      </h1>
+      <h1 class="text-center mt-3 text-danger fs-2">
+        CONTRIBUTION AU FOPROLOS
+      </h1>
+
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">المساهمة المستوجبة</th>
+            <th scope="col" class="text-center">النسبة</th>
+            <th scope="col" class="text-center">أساس المساهمة</th>
+          </tr>
+          <tr>
+            <th scope="col" class="text-center">Contribution due</th>
+            <th scope="col" class="text-center">Taux</th>
+            <th scope="col" class="text-center">Assiette de la Contribution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <input type="number" value="0.000" class="form-control" />
+            </td>
+            <td class="text-center">1%</td>
+            <td class="text-center">
+              <input type="number" value="0.000" class="form-control" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr>
+            <th class="text-center">Non لا</th>
+            <th class="text-center">Oui نعم</th>
+            <th class="text-center">معفى</th>
+            <th class="text-center" colspan="2" rowspan="2">
+              <input type="number" class="form-control" />
+            </th>
+            <th class="text-center" colspan="2">عدد المنتفعين</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <input type="radio" name="approval" value="non" />
+            </td>
+            <td class="text-center">
+              <input type="radio" name="approval" value="oui" />
+            </td>
+            <td class="text-center">Exonéré</td>
+            <td colspan="2" class="text-center"></td>
+            <td class="text-center">Nb bénéficiaires</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row wizard-buttons">
+        <div class="col d-flex justify-content-center align-items-center">
+          <button type="button" class="btn btn-outline-primary mx-2">
+            موافق Valider
+          </button>
+          <button
+            (click)="next()"
+            type="button"
+            class="btn btn-outline-primary mx-2"
+          >
+            الموالي Suivant
+          </button>
+          <button
+            (click)="previous()"
+            type="button"
+            class="btn btn-outline-primary mx-2"
+          >
+            السابق Precedent
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

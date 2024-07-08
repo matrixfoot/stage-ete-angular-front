@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impôts et Taxes</title>
+    <!-- Include Bootstrap CSS (or other CSS frameworks) -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Optional: Add custom styles here */
+      .header-title {
+        font-size: 2rem;
+        color: #dc3545; /* Bootstrap's danger color */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5 header-title">
+        الأداعات والمعاليم التي سيقع إحتسابها
+      </h1>
+      <h1 class="text-center mt-3 header-title">IMPOTS ET TAXES A LIQUIDER</h1>
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8 mt-5">
+          <div class="row mb-3">
+            <div class="col text-primary text-center fs-2">
+              <p>إضغط على الآداء أو المعلوم الّذي تريد إحتسابه</p>
+              <p>Cliquer sur l'impot ou la taxe a liquider</p>
+            </div>
+          </div>
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td>
+                  <a href="/RS" class="btn link-secondary fs-4"
+                    >الخصم من المورد RS</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/TFPc" class="btn link-secondary fs-4"
+                    >الأداء على التكوين المهني TFP</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/FOPRCOm" class="btn link-secondary fs-4">
+                    المساهمة في صندوق الأداء على التكوين المهني النهوض بالمسكن
+                    لفائدة الأجراء FOPROLOS
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/TVA1" class="btn link-secondary fs-4">أ ق م TVA</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/DT" class="btn link-secondary fs-4"
+                    >معلوم الطابع الجيائي DT</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/TCL1" class="btn link-secondary fs-4"
+                    >المعلوم على المؤسّسات TCL</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container text-center mt-5 fs-5 text-warning">
+        <p>
+          ملاحظة: يجب إدخال المبالغ بإعتبار المليمات، ضع نقطة بين الدّينار
+          والملّيمات. مثال: 2500 دينار يجب إدخالها 2500.000
+        </p>
+        <p>
+          Remarque : Vous devez obligatoirement saisir les montants y compris
+          les millimes, taper les Dinars et les Millimes separes par un point.
+          Exemple : pour saisir 2500DT, il faut taper 2500.000
+        </p>
+      </div>
+    </footer>
+    <div class="col d-flex justify-content-center align-items-center">
+      <button
+        (click)="next()"
+        type="button"
+        class="btn btn-outline-primary mx-2"
+      >
+        الموالي Suivant
+      </button>
+      <button
+        (click)="previous()"
+        type="button"
+        class="btn btn-outline-primary mx-2"
+      >
+        السابق Precedent
+      </button>
+    </div>
+
+    <!-- Include Bootstrap JS (or other JavaScript libraries) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

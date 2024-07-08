@@ -95,6 +95,18 @@ import { PlusComponent } from './plus/plus.component';
 import { PlustvaComponent } from './plustva/plustva.component';
 import { RubComponent } from './rub/rub.component';
 import { Select1Component } from './select1/select1.component';
+import { PageGardeComponent } from './page-garde/page-garde.component';
+import { TaxWizardComponentComponent } from './tax-wizard-component/tax-wizard-component.component';
+import { PageGarde2Component } from './page-garde2/page-garde2.component';
+import { RSComponent } from './rs/rs.component';
+import { TFPCompComponent } from './tfp-comp/tfp-comp.component';
+import { FOPROLOSCOMPOComponent } from './foprolos-compo/foprolos-compo.component';
+import { TVA1Component } from './tva1/tva1.component';
+import { TVA2Component } from './tva2/tva2.component';
+import { DTCOMPComponent } from './dt-comp/dt-comp.component';
+import { TCL1Component } from './tcl1/tcl1.component';
+import { TCL2Component } from './tcl2/tcl2.component';
+import { TCL3Component } from './tcl3/tcl3.component';
 /* import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
 import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
 import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component'; */
@@ -185,6 +197,18 @@ import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/st
     PlustvaComponent,
     RubComponent,
     Select1Component,
+    PageGardeComponent,
+    TaxWizardComponentComponent,
+    PageGarde2Component,
+    RSComponent,
+    TFPCompComponent,
+    FOPROLOSCOMPOComponent,
+    TVA1Component,
+    TVA2Component,
+    DTCOMPComponent,
+    TCL1Component,
+    TCL2Component,
+    TCL3Component,
     /* StatistiquesDetailleesComponent,
     StatistiquesDernierMoisComponent,
     StatistiquesDernierJourComponent, */

@@ -159,12 +159,58 @@ img {
 
 
 
+select {
+    border: none;
+        /* Enlever le cadre */
+        
+
+}
+select::-ms-expand {
+    display: none;
+}
+
+
+.row3{
+    border: none;
+}
+
+.table {
+    width: 100%;
+    /* Assurez-vous que la table utilise toute la largeur disponible */
+}
+
 .table th,
 .table td {
     text-align: center;
-    /* Centre le texte et les cases à cocher dans les cellules */
+    /* Centre le texte dans les cellules */
     vertical-align: middle;
     /* Aligne le texte verticalement au centre */
+}
+
+.table input[type="text"] {
+    width: 100%;
+    /* S'assure que le champ de saisie occupe toute la largeur de la cellule */
+    box-sizing: border-box;
+    /* Inclut le padding et la bordure dans la largeur totale */
+    border: 1px solid #ccc;
+    /* Ajoute une bordure légère */
     padding: 0.5em;
-    /* Ajoute un peu de padding pour l'espacement */
+    /* Ajoute un padding pour un peu d'espace intérieur */
+    border-radius: 4px;
+    /* Ajoute un léger arrondi aux coins */
+}
+
+.table select {
+    width: 100%;
+    /* S'assure que le select occupe toute la largeur de la cellule */
+    box-sizing: border-box;
+    /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+
+
+
+.table input[type="checkbox"] {
+    margin: 0 auto;
+    /* Centre les cases à cocher */
 }

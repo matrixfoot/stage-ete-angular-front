@@ -1,3 +1,5 @@
+import { RSComponent } from './rs/rs.component';
+import { TaxWizardComponentComponent } from './tax-wizard-component/tax-wizard-component.component';
 import { Component, NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +13,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { ViewCondidateComponent } from './view-condidate/view-condidate.component';
 import { ViewReclamationComponent } from './view-reclamation/view-reclamation.component';
 import { ModifActualiteComponent } from './modif-actualite/modif-actualite.component';
+
 
 
 import { CalendarComponent } from './calendar/calendar.component';
@@ -83,6 +86,17 @@ import { ViewDecompComponent } from './view-decomp/view-decomp.component';
  import { TimbreComponent } from './timbre/timbre.component';
  import { SoutenutvaComponent } from './soutenutva/soutenutva.component';
  import { PlusComponent } from './plus/plus.component';
+import { PageGardeComponent } from './page-garde/page-garde.component';
+import { TFPCompComponent } from './tfp-comp/tfp-comp.component';
+import { FOPROLOSCOMPOComponent } from './foprolos-compo/foprolos-compo.component';
+import { TVA1Component } from './tva1/tva1.component';
+import { TVA2Component } from './tva2/tva2.component';
+import { DTCOMPComponent } from './dt-comp/dt-comp.component';
+import { TCL1Component } from './tcl1/tcl1.component';
+import { TCL2Component } from './tcl2/tcl2.component';
+import { TCL3Component } from './tcl3/tcl3.component';
+import { PageGarde2Component } from './page-garde2/page-garde2.component';
+
 /*   import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
   import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
 import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
@@ -149,6 +163,15 @@ const routes: Routes = [
   {path:' Liste-factures-performat-générées',component:FacturePerformatComponent},
   {path:'calendar',component:CalendarComponent},
    {path:'about',component:AboutComponent},
+   {path:'RS',component:RSComponent},
+   {path:'TFPc',component:TFPCompComponent},
+   {path:'FOPRCOm',component:FOPROLOSCOMPOComponent},
+   {path:'TVA1',component:TVA1Component},
+   {path:'TVA2',component:TVA2Component},
+   {path:'DT',component:DTCOMPComponent},
+   {path:'TCL1',component:TCL1Component},
+   {path:'TCL2',component:TCL2Component},
+   {path:'TCL3',component:TCL3Component},
 
 
   
@@ -183,9 +206,12 @@ const routes: Routes = [
   {path : 'viewCond',component :ViewCondidateComponent},
   {path : 'viewRec',component :ViewReclamationComponent},
   {path : 'modifA',component :ModifActualiteComponent},
+  {path : 'pGarde',component :PageGardeComponent},
+  {path : 'p2Garde',component :PageGarde2Component},
   
   {path : 'saisiecomptab',component :SaisieComptableComponent},
   {path : 'saisieman',component :SaisieManuelComponent},
+  {path : 'TT',component :TaxWizardComponentComponent },
 
 
 ];

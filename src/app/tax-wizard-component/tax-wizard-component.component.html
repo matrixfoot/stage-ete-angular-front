@@ -1,0 +1,42 @@
+<div *ngIf="currentStep === 0">
+  <app-page-garde
+    (nextStep)="next()"
+    (previousStep)="previous()"
+  ></app-page-garde>
+</div>
+<div *ngIf="currentStep === 1">
+  <app-page-garde2
+    (nextStep)="next()"
+    (previousStep)="previous()"
+  ></app-page-garde2>
+</div>
+<div *ngIf="currentStep === 2">
+  <app-rs (nextStep)="next()" (previousStep)="previous()"></app-rs>
+</div>
+<div *ngIf="currentStep === 3">
+  <app-tfp-comp (nextStep)="next()" (previousStep)="previous()"></app-tfp-comp>
+</div>
+<div *ngIf="currentStep === 4">
+  <app-foprolos-compo
+    (nextStep)="next()"
+    (previousStep)="previous()"
+  ></app-foprolos-compo>
+</div>
+<div *ngIf="currentStep === 5">
+  <app-tva1 (nextStep)="next()" (previousStep)="previous()"></app-tva1>
+</div>
+<div *ngIf="currentStep === 6">
+  <app-tva2 (nextStep)="next()" (previousStep)="previous()"></app-tva2>
+</div>
+<div *ngIf="currentStep === 7">
+  <app-dt-comp (nextStep)="next()" (previousStep)="previous()"></app-dt-comp>
+</div>
+<div *ngIf="currentStep === 8">
+  <app-tcl1 (nextStep)="next()" (previousStep)="previous()"></app-tcl1>
+</div>
+<div *ngIf="currentStep === 9">
+  <app-tcl2 (nextStep)="next()" (previousStep)="previous()"></app-tcl2>
+</div>
+<div *ngIf="currentStep === 10">
+  <app-tcl3 (nextStep)="next()" (previousStep)="previous()"></app-tcl3>
+</div>
