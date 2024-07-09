@@ -68,7 +68,11 @@ import { UserBordComponent } from './user-bord/user-bord.component';
   import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
 import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
 import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
+import { SaisieAutoBanqueComponent } from './saisie-auto-banque/saisie-auto-banque.component';
+import { FichierrecapComponent } from './fichierrecap/fichierrecap.component';
 const routes: Routes = [
+  {path :'fichierrecap',component:FichierrecapComponent},
+  {path:'saisieAutoBanque',component:SaisieAutoBanqueComponent},
   {path:'• Liste des transactions',component:ListeTransactionsComponent},
   {path:'• Statistiques dernier jour',component:StatistiquesDernierJourComponent},
   {path:'• Statistiques dernier mois',component:StatistiquesDernierMoisComponent},

@@ -1,0 +1,116 @@
+<div>
+  <h3>Configuration de Mapping</h3>
+  <div>
+    <label for="celluleNumeroCompte">Cellule pour Numéro de Compte :</label>
+    <input id="celluleNumeroCompte" [(ngModel)]="configurationMapping.celluleNumeroCompte" placeholder="ex : A3">
+  </div>
+  <div>
+    <label for="celluleDebit">Cellule pour Débit :</label>
+    <input id="celluleDebit" [(ngModel)]="configurationMapping.celluleDebit" placeholder="ex : E6">
+  </div>
+  <div>
+    <label for="celluleCredit">Cellule pour Crédit :</label>
+    <input id="celluleCredit" [(ngModel)]="configurationMapping.celluleCredit" placeholder="ex : F6">
+  </div>
+  <div>
+    <label for="ligneDebutTransactions">Ligne pour Début des Transactions :</label>
+    <input id="ligneDebutTransactions" type="number" [(ngModel)]="configurationMapping.ligneDebutTransactions" placeholder="ex : 8">
+  </div>
+  <div>
+    <label for="ligneFinTransactions">Ligne pour Fin des Transactions :</label>
+    <input id="ligneFinTransactions" type="number" [(ngModel)]="configurationMapping.ligneFinTransactions" placeholder="ex : 20">
+  </div>
+  <div>
+    <label for="colonneJourTransaction">Colonne pour Jour de Transaction :</label>
+    <input id="colonneJourTransaction" [(ngModel)]="configurationMapping.colonneJourTransaction" placeholder="ex : A">
+  </div>
+  <div>
+    <label for="colonneDateTransaction">Colonne pour Date de Transaction :</label>
+    <input id="colonneDateTransaction" [(ngModel)]="configurationMapping.colonneDateTransaction" placeholder="ex : B">
+  </div>
+  <div>
+    <label for="colonneDesignation">Colonne pour Désignation :</label>
+    <input id="colonneDesignation" [(ngModel)]="configurationMapping.colonneDesignation" placeholder="ex : C">
+  </div>
+  <div>
+    <label for="colonneDebitTransaction">Colonne pour Débit :</label>
+    <input id="colonneDebitTransaction" [(ngModel)]="configurationMapping.colonneDebitTransaction" placeholder="ex : E">
+  </div>
+  <div>
+    <label for="colonneCreditTransaction">Colonne pour Crédit :</label>
+    <input id="colonneCreditTransaction" [(ngModel)]="configurationMapping.colonneCreditTransaction" placeholder="ex : F">
+  </div>
+</div>
+
+<div *ngIf="compte">
+  <div class="info-compte">
+    <h3>Informations du Compte numéro {{i}}</h3>
+    <p>Banque : </p>
+    <p>Numéro de Compte : {{ compte.numeroCompte }}</p>
+    <p>Devise :</p>
+    <p>Solde fin de mois précédent : </p>
+    <p>Débit : {{ compte.debit }}</p>
+    <p>Crédit : {{ compte.credit }}</p>
+    <button (click)="supprimerCompte()">Supprimer Compte</button>
+  </div>
+</div>
+
+<table *ngIf="transactions && transactions.length" class="table-transactions">
+  <thead>
+    <tr>
+      <th>Jour de Transaction</th>
+      <th>Date de Transaction</th>
+      <th>Désignation</th>
+      <th>Débit</th>
+      <th>Crédit</th>
+      <th>Objet Débit</th>
+      <th>Objet Crédit</th>
+      <th>Contient Tiers</th>
+      <th>Fournisseur</th>
+      <th>Client</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions; let i = index">
+      <td><input [(ngModel)]="transaction.jourTransaction"></td>
+      <td><input [(ngModel)]="transaction.dateTransaction"></td>
+      <td><input [(ngModel)]="transaction.designation"></td>
+      <td><input [(ngModel)]="transaction.debit"></td>
+      <td><input [(ngModel)]="transaction.credit"></td>
+      <td><select [(ngModel)]="transaction.objetDebit">
+        <option value="alimentation-caisse">Alimentation caisse</option>
+        <option value="blocage">Blocage</option>
+        <option value="commission-et-agios">Commission et agios</option>
+        <option value="impaye-client">Impayé client</option>
+        <option value="reglement-cnss">Règlement cnss</option>
+        <option value="reglement-fournisseur">Règlement fournisseur</option>
+        <option value="reglement-impot">Règlement impot</option>
+        <option value="reglement-salaire">Règlement salaire</option>
+        <option value="autre">Autre</option>
+      </select></td>
+      <td><select [(ngModel)]="transaction.objetCredit">
+        <option value="deblocage">Déblocage</option>
+        <option value="remise-cheque">Remise chèque</option>
+        <option value="reglement-impaye">Règlement impayé</option>
+        <option value="autre">Autre</option>
+      </select></td>
+      <td><input [(ngModel)]="transaction.contientTiers" type="checkbox"></td>
+      <td><select [(ngModel)]="transaction.fournisseur"></select></td>
+      <td><select [(ngModel)]="transaction.client"></select></td>
+      <td><button (click)="supprimerTransaction(i)">Supprimer</button></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Total des mouvement du mois</td>
+      <td>{{ totalDebit }}</td>
+      <td>{{ totalCredit }}</td>
+    </tr>
+    <tr>
+      <td colspan="3">Solde fin du mois</td>
+      <td>{{ nouveauSolde }}</td>
+    </tr>
+  </tfoot>
+</table>
+<input type="file" (change)="changementFichier($event)" accept=".xls,.xlsx">

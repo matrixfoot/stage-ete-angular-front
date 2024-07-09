@@ -84,6 +84,8 @@ import { StatistiquesDetailleesComponent } from './statistiques-detaillees/stati
 import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
 import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
 import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
+import { SaisieAutoBanqueComponent } from './saisie-auto-banque/saisie-auto-banque.component';
+import { FichierrecapComponent } from './fichierrecap/fichierrecap.component';
 @NgModule({
   declarations: [
     StatistiquesDetailleesComponent,
@@ -138,7 +140,7 @@ import { ListeTransactionsComponent } from './liste-transactions/liste-transacti
     ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent,
      ComptabiliteComponent, DeclarationFiscaleComponent,  DeclarationmensuelleComponent, ListeComponent, RetenueSourceComponent,PlusComponent,
       SelectComponent, PartieCommuneComponent, LoyerComponent, HoraireComponent, MontantComponent, RubriqueComponent, Select1Component,
-      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component, StatistiquesDetailleesComponent, StatistiquesDernierMoisComponent, StatistiquesDernierJourComponent, ListeTransactionsComponent,    
+      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component, StatistiquesDetailleesComponent, StatistiquesDernierMoisComponent, StatistiquesDernierJourComponent, ListeTransactionsComponent, SaisieAutoBanqueComponent, FichierrecapComponent,    
   ],
   imports: [
     HighchartsChartModule,
