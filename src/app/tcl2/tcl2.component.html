@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table td,
+      .table th {
+        vertical-align: middle;
+      }
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="fs-4 text-center">
+    <div class="container mt-5">
+      <h1 class="text-center mt-5 text-danger fs-2">صفحة خاصّة بالمعلومات</h1>
+      <h1 class="text-center mt-3 text-danger fs-2">MESSAGE D'INFORMATION</h1>
+    </div>
+    <hr class="border border-danger border-2 my-4 opacity-50" />
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">
+          قم بإدخال مبلغ المعلوم لفائدة الجماعات المحلية الذي وقع خلاصه بعنوان
+          الأشهر السابقة.
+        </p>
+        <p class="card-text">
+          Saisissez le montant de la TCL deja paye au titre des mois precedents
+          s'il en existe.
+        </p>
+      </div>
+    </div>
+
+    <hr class="border border-danger border-2 mt-4 opacity-50" />
+    <div class="row wizard-buttons">
+      <div class="col d-flex justify-content-center align-items-center">
+        <button
+          (click)="next()"
+          type="button"
+          class="btn btn-outline-primary mx-2"
+        >
+          الموالي Suivant
+        </button>
+        <button
+          (click)="previous()"
+          type="button"
+          class="btn btn-outline-primary mx-2"
+        >
+          السابق Precedent
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

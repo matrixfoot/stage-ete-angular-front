@@ -1,8 +1,26 @@
+import { RSComponent } from './rs/rs.component';
+import { TaxWizardComponentComponent } from './tax-wizard-component/tax-wizard-component.component';
 import { Component, NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
+
+import { FiscalityComponent } from './fiscality/fiscality.component';
+import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
+import { CollabBoardComponent } from './collab-board/collab-board.component';
+import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
+import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { ViewCondidateComponent } from './view-condidate/view-condidate.component';
+import { ViewReclamationComponent } from './view-reclamation/view-reclamation.component';
+import { ModifActualiteComponent } from './modif-actualite/modif-actualite.component';
+
+
+
 import { CalendarComponent } from './calendar/calendar.component';
 import { DeclarationFiscaleComponent } from './declaration-fiscale/declaration-fiscale.component';
+
+//import { HomeComponent } from './home/home.component';
+
 import { AboutComponent } from './about/about.component';
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
@@ -19,7 +37,7 @@ import { FacturePerformatComponent } from './facture-performat/facture-performat
 import { FactureRegleesComponent } from './facture-reglees/facture-reglees.component';
 import { ClientsAvecImpayesComponent } from './clients-avec-impayes/clients-avec-impayes.component';
 import { TousUtilisateursComponent } from './tous-utilisateurs/tous-utilisateurs.component';
-import { UtilisateursConnectesComponent } from './utilisateurs-connectes/utilisateurs-connectes.component';
+/* import { UtilisateursConnectesComponent } from './utilisateurs-connectes/utilisateurs-connectes.component'; */
 import { UtilisateursActifsComponent } from './utilisateurs-actifs/utilisateurs-actifs.component';
 import { UtilisateursBloquesComponent } from './utilisateurs-bloques/utilisateurs-bloques.component';
 import { ClientsSupprimesTemporairementComponent } from './clients-supprimes-temporairement/clients-supprimes-temporairement.component';
@@ -41,17 +59,21 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { CompleteComponent } from './complete/complete.component';
 import { ModifyPComponent } from './modify-p/modify-p.component';
  
- import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
  
-import { FiscalityComponent } from './fiscality/fiscality.component';
 import { ParametrageAdminComponent } from './parametrage-admin/parametrage-admin.component';
 import { UserBordComponent } from './user-bord/user-bord.component';
+
  import { DeclarationmensuelleComponent } from './declarationmensuelle/declarationmensuelle.component';
  import { ListeComponent } from './liste/liste.component';
+
+import { ViewDecFiscComponent } from './view-dec-fisc/view-dec-fisc.component';
+import { ViewDecompComponent } from './view-decomp/view-decomp.component';
+
 
  import { RetenueSourceComponent } from './retenue-source/retenue-source.component';
  import { PartieCommuneComponent } from './partie-commune/partie-commune.component';
  import { LoyerComponent } from './loyer/loyer.component';
+
 
  import { HoraireComponent } from './horaire/horaire.component';
  import { MontantComponent } from './montant/montant.component';
@@ -64,7 +86,18 @@ import { UserBordComponent } from './user-bord/user-bord.component';
  import { TimbreComponent } from './timbre/timbre.component';
  import { SoutenutvaComponent } from './soutenutva/soutenutva.component';
  import { PlusComponent } from './plus/plus.component';
-  import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
+import { PageGardeComponent } from './page-garde/page-garde.component';
+import { TFPCompComponent } from './tfp-comp/tfp-comp.component';
+import { FOPROLOSCOMPOComponent } from './foprolos-compo/foprolos-compo.component';
+import { TVA1Component } from './tva1/tva1.component';
+import { TVA2Component } from './tva2/tva2.component';
+import { DTCOMPComponent } from './dt-comp/dt-comp.component';
+import { TCL1Component } from './tcl1/tcl1.component';
+import { TCL2Component } from './tcl2/tcl2.component';
+import { TCL3Component } from './tcl3/tcl3.component';
+import { PageGarde2Component } from './page-garde2/page-garde2.component';
+
+/*   import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
   import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
 import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
 import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
@@ -101,6 +134,26 @@ const routes: Routes = [
   {path:'• Liste des factures performat générées',component:FacturePerformatComponent},
   {path:'calendar',component:CalendarComponent},
    {path:'about',component:AboutComponent},
+import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component'; */
+
+  
+
+
+const routes: Routes = [
+  {path:'modi',component: ModiEventComponent},
+  {path:'aj',component:  AjouterEventComponent},
+  {path:'prof',component:   ProfilComponent},
+    {path:'about',component:   AboutComponent  },
+   /*  {path:'fichierdeclaration',component:   FichierDeclarationComponent  }, */
+    {path:'fichierrecap',component:   FichiersComptablesEnCoursExecutionComponent  },
+    {path:'fisc',component:  FiscalityComponent     },
+    {path:'comptab',component:   ComptabiliteComponent     },{ path: 'saisie-comptable', component: SaisieComptableComponent },
+     // Optionnel: redirection vers saisie-comptable par défaut
+    /* { path: '**', redirectTo: '/saisie-comptable' }, */
+    {path:'saisiemanuel',component:   SaisieManuelComponent    },
+  {path:'collab-board',component:CollabBoardComponent},
+ /*  {path:'',component:HomeComponent}, */
+  {path:'about',component:AboutComponent},
   {path:'ajouterEvent', component : AjouterEventComponent},
   {path:'profil',component:ProfilComponent},
   {path:'modifierEvent',component:ModiEventComponent},
@@ -108,16 +161,54 @@ const routes: Routes = [
   {path:'userbord',component:UserBordComponent},
   {path:'fisc',component:FiscalityComponent},
   {path:'comptab',component:ComptabiliteComponent},
-  {path:'• Dossiers en cours d\'exécution', component:DossiersExecutionComponent},
-  {path:'• Dossiers en instance',component:DossiersInstanceComponent},
-  {path : '• Dossiers ouverts',component:DossiersOuvertsComponent},
-  {path : '• Dossiers validés pas encore affectés',component:DossiersValidesComponent},
-  {path :'• Liste des demandes de services pas encore règlées',component:DsPasEncoreReglesComponent},
-  {path : '• Liste des demandes de services règlées',component:DsReglesComponent},
-  {path :'• Liste des demandes de services marquées comme payées',component :DsMarquesPayesComponent},
+  {path:' DossiersEXec', component:DossiersExecutionComponent},
+  {path:' DossiersIns',component:DossiersInstanceComponent},
+  {path : ' DossiersOuv',component:DossiersOuvertsComponent},
+  {path : 'DossiersValide',component:DossiersValidesComponent},
+  {path :'ListePasReg',component:DsPasEncoreReglesComponent},
+  {path : ' ListeRèglées',component:DsReglesComponent},
+  {path :' ListeMarquéesPayées',component :DsMarquesPayesComponent},
    {path : 'complete', component : CompleteComponent},
   {path : 'modifyP', component : ModifyPComponent},
-  {path : 'select1', component : Select1Component},
+  { path: 'select1', component: Select1Component },
+/*   {path:' ListeTrans',component:ListeTransactionsComponent},
+  {path:'StatistiquesDernierJ',component:StatistiquesDernierJourComponent},
+  {path:' StatistiquesDernierMois',component:StatistiquesDernierMoisComponent},
+  {path:' StatistiquesDétaillées',component:StatistiquesDetailleesComponent}, */
+  {path:'adminDashboard',component:AdminDashboardComponent},
+  {path:' RéclamationsEn-coursexecution',component:ReclamationsEnCoursComponent},
+  {path:' Réclamations-traités',component:ReclamationsTraiteesComponent},
+  {path:' Liste-candidatures-exécution',component:CandidaturesEnCoursExecutionComponent},
+  {path:' Liste-validés',component:CandidaturesValideesComponent},
+  {path:' Copies-fichiers-validés',component:CopiesFichiersComptablesValidesComponent},
+  {path:' Fichiers-comptables-en cours-execution',component:FichiersComptablesEnCoursExecutionComponent},
+  {path:' Fichiers-comptables-validés',component:FichiersComptablesValidesComponent},
+  {path:' Copies-déclarations-fiscales-validés',component:CopiesDeclarationsFiscalesValidesComponent},
+  {path:' Déclarations-fiscales-en cours-execution',component:DeclarationsFiscalesEnCoursExecutionComponent},
+  {path:' Déclarations-fiscales-validés',component:DeclarationsFiscalesValidesComponent},
+  {path:' Candidats',component:CandidatsComponent},
+  {path:' Consultants',component:ConsultantsComponent},
+  {path:' Collaborateurs',component:CollaborateursComponent},
+  {path:' Clients supprimés temporairement',component:ClientsSupprimesTemporairementComponent},
+  {path : ' Clients bloqués',component : UtilisateursBloquesComponent},
+  {path:' Clients actifs',component:UtilisateursActifsComponent},
+  /* {path:' Utilisateurs connectés',component:UtilisateursConnectesComponent}, */
+  {path:' Tous les utilisateurs',component:TousUtilisateursComponent},
+  {path:' Liste-clients-avec-des impayés',component:ClientsAvecImpayesComponent},
+  {path:' Liste-factures- règlées', component: FactureRegleesComponent},
+  {path:' Liste-factures-performat-générées',component:FacturePerformatComponent},
+  {path:'calendar',component:CalendarComponent},
+   {path:'about',component:AboutComponent},
+   {path:'RS',component:RSComponent},
+   {path:'TFPc',component:TFPCompComponent},
+   {path:'FOPRCOm',component:FOPROLOSCOMPOComponent},
+   {path:'TVA1',component:TVA1Component},
+   {path:'TVA2',component:TVA2Component},
+   {path:'DT',component:DTCOMPComponent},
+   {path:'TCL1',component:TCL1Component},
+   {path:'TCL2',component:TCL2Component},
+   {path:'TCL3',component:TCL3Component},
+
 
   
    
@@ -126,6 +217,7 @@ const routes: Routes = [
   {path : 'fiscality',component :FiscalityComponent},
   {path : 'pAdmin',component :ParametrageAdminComponent},
   {path : 'userbord',component :UserBordComponent},
+
   {path : 'declaration',component : DeclarationFiscaleComponent},
    
   {path : 'declamensuelle',component :   DeclarationmensuelleComponent},
@@ -144,6 +236,21 @@ const routes: Routes = [
   {path : 'timbre', component :   TimbreComponent},
   {path : 'soutenu', component :     SoutenutvaComponent},
   {path : 'plus', component :      PlusComponent},
+  {path : 'viewFis',component :ViewDecFiscComponent},
+  {path : 'viewDec',component :ViewDecompComponent},
+  {path : 'coming-soon',component :ComingSoonComponent},
+  {path : 'viewCond',component :ViewCondidateComponent},
+  {path : 'viewRec',component :ViewReclamationComponent},
+  {path : 'modifA',component :ModifActualiteComponent},
+  {path : 'pGarde',component :PageGardeComponent},
+  {path : 'p2Garde',component :PageGarde2Component},
+  
+  {path : 'saisiecomptab',component :SaisieComptableComponent},
+  {path : 'saisieman',component :SaisieManuelComponent},
+  {path : 'TT',component :TaxWizardComponentComponent },
+    {path:'comptab',component:   ComptabiliteComponent     },
+
+
 ];
 
 @NgModule({

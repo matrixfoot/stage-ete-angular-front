@@ -1,0 +1,60 @@
+.title {
+    color: #5570f1;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    margin-top: 232px;
+    font: 500 30px/80% Montserrat, -apple-system, Roboto, Helvetica,
+        sans-serif;
+}
+
+@media (max-width: 991px) {
+    .title {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+
+.title2 {
+    color: #000;
+
+    align-self: start;
+
+    font: 500 30px/24px Montserrat, -apple-system, Roboto, Helvetica,
+        sans-serif;
+}
+
+@media (max-width: 991px) {
+    .title2 {
+        margin: 40px 0 0 10px;
+    }
+}
+
+
+
+/* .section1 {
+    color: #000;
+    text-decoration-line: underline;
+    width: 1289px;
+    margin: 46px 0 0 159px;
+    font: 400 19px/25px Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+    .section1 {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}  */
+
+
+.info-label {
+    color: rgba(20, 0, 255, 1);
+    margin-right: 5px;
+}
+
+.info-data {
+    margin-left: 5px;
+    color: black;
+    /* Change the color here */
+}

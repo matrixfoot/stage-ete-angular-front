@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/* import { Component } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
 @Component({
@@ -80,3 +80,4 @@ export class StatistiquesDernierJourComponent {
     }]
   };
 }
+ */

@@ -1,4 +1,4 @@
-// statistiques-dernier-mois.component.ts
+/* // statistiques-dernier-mois.component.ts
 import { Component } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
@@ -81,3 +81,4 @@ export class StatistiquesDernierMoisComponent {
     }]
   };
 }
+ */

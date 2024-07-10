@@ -1,0 +1,211 @@
+.ajout-autre-ds {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    text-align: center;
+  
+    h1 {
+        text-align: left;
+        margin-bottom: 20px;
+        color: #6b6b6b;
+        letter-spacing: 0.36px;
+        font: 600 36px Poppins, sans-serif;
+        margin-left: 160px;
+      }
+  
+    .line {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      background-color: #dddfe0;
+      min-height: 1px;
+      margin: 20px 0;
+    }
+  
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+  
+      label {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+  
+      select {
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          border-color: #0000ff;
+        }
+  
+        option {
+          padding: 10px;
+        }
+      }
+    }
+
+    .btn {
+      margin-right: 10px;
+      
+      border: none;
+      border-radius: 2px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+
+       
+
+      &.create-ds {
+        background-color: #00cc99;
+        margin-right: 1200px;
+
+        &:hover {
+          background-color: #009966;
+          transform: scale(1.05);
+        }
+      }
+    }
+    .additional-section {
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1400px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    
+        h2 {
+          background-color: #e0e0e0;
+          padding: 15px;
+          font-weight: bold;
+          text-align: center;
+          margin: 0;
+          color: #6b6b6b;
+          letter-spacing: 0.32px;
+          font: 600 32px Poppins, sans-serif;
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+           
+    
+          th, td {
+            padding: 6px 6px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+          }
+    
+          th {
+            background-color: #f8f9fa;
+          }
+    
+          tr:hover {
+            background-color: #f1f1f1;
+          }
+    
+          select, input {
+            padding: 8px; /* Reduced padding */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.875rem; /* Reduced font size */
+            outline: none;
+            transition: border-color 0.3s;
+            width: 155px; /* Set a specific width */
+    
+            &:focus {
+              border-color: #0000ff;
+            }
+          }
+    
+          input[type="checkbox"] {
+            transform: scale(1.5);
+          }
+        }
+    
+        .btn {
+          margin-right: 10px;
+          
+          border: none;
+          border-radius: 2px;
+          color: white;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.2s;
+    
+          &.demarrer-btn {
+            background-color: #55B962;
+            padding: 4px 6px;
+    
+            &:hover {
+              background-color: #009933;
+              transform: scale(1.05);
+            }
+          }
+
+          &.refresh-btn {
+            background-color: #F2D956;
+            padding: 4px 7px;
+    
+            &:hover {
+              background-color: #d9c34d;
+              transform: scale(1.05);
+            }
+          }
+
+          &.pause-btn {
+            background-color: #56CCF2;
+            padding: 4px 9px;
+    
+            &:hover {
+              background-color: #4BB7D9;
+              transform: scale(1.05);
+            }
+          }
+
+          &.supprimer-btn {
+            background-color: #F25656;
+            padding: 4px 5px;
+    
+            &:hover {
+              background-color: #D54848;
+              transform: scale(1.05);
+            }
+          }
+
+          &.ajouter-btn {
+            background-color: #7B61FF;
+            padding: 4px 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 1335px;
+            
+    
+            &:hover {
+              background-color: #634FCA;
+              transform: scale(1.05);
+            }
+          }
+    
+          &.create-ds {
+            background-color: #00cc99;
+    
+            &:hover {
+              background-color: #009966;
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+  
+  

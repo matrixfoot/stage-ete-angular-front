@@ -1,23 +1,31 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
- 
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
+import { PdfInterfaceComponent } from './pdf-interface/pdf-interface.component';
 import { MaterialModule } from './material/material.module';
-import { CompleteComponent } from './complete/complete.component';
-import { ModifyPComponent } from './modify-p/modify-p.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ChartModule} from 'angular-highcharts';
-import { HighchartsChartModule } from 'highcharts-angular';
+/* import { ChartModule } from 'angular-highcharts';
+import { HighchartsChartModule } from 'highcharts-angular'; */
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+
+import { AppComponent } from './app.component';
+import { CollabBoardComponent } from './collab-board/collab-board.component';
+import { PourquoiComponent } from './pourquoi/pourquoi.component';
+import { ParametrageAdminComponent } from './parametrage-admin/parametrage-admin.component';
+import { UserBordComponent } from './user-bord/user-bord.component';
+import { ViewDecFiscComponent } from './view-dec-fisc/view-dec-fisc.component';
+import { ViewDecompComponent } from './view-decomp/view-decomp.component';
+import { CompleteComponent } from './complete/complete.component';
+import { ModifyPComponent } from './modify-p/modify-p.component';
 import { CalendarComponent } from './calendar/calendar.component';
- import { ModiEventComponent } from './modi-event/modi-event.component';
+import { ModiEventComponent } from './modi-event/modi-event.component';
 import { AjouterEventComponent } from './ajouter-event/ajouter-event.component';
 import { ProfilComponent } from './profil/profil.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ClickOutsideDirective } from './click-outside.directive';
 import { DisconnectedHomeNavComponent } from './disconnected-home-nav/disconnected-home-nav.component';
 import { DisconnectedNotHomeNavComponent } from './disconnected-not-home-nav/disconnected-not-home-nav.component';
@@ -26,9 +34,16 @@ import { ConnectedNotHomeNavComponent } from './connected-not-home-nav/connected
 import { NavbarSwitcherComponent } from './navbar-switcher/navbar-switcher.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
-import { UserBordComponent } from './user-bord/user-bord.component';
 import { FiscalityComponent } from './fiscality/fiscality.component';
 import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
+import { SaisieComptableComponent } from './saisie-comptable/saisie-comptable.component';
+import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { ViewCondidateComponent } from './view-condidate/view-condidate.component';
+import { ViewReclamationComponent } from './view-reclamation/view-reclamation.component';
+import { ModifActualiteComponent } from './modif-actualite/modif-actualite.component';
+import { AjoutAutreDsComponent } from './ajout-autre-ds/ajout-autre-ds.component';
+import { ViewAutreDsComponent } from './view-autre-ds/view-autre-ds.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { DossiersInstanceComponent } from './dossiers-instance/dossiers-instance.component';
 import { DossiersValidesComponent } from './dossiers-valides/dossiers-valides.component';
@@ -42,7 +57,7 @@ import { FacturePerformatComponent } from './facture-performat/facture-performat
 import { FactureRegleesComponent } from './facture-reglees/facture-reglees.component';
 import { ClientsAvecImpayesComponent } from './clients-avec-impayes/clients-avec-impayes.component';
 import { TousUtilisateursComponent } from './tous-utilisateurs/tous-utilisateurs.component';
-import { UtilisateursConnectesComponent } from './utilisateurs-connectes/utilisateurs-connectes.component';
+/* import { UtilisateursConnectesComponent } from './utilisateurs-connectes/utilisateurs-connectes.component'; */
 import { UtilisateursActifsComponent } from './utilisateurs-actifs/utilisateurs-actifs.component';
 import { UtilisateursBloquesComponent } from './utilisateurs-bloques/utilisateurs-bloques.component';
 import { ClientsSupprimesTemporairementComponent } from './clients-supprimes-temporairement/clients-supprimes-temporairement.component';
@@ -61,7 +76,7 @@ import { ReclamationsTraiteesComponent } from './reclamations-traitees/reclamati
 import { ReclamationsEnCoursComponent } from './reclamations-en-cours/reclamations-en-cours.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { DeclarationFiscaleComponent } from './declaration-fiscale/declaration-fiscale.component';
- import { DeclarationmensuelleComponent } from './declarationmensuelle/declarationmensuelle.component';
+import { DeclarationmensuelleComponent } from './declarationmensuelle/declarationmensuelle.component';
 import { ListeComponent } from './liste/liste.component';
 import { RetenueSourceComponent } from './retenue-source/retenue-source.component';
 import { SelectComponent } from './select/select.component';
@@ -80,18 +95,41 @@ import { PlusComponent } from './plus/plus.component';
 import { PlustvaComponent } from './plustva/plustva.component';
 import { RubComponent } from './rub/rub.component';
 import { Select1Component } from './select1/select1.component';
-import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
+import { PageGardeComponent } from './page-garde/page-garde.component';
+import { TaxWizardComponentComponent } from './tax-wizard-component/tax-wizard-component.component';
+import { PageGarde2Component } from './page-garde2/page-garde2.component';
+import { RSComponent } from './rs/rs.component';
+import { TFPCompComponent } from './tfp-comp/tfp-comp.component';
+import { FOPROLOSCOMPOComponent } from './foprolos-compo/foprolos-compo.component';
+import { TVA1Component } from './tva1/tva1.component';
+import { TVA2Component } from './tva2/tva2.component';
+import { DTCOMPComponent } from './dt-comp/dt-comp.component';
+import { TCL1Component } from './tcl1/tcl1.component';
+import { TCL2Component } from './tcl2/tcl2.component';
+import { TCL3Component } from './tcl3/tcl3.component';
+/* import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
 import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
 import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
 import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
 import { SaisieAutoBanqueComponent } from './saisie-auto-banque/saisie-auto-banque.component';
 import { FichierrecapComponent } from './fichierrecap/fichierrecap.component';
+import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component'; */
+//import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
+
 @NgModule({
   declarations: [
-    StatistiquesDetailleesComponent,
     AppComponent,
+    CollabBoardComponent,
+    PourquoiComponent,
+    ParametrageAdminComponent,
+    UserBordComponent,
+    ViewDecFiscComponent,
+    PdfInterfaceComponent,
+    ViewDecompComponent,
+    CompleteComponent,
+    ModifyPComponent,
     CalendarComponent,
-    AboutComponent,
+    ModiEventComponent,
     AjouterEventComponent,
     ProfilComponent,
     ClickOutsideDirective,
@@ -101,9 +139,17 @@ import { FichierrecapComponent } from './fichierrecap/fichierrecap.component';
     ConnectedNotHomeNavComponent,
     NavbarSwitcherComponent,
     FooterComponent,
-    UserBordComponent,
+    AboutComponent,
     FiscalityComponent,
     ComptabiliteComponent,
+    SaisieComptableComponent,
+    SaisieManuelComponent,
+    ComingSoonComponent,
+    ViewCondidateComponent,
+    ViewReclamationComponent,
+    ModifActualiteComponent,
+    AjoutAutreDsComponent,
+    ViewAutreDsComponent,
     MenuLateralComponent,
     DossiersInstanceComponent,
     DossiersValidesComponent,
@@ -117,7 +163,7 @@ import { FichierrecapComponent } from './fichierrecap/fichierrecap.component';
     FactureRegleesComponent,
     ClientsAvecImpayesComponent,
     TousUtilisateursComponent,
-    UtilisateursConnectesComponent,
+    /* UtilisateursConnectesComponent, */
     UtilisateursActifsComponent,
     UtilisateursBloquesComponent,
     ClientsSupprimesTemporairementComponent,
@@ -140,17 +186,56 @@ import { FichierrecapComponent } from './fichierrecap/fichierrecap.component';
     ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent,
      ComptabiliteComponent, DeclarationFiscaleComponent,  DeclarationmensuelleComponent, ListeComponent, RetenueSourceComponent,PlusComponent,
       SelectComponent, PartieCommuneComponent, LoyerComponent, HoraireComponent, MontantComponent, RubriqueComponent, Select1Component,
-      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component, StatistiquesDetailleesComponent, StatistiquesDernierMoisComponent, StatistiquesDernierJourComponent, ListeTransactionsComponent, SaisieAutoBanqueComponent, FichierrecapComponent,    
+      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component,   
+    DeclarationFiscaleComponent,
+    DeclarationmensuelleComponent,
+    ListeComponent,
+    RetenueSourceComponent,
+    SelectComponent,
+    PartieCommuneComponent,
+    LoyerComponent,
+    HoraireComponent,
+    MontantComponent,
+    RubriqueComponent,
+    TFPComponent,
+    FoprolosComponent,
+    TVAComponent,
+    TclComponent,
+    TimbreComponent,
+    SoutenutvaComponent,
+    PlusComponent,
+    PlustvaComponent,
+    RubComponent,
+    Select1Component,
+    PageGardeComponent,
+    TaxWizardComponentComponent,
+    PageGarde2Component,
+    RSComponent,
+    TFPCompComponent,
+    FOPROLOSCOMPOComponent,
+    TVA1Component,
+    TVA2Component,
+    DTCOMPComponent,
+    TCL1Component,
+    TCL2Component,
+    TCL3Component,
+    /* StatistiquesDetailleesComponent,
+    StatistiquesDernierMoisComponent,
+    StatistiquesDernierJourComponent, */
+    //ListeTransactionsComponent,
   ],
   imports: [
-    HighchartsChartModule,
-    ChartModule,
     BrowserModule,
-    BrowserAnimationsModule ,
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MaterialModule,
+    MatSnackBarModule,
+  /*   HighchartsChartModule,
+    ChartModule, */
+    BrowserAnimationsModule,
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
-    ReactiveFormsModule,
-    FormsModule, MatSnackBarModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' }
@@ -158,12 +243,3 @@ import { FichierrecapComponent } from './fichierrecap/fichierrecap.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-
-
-
-
-
-
-

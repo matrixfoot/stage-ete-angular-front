@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-right-ar {
+        text-align: right;
+        direction: rtl;
+      }
+
+      .text-left-fr {
+        text-align: left;
+        direction: ltr;
+      }
+      .d-flex {
+        display: flex;
+      }
+      .justify-content-between {
+        justify-content: space-between;
+      }
+      .align-items-center {
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body class="fs-5">
+    <div class="container mt-5 mb-4">
+      <h1 class="text-center mt-5 text-danger fs-2">
+        الأداء على القيمة المضافة
+      </h1>
+      <h1 class="text-center mt-3 text-danger fs-2">
+        TAXE SUR LA VALEUR AJOUTEE
+      </h1>
+      <table class="table table-bordered mt-5">
+        <tbody>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>الباقي المستوجب أو الفائض</span>
+                <span class="text-left-fr">
+                  Reste à payer ou à reporter (P ou R)</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> الفائض من الشهر السّابق </span>
+                <span class="text-left-fr">Crédit du mois précédent</span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> المبلغ المطلوب استرجاعه </span>
+                <span class="text-left-fr">Montant restitué</span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> المبلغ الذي تم استرجاعه </span>
+                <span class="text-left-fr">Montant déjà restitué</span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> المبلغ المتبقي للاسترجاع </span>
+                <span class="text-left-fr">Reliquat à restituer</span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-right-ar text-warning fs-5" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>
+                  قسيمة خاصة بالمؤسسات التي طلبت استرجاع فائض الأداء على القيمة
+                  المضافة المعني بإيقاف حق الطرح
+                </span>
+                <span class="text-left-fr"
+                  >Case réservée aux entreprises ayant demandé la restitution du
+                  crédit de TVA Concerné par la suspension du droit à
+                  déduction</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>
+                  فائض الأداء المطلوب استرجاعه والذي تم إيقاف حق طرحه خلال
+                  الشهر</span
+                >
+                <span class="text-left-fr"
+                  >Crédit de TVA demandé en restitution et dont le droit à
+                  déduction a été suspendu durant le mois</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> المبلغ الذي تم استرجاعه من هذا الفائض</span>
+                <span class="text-left-fr">Montant restitué de ce crédit</span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span
+                  >الباقي من فائض الأداء المطلوب استرجاعه والذي تم إيقاف حق طرحه
+                  خلال الأشهر السابقة
+                </span>
+                <span class="text-left-fr"
+                  >Reliquat du crédit de TVA demandé en restitution et dont le
+                  droit à déduction a été suspendu durant les mois
+                  précédents</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span
+                  >مبلغ الفائض المعني باسترجاع حق الطرح (تجاوز 120 يوما من تاريخ
+                  العمل بإيقاف حق الطرح)
+                </span>
+                <span class="text-left-fr"
+                  >Montant du crédit concerné par la reprise du droit à
+                  déduction (a dépassé 120 jours à compter de la date de la
+                  suspension du droit à déduction)</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> </span>
+                <span class="text-left-fr"></span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span
+                  >الباقي من فائض الأداء المطلوب استرجاعه والذي تم إيقاف حق طرحه
+                </span>
+                <span class="text-left-fr"
+                  >Reliquat du crédit de TVA demandé en restitution et dont le
+                  droit à déduction a été suspendu</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> الباقي المستوجب أو الفائض </span>
+                <span class="text-left-fr">Reste à payer ou à reporter</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-bordered mt-5">
+        <tbody>
+          <tr scope="row">
+            <td class="text-center">خلال الشهر</td>
+            <td class="text-center" rowspan="2">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">إلى العدد</td>
+            <td class="text-center" rowspan="2">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center" colspan="4">
+              <span> تمّ إصدار فواتير من عدد</span>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">au cours du mois</td>
+
+            <td class="text-center">Au numéro</td>
+
+            <td class="text-center" colspan="4">
+              <span> Ont été émises les factures du numéro</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-bordered mt-5">
+        <tbody>
+          <tr scope="row">
+            <td class="text-center">الفارق</td>
+            <td class="text-center">السنة الفارطة</td>
+            <td class="text-center">السنة الجارية</td>
+
+            <td class="text-center" colspan="4">
+              <span> نسبة الطرح بعنوان النشاط الخاضع جزئيًا للأق م</span>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">Variation</td>
+            <td class="text-center">Exercice Antérieur</td>
+            <td class="text-center">Exercice courant</td>
+
+            <td class="text-center" colspan="4">
+              <span>
+                Pourcentage de déduction au titre de l'activité soumise
+                partiellement à la TVA
+              </span>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-center" colspan="4">
+              <span> </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container mt-5">
+      <h1 class="text-center mt-5 text-danger fs-2">إرشادات تكميلية</h1>
+      <h1 class="text-center mt-3 text-danger fs-2">
+        Informations Complémentaires
+      </h1>
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr scope="row">
+            <td class="text-center">أ ق م المستوجب لو كانت العمليات خاضعة</td>
+            <td class="text-center">
+              أ ق م القابل للطرح لو كانت الشراءات خاضعة أو تخوَل حقَ الطرح
+            </td>
+            <td class="text-center">المبلغ</td>
+            <td class="text-center">البيانات</td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              TVA due si ces opérations étaient soumises
+            </td>
+            <td class="text-center">
+              TVA déductible si ces opérations étaient soumises ou ouvrant droit
+              à déduction
+            </td>
+            <td class="text-center">Montant(D)</td>
+
+            <td class="text-center" colspan="4">
+              <span>Libellés</span>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>
+                  1 - شراءات بتوقيف العمل بالأداء على القيمة المضافة
+                </span>
+                <span class="text-left-fr"
+                  >1 - Achats en suspension de TVA
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span
+                  >2 - شراءات بتوقيف العمل بالأداء على القيمة المضافة بعنوان
+                  المواد و التجهيزات التي تدخل ضمن مكونات إنجاز صفقات بالخارج
+                  تساوي أو تفوق 3 مليون دينار
+                </span>
+                <span class="text-left-fr"
+                  >2 - Achats en suspension de TVA au titre des biens et
+                  équipements acquis localement entrant dans les composantes des
+                  marchés réalisés à l'étranger dont les montants sont
+                  supérieurs ou égal à 3 millions de dinars
+                </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> 3 - شراءات معفاة</span>
+                <span class="text-left-fr">3 - Achats exoneres </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span
+                  >4 - شراءات لدى غير الخاضعين للأداء على القيمة المضافة
+                </span>
+                <span class="text-left-fr">
+                  4 - Achats auprès des non assujettis à la TVA</span
+                >
+              </div>
+            </td>
+          </tr>
+
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span
+                  >5 - شراءات أخرى خاضعة للأداء على القيمة المضافة بدون إعتبار
+                  الأداء على القيمة المضافة ولا تنتفع بحقّ الطرح
+                </span>
+                <span class="text-left-fr"
+                  >5 - Autres Achats hors TVA et ne donnant pas droit a
+                  deduction
+                </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> 6 - تصدير بضائع و خدمات</span>
+                <span class="text-left-fr"
+                  >6 - Exportation de marchandises et services
+                </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>7 - بيوعات بتأجيل توظيف أ.ق.م </span>
+                <span class="text-left-fr">
+                  7 - Ventes en suspension de TVA</span
+                >
+              </div>
+            </td>
+          </tr>
+
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>8 - رقم المعاملات المعفي من أ.ق.م </span>
+                <span class="text-left-fr">8 - C.A. exonéré de la TVA </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr scope="row">
+            <td class="text-center"></td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span> 9 - التفويت على الرصيف</span>
+                <span class="text-left-fr">9 - Cession à quai </span>
+              </div>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-center">
+              <input type="number" name="v" value="0.000" />
+            </td>
+            <td class="text-right-ar text-primary" colspan="4">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>المجموع </span>
+                <span class="text-left-fr"> TOTAL</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row wizard-buttons">
+        <div class="col d-flex justify-content-center align-items-center">
+          <button
+            (click)="next()"
+            type="button"
+            class="btn btn-outline-primary mx-2"
+          >
+            الموالي Suivant
+          </button>
+          <button
+            (click)="previous()"
+            type="button"
+            class="btn btn-outline-primary mx-2"
+          >
+            السابق Precedent
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

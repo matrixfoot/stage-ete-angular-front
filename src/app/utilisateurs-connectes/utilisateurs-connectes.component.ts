@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/* import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
 @Component({
   selector: 'app-utilisateurs-connectes',
@@ -180,3 +180,4 @@ export class UtilisateursConnectesComponent implements OnInit {
     }
   }
 }
+ */

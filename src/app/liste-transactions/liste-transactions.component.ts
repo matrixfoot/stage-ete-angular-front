@@ -1,4 +1,4 @@
-// liste-transactions.component.ts
+/* // liste-transactions.component.ts
 import { Component } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
@@ -14,7 +14,7 @@ export class ListeTransactionsComponent {
     { date: '2023-06-01 10:30', type: 'Dossier', montant: 1500, description: 'Dossier A', client: 'Client 1' },
     { date: '2023-06-02 14:00', type: 'Demande de service', montant: 2000, description: 'Service B', client: 'Client 2' },
     { date: '2023-06-03 09:15', type: 'Déclaration fiscale', montant: 1000, description: 'Déclaration C', client: 'Client 3' },
-    // Ajoutez d'autres transactions ici
+    
   ];
 
   barChartOptions: Highcharts.Options = {
@@ -83,3 +83,4 @@ export class ListeTransactionsComponent {
     }]
   };
 }
+ */
