@@ -1,9 +1,10 @@
+
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import {FacturationModule} from './facturation/facturation.module';
 import { PdfInterfaceComponent } from './pdf-interface/pdf-interface.component';
 import { MaterialModule } from './material/material.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -12,7 +13,6 @@ import { HighchartsChartModule } from 'highcharts-angular'; */
 import { AppRoutingModule } from './app-routing.module';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-
 import { AppComponent } from './app.component';
 import { CollabBoardComponent } from './collab-board/collab-board.component';
 import { PourquoiComponent } from './pourquoi/pourquoi.component';
@@ -217,6 +217,7 @@ import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/st
   imports: [
     BrowserModule,
     CommonModule,
+   FacturationModule,
     ReactiveFormsModule,
     FormsModule,
     MaterialModule,

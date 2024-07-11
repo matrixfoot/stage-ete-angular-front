@@ -1,0 +1,8 @@
+// invoice-generator.component.scss
+
+.image-styled {
+    max-height: 100%; // Assure que l'image occupe toute la hauteur disponible
+    object-fit: cover; // Assure que l'image couvre tout le conteneur tout en gardant son aspect ratio
+    border-radius: 10px; // Coins arrondis
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre légère
+}

@@ -1,0 +1,75 @@
+<!-- <div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8 d-flex align-items-center">
+      <div class="card w-100 shadow-sm">
+        <div class="card-header bg-primary text-white text-center">
+          <h4 class="mb-0">Générateur de Documents</h4>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="generateDocument()" class="form text-center">
+            <div class="form-group">
+              <label for="docType">Type de document :</label>
+              <select
+                id="docType"
+                [(ngModel)]="documentType"
+                name="documentType"
+                class="form-control"
+              >
+                <option value="invoice">Facture</option>
+                <option value="facture-proforma">Facture Proforma</option>
+                <option value="devis">Devis</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3 text-center">
+              Générer
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex align-items-center">
+      <img
+        src="../../../assets/mm.jpg"
+        alt="Description de l'image"
+        class="img-fluid w-100 rounded"
+      />
+    </div>
+  </div>
+</div> -->
+
+<div class="container mt-4">
+  <div class="row d-flex align-items-center justify-content-center gx-5">
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Générateur de Documents</h4>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="generateDocument()" class="form">
+            <div class="form-group">
+              <label for="docType">Type de document :</label>
+              <select
+                id="docType"
+                [(ngModel)]="documentType"
+                name="documentType"
+                class="form-control"
+              >
+                <option value="facture">Facture</option>
+                <option value="facture-proforma">Facture Proforma</option>
+                <option value="devis">Devis</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Générer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex align-items-center">
+      <img
+        src="../../../assets/mm.jpg"
+        alt="Description de l'image"
+        class="img-fluid w-100 rounded"
+      />
+    </div>
+  </div>
+</div>

@@ -96,6 +96,10 @@ import { TCL1Component } from './tcl1/tcl1.component';
 import { TCL2Component } from './tcl2/tcl2.component';
 import { TCL3Component } from './tcl3/tcl3.component';
 import { PageGarde2Component } from './page-garde2/page-garde2.component';
+import { FactureComponent } from './facturation/facture/facture.component';
+import { FactureProformaComponent } from './facturation/facture-proforma/facture-proforma.component';
+import { DevisComponent } from './facturation/devis/devis.component';
+import { InvoiceGeneratorComponent } from './facturation/invoice-generator/invoice-generator.component';
 
 /*   import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
   import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
@@ -124,7 +128,11 @@ const routes: Routes = [
   {path:'profil',component:ProfilComponent},
   {path:'modifierEvent',component:ModiEventComponent},
   {path : 'pourquoi', component : PourquoiComponent},
-  {path:'userbord',component:UserBordComponent},
+  { path: 'userbord', component: UserBordComponent },
+    { path: 'facture', component: FactureComponent},
+  { path: 'facture-proforma', component: FactureProformaComponent },
+  { path: 'devis', component: DevisComponent },
+  { path: 'invoice', component: InvoiceGeneratorComponent },
   {path:'fisc',component:FiscalityComponent},
   {path:'comptab',component:ComptabiliteComponent},
   {path:' DossiersEXec', component:DossiersExecutionComponent},
