@@ -1,0 +1,185 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form [formGroup]="anxdebForm" (ngSubmit)="onSubmit()">
+    <h2> D. Fiche descriptive - Enregistrement «ANXFIN01</h2>
+    
+    <div>
+      <label for="T100">Type enregistrement:</label>
+      <input id="T100" formControlName="T100">
+      <div *ngIf="anxdebForm.get('T100').invalid && anxdebForm.get('T100').touched">
+        <p *ngIf="anxdebForm.get('T100').hasError('required')">Type enregistrement est obligatoire .</p>
+        <p *ngIf="anxdebForm.get('T100').hasError('invalidValue')">value  invalide for Type enregistrement.</p>
+      </div>
+    </div>
+  
+    <h3>Identifiant contribuable déclarant</h3>
+    
+    <div>
+      <label for="T001">Matricule Fiscal:</label>
+      <input id="T001" formControlName="T001">
+      <div *ngIf="anxdebForm.get('T001').invalid && anxdebForm.get('T001').touched">
+        <p *ngIf="anxdebForm.get('T001').hasError('required')">Matricule Fiscal est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T001').hasError('pattern')">Matricule Fiscal doit comporter 7 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T002">Clé du matricule fiscal:</label>
+      <input id="T002" formControlName="T002">
+      <div *ngIf="anxdebForm.get('T002').invalid && anxdebForm.get('T002').touched">
+        <p *ngIf="anxdebForm.get('T002').hasError('required')">Clé du matricule est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T002').hasError('pattern')">Clé du matricule fiscal doit etre un seul caractère </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T003">Catégorie contribuable:</label>
+      <input id="T003" formControlName="T003">
+      <div *ngIf="anxdebForm.get('T003').invalid && anxdebForm.get('T003').touched">
+        <p *ngIf="anxdebForm.get('T003').hasError('required')">Catégorie contribuable est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T003').hasError('pattern')">Catégorie contribuable  doit etre un seul caractère différent de E </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T004"> Numéro de
+        l’établissement
+        secondaire du
+        contribuable:</label>
+      <input id="T004" formControlName="T004">
+      <div *ngIf="anxdebForm.get('T004').invalid && anxdebForm.get('T004').touched">
+        <p *ngIf="anxdebForm.get('T004').hasError('required')"> Numéro de
+            l’établissement
+            secondaire du
+            contribuable est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T004').hasError('pattern')"> Numéro de
+            l’établissement
+            secondaire du
+            contribuable doit etre 000 </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T105">Exercice:</label>
+      <input id="T105" formControlName="T105">
+      <div *ngIf="anxdebForm.get('T105').invalid && anxdebForm.get('T105').touched">
+        <p *ngIf="anxdebForm.get('T105').hasError('pattern')">Exercice doit comporter 4 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T106"> Zone réservée : </label>
+      <input id="T106" formControlName="T106">
+      <div *ngIf="anxdebForm.get('T106').invalid && anxdebForm.get('T106').touched">
+         
+        <p *ngIf="anxdebForm.get('T106').hasError('pattern')">Zone réservée doit comporter 242 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T107"> Total revenus imposables </label>
+      <input id="T107" formControlName="T107">
+      <div *ngIf="anxdebForm.get('T107').invalid && anxdebForm.get('T107').touched">
+        <p *ngIf="anxdebForm.get('T107').hasError('pattern')"> Total revenus imposables doit comporter 15 nombres </p>
+       
+      </div>
+    </div>
+  
+    <div>
+      <label for="T108"> Total avantages en nature  </label>
+      <input id="T108" formControlName="T108">
+      <div *ngIf="anxdebForm.get('T108').invalid && anxdebForm.get('T108').touched">
+        <p *ngIf="anxdebForm.get('T108').hasError('pattern')"> Total avantages en nature doit comporter 15 nombres</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T109"> Total revenus bruts imposables </label>
+      <input id="T109" formControlName="T109">
+      <div *ngIf="anxdebForm.get('T109').invalid && anxdebForm.get('T109').touched">
+        <p *ngIf="anxdebForm.get('T109').hasError('pattern')"> Total revenus bruts imposables  doit comporter 15 nombres .</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T110">Total revenus réinvestis : </label>
+      <input id="T110" formControlName="T110">
+      <div *ngIf="anxdebForm.get('T110').invalid && anxdebForm.get('T110').touched">
+        <p *ngIf="anxdebForm.get('T110').hasError('pattern')"> Total revenus réinvestis doit comporter 15 nombres  </p>
+      </div>
+    </div>
+  
+   
+    <div>
+      <label for="T111"> Total retenues opérées selon le
+        régime commun :</label>
+      <input id="T111" formControlName="T111">
+      <div *ngIf="anxdebForm.get('T111').invalid && anxdebForm.get('T111').touched">
+        <p *ngIf="anxdebForm.get('T111').hasError('pattern')"> Total retenues opérées selon le
+            régime commun doit comporter 15 nombres  </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T112"> Total retenues opérées des salaires,
+        rémunérations, primes et autres
+        avantages payés aux étrangers:</label>
+      <input id="T112" formControlName="T112">
+      <div *ngIf="anxdebForm.get('T112').invalid && anxdebForm.get('T112').touched">
+        <p *ngIf="anxdebForm.get('T112').hasError('pattern')">  Total retenues opérées des salaires,
+            rémunérations, primes et autres
+            avantages payés aux étrangers doit comporter 15 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T113"> Total de la contribution sociale de
+        solidarité due sur les traitements,
+        salaires, rémunérations, indemnités</label>
+      <input id="T113" formControlName="T113">
+      <div *ngIf="anxdebForm.get('T113').invalid && anxdebForm.get('T113').touched">
+        <p *ngIf="anxdebForm.get('T113').hasError('pattern')"> Total de la contribution sociale de
+            solidarité due sur les traitements,
+            salaires, rémunérations, indemnités  doit comporter 15 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T114"> Total nets servis:</label>
+      <input id="T114" formControlName="T114">
+      <div *ngIf="anxdebForm.get('T114').invalid && anxdebForm.get('T114').touched">
+        <p *ngIf="anxdebForm.get('T114').hasError('pattern')"> Total nets servis    doit comporter 15 nombres</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T115">Zone réservée:</label>
+      <input id="T115" formControlName="T115">
+      <div *ngIf="anxdebForm.get('T115').invalid && anxdebForm.get('T115').touched">
+        <p *ngIf="anxdebForm.get('T115').hasError('pattern')">Zone réservée doit comporter 19 caractères </p>
+      </div>
+    </div>
+  
+    <button type="submit">{{ isEditMode ? 'Valider' : 'Modifier' }}</button>
+    
+  </form>

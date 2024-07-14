@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-utilisateurs-connectes',
   templateUrl: './utilisateurs-connectes.component.html',
-  styleUrls: ['./utilisateurs-connectes.component.scss']
+  styleUrls: ['./utilisateurs-connectes.component.scss'],
 })
 export class UtilisateursConnectesComponent implements OnInit {
   utilisateurs = [

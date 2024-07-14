@@ -85,7 +85,9 @@ import { PageGarde2Component } from './page-garde2/page-garde2.component';
 import { HomeComponent } from './home/home.component';
 import { UtilisateursConnectesComponent } from './utilisateurs-connectes/utilisateurs-connectes.component';
 import { SaisieAutoBanqueComponent } from './saisie-auto-banque/saisie-auto-banque.component';
+import { FormulaireComponent } from './formulaire/formulaire.component';
 const routes: Routes = [
+  {path:'formulaireSprint6',component : FormulaireComponent},
   {path:'saisie-auto-banque',component:SaisieAutoBanqueComponent},
   {path:'tax-wizard',component:TaxWizardComponentComponent},
   {path:'parametrage-admin',component:ParametrageAdminComponent},

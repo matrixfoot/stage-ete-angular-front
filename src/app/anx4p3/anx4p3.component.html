@@ -1,0 +1,268 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form [formGroup]="anxdebForm" (ngSubmit)="onSubmit()">
+    <h2>  Fiche descriptive - Enregistrement «ANXFIN04 »</h2>
+    
+    <div>
+      <label for="T400">Type enregistrement:</label>
+      <input id="T400" formControlName="T400">
+      <div *ngIf="anxdebForm.get('T400').invalid && anxdebForm.get('T400').touched">
+        <p *ngIf="anxdebForm.get('T400').hasError('required')">Type enregistrement est obligatoire .</p>
+        <p *ngIf="anxdebForm.get('T400').hasError('invalidValue')">value  invalide for Type enregistrement.</p>
+      </div>
+    </div>
+  
+    <h3>Identifiant contribuable déclarant</h3>
+    
+    <div>
+      <label for="T001">Matricule Fiscal:</label>
+      <input id="T001" formControlName="T001">
+      <div *ngIf="anxdebForm.get('T001').invalid && anxdebForm.get('T001').touched">
+        <p *ngIf="anxdebForm.get('T001').hasError('required')">Matricule Fiscal est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T001').hasError('pattern')">Matricule Fiscal doit comporter 7 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T002">Clé du matricule fiscal:</label>
+      <input id="T002" formControlName="T002">
+      <div *ngIf="anxdebForm.get('T002').invalid && anxdebForm.get('T002').touched">
+        <p *ngIf="anxdebForm.get('T002').hasError('required')">Clé du matricule est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T002').hasError('pattern')">Clé du matricule fiscal doit etre un seul caractère </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T003">Catégorie contribuable:</label>
+      <input id="T003" formControlName="T003">
+      <div *ngIf="anxdebForm.get('T003').invalid && anxdebForm.get('T003').touched">
+        <p *ngIf="anxdebForm.get('T003').hasError('required')">Catégorie contribuable est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T003').hasError('pattern')">Catégorie contribuable  doit etre un seul caractère différent de E </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T004"> Numéro de
+        l’établissement
+        secondaire du
+        contribuable:</label>
+      <input id="T004" formControlName="T004">
+      <div *ngIf="anxdebForm.get('T004').invalid && anxdebForm.get('T004').touched">
+        <p *ngIf="anxdebForm.get('T004').hasError('required')"> Numéro de
+            l’établissement
+            secondaire du
+            contribuable est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T004').hasError('pattern')"> Numéro de
+            l’établissement
+            secondaire du
+            contribuable doit etre 000 </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T405">Exercice:</label>
+      <input id="T405" formControlName="T405">
+      <div *ngIf="anxdebForm.get('T405').invalid && anxdebForm.get('T405').touched">
+        <p *ngIf="anxdebForm.get('T405').hasError('pattern')">Exercice doit comporter 4 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T406"> Zone réservée : </label>
+      <input id="T406" formControlName="T406">
+      <div *ngIf="anxdebForm.get('T406').invalid && anxdebForm.get('T406').touched">
+         
+        <p *ngIf="anxdebForm.get('T406').hasError('pattern')">Zone réservée doit comporter 221 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T407"> Zone réservée :  </label>
+      <input id="T407" formControlName="T407">
+      <div *ngIf="anxdebForm.get('T407').invalid && anxdebForm.get('T407').touched">
+        <p *ngIf="anxdebForm.get('T407').hasError('pattern')"> Zone réservée   doit etre egal à 00000  </p>
+         
+      </div>
+    </div>
+  
+    <div>
+      <label for="T408">  Total des honoraires,
+        commissions, montants servis
+        aux non-résidents établis en
+        Tunisie et qui ne procèdent pas
+        au dépôt de la déclaration
+        d’existence
+          </label>
+      <input id="T408" formControlName="T408">
+      <div *ngIf="anxdebForm.get('T408').invalid && anxdebForm.get('T408').touched">
+        <p *ngIf="anxdebForm.get('T408').hasError('pattern')">  Total des honoraires,
+            commissions, montants servis
+            aux non-résidents établis en
+            Tunisie et qui ne procèdent pas
+            au dépôt de la déclaration
+            d’existence
+             doit comporter 15 nombres</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T409">  Zone réservée  </label>
+      <input id="T409" formControlName="T409">
+      <div *ngIf="anxdebForm.get('T409').invalid && anxdebForm.get('T409').touched">
+        <p *ngIf="anxdebForm.get('T409').hasError('pattern')"> Total revenus bruts imposables   doit etre egal à 00000 .</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T410"> Total des honorairesservis aux
+        personnes non résidentes et
+        établies qui réalisent des travaux
+        de construction ou des opérations
+        de montage ou des services de
+        contrôles connexes ou d’autres
+        services pour une période ne
+        dépassant pas 6 mois </label>
+      <input id="T410" formControlName="T410">
+      <div *ngIf="anxdebForm.get('T410').invalid && anxdebForm.get('T410').touched">
+        <p *ngIf="anxdebForm.get('T410').hasError('pattern')">  Total des honorairesservis aux
+            personnes non résidentes et
+            établies qui réalisent des travaux
+            de construction ou des opérations
+            de montage ou des services de
+            contrôles connexes ou d’autres
+            services pour une période ne
+            dépassant pas 6 mois  doit comporter 15 nombres  </p>
+      </div>
+    </div>
+  
+   
+    <div>
+      <label for="T411">  Zone réservée :</label>
+      <input id="T411" formControlName="T411">
+      <div *ngIf="anxdebForm.get('T411').invalid && anxdebForm.get('T411').touched">
+        <p *ngIf="anxdebForm.get('T411').hasError('pattern')">  Zone réservée   doit etre egal à 00000  </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T412">  Total de plus-value immobilière :</label>
+      <input id="T412" formControlName="T412">
+      <div *ngIf="anxdebForm.get('T412').invalid && anxdebForm.get('T412').touched">
+        <p *ngIf="anxdebForm.get('T412').hasError('pattern')">   Total de plus-value immobilière  doit comporter 15 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T413">  Zone réservée </label>
+      <input id="T413" formControlName="T413">
+      <div *ngIf="anxdebForm.get('T413').invalid && anxdebForm.get('T413').touched">
+        <p *ngIf="anxdebForm.get('T413').hasError('pattern')"> Zone réservée  doit etre egal à 00000  </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T414">  Total plus-value de cession des
+        actions, des parts sociales ou des
+        parts de fonds prévues par la
+        législation :</label>
+      <input id="T414" formControlName="T414">
+      <div *ngIf="anxdebForm.get('T414').invalid && anxdebForm.get('T414').touched">
+        <p *ngIf="anxdebForm.get('T414').hasError('pattern')">  Total plus-value de cession des
+            actions, des parts sociales ou des
+            parts de fonds prévues par la
+            législation     doit comporter 15 nombres</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T415">Zone réservée:</label>
+      <input id="T415" formControlName="T415">
+      <div *ngIf="anxdebForm.get('T415').invalid && anxdebForm.get('T415').touched">
+        <p *ngIf="anxdebForm.get('T415').hasError('pattern')">Zone réservée doit etre egal à 00000 </p>
+      </div>
+    </div>
+    <div>
+        <label for="T416"> Total des revenus des valeurs
+            mobilières y compris jetons de
+            présence, rémunérations et primes
+            attribuées aux membres des
+            conseils, des directoires et des
+            comités des sociétés, actions et
+            parts sociales. :</label> 
+        <input id="T416" formControlName="T416">
+        <div *ngIf="anxdebForm.get('T416').invalid && anxdebForm.get('T416').touched">
+          <p *ngIf="anxdebForm.get('T416').hasError('pattern')"> Total des revenus des valeurs
+            mobilières y compris jetons de
+            présence, rémunérations et primes
+            attribuées aux membres des
+            conseils, des directoires et des
+            comités des sociétés, actions et
+            parts sociales. doit comporter 15 nbres </p>
+        </div>
+      </div>
+      <div>
+        <label for="T417">  Total des rémunérations ou
+            revenus servis à des personnes
+            résidentes ou établies dans un
+            Etat ou un territoire dont le
+            régime fiscal est privilégié.
+             :</label>
+        <input id="T417" formControlName="T417">
+        <div *ngIf="anxdebForm.get('T417').invalid && anxdebForm.get('T417').touched">
+          <p *ngIf="anxdebForm.get('T417').hasError('pattern')">  Total des rémunérations ou
+            revenus servis à des personnes
+            résidentes ou établies dans un
+            Etat ou un territoire dont le
+            régime fiscal est privilégié.
+             doit comporter 15 nbres </p>
+        </div>
+      </div>
+      <div>
+        <label for="T418">   Retenues opérées sur les montants
+            servis au titre des opérations
+            réalisées avec les personnes n’ayant
+            pas d’établissement en Tunisie et
+            dont la retenue à la source au titre de
+            la TVA est de 100%
+             :</label>
+        <input id="T418" formControlName="T418">
+      
+        
+      </div>
+      <div>
+        <label for="T419">   Total retenues opérées
+             :</label>
+        <input id="T418" formControlName="T419">
+        <p *ngIf="anxdebForm.get('T419').hasError('pattern')">    Total retenues opérées  doit comporter 15 nombres</p>
+    </div>
+        
+       <div>
+        <label for="T420">   Total nets servis
+             :</label>
+        <input id="T418" formControlName="T420">
+        <p *ngIf="anxdebForm.get('T420').hasError('pattern')">    Total nets servis   doit comporter 15 nombres</p>
+        
+      </div>
+    <button type="submit">{{ isEditMode ? 'Valider' : 'Modifier' }}</button>
+    
+  </form>

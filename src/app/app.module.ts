@@ -113,6 +113,7 @@ import { StatistiquesDetailleesComponent} from './statistiques-detaillees/statis
 import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
 import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
 import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
+import { FormulaireComponent } from './formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -222,7 +223,7 @@ import { ListeTransactionsComponent } from './liste-transactions/liste-transacti
     StatistiquesDetailleesComponent,
     StatistiquesDernierMoisComponent,
     StatistiquesDernierJourComponent, 
-    ListeTransactionsComponent,
+    ListeTransactionsComponent, FormulaireComponent,
   ],
   imports: [
     BrowserModule,

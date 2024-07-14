@@ -1,0 +1,132 @@
+<form [formGroup]="anxdebForm" (ngSubmit)="onSubmit()">
+  <h2>Fiche descriptive - Enregistrement «ANXFIN05 »</h2>
+  
+  <div>
+    <label for="T500">Type enregistrement:</label>
+    <input id="T500" formControlName="T500">
+    <div *ngIf="anxdebForm.get('T500').invalid && anxdebForm.get('T500').touched">
+      <p *ngIf="anxdebForm.get('T500').hasError('required')">Type enregistrement est obligatoire.</p>
+      <p *ngIf="anxdebForm.get('T500').hasError('invalidValue')">Valeur invalide pour Type enregistrement.</p>
+    </div>
+  </div>
+
+  <h3>Identifiant contribuable déclarant</h3>
+  
+  <div>
+    <label for="T001">Matricule Fiscal:</label>
+    <input id="T001" formControlName="T001">
+    <div *ngIf="anxdebForm.get('T001').invalid && anxdebForm.get('T001').touched">
+      <p *ngIf="anxdebForm.get('T001').hasError('required')">Matricule Fiscal est obligatoire.</p>
+      <p *ngIf="anxdebForm.get('T001').hasError('pattern')">Matricule Fiscal doit comporter 7 nombres.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T002">Clé du matricule fiscal:</label>
+    <input id="T002" formControlName="T002">
+    <div *ngIf="anxdebForm.get('T002').invalid && anxdebForm.get('T002').touched">
+      <p *ngIf="anxdebForm.get('T002').hasError('required')">Clé du matricule est obligatoire.</p>
+      <p *ngIf="anxdebForm.get('T002').hasError('pattern')">Clé du matricule fiscal doit être un seul caractère.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T003">Catégorie contribuable:</label>
+    <input id="T003" formControlName="T003">
+    <div *ngIf="anxdebForm.get('T003').invalid && anxdebForm.get('T003').touched">
+      <p *ngIf="anxdebForm.get('T003').hasError('required')">Catégorie contribuable est obligatoire.</p>
+      <p *ngIf="anxdebForm.get('T003').hasError('pattern')">Catégorie contribuable doit être un seul caractère différent de E.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T004">Numéro de l’établissement secondaire du contribuable:</label>
+    <input id="T004" formControlName="T004">
+    <div *ngIf="anxdebForm.get('T004').invalid && anxdebForm.get('T004').touched">
+      <p *ngIf="anxdebForm.get('T004').hasError('required')">Numéro de l’établissement secondaire du contribuable est obligatoire.</p>
+      <p *ngIf="anxdebForm.get('T004').hasError('pattern')">Numéro de l’établissement secondaire du contribuable doit être 000.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T505">Exercice:</label>
+    <input id="T505" formControlName="T505">
+    <div *ngIf="anxdebForm.get('T505').invalid && anxdebForm.get('T505').touched">
+      <p *ngIf="anxdebForm.get('T505').hasError('pattern')">Exercice doit comporter 4 caractères.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T506">Zone réservée:</label>
+    <input id="T506" formControlName="T506">
+    <div *ngIf="anxdebForm.get('T506').invalid && anxdebForm.get('T506').touched">
+      <p *ngIf="anxdebForm.get('T506').hasError('pattern')">Zone réservée doit comporter 220 caractères.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T507">Total des montants des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D y compris la TVA provenant auprès des sociétés soumises à un IS de 10%:</label>
+    <input id="T507" formControlName="T507">
+    <div *ngIf="anxdebForm.get('T507').invalid && anxdebForm.get('T507').touched">
+      <p *ngIf="anxdebForm.get('T507').hasError('pattern')">Total des montants des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D y compris la TVA provenant auprès des sociétés soumises à un IS de 10% doit comporter 15 nombres.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T508">Total montants des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D y compris la TVA provenant auprès des sociétés soumises à un IS de 15%:</label>
+    <input id="T508" formControlName="T508">
+    <div *ngIf="anxdebForm.get('T508').invalid && anxdebForm.get('T508').touched">
+      <p *ngIf="anxdebForm.get('T508').hasError('pattern')">Total montants des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D y compris la TVA provenant auprès des sociétés soumises à un IS de 15% doit comporter 15 nombres.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T511">Total des montants des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D y compris la TVA provenant auprès des PP dont les revenus bénéficient d'une déduction de deux tiers:</label>
+    <input id="T511" formControlName="T511">
+    <div *ngIf="anxdebForm.get('T511').invalid && anxdebForm.get('T511').touched">
+      <p *ngIf="anxdebForm.get('T511').hasError('pattern')">Total des montants des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D y compris la TVA provenant auprès des PP dont les revenus bénéficient d'une déduction de deux tiers doit comporter 15 nombres.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T513">Total des montants des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D y compris la TVA provenant auprès d'autres entreprises:</label>
+    <input id="T513" formControlName="T513">
+    <div *ngIf="anxdebForm.get('T513').invalid && anxdebForm.get('T513').touched">
+      <p *ngIf="anxdebForm.get('T513').hasError('pattern')">Total des montants des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D y compris la TVA provenant auprès d'autres entreprises doit comporter 15 nombres.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T515">Total des retenues au titre de la TVA sur des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D:</label>
+    <input id="T515" formControlName="T515">
+    <div *ngIf="anxdebForm.get('T515').invalid && anxdebForm.get('T515').touched">
+      <p *ngIf="anxdebForm.get('T515').hasError('pattern')">Total des retenues au titre de la TVA sur des acquisitions de marchandises, matériels, équipements et de services égaux ou supérieurs à 1000D doit comporter 15 nombres.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T516">Total des retenues opérées:</label>
+    <input id="T516" formControlName="T516">
+    <div *ngIf="anxdebForm.get('T516').invalid && anxdebForm.get('T516').touched">
+      <p *ngIf="anxdebForm.get('T516').hasError('pattern')">Total des retenues opérées doit comporter 15 nombres.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T517">Total des montants nets servis:</label>
+    <input id="T517" formControlName="T517">
+    <div *ngIf="anxdebForm.get('T517').invalid && anxdebForm.get('T517').touched">
+      <p *ngIf="anxdebForm.get('T517').hasError('pattern')">Total des montants nets servis doit comporter 15 nombres.</p>
+    </div>
+  </div>
+
+  <div>
+    <label for="T518">Zone réservée:</label>
+    <input id="T518" formControlName="T518">
+    <div *ngIf="anxdebForm.get('T518').invalid && anxdebForm.get('T518').touched">
+      <p *ngIf="anxdebForm.get('T518').hasError('pattern')">Zone réservée doit comporter 56 caractères.</p>
+    </div>
+  </div>
+  
+  <button type="submit">{{ isEditMode ? 'Valider' : 'Modifier' }}</button>
+</form>
