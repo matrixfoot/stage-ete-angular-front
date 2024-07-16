@@ -10,6 +10,11 @@ import { SaisieManuelComponent } from './saisie-manuel/saisie-manuel.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { ViewCondidateComponent } from './view-condidate/view-condidate.component';
 import { ViewReclamationComponent } from './view-reclamation/view-reclamation.component';
+
+import { FactureComponent } from './facturation/facture/facture.component';
+import { FactureProformaComponent } from './facturation/facture-proforma/facture-proforma.component';
+import { DevisComponent } from './facturation/devis/devis.component';
+import { InvoiceGeneratorComponent } from './facturation/invoice-generator/invoice-generator.component';
 import { ModifActualiteComponent } from './modif-actualite/modif-actualite.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { DeclarationFiscaleComponent } from './declaration-fiscale/declaration-fiscale.component';
@@ -100,7 +105,8 @@ const routes: Routes = [
   {path:'• Fichiers comptables validés',component:FichiersComptablesValidesComponent},
   {path:'• Copies déclarations fiscales validés',component:CopiesDeclarationsFiscalesValidesComponent},
   {path:'• Liste des factures règlées',component:FactureRegleesComponent},
-  {path:'• Liste des factures performat générées',component:FacturePerformatComponent},
+  { path: '• Liste des factures performat générées', component: FacturePerformatComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path:'home',component:HomeComponent},
   {path:'• Utilisateurs connectés',component:UtilisateursConnectesComponent},
   { path: 'modi', component: ModiEventComponent },
@@ -109,6 +115,10 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'fichierrecap', component: FichiersComptablesEnCoursExecutionComponent },
   { path: 'fisc', component: FiscalityComponent },
+  { path: 'facture', component: FactureComponent},
+  { path: 'facture-proforma', component: FactureProformaComponent },
+  { path: 'devis', component: DevisComponent },
+  { path: 'invoice', component: InvoiceGeneratorComponent },
   { path: 'comptab', component: ComptabiliteComponent },
   { path: 'saisie-comptable', component: SaisieComptableComponent },
   { path: 'saisiemanuel', component: SaisieManuelComponent },
