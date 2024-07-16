@@ -1,0 +1,236 @@
+ 
+<form [formGroup]="anxdebForm" (ngSubmit)="onSubmit()">
+    <h2>   Fiche descriptive - Enregistrement «ANXFIN06 » </h2>
+    
+    <div>
+      <label for="T600">Type enregistrement:</label>
+      <input id="T600" formControlName="T600">
+      <div *ngIf="anxdebForm.get('T600').invalid && anxdebForm.get('T600').touched">
+        <p *ngIf="anxdebForm.get('T600').hasError('required')">Type enregistrement est obligatoire .</p>
+        <p *ngIf="anxdebForm.get('T600').hasError('invalidValue')">value  invalide for Type enregistrement.</p>
+      </div>
+    </div>
+  
+    <h3>Identifiant contribuable déclarant</h3>
+    
+    <div>
+      <label for="T001">Matricule Fiscal:</label>
+      <input id="T001" formControlName="T001">
+      <div *ngIf="anxdebForm.get('T001').invalid && anxdebForm.get('T001').touched">
+        <p *ngIf="anxdebForm.get('T001').hasError('required')">Matricule Fiscal est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T001').hasError('pattern')">Matricule Fiscal doit comporter 7 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T002">Clé du matricule fiscal:</label>
+      <input id="T002" formControlName="T002">
+      <div *ngIf="anxdebForm.get('T002').invalid && anxdebForm.get('T002').touched">
+        <p *ngIf="anxdebForm.get('T002').hasError('required')">Clé du matricule est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T002').hasError('pattern')">Clé du matricule fiscal doit etre un seul caractère </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T003">Catégorie contribuable:</label>
+      <input id="T003" formControlName="T003">
+      <div *ngIf="anxdebForm.get('T003').invalid && anxdebForm.get('T003').touched">
+        <p *ngIf="anxdebForm.get('T003').hasError('required')">Catégorie contribuable est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T003').hasError('pattern')">Catégorie contribuable  doit etre un seul caractère différent de E </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T004"> Numéro de
+        l’établissement
+        secondaire du
+        contribuable:</label>
+      <input id="T004" formControlName="T004">
+      <div *ngIf="anxdebForm.get('T004').invalid && anxdebForm.get('T004').touched">
+        <p *ngIf="anxdebForm.get('T004').hasError('required')"> Numéro de
+            l’établissement
+            secondaire du
+            contribuable est obligatoire </p>
+        <p *ngIf="anxdebForm.get('T004').hasError('pattern')"> Numéro de
+            l’établissement
+            secondaire du
+            contribuable doit etre 000 </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T605">Exercice:</label>
+      <input id="T605" formControlName="T605">
+      <div *ngIf="anxdebForm.get('T605').invalid && anxdebForm.get('T605').touched">
+        <p *ngIf="anxdebForm.get('T605').hasError('pattern')">Exercice doit comporter 4 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T606"> Zone réservée : </label>
+      <input id="T606" formControlName="T606">
+      <div *ngIf="anxdebForm.get('T606').invalid && anxdebForm.get('T606').touched">
+         
+        <p *ngIf="anxdebForm.get('T606').hasError('pattern')">Zone réservée doit comporter 221 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="T607">  Montant total des ristournes
+        commerciales et non
+        commerciales servies
+         :  </label>
+      <input id="T607" formControlName="T607">
+      <div *ngIf="anxdebForm.get('T607').invalid && anxdebForm.get('T607').touched">
+        <p *ngIf="anxdebForm.get('T607').hasError('pattern')">  Total des montants des
+            Montant total des ristournes
+            commerciales et non
+            commerciales servies
+ doit comporter 15 nbres               </p>
+         
+      </div>
+    </div>
+  
+    <div>
+      <label for="T608">    Montant total des ventes aux P.P
+        soumises à l’impôt sur le revenu
+        selon le au régime forfaitaire.
+          </label>
+      <input id="T608" formControlName="T608">
+      <div *ngIf="anxdebForm.get('T608').invalid && anxdebForm.get('T608').touched">
+        <p *ngIf="anxdebForm.get('T608').hasError('pattern')">   Montant total des ventes aux P.P
+            soumises à l’impôt sur le revenu
+            selon le au régime forfaitaire.
+              etre de longueur egale à 15 </p>
+      </div>
+    </div>
+  
+     
+   
+   
+    <div>
+      <label for="T609">    Montant total de l’avance due sur les
+        ventes aux P.P soumises à l’impôt
+        sur le revenu selon le régime
+        forfaitaire
+        déduction de deux tiers :</label>
+      <input id="T609" formControlName="T609">
+      <div *ngIf="anxdebForm.get('T609').invalid && anxdebForm.get('T609').touched">
+        <p *ngIf="anxdebForm.get('T609').hasError('pattern')">   Montant total de l’avance due sur les
+            ventes aux P.P soumises à l’impôt
+            sur le revenu selon le régime
+            forfaitaire doit etre de longueur egale à 15   </p>
+      </div>
+    </div>
+  
+    
+  
+    <div>
+      <label for="T610">    Montant total des revenus au titre des
+        jeux de pari de hasard et de loterie</label>
+      <input id="T610" formControlName="T610">
+      <div *ngIf="anxdebForm.get('T610').invalid && anxdebForm.get('T610').touched">
+        <p *ngIf="anxdebForm.get('T610').hasError('pattern')">  Montant total des revenus au titre des
+            jeux de pari de hasard et de loterie doit etre de longueur egale à 15   </p>
+      </div>
+    </div>
+  
+     
+    
+  
+    <div>
+      <label for="T611">  Montant total des retenues à la
+        source au titre des revenus au titre
+        des jeux de pari de hasard et de
+        loterie</label>
+      <input id="T611" formControlName="T615">
+      <div *ngIf="anxdebForm.get('T611').invalid && anxdebForm.get('T611').touched">
+        <p *ngIf="anxdebForm.get('T611').hasError('pattern')"> Montant total des retenues à la
+            source au titre des revenus au titre
+            des jeux de pari de hasard et de
+            loterie doit etre de longueur egale à 15    </p>
+      </div>
+    </div>
+    <div>
+        <label for="T612">   Montant total des ventes des
+            entreprises industrielles et de de
+            commerce au profit des intervenants
+            dans la distribution de biens et de
+            produits et services qui ne dépassent
+            pas 20.000 DT par an.:</label>
+        <input id="T612" formControlName="T612">
+        <div *ngIf="anxdebForm.get('T616').invalid && anxdebForm.get('T612').touched">
+          <p *ngIf="anxdebForm.get('T616').hasError('pattern')">  Montant total des ventes des
+            entreprises industrielles et de de
+            commerce au profit des intervenants
+            dans la distribution de biens et de
+            produits et services qui ne dépassent
+            pas 20.000 DT par an doit etre de lonhueur égale à 15 </p>
+        </div> </div>
+      
+      <div>
+        <label for="T613">    Montant total des retenues sur les
+            ventes des entreprises industrielles et
+            de de commerce au profit des
+            intervenants dans la distribution de
+            biens et de produits et services qui ne
+            dépassent pas 20.000 DT par an.
+             :</label>
+        <input id="T613" formControlName="T613">
+        <div *ngIf="anxdebForm.get('T613').invalid && anxdebForm.get('T613').touched">
+          <p *ngIf="anxdebForm.get('T613').hasError('pattern')">   
+            Montant total des retenues sur les
+            ventes des entreprises industrielles et
+            de de commerce au profit des
+            intervenants dans la distribution de
+            biens et de produits et services qui ne
+            dépassent pas 20.000 DT par an doit etre de longueur égale à 15  </p>
+        </div>
+      </div>
+      <div>
+        <label for="T614">    Montant total perçus en espèces au
+            titre des marchandises vendues et
+            services rendus
+             :</label>
+        <input id="T614" formControlName="T614">
+        <p *ngIf="anxdebForm.get('T614').hasError('pattern')">  Montant total perçus en espèces au
+            titre des marchandises vendues et
+            services rendus  doit comporter 15 nbres  </p>
+        
+      </div>
+      <div>
+        <label for="T615">    Montant total des ventes des
+            fabricants et embouteilleurs de vin,
+            de bière et de boissons alcoolisées
+             :</label>
+        <input id="T615" formControlName="T615">
+        <p *ngIf="anxdebForm.get('T615').hasError('pattern')">   Montant total des ventes des
+            fabricants et embouteilleurs de vin,
+            de bière et de boissons alcoolisées   doit comporter 15 nbres  </p>
+        
+      </div>
+      <div>
+        <label for="T616">      Montant total de l’avance due sur les
+            ventes des fabricants et
+            embouteilleurs de vin, de bière et de
+            boissons alcoolisée
+             :</label>
+        <input id="T616" formControlName="T616">
+        <p *ngIf="anxdebForm.get('T616').hasError('pattern')">    Montant total de l’avance due sur les
+            ventes des fabricants et
+            embouteilleurs de vin, de bière et de
+            boissons alcoolisée   doit comporter 15 nbres  </p>
+        
+      </div>
+      <div>
+        <label for="T617">   Zone Réservée
+             :</label>
+        <input id="T617" formControlName="T617">
+        <p *ngIf="anxdebForm.get('T617').hasError('pattern')">  Zone Réservée doit 
+            comporter 10 caractères   </p>
+        
+      </div>
+      
+    <button type="submit">{{ isEditMode ? 'Valider' : 'Modifier' }}</button>
+    
+  </form>

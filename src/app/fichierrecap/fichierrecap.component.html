@@ -1,0 +1,1789 @@
+<form [formGroup]="declarationForm0" (ngSubmit)="onSubmit()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement « DECEMP01 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D010" maxlength="3" [disabled]="!isEditing">
+          <span *ngIf="declarationForm0.get('D010').invalid && declarationForm0.get('D010').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011"> Total assiette des traitements,
+        salaires,rémunérations, primes et
+        autresavantages payés aux
+        étrangers.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D011" maxlength="15" [disabled]="!isEditing">
+          <span *ngIf="declarationForm0.get('D011').invalid && declarationForm0.get('D011').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">Zone réservée:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D012" maxlength="5" [disabled]="!isEditing">
+          <span *ngIf="declarationForm0.get('D012').invalid && declarationForm0.get('D012').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">Total retenues opérées au titre des
+        traitements, salaires, pensions et
+        rentes viagères selon le régime
+        commun.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D013" maxlength="15" [disabled]="!isEditing">
+          <span *ngIf="declarationForm0.get('D013').invalid && declarationForm0.get('D013').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit()">
+    {{ isEditing ? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+<form [formGroup]="declarationForm2" (ngSubmit)="onSubmit2()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP02 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D020" maxlength="3" [disabled]="!isEditing2">
+          <span *ngIf="declarationForm2.get('D020').invalid && declarationForm2.get('D020').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011"> Total assiette des traitements,
+        salaires,rémunérations, primes et
+        autresavantages payés aux
+        étrangers</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D021" maxlength="15" [disabled]="!isEditing2">
+          <span *ngIf="declarationForm2.get('D021').invalid && declarationForm2.get('D021').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">Zone réservée:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D022" maxlength="5" [disabled]="!isEditing2">
+          <span *ngIf="declarationForm2.get('D022').invalid && declarationForm2.get('D022').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">Total retenues opérées au titre des
+        traitements salaires, rémunérations,
+        primes et autres avantages payés
+        aux étrangers</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D023" maxlength="15" [disabled]="!isEditing2">
+          <span *ngIf="declarationForm2.get('D023').invalid && declarationForm2.get('D023').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit2()">
+    {{ isEditing2 ? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage2" class="error-message">
+    {{ errorMessage2 }}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form [formGroup]="declarationForm3" (ngSubmit)="onSubmit3()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP03 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D030" class="inp" type="text" formControlName="D030" maxlength="3" [disabled]="!isEditing3">
+          <span *ngIf="declarationForm3.get('D030').invalid && declarationForm3.get('D030').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Zone réservée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D031" maxlength="20" [disabled]="!isEditing3">
+          <span *ngIf="declarationForm3.get('D031').invalid && declarationForm3.get('D031').touched" class="error-message">
+             valeur numérique et de longueur 20.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D032"> Total de la contribution sociale de
+        solidarité due sur les traitements,
+        salaires, rémunérations,
+        indemnités</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D032" maxlength="15" [disabled]="!isEditing3">
+          <span *ngIf="declarationForm3.get('D032').invalid && declarationForm3.get('D032').touched" class="error-message">
+          valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+     
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit3()">
+    {{ isEditing3 ? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage3" class="error-message">
+    {{ errorMessage3 }}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+<form [formGroup]="declarationForm4" (ngSubmit)="onSubmit4()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP04 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D040" maxlength="3" [disabled]="!isEditing4">
+          <span *ngIf="declarationForm4.get('D040').invalid && declarationForm4.get('D040').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au titre des activités
+        non commerciales servis aux
+        personnes physique résidentes et
+        établies.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D041" maxlength="15" [disabled]="!isEditing4">
+          <span *ngIf="declarationForm4.get('D041').invalid && declarationForm4.get('D041').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012"> Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D042" maxlength="5" [disabled]="!isEditing4">
+          <span *ngIf="declarationForm4.get('D042').invalid && declarationForm4.get('D042').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013"> Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au titre des activités
+        non commerciales servis aux
+        personnes physique résidentes et
+        établies.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D043" maxlength="15" [disabled]="!isEditing4">
+          <span *ngIf="declarationForm4.get('D043').invalid && declarationForm4.get('D043').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit4()">
+    {{ isEditing4? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage4" class="error-message">
+    {{ errorMessage4 }}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+
+
+<form [formGroup]="declarationForm5" (ngSubmit)="onSubmit5()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP05 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D050" maxlength="3" [disabled]="!isEditing5">
+          <span *ngIf="declarationForm5.get('D050').invalid && declarationForm5.get('D050').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au titre des activités
+        non commerciales servis aux
+        personnes physique résidentes et
+        établies.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D051" maxlength="15" [disabled]="!isEditing5">
+          <span *ngIf="declarationForm5.get('D051').invalid && declarationForm5.get('D051').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012"> Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D052" maxlength="5" [disabled]="!isEditing5">
+          <span *ngIf="declarationForm5.get('D052').invalid && declarationForm5.get('D052').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013"> Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au titre des activités
+        non commerciales servis aux
+        personnes physique résidentes et
+        établies.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D053" maxlength="15" [disabled]="!isEditing5">
+          <span *ngIf="declarationForm5.get('D053').invalid && declarationForm5.get('D053').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit5()">
+    {{ isEditing5? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage5" class="error-message">
+    {{ errorMessage5 }}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+
+
+
+<form [formGroup]="declarationForm6" (ngSubmit)="onSubmit6()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP06 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D060" maxlength="3" [disabled]="!isEditing6">
+          <span *ngIf="declarationForm6.get('D060').invalid && declarationForm6.get('D060').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011"> Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnes physiques non
+        domiciliés ni établis en Tunisie</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D061" maxlength="15" [disabled]="!isEditing6">
+          <span *ngIf="declarationForm6.get('D061').invalid && declarationForm6.get('D061').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012"> Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D062" maxlength="5" [disabled]="!isEditing6">
+          <span *ngIf="declarationForm6.get('D062').invalid && declarationForm4.get('D062').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013"> Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnes physiques non
+        domiciliés ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D063" maxlength="15" [disabled]="!isEditing6">
+          <span *ngIf="declarationForm6.get('D063').invalid && declarationForm6.get('D063').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit6()">
+    {{ isEditing6? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage6" class="error-message">
+    {{ errorMessage6}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+<form [formGroup]="declarationForm7" (ngSubmit)="onSubmit7()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP07 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D070" maxlength="3" [disabled]="!isEditing7">
+          <span *ngIf="declarationForm7.get('D070').invalid && declarationForm7.get('D070').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D071" maxlength="15" [disabled]="!isEditing7">
+          <span *ngIf="declarationForm7.get('D071').invalid && declarationForm7.get('D071').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D072" maxlength="5" [disabled]="!isEditing7">
+          <span *ngIf="declarationForm7.get('D072').invalid && declarationForm7.get('D072').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D073" maxlength="15" [disabled]="!isEditing7">
+          <span *ngIf="declarationForm7.get('D073').invalid && declarationForm7.get('D073').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit7()">
+    {{ isEditing7? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage7" class="error-message">
+    {{ errorMessage7}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+
+<form [formGroup]="declarationForm8" (ngSubmit)="onSubmit8()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP08 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D080" maxlength="3" [disabled]="!isEditing8">
+          <span *ngIf="declarationForm8.get('D080').invalid && declarationForm8.get('D080').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D081" maxlength="15" [disabled]="!isEditing8">
+          <span *ngIf="declarationForm8.get('D081').invalid && declarationForm8.get('D081').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D082" maxlength="5" [disabled]="!isEditing8">
+          <span *ngIf="declarationForm8.get('D082').invalid && declarationForm8.get('D082').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D083" maxlength="15" [disabled]="!isEditing8">
+          <span *ngIf="declarationForm8.get('D083').invalid && declarationForm8.get('D083').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit8()">
+    {{ isEditing8? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage8" class="error-message">
+    {{ errorMessage8}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+<form [formGroup]="declarationForm9" (ngSubmit)="onSubmit9()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP09 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D090" maxlength="3" [disabled]="!isEditing9">
+          <span *ngIf="declarationForm9.get('D090').invalid && declarationForm9.get('D090').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D091" maxlength="15" [disabled]="!isEditing9">
+          <span *ngIf="declarationForm9.get('D091').invalid && declarationForm9.get('D091').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D092" maxlength="5" [disabled]="!isEditing9">
+          <span *ngIf="declarationForm9.get('D092').invalid && declarationForm9.get('D092').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D093" maxlength="15" [disabled]="!isEditing9">
+          <span *ngIf="declarationForm9.get('D093').invalid && declarationForm9.get('D093').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit9()">
+    {{ isEditing9? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage9" class="error-message">
+    {{ errorMessage9}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+<form [formGroup]="declarationForm10" (ngSubmit)="onSubmit10()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP10 »</h2>
+
+    <tr>
+      <th><label for="D010">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D100" maxlength="3" [disabled]="!isEditing10">
+          <span *ngIf="declarationForm10.get('D100').invalid && declarationForm10.get('D100').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D101" maxlength="15" [disabled]="!isEditing10">
+          <span *ngIf="declarationForm10.get('D101').invalid && declarationForm10.get('D101').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D102" maxlength="5" [disabled]="!isEditing10">
+          <span *ngIf="declarationForm10.get('D102').invalid && declarationForm10.get('D102').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D103" maxlength="15" [disabled]="!isEditing10">
+          <span *ngIf="declarationForm10.get('D103').invalid && declarationForm10.get('D103').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit10()">
+    {{ isEditing10? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage10" class="error-message">
+    {{ errorMessage10}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+<form [formGroup]="declarationForm11" (ngSubmit)="onSubmit11()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP11 »</h2>
+
+    <tr>
+      <th><label for="D110">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D110" maxlength="3" [disabled]="!isEditing11">
+          <span *ngIf="declarationForm11.get('D110').invalid && declarationForm11.get('D110').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D111" maxlength="15" [disabled]="!isEditing11">
+          <span *ngIf="declarationForm11.get('D111').invalid && declarationForm11.get('D111').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D112" maxlength="5" [disabled]="!isEditing11">
+          <span *ngIf="declarationForm11.get('D112').invalid && declarationForm11.get('D112').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D113" maxlength="15" [disabled]="!isEditing11">
+          <span *ngIf="declarationForm11.get('D113').invalid && declarationForm11.get('D113').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit11()">
+    {{ isEditing11? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage11" class="error-message">
+    {{ errorMessage11}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form [formGroup]="declarationForm12" (ngSubmit)="onSubmit12()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP12 »</h2>
+
+    <tr>
+      <th><label for="D110">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D110" class="inp" type="text" formControlName="D120" maxlength="3" [disabled]="!isEditing12">
+          <span *ngIf="declarationForm12.get('D120').invalid && declarationForm12.get('D120').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D121" maxlength="15" [disabled]="!isEditing12">
+          <span *ngIf="declarationForm12.get('D121').invalid && declarationForm12.get('D121').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D122" maxlength="5" [disabled]="!isEditing12">
+          <span *ngIf="declarationForm12.get('D122').invalid && declarationForm12.get('D122').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D123" maxlength="15" [disabled]="!isEditing12">
+          <span *ngIf="declarationForm12.get('D123').invalid && declarationForm12.get('D123').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit12()">
+    {{ isEditing12? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage12" class="error-message">
+    {{ errorMessage12}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+<form [formGroup]="declarationForm13" (ngSubmit)="onSubmit13()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP13 »</h2>
+
+    <tr>
+      <th><label for="D110">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D130" maxlength="3" [disabled]="!isEditing13">
+          <span *ngIf="declarationForm13.get('D130').invalid && declarationForm13.get('D130').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D11" maxlength="15" [disabled]="!isEditing13">
+          <span *ngIf="declarationForm13.get('D131').invalid && declarationForm13.get('D131').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D132" maxlength="5" [disabled]="!isEditing13">
+          <span *ngIf="declarationForm13.get('D132').invalid && declarationForm13.get('D132').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D133" maxlength="15" [disabled]="!isEditing13">
+          <span *ngIf="declarationForm13.get('D133').invalid && declarationForm13.get('D133').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit13()">
+    {{ isEditing13? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage13" class="error-message">
+    {{ errorMessage13}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+<form [formGroup]="declarationForm14" (ngSubmit)="onSubmit14()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP14»</h2>
+
+    <tr>
+      <th><label for="D110">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D140" maxlength="3" [disabled]="!isEditing14">
+          <span *ngIf="declarationForm14.get('D140').invalid && declarationForm14.get('D140').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D141" maxlength="15" [disabled]="!isEditing14">
+          <span *ngIf="declarationForm14.get('D141').invalid && declarationForm14.get('D141').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D142" maxlength="5" [disabled]="!isEditing14">
+          <span *ngIf="declarationForm14.get('D142').invalid && declarationForm14.get('D142').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D143" maxlength="15" [disabled]="!isEditing14">
+          <span *ngIf="declarationForm14.get('D143').invalid && declarationForm14.get('D143').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit14()">
+    {{ isEditing14? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage14" class="error-message">
+    {{ errorMessage14}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+<form [formGroup]="declarationForm15" (ngSubmit)="onSubmit15()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP15 »</h2>
+
+    <tr>
+      <th><label for="D110">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D150" maxlength="3" [disabled]="!isEditing15">
+          <span *ngIf="declarationForm15.get('D150').invalid && declarationForm15.get('D150').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D151" maxlength="15" [disabled]="!isEditing15">
+          <span *ngIf="declarationForm15.get('D151').invalid && declarationForm15.get('D151').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D152" maxlength="5" [disabled]="!isEditing15">
+          <span *ngIf="declarationForm15.get('D152').invalid && declarationForm15.get('D152').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D153" maxlength="15" [disabled]="!isEditing15">
+          <span *ngIf="declarationForm15.get('D153').invalid && declarationForm15.get('D153').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit15()">
+    {{ isEditing15? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage15" class="error-message">
+    {{ errorMessage15}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+<form [formGroup]="declarationForm16" (ngSubmit)="onSubmit16()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP16 »</h2>
+
+    <tr>
+      <th><label for="D160">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D160" maxlength="3" [disabled]="!isEditing16">
+          <span *ngIf="declarationForm16.get('D160').invalid && declarationForm16.get('D160').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D011">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D011" class="inp" type="number" formControlName="D161" maxlength="15" [disabled]="!isEditing16">
+          <span *ngIf="declarationForm16.get('D161').invalid && declarationForm16.get('D161').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D162" maxlength="5" [disabled]="!isEditing16">
+          <span *ngIf="declarationForm16.get('D162').invalid && declarationForm16.get('D162').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D163" maxlength="15" [disabled]="!isEditing16">
+          <span *ngIf="declarationForm16.get('D163').invalid && declarationForm16.get('D163').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit16()">
+    {{ isEditing16? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage16" class="error-message">
+    {{ errorMessage16}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+<form [formGroup]="declarationForm17" (ngSubmit)="onSubmit17()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP17 »</h2>
+
+    <tr>
+      <th><label for="D170">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D170" maxlength="3" [disabled]="!isEditing17">
+          <span *ngIf="declarationForm17.get('D170').invalid && declarationForm17.get('D170').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D017">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D017" class="inp" type="number" formControlName="D171" maxlength="15" [disabled]="!isEditing17">
+          <span *ngIf="declarationForm17.get('D171').invalid && declarationForm17.get('D171').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D172" maxlength="5" [disabled]="!isEditing17">
+          <span *ngIf="declarationForm17.get('D172').invalid && declarationForm17.get('D172').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D173" maxlength="15" [disabled]="!isEditing17">
+          <span *ngIf="declarationForm17.get('D173').invalid && declarationForm17.get('D173').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit17()">
+    {{ isEditing17? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage17" class="error-message">
+    {{ errorMessage17}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+<form [formGroup]="declarationForm17" (ngSubmit)="onSubmit17()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP17 »</h2>
+
+    <tr>
+      <th><label for="D110">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D170" maxlength="3" [disabled]="!isEditing17">
+          <span *ngIf="declarationForm17.get('D170').invalid && declarationForm17.get('D170').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D017">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D017" class="inp" type="number" formControlName="D171" maxlength="15" [disabled]="!isEditing17">
+          <span *ngIf="declarationForm17.get('D171').invalid && declarationForm17.get('D171').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D172" maxlength="5" [disabled]="!isEditing17">
+          <span *ngIf="declarationForm17.get('D172').invalid && declarationForm17.get('D172').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D173" maxlength="15" [disabled]="!isEditing17">
+          <span *ngIf="declarationForm17.get('D173').invalid && declarationForm17.get('D173').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit17()">
+    {{ isEditing17? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage17" class="error-message">
+    {{ errorMessage17}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+<form [formGroup]="declarationForm18" (ngSubmit)="onSubmit18()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP18 »</h2>
+
+    <tr>
+      <th><label for="D180">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D180" maxlength="3" [disabled]="!isEditing18">
+          <span *ngIf="declarationForm18.get('D180').invalid && declarationForm18.get('D180').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D018">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D018" class="inp" type="number" formControlName="D181" maxlength="15" [disabled]="!isEditing18">
+          <span *ngIf="declarationForm18.get('D181').invalid && declarationForm18.get('D181').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D182" maxlength="5" [disabled]="!isEditing18">
+          <span *ngIf="declarationForm18.get('D182').invalid && declarationForm18.get('D182').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D183" maxlength="15" [disabled]="!isEditing18">
+          <span *ngIf="declarationForm18.get('D183').invalid && declarationForm18.get('D183').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit18()">
+    {{ isEditing18? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage18" class="error-message">
+    {{ errorMessage18}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+<form [formGroup]="declarationForm19" (ngSubmit)="onSubmit19()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP19 »</h2>
+
+    <tr>
+      <th><label for="D190">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D190" maxlength="3" [disabled]="!isEditing19">
+          <span *ngIf="declarationForm19.get('D190').invalid && declarationForm19.get('D190').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D019">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D019" class="inp" type="number" formControlName="D191" maxlength="15" [disabled]="!isEditing19">
+          <span *ngIf="declarationForm19.get('D191').invalid && declarationForm19.get('D191').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D192" maxlength="5" [disabled]="!isEditing19">
+          <span *ngIf="declarationForm19.get('D192').invalid && declarationForm19.get('D192').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D193" maxlength="15" [disabled]="!isEditing19">
+          <span *ngIf="declarationForm19.get('D193').invalid && declarationForm19.get('D193').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit19()">
+    {{ isEditing19? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage19" class="error-message">
+    {{ errorMessage19}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+<form [formGroup]="declarationForm20" (ngSubmit)="onSubmit20()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP20 »</h2>
+
+    <tr>
+      <th><label for="D200">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D200" maxlength="3" [disabled]="!isEditing20">
+          <span *ngIf="declarationForm20.get('D200').invalid && declarationForm20.get('D200').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D020">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D020" class="inp" type="number" formControlName="D201" maxlength="15" [disabled]="!isEditing20">
+          <span *ngIf="declarationForm20.get('D201').invalid && declarationForm20.get('D201').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D202" maxlength="5" [disabled]="!isEditing20">
+          <span *ngIf="declarationForm20.get('D202').invalid && declarationForm20.get('D202').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D203" maxlength="15" [disabled]="!isEditing20">
+          <span *ngIf="declarationForm20.get('D203').invalid && declarationForm20.get('D203').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit20()">
+    {{ isEditing20? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage20" class="error-message">
+    {{ errorMessage20}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+
+<form [formGroup]="declarationForm21" (ngSubmit)="onSubmit21()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP21 »</h2>
+
+    <tr>
+      <th><label for="D210">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D210" maxlength="3" [disabled]="!isEditing21">
+          <span *ngIf="declarationForm21.get('D210').invalid && declarationForm21.get('D210').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D021">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D021" class="inp" type="number" formControlName="D211" maxlength="15" [disabled]="!isEditing21">
+          <span *ngIf="declarationForm21.get('D211').invalid && declarationForm21.get('D211').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D212" maxlength="5" [disabled]="!isEditing21">
+          <span *ngIf="declarationForm21.get('D212').invalid && declarationForm21.get('D212').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D213" maxlength="15" [disabled]="!isEditing21">
+          <span *ngIf="declarationForm21.get('D213').invalid && declarationForm21.get('D213').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit21()">
+    {{ isEditing21? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage21" class="error-message">
+    {{ errorMessage21}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+<form [formGroup]="declarationForm22" (ngSubmit)="onSubmit22()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP22 »</h2>
+
+    <tr>
+      <th><label for="D220">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D220" maxlength="3" [disabled]="!isEditing22">
+          <span *ngIf="declarationForm22.get('D220').invalid && declarationForm22.get('D220').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D022">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D022" class="inp" type="number" formControlName="D221" maxlength="15" [disabled]="!isEditing22">
+          <span *ngIf="declarationForm22.get('D221').invalid && declarationForm22.get('D221').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D222" maxlength="5" [disabled]="!isEditing22">
+          <span *ngIf="declarationForm22.get('D222').invalid && declarationForm22.get('D222').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D223" maxlength="15" [disabled]="!isEditing22">
+          <span *ngIf="declarationForm22.get('D223').invalid && declarationForm22.get('D223').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit22()">
+    {{ isEditing22? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage22" class="error-message">
+    {{ errorMessage22}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+
+
+
+
+
+<form [formGroup]="declarationForm23" (ngSubmit)="onSubmit23()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP23 »</h2>
+
+    <tr>
+      <th><label for="D230">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D230" maxlength="3" [disabled]="!isEditing23">
+          <span *ngIf="declarationForm23.get('D230').invalid && declarationForm23.get('D230').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D023">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D023" class="inp" type="number" formControlName="D231" maxlength="15" [disabled]="!isEditing23">
+          <span *ngIf="declarationForm23.get('D231').invalid && declarationForm23.get('D231').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D232" maxlength="5" [disabled]="!isEditing23">
+          <span *ngIf="declarationForm23.get('D232').invalid && declarationForm23.get('D232').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D233" maxlength="15" [disabled]="!isEditing23">
+          <span *ngIf="declarationForm23.get('D233').invalid && declarationForm23.get('D233').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit23()">
+    {{ isEditing23? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage23" class="error-message">
+    {{ errorMessage23}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>
+<form [formGroup]="declarationForm24" (ngSubmit)="onSubmit24()">
+  <table>
+    <h2>Fiche descriptive - Enregistrement «  DECEMP24 »</h2>
+
+    <tr>
+      <th><label for="D240">Type enregistrement:</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D010" class="inp" type="text" formControlName="D240" maxlength="3" [disabled]="!isEditing24">
+          <span *ngIf="declarationForm24.get('D240').invalid && declarationForm24.get('D240').touched" class="error-message">
+           valeur alphanumérique et de longueur 3.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D024">  Total assiette Commissions,
+        Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D024" class="inp" type="number" formControlName="D241" maxlength="15" [disabled]="!isEditing24">
+          <span *ngIf="declarationForm24.get('D241').invalid && declarationForm24.get('D241').touched" class="error-message">
+             valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D012">  Taux de la retenue opérée</label></th>
+      <td>
+        <div class="input-container">
+          <input id="D012" class="inp" type="number" formControlName="D242" maxlength="5" [disabled]="!isEditing24">
+          <span *ngIf="declarationForm24.get('D242').invalid && declarationForm24.get('D242').touched" class="error-message">
+          valeur numérique et de longueur 5.
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="D013">  Total retenues opérées au titre des
+        Commissions, Courtages, Loyers et
+        rémunérations au servis aux
+        personnesmorales non domiciliés
+        ni établis en Tunisie.
+        </label></th>
+      <td>
+        <div class="input-container">
+          <input id="D013" class="inp" type="number" formControlName="D243" maxlength="15" [disabled]="!isEditing24">
+          <span *ngIf="declarationForm24.get('D243').invalid && declarationForm24.get('D243').touched" class="error-message">
+            valeur numérique et de longueur 15.
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <button class="sub" type="button" (click)="onSubmit24()">
+    {{ isEditing24? 'Valider' : 'Modifier' }}
+  </button>
+  <div *ngIf="errorMessage24" class="error-message">
+    {{ errorMessage24}}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+     
+  </div>
+</form>

@@ -1,0 +1,92 @@
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  div {
+    margin-bottom: 2vw;;
+  }
+  
+  label {
+    display: inline-block;
+    width: 50%;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9vw;
+  }
+  
+  input {
+    padding: 8px;
+    width: 40%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+  }
+  
+  button {
+    display: block;
+    width: 20%;
+    padding: 0.5vw;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1vw;
+    cursor: pointer;
+    margin-top: 1%;
+    margin-left: 45%;
+  }
+  
+  
+  p {
+    color: red;
+    font-size: 1vw;
+    margin-top: 1vw;
+  }
+  
+  /* Specific styling for horizontal layout */
+  h3 + div {
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+  
+  h3 + div > div {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+     
+  }
+  
+  h3 + div > div label {
+    width: 15%;
+  }
+  
+  h3 + div > div input {
+    width: calc(100% - 15%);
+    max-width: none;
+  }
+  

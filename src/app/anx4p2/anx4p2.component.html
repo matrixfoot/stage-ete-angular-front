@@ -1,0 +1,429 @@
+  
+  
+  
+  
+  
+  
+  
+  <form [formGroup]="anxdebForm1" (ngSubmit)="onSubmit1()">
+    <h2>  Fiche descriptive - Enregistrement «ANXBEN04 » </h2>
+  
+    <div>
+      <label for="A400">Type enregistrement:</label>
+      <input id="A400" formControlName="A400">
+      
+    </div>
+  
+    <h3>Identifiant contribuable déclarant</h3>
+  
+    <div>
+      <label for="A001">Matricule Fiscal:</label>
+      <input id="A001" formControlName="A001">
+      <div *ngIf="anxdebForm1.get('A001').invalid && anxdebForm1.get('A001').touched">
+        <p *ngIf="anxdebForm1.get('A001').hasError('required')">Matricule Fiscal est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A001').hasError('pattern')">Matricule Fiscal doit avoir 7 nombres.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A002">Clé du matricule fiscal:</label>
+      <input id="A002" formControlName="A002">
+      <div *ngIf="anxdebForm1.get('A002').invalid && anxdebForm1.get('A002').touched">
+        <p *ngIf="anxdebForm1.get('A002').hasError('required')">Clé du matricule fiscal est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A002').hasError('pattern')">Clé du matricule fiscal doit comporter un seul caractère.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A003">Catégorie contribuable:</label>
+      <input id="A003" formControlName="A003">
+      <div *ngIf="anxdebForm1.get('A003').invalid && anxdebForm1.get('A003').touched">
+        <p *ngIf="anxdebForm1.get('A003').hasError('required')">Catégorie contribuable est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A003').hasError('pattern')">Catégorie contribuable doit avoir un seul caractère différent de 'E'.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A004">Numéro de l’établissement secondaire du contribuable:</label>
+      <input id="A004" formControlName="A004">
+      <div *ngIf="anxdebForm1.get('A004').invalid && anxdebForm1.get('A004').touched">
+        <p *ngIf="anxdebForm1.get('A004').hasError('required')">Numéro de l’établissement secondaire du contribuable est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A004').hasError('pattern')">Numéro de l’établissement secondaire du contribuable doit être de 3 nombres: 000.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A405">Exercice:</label>
+      <input id="A405" formControlName="A405">
+      <div *ngIf="anxdebForm1.get('A405').invalid && anxdebForm1.get('A405').touched">
+        <p *ngIf="anxdebForm1.get('A405').hasError('pattern')">Exercice doit comporter 4 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A406">Numéro d’ordre</label>
+      <input id="A406" formControlName="A406">
+      <div *ngIf="anxdebForm1.get('A406').invalid && anxdebForm1.get('A406').touched">
+        <p *ngIf="anxdebForm1.get('A406').hasError('required')">Numéro d’ordre est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A406').hasError('pattern')">Numéro d’ordre doit comporter 6 nombres.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A407"> Nature de l’identifiant</label>
+      <input id="A407" formControlName="A407">
+      <div *ngIf="anxdebForm1.get('A407').invalid && anxdebForm1.get('A407').touched">
+        <pre *ngIf="anxdebForm1.get('A407').hasError('pattern')">
+            Code acte doit être égal à:
+            3 : numéro de la carte de séjour pour
+            les étrangers.
+            4 : Identifiant des personnes non
+            domiciliées ni établies en Tunisie
+            </pre>
+        <p *ngIf="anxdebForm1.get('A407').hasError('required')">  Nature de l’identifiant  est obligatoire.</p>
+         
+      </div>
+    </div>
+  
+   
+  
+    <div>
+      <label for="A408"> Identifiant bénéficiaire </label>
+      <input id="A408" formControlName="A408">
+      <div *ngIf="anxdebForm1.get('A408').invalid && anxdebForm1.get('A408').touched">
+        <p *ngIf="anxdebForm1.get('A408').hasError('pattern')">Identifiant bénéficiaire  doit comporter 13 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A409"> Nom et prénom ou raison sociale
+        du bénéficiaire </label>
+      <input id="A409" formControlName="A409">
+      <div *ngIf="anxdebForm1.get('A409').invalid && anxdebForm1.get('A409').touched">
+        <p *ngIf="anxdebForm1.get('A409').hasError('pattern')"> Nom et prénom ou raison sociale
+            du bénéficiaire   doit comporter 40 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A410"> Activité du bénéficiaire </label>
+      <input id="A410" formControlName="A410">
+      <div *ngIf="anxdebForm1.get('A410').invalid && anxdebForm1.get('A410').touched">
+        <p *ngIf="anxdebForm1.get('A410').hasError('pattern')"> Activité du bénéficiaire doit comporter 40 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A411">Dernière adresse du bénéficiaire</label>
+      <input id="A411" formControlName="A411">
+      <div *ngIf="anxdebForm1.get('A411').invalid && anxdebForm1.get('A411').touched">
+        <p *ngIf="anxdebForm1.get('A411').hasError('pattern')">Dernière adresse du bénéficiaire doit comporter 120 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A412"> Type des Montants servis au titre
+        des honoraires, commissions,
+        courtages, loyers, rémunérations
+        des activités non commerciales et
+        autres revenus </label>
+      <input id="A412" formControlName="A412">
+      <div *ngIf="anxdebForm1.get('A412').invalid && anxdebForm1.get('A412').touched">
+        <pre *ngIf="anxdebForm1.get('A412').hasError('pattern')"> Type des Montants servis au titre
+                des honoraires, commissions,
+                courtages, loyers, rémunérations
+                des activités non commerciales et
+                autres revenus 
+                doit prendre la valeur: 
+                2 : Pour les commissions
+                3 :Pour les courtages
+                4 : Pour les loyers
+                5 : Pour les rémunérations au titre des
+                activités non commerciales
+                6 : Pour les autres revenus
+                7 : Pour les montants servis aux non résidents
+                qui ne procèdent pas au dépôt de la déclaration
+                d’existence avant d’entamer leur
+                activité :personnes établies en Tunisie et
+                résidentes dans un Etat ou un territoire dont le
+                régime fiscal est privilégié
+                8 Pour les montants servis aux non-résidents
+                qui ne procèdent pas au dépôt de la
+                déclaration d’existence avant d’entamer leur
+                activité : autres établissements stables
+                9 : Rémunérations payées en contre partie de
+                la performance dans la prestation.
+                0 : si le montant A413 = 0
+
+        
+        </pre>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A413"> Taux des Montants servis au titre
+        des honoraires, commissions,
+        montants servis aux non-résidents
+        établis en Tunisie et qui ne
+        procèdent pas au dépôt de la
+        déclaration d’existence, . </label>
+      <input id="A413" formControlName="A413">
+      <div *ngIf="anxdebForm1.get('A413').invalid && anxdebForm1.get('A413').touched">
+        <p *ngIf="anxdebForm1.get('A413').hasError('pattern')"> Taux des Montants servis au titre
+            des honoraires, commissions,
+            montants servis aux non-résidents
+            établis en Tunisie et qui ne
+            procèdent pas au dépôt de la
+            déclaration d’existence, doit comporter 5 nombres.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A414"> Montant brut servi au titre des
+        honoraires, commissions,
+        montants servis aux non-résidents
+        établis en Tunisie et qui ne
+        procèdent pas au dépôt de la
+        déclaration d’existence, .. </label>
+      <input id="A414" formControlName="A414">
+      <div *ngIf="anxdebForm1.get('A414').invalid && anxdebForm1.get('A414').touched">
+        <p *ngIf="anxdebForm1.get('A414').hasError('pattern')"> Montant brut servi au titre des
+            honoraires, commissions,
+            montants servis aux non-résidents
+            établis en Tunisie et qui ne
+            procèdent pas au dépôt de la
+            déclaration d’existence, doit comporter 15 nombres .</p>
+      </div>
+    </div>
+  
+    <div>
+        <label for="A415"> Taux des honoraires servis aux
+            personnes non résidentes et
+            établies qui réalisent des travaux
+            de construction ou des opérations
+            de montage ou des services de
+            contrôles connexes ou d’autres
+            services pour une période ne
+            dépassant pas 6 mois.</label>
+        <input id="A415" formControlName="A415">
+        <div *ngIf="anxdebForm1.get('A415').invalid &&anxdebForm1.get('A415').touched">
+          <p *ngIf="anxdebForm1.get('A415').hasError('pattern')"> Taux des honoraires servis aux
+            personnes non résidentes et
+            établies qui réalisent des travaux
+            de construction ou des opérations
+            de montage ou des services de
+            contrôles connexes ou d’autres
+            services pour une période ne
+            dépassant pas 6 mois.  doit comporter 5 nbres </p>
+        </div>
+      </div>
+      <div>
+        <label for="A416">  Montant des honoraires servis aux
+            personnes non résidentes et
+            établies qui réalisent des travaux
+            de construction ou des opérations
+            de montage ou des services de
+            contrôles connexes ou d’autres
+            services pour une période ne
+            dépassant pas 6 mois. 
+          </label>
+        <input id="A416" formControlName="A416">
+        <div *ngIf="anxdebForm1.get('A416').invalid &&anxdebForm1.get('A416').touched">
+          <p *ngIf="anxdebForm1.get('A416').hasError('pattern')">   Montant des honoraires servis aux
+            personnes non résidentes et
+            établies qui réalisent des travaux
+            de construction ou des opérations
+            de montage ou des services de
+            contrôles connexes ou d’autres
+            services pour une période ne
+            dépassant pas 6 mois.  doit comporter 15 nbres 
+             </p>
+        </div>
+      </div>
+    
+    <div>
+      <label for="A417">  Taux de plus-value immobilière 
+        </label>
+      <input id="A417" formControlName="A417">
+      <div *ngIf="anxdebForm1.get('A417').invalid &&anxdebForm1.get('A417').touched">
+        <p *ngIf="anxdebForm1.get('A417').hasError('pattern')">    Taux de plus-value immobilière  doit comporter 5 nbres 
+           </p>
+      </div>
+    </div>
+    <div>
+      <label for="A418">  Montant de la plus-value
+        immobilière
+        </label>
+      <input id="A418" formControlName="A418">
+      <div *ngIf="anxdebForm1.get('A418').invalid &&anxdebForm1.get('A418').touched">
+        <p *ngIf="anxdebForm1.get('A418').hasError('pattern')">   Montant de la plus-value
+            immobilière  doit comporter 15 nbres 
+           </p>
+      </div></div>
+    
+      <div>
+        <label for="A419">    Taux de plus-value de cession des
+            actions, des parts sociales ou des
+            parts de fonds prévues par la
+            législation
+            
+          </label>
+        <input id="A419" formControlName="A419">
+        <div *ngIf="anxdebForm1.get('A419').invalid &&anxdebForm1.get('A419').touched">
+          <p *ngIf="anxdebForm1.get('A419').hasError('pattern')">     Taux de plus-value de cession des
+            actions, des parts sociales ou des
+            parts de fonds prévues par la
+            législation
+             doit comporter 5 nbres 
+             </p>
+        </div>
+      </div>
+        <div>
+          <label for="A420">     Montant plus-value de cession des
+            actions, des parts sociales ou des
+            parts de fonds prévues par la
+            législation 
+            </label>
+          <input id="A420" formControlName="A420">
+          <div *ngIf="anxdebForm1.get('A420').invalid &&anxdebForm1.get('A421').touched">
+            <p *ngIf="anxdebForm1.get('A420').hasError('pattern')">     Montant plus-value de cession des
+                actions, des parts sociales ou des
+                parts de fonds prévues par la
+                législation  doit comporter 15 nbres 
+               </p>
+          </div> </div>
+    
+          <div>
+            <label for="A421">     Taux de revenues des valeurs
+                mobilières y compris jetons de
+                présence, rémunérations et primes
+                attribuées aux membres des
+                conseils, des directoires et des
+                comités des sociétés, actions et
+                parts sociales
+              </label>
+            <input id="A421" formControlName="A421">
+            <div *ngIf="anxdebForm1.get('A421').invalid &&anxdebForm1.get('A421').touched">
+              <p *ngIf="anxdebForm1.get('A421').hasError('pattern')">     Taux de revenues des valeurs
+                mobilières y compris jetons de
+                présence, rémunérations et primes
+                attribuées aux membres des
+                conseils, des directoires et des
+                comités des sociétés, actions et
+                parts sociales  doit comporter 5 nbres 
+                 </p>
+            </div></div>
+            <div>
+              <label for="A422">      Montant des revenus des valeurs
+                mobilières y compris jetons de
+                présence, rémunérations et primes
+                attribuées aux membres des
+                conseils, des directoires et des
+                comités des sociétés, actions et
+                parts sociales
+                
+                </label>
+              <input id="A422" formControlName="A421">
+              <div *ngIf="anxdebForm1.get('A422').invalid &&anxdebForm1.get('A422').touched">
+                <p *ngIf="anxdebForm1.get('A422').hasError('pattern')">      Montant des revenus des valeurs
+                    mobilières y compris jetons de
+                    présence, rémunérations et primes
+                    attribuées aux membres des
+                    conseils, des directoires et des
+                    comités des sociétés, actions et
+                    parts sociales
+                   doit comporter 15 nbres 
+                   </p>
+              </div> </div>
+              <div>
+                <label for="A423">   Le montant des rémunérations ou
+                    revenus servis à des personnes
+                    résidentes ou établies dans un Etat
+                    ou un territoire dont le régime
+                    fiscal est privilégié.
+                  
+                  
+                  </label>
+                <input id="A423" formControlName="A423">
+                <div *ngIf="anxdebForm1.get('A423').invalid &&anxdebForm1.get('A423').touched">
+                  <p *ngIf="anxdebForm1.get('A423').hasError('pattern')">    
+                    Le montant des rémunérations ou
+                    revenus servis à des personnes
+                    résidentes ou établies dans un Etat
+                    ou un territoire dont le régime
+                    fiscal est privilégié.
+                    
+                     doit comporter 15 nbres 
+                     </p>
+                </div></div>
+    
+                <div>
+                  <label for="A424">      Retenues opérées sur les montants
+                    servis au titre des opérations
+                    réalisées avec les personnes
+                    n’ayant pas d’établissement en
+                    Tunisie et dont la retenue à la
+                    source au titre de la TVA est de
+                    100%
+                    
+                    </label>
+                  <input id="A424" formControlName="A424">
+                  <div *ngIf="anxdebForm1.get('A424').invalid &&anxdebForm1.get('A424').touched">
+                    <p *ngIf="anxdebForm1.get('A424').hasError('pattern')">  Retenues opérées sur les montants
+                        servis au titre des opérations
+                        réalisées avec les personnes
+                        n’ayant pas d’établissement en
+                        Tunisie et dont la retenue à la
+                        source au titre de la TVA est de
+                        100% doit comporter 15 nbres  </p></div>  </div> 
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      <div>
+                      
+                      
+                      
+                      <label for="A425">    Montant des retenues opérées
+                        </label>
+                      <input id="A425" formControlName="A423">
+                      <div *ngIf="anxdebForm1.get('A425').invalid &&anxdebForm1.get('A425').touched">
+                        <p *ngIf="anxdebForm1.get('A425').hasError('pattern')">      Montant des retenues opérées doit comporter 15 nbres 
+                           </p>
+                      </div>
+                   
+                  </div> 
+                  <div>
+                      
+                      
+                      
+                    <label for="A426">     Montant net serv
+                      </label>
+                    <input id="A426" formControlName="A426">
+                    <div *ngIf="anxdebForm1.get('A426').invalid &&anxdebForm1.get('A426').touched">
+                      <p *ngIf="anxdebForm1.get('A426').hasError('pattern')">      Montant net serv  doit comporter 15 nbres 
+                         </p>
+                    </div>
+                 
+                </div> 
+        
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+                  <button type="submit">
+                    {{ isEditMode ? 'Valider' : 'Modifier' }}
+                  </button>
+     
+    </form>
+    

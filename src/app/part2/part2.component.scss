@@ -1,0 +1,102 @@
+h2{
+    margin-top: 4%;
+    margin-left: 5%;
+    color: blue;
+    font-weight: bolder;
+    margin-bottom: 4%;
+}  
+td {
+    text-align: right;
+     padding-bottom:0.3%;
+     padding-top: 0.3%;
+     height: 0.4%;
+
+}
+  
+tr {
+    background-color: rgba(235, 235, 235, 0.45); /* Utilisez le canal alpha pour la transparence */
+    color: #000;
+  }
+ tr:hover {
+     border-color: #555;
+  
+    color: grey;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 70%;
+    margin-left: 5%;
+}
+.inp
+{
+   
+    outline: none;
+    background-color: transparent;
+    border-width:0.1vw;
+    border-radius: 5px;
+}
+.sub
+{
+    background-color:  #ebebeb;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 70%;
+    width: 5%;
+    margin-top: 1%;
+    font-size: 1vw;
+
+}
+
+ /*input disbled */
+ input:disabled {
+    
+    background-color: #ebebeb; /* Dark gray */
+    cursor: not-allowed;
+    
+  }
+
+  /*valeur par defaut */
+  .default-value {
+    color: #C84C09; /* Applique la couleur noire pour la valeur par défaut */
+   
+  }
+  label
+  {
+    font-size: 1vw;;
+  }
+
+  .custom-snackbar {
+    max-width: 400px; /* Ajustez la largeur selon vos besoins */
+  }
+
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inp {
+    flex-grow: 1;
+    
+  }
+  
+  .error-message {
+    color: green;
+    /* margin-top: 10%; */
+    font-size: 1vw;
+    /* flex-wrap: nowrap; */
+    
+    white-space: nowrap;
+  }
+  
+  .error-message ul {
+     
+    padding: 0;
+    margin-left: 10%;
+  }
+  
+  .error-message li {
+    color: red;
+  }

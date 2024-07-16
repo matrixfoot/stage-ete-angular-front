@@ -1,0 +1,162 @@
+  
+
+
+
+
+
+
+
+<form [formGroup]="anxdebForm" (ngSubmit)="onSubmit()">
+    <h2>   Fiche descriptive - Enregistrement « ANXDEB00 » </h2>
+    
+    <div>
+      <label for="E400">Type enregistrement:</label>
+      <input id="E400" formControlName="E400">
+      <div *ngIf="anxdebForm.get('E400').invalid && anxdebForm.get('E400').touched">
+        <p *ngIf="anxdebForm.get('E400').hasError('required')">Type enregistrement est obligatoire </p>
+        <p *ngIf="anxdebForm.get('E400').hasError('invalidValue')">Valeur de Type enregistrement invalide .</p>
+      </div>
+    </div>
+  
+    <h3>Identifiant contribuable déclarant</h3>
+    
+    <div>
+      <label for="E001">Matricule Fiscal:</label>
+      <input id="E001" formControlName="E001">
+      <div *ngIf="anxdebForm.get('E001').invalid && anxdebForm.get('E001').touched">
+        <p *ngIf="anxdebForm.get('E001').hasError('required')">Matricule Fiscal est obligatoire .</p>
+        <p *ngIf="anxdebForm.get('E001').hasError('pattern')">Matricule Fiscal doit comporter 7 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E002">Clé du matricule fiscal:</label>
+      <input id="E002" formControlName="E002">
+      <div *ngIf="anxdebForm.get('E002').invalid && anxdebForm.get('E002').touched">
+        <p *ngIf="anxdebForm.get('E002').hasError('required')">Clé du matricule fiscal est obligatoire </p>
+        <p *ngIf="anxdebForm.get('E002').hasError('pattern')">Clé du matricule fiscal doit etre un seul caractère </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E003">Catégorie contribuable:</label>
+      <input id="E003" formControlName="E003">
+      <div *ngIf="anxdebForm.get('E003').invalid && anxdebForm.get('E003').touched">
+        <p *ngIf="anxdebForm.get('E003').hasError('required')">Catégorie contribuable est obligatoire </p>
+        <p *ngIf="anxdebForm.get('E003').hasError('pattern')">Catégorie contribuable doit etre un seul caractère et différente de 'E'</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E004">Numéro de l’établissement secondaire du contribuable:</label>
+      <input id="E004" formControlName="E004">
+      <div *ngIf="anxdebForm.get('E004').invalid && anxdebForm.get('E004').touched">
+        <p *ngIf="anxdebForm.get('E004').hasError('required')">Numéro de l’établissement secondaire du contribuable est obligatoire </p>
+        <p *ngIf="anxdebForm.get('E004').hasError('pattern')">Numéro de l’établissement secondaire du contribuable doit etre de valeur 000 </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E405">Exercice:</label>
+      <input id="E405" formControlName="E405">
+      <div *ngIf="anxdebForm.get('E405').invalid && anxdebForm.get('E405').touched">
+        <p *ngIf="anxdebForm.get('E405').hasError('pattern')">Exercice doit comporter 4 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E406">Type de document:</label>
+      <input id="E406" formControlName="E406">
+      <div *ngIf="anxdebForm.get('E406').invalid && anxdebForm.get('E406').touched">
+        <p *ngIf="anxdebForm.get('E406').hasError('required')">Type de document est obligatoire </p>
+        <p *ngIf="anxdebForm.get('E406').hasError('pattern')">Type de document doit etre de valeur An4</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E407">Code acte:</label>
+      <input id="E407" formControlName="E407">
+      <div *ngIf="anxdebForm.get('E407').invalid && anxdebForm.get('E407').touched">
+        <pre *ngIf="anxdebForm.get('E407').hasError('pattern')">
+valeur valide : 
+0 : Spontané,
+1 : Régularisation.
+2 : redressement
+        </pre>
+        <p *ngIf="anxdebForm.get('E407').hasError('required')">Code acte est obligatoire </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E408">Nombre total de bénéficiaires:</label>
+      <input id="E408" formControlName="E408">
+      <div *ngIf="anxdebForm.get('E408').invalid && anxdebForm.get('E408').touched">
+        <p *ngIf="anxdebForm.get('E408').hasError('pattern')"> Nombre total de bénéficiaires doit comporter 6 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E409"> Nom et prénom ou Raison sociale
+        contribuable déclarant</label>
+      <input id="E409" formControlName="E409">
+      <div *ngIf="anxdebForm.get('E409').invalid && anxdebForm.get('E409').touched">
+        <p *ngIf="anxdebForm.get('E409').hasError('pattern')">Nom et prénom ou Raison sociale contribuable déclarant doit comporter 40 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E410">Activité contribuable déclarant:</label>
+      <input id="E410" formControlName="E410">
+      <div *ngIf="anxdebForm.get('E410').invalid && anxdebForm.get('E410').touched">
+        <p *ngIf="anxdebForm.get('E410').hasError('pattern')">Activité contribuable déclarant doit comporter 40 caractères </p>
+      </div>
+    </div>
+  
+    <h3> Dernière adresse contribuable
+        déclarant </h3>
+  
+    <div>
+      <label for="E411">Ville:</label>
+      <input id="E411" formControlName="E411">
+      <div *ngIf="anxdebForm.get('E411').invalid && anxdebForm.get('E411').touched">
+        <p *ngIf="anxdebForm.get('E411').hasError('pattern')">Ville doit comporter 40 caractères .</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E412">Rue:</label>
+      <input id="E412" formControlName="E412">
+      <div *ngIf="anxdebForm.get('E412').invalid && anxdebForm.get('E412').touched">
+        <p *ngIf="anxdebForm.get('E412').hasError('pattern')">Rue doit comporter 72 caractères </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E413">Numéro:</label>
+      <input id="E413" formControlName="E413">
+      <div *ngIf="anxdebForm.get('E413').invalid && anxdebForm.get('E413').touched">
+        <p *ngIf="anxdebForm.get('E413').hasError('pattern')">Numéro doit comporter 4 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E414">Code postal:</label>
+      <input id="E414" formControlName="E414">
+      <div *ngIf="anxdebForm.get('E414').invalid && anxdebForm.get('E414').touched">
+        <p *ngIf="anxdebForm.get('E414').hasError('pattern')">Code postal doit comporter 4 nombres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="E415">Zone réservée:</label>
+      <input id="E415" formControlName="E415">
+      <div *ngIf="anxdebForm.get('E415').invalid && anxdebForm.get('E415').touched">
+        <p *ngIf="anxdebForm.get('E415').hasError('pattern')">Zone réservée must be 171 characters long.</p>
+      </div>
+    </div>
+  
+    <button type="submit">{{ isEditMode ? 'Valider' : 'Modifier' }}</button>
+    
+  </form>
+  <app-anx4p2></app-anx4p2>
+  <app-anx4p3></app-anx4p3>

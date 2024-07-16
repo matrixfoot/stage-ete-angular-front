@@ -1,0 +1,184 @@
+     
+  
+  
+  
+  
+  
+  
+  <form [formGroup]="anxdebForm1" (ngSubmit)="onSubmit1()">
+    <h2>   Fiche descriptive - Enregistrement «ANXBEN07 » </h2>
+  
+    <div>
+      <label for="A700">Type enregistrement:</label>
+      <input id="A700" formControlName="A700">
+      
+    </div>
+  
+    <h3>Identifiant contribuable déclarant</h3>
+  
+    <div>
+      <label for="A001">Matricule Fiscal:</label>
+      <input id="A001" formControlName="A001">
+      <div *ngIf="anxdebForm1.get('A001').invalid && anxdebForm1.get('A001').touched">
+        <p *ngIf="anxdebForm1.get('A001').hasError('required')">Matricule Fiscal est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A001').hasError('pattern')">Matricule Fiscal doit avoir 7 nombres.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A002">Clé du matricule fiscal:</label>
+      <input id="A002" formControlName="A002">
+      <div *ngIf="anxdebForm1.get('A002').invalid && anxdebForm1.get('A002').touched">
+        <p *ngIf="anxdebForm1.get('A002').hasError('required')">Clé du matricule fiscal est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A002').hasError('pattern')">Clé du matricule fiscal doit comporter un seul caractère.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A003">Catégorie contribuable:</label>
+      <input id="A003" formControlName="A003">
+      <div *ngIf="anxdebForm1.get('A003').invalid && anxdebForm1.get('A003').touched">
+        <p *ngIf="anxdebForm1.get('A003').hasError('required')">Catégorie contribuable est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A003').hasError('pattern')">Catégorie contribuable doit avoir un seul caractère différent de 'E'.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A004">Numéro de l’établissement secondaire du contribuable:</label>
+      <input id="A004" formControlName="A004">
+      <div *ngIf="anxdebForm1.get('A004').invalid && anxdebForm1.get('A004').touched">
+        <p *ngIf="anxdebForm1.get('A004').hasError('required')">Numéro de l’établissement secondaire du contribuable est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A004').hasError('pattern')">Numéro de l’établissement secondaire du contribuable doit être de 3 nombres: 000.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A705">Exercice:</label>
+      <input id="A705" formControlName="A705">
+      <div *ngIf="anxdebForm1.get('A705').invalid && anxdebForm1.get('A705').touched">
+        <p *ngIf="anxdebForm1.get('A705').hasError('pattern')">Exercice doit comporter 4 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A706">Numéro d’ordre</label>
+      <input id="A706" formControlName="A706">
+      <div *ngIf="anxdebForm1.get('A706').invalid && anxdebForm1.get('A706').touched">
+        <p *ngIf="anxdebForm1.get('A706').hasError('required')">Numéro d’ordre est obligatoire.</p>
+        <p *ngIf="anxdebForm1.get('A706').hasError('pattern')">Numéro d’ordre doit comporter 6 nombres.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A707"> Nature de l’identifiant</label>
+      <input id="A707" formControlName="A707">
+      <div *ngIf="anxdebForm1.get('A707').invalid && anxdebForm1.get('A707').touched">
+        <pre *ngIf="anxdebForm1.get('A707').hasError('pattern')">
+            1 : Matricule fiscal,
+            2 : Numéro de la carte d’identité
+            nationale,
+            3 : Carte de séjour pour les étrangers,
+            4 : Identifiant des personnes non
+            domiciliées ni établies en Tunisie.
+            </pre>
+        <p *ngIf="anxdebForm1.get('A707').hasError('required')">  Nature de l’identifiant  est obligatoire.</p>
+         
+      </div>
+    </div>
+  
+   
+  
+    <div>
+      <label for="A708"> Identifiant bénéficiaire </label>
+      <input id="A708" formControlName="A708">
+      <div *ngIf="anxdebForm1.get('A708').invalid && anxdebForm1.get('A708').touched">
+        <p *ngIf="anxdebForm1.get('A708').hasError('pattern')">Identifiant bénéficiaire 
+           doit comporter 13 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A709"> Nom et prénom ou raison sociale
+        du bénéficiaire </label>
+      <input id="A709" formControlName="A709">
+      <div *ngIf="anxdebForm1.get('A709').invalid && anxdebForm1.get('A709').touched">
+        <p *ngIf="anxdebForm1.get('A709').hasError('pattern')"> Nom et prénom ou raison 
+          sociale
+            du bénéficiaire   doit comporter 40 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A710"> Activité  </label>
+      <input id="A710" formControlName="A710">
+      <div *ngIf="anxdebForm1.get('A710').invalid && anxdebForm1.get('A710').touched">
+        <p *ngIf="anxdebForm1.get('A710').hasError('pattern')"> Activité   doit 
+          comporter 40 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A711">Dernière adresse du bénéficiaire</label>
+      <input id="A711" formControlName="A711">
+      <div *ngIf="anxdebForm1.get('A711').invalid && anxdebForm1.get('A711').touched">
+        <p *ngIf="anxdebForm1.get('A711').hasError('pattern')">Dernière adresse 
+            du bénéficiaire doit comporter 120 caractères.</p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A712">  Type des montants payés  </label>
+      <input id="A712" formControlName="A712">
+      <div *ngIf="anxdebForm1.get('A712').invalid && anxdebForm1.get('A712').touched">
+        <pre *ngIf="anxdebForm1.get('A712').hasError('pattern')">  
+            Type des montants payés  doit etre de longueur egale à 2 
+        </pre>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A713">   Montants payés </label>
+      <input id="A713" formControlName="A713">
+      <div *ngIf="anxdebForm1.get('A713').invalid && anxdebForm1.get('A713').touched">
+        <p *ngIf="anxdebForm1.get('A713').hasError('pattern')">  longueur doit etre
+           egale à 15 nbres </p>
+      </div>
+    </div>
+  
+    <div>
+      <label for="A714">   Retenue à la source </label>
+      <input id="A714" formControlName="A714">
+      <div *ngIf="anxdebForm1.get('A714').invalid && anxdebForm1.get('A714').touched">
+        <p *ngIf="anxdebForm1.get('A714').hasError('pattern')">  Retenue à la source  doit comporter 15 nombres .</p>
+      </div>
+    </div>
+  
+    <div>
+        <label for="A715">   Montant net servi</label>
+        <input id="A715" formControlName="A715">
+        <div *ngIf="anxdebForm1.get('A715').invalid &&anxdebForm1.get('A715').touched">
+          <p *ngIf="anxdebForm1.get('A715').hasError('pattern')">   Montant net servi doit  comporter 15 nbres </p>
+        </div>
+      </div>
+      <div>
+        <label for="A716">   Zone Réservé
+          
+          </label>
+        <input id="A716" formControlName="A716">
+        <div *ngIf="anxdebForm1.get('A716').invalid &&anxdebForm1.get('A716').touched">
+          <p *ngIf="anxdebForm1.get('A716').hasError('pattern')">     Zone Réservé doit comporter 114 caractères 
+             
+             </p>
+        </div>
+      </div>
+    
+     
+      
+      
+      
+      <button type="submit">
+                    {{ isEditMode ? 'Valider' : 'Modifier' }}
+                  </button>
+     
+    </form>
+    

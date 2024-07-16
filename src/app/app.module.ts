@@ -8,8 +8,8 @@ import {FacturationModule} from './facturation/facturation.module';
 import { PdfInterfaceComponent } from './pdf-interface/pdf-interface.component';
 import { MaterialModule } from './material/material.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-/* import { ChartModule } from 'angular-highcharts';
-import { HighchartsChartModule } from 'highcharts-angular'; */
+import { ChartModule } from 'angular-highcharts';
+import { HighchartsChartModule } from 'highcharts-angular'; 
 import { AppRoutingModule } from './app-routing.module';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
@@ -57,7 +57,7 @@ import { FacturePerformatComponent } from './facture-performat/facture-performat
 import { FactureRegleesComponent } from './facture-reglees/facture-reglees.component';
 import { ClientsAvecImpayesComponent } from './clients-avec-impayes/clients-avec-impayes.component';
 import { TousUtilisateursComponent } from './tous-utilisateurs/tous-utilisateurs.component';
-/* import { UtilisateursConnectesComponent } from './utilisateurs-connectes/utilisateurs-connectes.component'; */
+import { UtilisateursConnectesComponent } from './utilisateurs-connectes/utilisateurs-connectes.component'; 
 import { UtilisateursActifsComponent } from './utilisateurs-actifs/utilisateurs-actifs.component';
 import { UtilisateursBloquesComponent } from './utilisateurs-bloques/utilisateurs-bloques.component';
 import { ClientsSupprimesTemporairementComponent } from './clients-supprimes-temporairement/clients-supprimes-temporairement.component';
@@ -107,13 +107,23 @@ import { DTCOMPComponent } from './dt-comp/dt-comp.component';
 import { TCL1Component } from './tcl1/tcl1.component';
 import { TCL2Component } from './tcl2/tcl2.component';
 import { TCL3Component } from './tcl3/tcl3.component';
-/* import { StatistiquesDetailleesComponent } from './statistiques-detaillees/statistiques-detaillees.component';
+import { SaisieAutoBanqueComponent } from './saisie-auto-banque/saisie-auto-banque.component';
+import { FichierrecapComponent } from './fichierrecap/fichierrecap.component';
+import { StatistiquesDetailleesComponent} from './statistiques-detaillees/statistiques-detaillees.component';
+import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component';
 import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
-import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/statistiques-dernier-jour.component'; */
-//import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
+import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+
+
+
+
+
 
 @NgModule({
   declarations: [
+    FichierrecapComponent,
+    SaisieAutoBanqueComponent,
     AppComponent,
     CollabBoardComponent,
     PourquoiComponent,
@@ -159,7 +169,7 @@ import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/st
     FactureRegleesComponent,
     ClientsAvecImpayesComponent,
     TousUtilisateursComponent,
-    /* UtilisateursConnectesComponent, */
+    UtilisateursConnectesComponent, 
     UtilisateursActifsComponent,
     UtilisateursBloquesComponent,
     ClientsSupprimesTemporairementComponent,
@@ -177,6 +187,12 @@ import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/st
     ReclamationsTraiteesComponent,
     ReclamationsEnCoursComponent,
     AdminDashboardComponent,
+    AppComponent,
+    CalendarComponent,
+    ModiEventComponent,AjouterEventComponent,ProfilComponent,AboutComponent, UserBordComponent, FiscalityComponent,
+     ComptabiliteComponent, DeclarationFiscaleComponent,  DeclarationmensuelleComponent, ListeComponent, RetenueSourceComponent,PlusComponent,
+      SelectComponent, PartieCommuneComponent, LoyerComponent, HoraireComponent, MontantComponent, RubriqueComponent, Select1Component,
+      TFPComponent, FoprolosComponent, TVAComponent, TclComponent, TimbreComponent, SoutenutvaComponent, PlusComponent, PlustvaComponent, RubComponent, Select1Component,   
     DeclarationFiscaleComponent,
     DeclarationmensuelleComponent,
     ListeComponent,
@@ -209,10 +225,10 @@ import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/st
     TCL1Component,
     TCL2Component,
     TCL3Component,
-    /* StatistiquesDetailleesComponent,
+    StatistiquesDetailleesComponent,
     StatistiquesDernierMoisComponent,
-    StatistiquesDernierJourComponent, */
-    //ListeTransactionsComponent,
+    StatistiquesDernierJourComponent, 
+    ListeTransactionsComponent, FormulaireComponent,
   ],
   imports: [
     BrowserModule,
@@ -222,8 +238,8 @@ import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/st
     FormsModule,
     MaterialModule,
     MatSnackBarModule,
-  /*   HighchartsChartModule,
-    ChartModule, */
+    HighchartsChartModule,
+    ChartModule, 
     BrowserAnimationsModule,
     AppRoutingModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
