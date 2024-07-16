@@ -1,0 +1,50 @@
+{
+  "INVOICE": "Facture",
+  "INVOICE_NUMBER": "Facture N°",
+  "USER_ID": "ID Utilisateur",
+  "DATE": "Date",
+  "SELLER_INFO": "Vendeur",
+  "SELLER_NAME": "Nom",
+  "SELLER_ADDRESS": "Adresse",
+  "SELLER_PHONE": "Téléphone",
+  "SELLER_EMAIL": "Email",
+  "CLIENT_INFO": "Client",
+  "CLIENT_NAME": "Nom",
+  "CLIENT_ADDRESS": "Adresse",
+  "CLIENT_PHONE": "Téléphone",
+  "CLIENT_EMAIL": "Email",
+  "DESCRIPTION": "Description",
+  "QUANTITY": "Quantité",
+  "UNIT_PRICE": "Prix Unitaire",
+  "TOTAL": "Total",
+  "ACTIONS": "Actions",
+  "ADD_ITEM": "Ajouter un article",
+  "TERMS": "Termes et Conditions",
+  "NOTES": "Notes Supplémentaires",
+  "TOTAL_HT": "Total hors taxes",
+  "TVA": "TVA ",
+  "TOTAL_TTC": "Total TTC",
+  "GENERATE_INVOICE": "Générer la Facture",
+  "THANK_YOU": "Merci pour votre confiance",
+  "ITEM_DESCRIPTION":"Description",
+  
+
+  "INVOICE_NUMBER_REQUIRED": "Le numéro de facture est requis",
+  "SELLER": "Vendeur",
+
+  "SELLER_NAME_REQUIRED": "Le nom du vendeur est requis",
+  "CLIENT": "Client",
+  
+  "CLIENT_NAME_REQUIRED": "Le nom du client est requis",
+
+  "DESCRIPTION_INVALID": "La description est requise",
+  "QUANTITY_INVALID": "La quantité doit être un nombre positif",
+  "UNIT_PRICE_INVALID": "Le prix unitaire doit être un nombre positif",
+  "REMOVE": "Supprimer",
+  
+  "TERMS_AND_CONDITIONS": "Conditions Générales",
+  
+  "SUBMIT": "Soumettre"
+}
+
+

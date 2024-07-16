@@ -1,1 +1,585 @@
-<p>facture-proforma works!</p>
+<div class="container-fluid mt-3" id="invoice">
+  <div class="d-flex align-items-start mb-4 mt-4">
+    <div class="document-header mt-3 ml-4">
+      <h1 class="text-uppercase fw-bold title-size">
+        {{ "Facture" | translate }}
+      </h1>
+      <h2 class="text-uppercase fw-bold title-size">
+        {{ "Proforma" | translate }}
+      </h2>
+    </div>
+
+    <div class="flex-grow-1 ml-4">
+      <form
+        #invoiceForm="ngForm"
+        (ngSubmit)="onSubmit(invoiceForm)"
+        class="row invoice-form"
+        novalidate
+      >
+        <div class="col-md-4">
+          <label for="invoiceNumber" class="form-label">{{
+            "Facture Perf N°" | translate
+          }}</label>
+          <input
+            type="text"
+            class="form-control"
+            id="invoiceNumber"
+            [(ngModel)]="invoice.invoiceNumber"
+            name="invoiceNumber"
+            required
+            #invoiceNumber="ngModel"
+            [ngClass]="{
+              'is-invalid':
+                invoiceNumber.invalid &&
+                (invoiceNumber.dirty || invoiceNumber.touched)
+            }"
+          />
+          <div
+            *ngIf="
+              invoiceNumber.invalid &&
+              (invoiceNumber.dirty || invoiceNumber.touched)
+            "
+            class="invalid-feedback"
+          >
+            {{ "INVOICE_NUMBER_REQUIRED" | translate }}
+          </div>
+        </div>
+
+        <!-- User ID -->
+        <div class="col-md-4">
+          <label for="userId" class="form-label">{{
+            "USER_ID" | translate
+          }}</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userId"
+            [(ngModel)]="invoice.userId"
+            name="userId"
+            required
+            #userId="ngModel"
+            [ngClass]="{
+              'is-invalid': userId.invalid && (userId.dirty || userId.touched)
+            }"
+          />
+          <div
+            *ngIf="userId.invalid && (userId.dirty || userId.touched)"
+            class="invalid-feedback"
+          >
+            {{ "USER_ID_REQUIRED" | translate }}
+          </div>
+        </div>
+
+        <!-- Date -->
+        <div class="col-md-4">
+          <label for="date" class="form-label">{{ "DATE" | translate }}</label>
+          <input
+            type="datetime-local"
+            class="form-control"
+            id="date"
+            [(ngModel)]="invoice.date"
+            name="date"
+            required
+            #date="ngModel"
+            [ngClass]="{
+              'is-invalid': date.invalid && (date.dirty || date.touched)
+            }"
+          />
+          <div
+            *ngIf="date.invalid && (date.dirty || date.touched)"
+            class="invalid-feedback"
+          >
+            {{ "DATE_REQUIRED" | translate }}
+          </div>
+        </div>
+
+        <!-- Vendeur (Seller) Section -->
+        <div class="col-12 mt-4">
+          <h2 class="text-danger fs-5">{{ "SELLER_INFO" | translate }}</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="sellerName" class="form-label">{{
+                "SELLER_NAME" | translate
+              }}</label>
+              <input
+                type="text"
+                class="form-control"
+                id="sellerName"
+                [(ngModel)]="invoice.clientInfo[0].name"
+                name="sellerName"
+                required
+                #sellerName="ngModel"
+                [ngClass]="{
+                  'is-invalid':
+                    sellerName.invalid &&
+                    (sellerName.dirty || sellerName.touched)
+                }"
+              />
+              <div
+                *ngIf="
+                  sellerName.invalid && (sellerName.dirty || sellerName.touched)
+                "
+                class="invalid-feedback"
+              >
+                {{ "SELLER_NAME_REQUIRED" | translate }}
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="sellerAddress" class="form-label">{{
+                "SELLER_ADDRESS" | translate
+              }}</label>
+              <input
+                type="text"
+                class="form-control"
+                id="sellerAddress"
+                [(ngModel)]="invoice.clientInfo[0].address"
+                name="sellerAddress"
+                required
+                #sellerAddress="ngModel"
+                [ngClass]="{
+                  'is-invalid':
+                    sellerAddress.invalid &&
+                    (sellerAddress.dirty || sellerAddress.touched)
+                }"
+              />
+              <div
+                *ngIf="
+                  sellerAddress.invalid &&
+                  (sellerAddress.dirty || sellerAddress.touched)
+                "
+                class="invalid-feedback"
+              >
+                {{ "SELLER_ADDRESS_REQUIRED" | translate }}
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="sellerPhone" class="form-label">{{
+                "SELLER_PHONE" | translate
+              }}</label>
+              <input
+                type="text"
+                class="form-control"
+                id="sellerPhone"
+                [(ngModel)]="invoice.clientInfo[0].phone"
+                name="sellerPhone"
+                required
+                #sellerPhone="ngModel"
+                [ngClass]="{
+                  'is-invalid':
+                    sellerPhone.invalid &&
+                    (sellerPhone.dirty || sellerPhone.touched)
+                }"
+              />
+              <div
+                *ngIf="
+                  sellerPhone.invalid &&
+                  (sellerPhone.dirty || sellerPhone.touched)
+                "
+                class="invalid-feedback"
+              >
+                {{ "SELLER_PHONE_REQUIRED" | translate }}
+              </div>
+            </div>
+
+            <div class="col-md-4 mt-3">
+              <label for="sellerEmail" class="form-label">{{
+                "SELLER_EMAIL" | translate
+              }}</label>
+              <input
+                type="email"
+                class="form-control"
+                id="sellerEmail"
+                [(ngModel)]="invoice.clientInfo[0].email"
+                name="sellerEmail"
+                required
+                #sellerEmail="ngModel"
+                [ngClass]="{
+                  'is-invalid':
+                    sellerEmail.invalid &&
+                    (sellerEmail.dirty || sellerEmail.touched)
+                }"
+              />
+              <div
+                *ngIf="
+                  sellerEmail.invalid &&
+                  (sellerEmail.dirty || sellerEmail.touched)
+                "
+                class="invalid-feedback"
+              >
+                {{ "SELLER_EMAIL_REQUIRED" | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Section -->
+        <div class="col-12 mt-4">
+          <h2 class="text-danger fs-5">{{ "CLIENT_INFO" | translate }}</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="clientName" class="form-label">{{
+                "CLIENT_NAME" | translate
+              }}</label>
+              <input
+                type="text"
+                class="form-control"
+                id="clientName"
+                [(ngModel)]="invoice.clientInfo[1].name"
+                name="clientName"
+                required
+                #clientName="ngModel"
+                [ngClass]="{
+                  'is-invalid':
+                    clientName.invalid &&
+                    (clientName.dirty || clientName.touched)
+                }"
+              />
+              <div
+                *ngIf="
+                  clientName.invalid && (clientName.dirty || clientName.touched)
+                "
+                class="invalid-feedback"
+              >
+                {{ "CLIENT_NAME_REQUIRED" | translate }}
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="clientAddress" class="form-label">{{
+                "CLIENT_ADDRESS" | translate
+              }}</label>
+              <input
+                type="text"
+                class="form-control"
+                id="clientAddress"
+                [(ngModel)]="invoice.clientInfo[1].address"
+                name="clientAddress"
+                required
+                #clientAddress="ngModel"
+                [ngClass]="{
+                  'is-invalid':
+                    clientAddress.invalid &&
+                    (clientAddress.dirty || clientAddress.touched)
+                }"
+              />
+              <div
+                *ngIf="
+                  clientAddress.invalid &&
+                  (clientAddress.dirty || clientAddress.touched)
+                "
+                class="invalid-feedback"
+              >
+                {{ "CLIENT_ADDRESS_REQUIRED" | translate }}
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="clientPhone" class="form-label">{{
+                "CLIENT_PHONE" | translate
+              }}</label>
+              <input
+                type="text"
+                class="form-control"
+                id="clientPhone"
+                [(ngModel)]="invoice.clientInfo[1].phone"
+                name="clientPhone"
+                required
+                #clientPhone="ngModel"
+                [ngClass]="{
+                  'is-invalid':
+                    clientPhone.invalid &&
+                    (clientPhone.dirty || clientPhone.touched)
+                }"
+              />
+              <div
+                *ngIf="
+                  clientPhone.invalid &&
+                  (clientPhone.dirty || clientPhone.touched)
+                "
+                class="invalid-feedback"
+              >
+                {{ "CLIENT_PHONE_REQUIRED" | translate }}
+              </div>
+            </div>
+
+            <div class="col-md-4 mt-3">
+              <label for="clientEmail" class="form-label">{{
+                "CLIENT_EMAIL" | translate
+              }}</label>
+              <input
+                type="email"
+                class="form-control"
+                id="clientEmail"
+                [(ngModel)]="invoice.clientInfo[1].email"
+                name="clientEmail"
+                required
+                #clientEmail="ngModel"
+                [ngClass]="{
+                  'is-invalid':
+                    clientEmail.invalid &&
+                    (clientEmail.dirty || clientEmail.touched)
+                }"
+              />
+              <div
+                *ngIf="
+                  clientEmail.invalid &&
+                  (clientEmail.dirty || clientEmail.touched)
+                "
+                class="invalid-feedback"
+              >
+                {{ "CLIENT_EMAIL_REQUIRED" | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-4">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>{{ "ITEM_DESCRIPTION" | translate }}</th>
+                <th>{{ "QUANTITY" | translate }}</th>
+                <th>{{ "UNIT_PRICE" | translate }}</th>
+                <th>{{ "TOTAL" | translate }}</th>
+                <th>{{ "ACTION" | translate }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of invoice.invoiceDetails; let i = index">
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [(ngModel)]="item.description"
+                    name="description{{ i }}"
+                    required
+                    #description="ngModel"
+                    [ngClass]="{
+                      'is-invalid':
+                        description.invalid &&
+                        (description.dirty || description.touched)
+                    }"
+                  />
+                  <div
+                    *ngIf="
+                      description.invalid &&
+                      (description.dirty || description.touched)
+                    "
+                    class="invalid-feedback"
+                  >
+                    {{ "DESCRIPTION_INVALID" | translate }}
+                  </div>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    [(ngModel)]="item.quantity"
+                    name="quantity{{ i }}"
+                    (input)="updateTotal()"
+                    required
+                    min="1"
+                    #quantity="ngModel"
+                    [ngClass]="{
+                      'is-invalid':
+                        quantity.invalid && (quantity.dirty || quantity.touched)
+                    }"
+                  />
+                  <div
+                    *ngIf="
+                      quantity.invalid && (quantity.dirty || quantity.touched)
+                    "
+                    class="invalid-feedback"
+                  >
+                    {{ "QUANTITY_INVALID" | translate }}
+                  </div>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    [(ngModel)]="item.unitPrice"
+                    name="unitPrice{{ i }}"
+                    (input)="updateTotal()"
+                    required
+                    min="0"
+                    #unitPrice="ngModel"
+                    [ngClass]="{
+                      'is-invalid':
+                        unitPrice.invalid &&
+                        (unitPrice.dirty || unitPrice.touched)
+                    }"
+                  />
+                  <div
+                    *ngIf="
+                      unitPrice.invalid &&
+                      (unitPrice.dirty || unitPrice.touched)
+                    "
+                    class="invalid-feedback"
+                  >
+                    {{ "UNIT_PRICE_INVALID" | translate }}
+                  </div>
+                </td>
+                <td>
+                  {{ item.quantity * item.unitPrice }} {{ invoice.currency }}
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    (click)="removeItem(i)"
+                  >
+                    {{ "REMOVE" | translate }}
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12 d-flex justify-content-end mt-3">
+            <button
+              type="button"
+              class="btn btn-secondary btn-add-item mx-3"
+              (click)="addItem()"
+            >
+              {{ "ADD_ITEM" | translate }}
+            </button>
+          </div>
+
+          <!-- Terms and Notes -->
+          <div class="col-12 mt-4">
+            <label for="terms" class="form-label">{{
+              "TERMS" | translate
+            }}</label>
+            <textarea
+              class="form-control"
+              id="terms"
+              [(ngModel)]="invoice.terms"
+              name="terms"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <div class="col-12 mt-4">
+            <label for="notes" class="form-label">{{
+              "NOTES" | translate
+            }}</label>
+            <textarea
+              class="form-control"
+              id="notes"
+              [(ngModel)]="invoice.notes"
+              name="notes"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <!-- Totals -->
+          <div class="totals mt-3">
+            <p class="fs-5">
+              {{ "TOTAL_HT" | translate }} : {{ totalHT }}
+              {{ invoice.currency }}
+            </p>
+            <p class="fs-5">
+              {{ "TVA" | translate }} ( {{ tva * 100 }} %):
+              {{ invoice.currency }}
+            </p>
+            <p class="fs-5">
+              {{ "TOTAL_TTC" | translate }} : {{ totalTTC }}
+              {{ invoice.currency }}
+            </p>
+          </div>
+          <div class="row mt-4 mb-4">
+            <div class="col-12">
+              <h3 class="section-title text-primary">Signature:</h3>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <label for="clientSignature" class="form-label"
+                    >Signature du client:</label
+                  >
+                  <div class="signature-box" id="clientSignature">
+                    <!-- Espace pour la signature -->
+                  </div>
+                  <div class="signature-date">
+                    Date: {{ invoice.validityDate | date : "dd/MM/yyyy" }}
+                  </div>
+                </div>
+                <div>
+                  <label for="vendorSignature" class="form-label"
+                    >Signature du vendeur:</label
+                  >
+                  <div class="signature-box" id="vendorSignature">
+                    <!-- Espace pour la signature -->
+                  </div>
+                  <div class="signature-date">
+                    Date: {{ invoice.validityDate | date : "dd/MM/yyyy" }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-12">
+            <button
+              type="submit"
+              class="btn btn-primary mt-3"
+              (click)="generatePDF()"
+              [disabled]="invoiceForm.invalid"
+            >
+              {{ "GENERATE_INVOICE" | translate }}
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Thank You Message -->
+      <div class="col-12 mt-3 text-end">
+        <p class="text-warning fs-4 mx-5 mb-3">{{ "THANK_YOU" | translate }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 text-start">
+      <div class="col-md-5">
+        <label for="inputState" class="form-label">Language</label>
+        <select
+          id="inputState"
+          class="form-select"
+          (change)="switchLanguage($event.target.value)"
+        >
+          <option value="fr" selected>Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+
+      <div class="col-md-4 mt-3">
+        <label for="currency" class="form-label">{{
+          "CURRENCY" | translate
+        }}</label>
+        <select
+          id="currency"
+          class="form-select"
+          [(ngModel)]="invoice.currency"
+          name="currency"
+        >
+          <option value="DT">Tunisian Dinar (DT)</option>
+          <option value="USD">US Dollar (USD)</option>
+          <option value="EUR">Euro (EUR)</option>
+        </select>
+      </div>
+      <div class="col-md-4 mt-3">
+        <label for="tva" class="form-label">TVA</label>
+        <input
+          id="tva"
+          class="form-control"
+          type="number"
+          [(ngModel)]="tva"
+          name="tva"
+          step="0.01"
+        />
+      </div>
+    </div>
+  </div>
+</div>

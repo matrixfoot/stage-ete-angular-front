@@ -1,0 +1,173 @@
+// invoice-generator.component.scss
+
+
+
+
+/* Style pour le formulaire afin d'augmenter sa largeur */
+.invoice-form {
+    max-width: 1200px; // Ajustez la largeur maximale selon vos besoins
+    margin: 0 auto; // Centrer le formulaire horizontalement
+}
+
+/* Style pour les titres des sections */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Style des labels de formulaire */
+.form-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Espacement entre les champs du formulaire */
+.mb-3 {
+    margin-bottom: 1.5rem; // Augmente l'espace entre les champs
+}
+
+/* Table des articles */
+.table {
+    margin-top: 1rem;
+}
+
+.totals p {
+    font-weight: bold;
+}
+
+
+/* Style pour le titre Facture */
+.title-size {
+    font-size: 100px; // Taille de la police
+    margin-top: 80px; // Espacement au-dessus du titre
+    margin-bottom: 80px; // Espacement en-dessous du titre
+    // Aligne le titre au centre de son conteneur
+    margin-left: 280px;
+
+}
+
+/* Styles pour aligner le titre et le formulaire sur la même ligne */
+.d-flex {
+    display: flex;
+    align-items: flex-start;
+    /* Aligne les éléments au début de la ligne */
+}
+
+.title-size {
+    font-size: 100px;
+    /* Taille de la police */
+    margin: 0;
+    /* Supprime les marges pour le titre */
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+    /* Permet au formulaire de prendre tout l'espace restant */
+}
+
+.ml-4 {
+    margin-left: 1.5rem;
+    /* Marge à gauche pour séparer le titre du formulaire */
+}
+
+.invoice-form {
+    margin-top: 0;
+    /* Réduit l'espace au-dessus du formulaire */
+}
+
+
+.table-header-bg {
+    background-color: #191919;
+    /* Couleur de fond */
+    color: #ffffff;
+    /* Couleur du texte pour contraste */
+}
+
+
+
+
+
+/* Style général pour le tableau */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style pour les en-têtes de tableau */
+.table thead {
+    background-color: #191919;
+    /* Gris anthracite */
+    color: #ffffff;
+    /* Texte blanc */
+}
+
+.table thead th {
+    padding: 12px 15px;
+    /* Padding pour plus d'espace */
+    border-bottom: 2px solid #444;
+    /* Bordure subtile */
+    font-size: 16px;
+    /* Taille de police lisible */
+}
+
+.table tbody td {
+    padding: 10px 15px;
+    /* Padding pour les cellules */
+    border-bottom: 1px solid #ddd;
+    /* Bordure subtile pour les lignes */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Couleur de fond alternative */
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+    /* Couleur de fond au survol */
+}
+
+/* Styles pour les boutons */
+.btn-danger {
+    background-color: #dc3545;
+    /* Couleur du bouton */
+    color: #ffffff;
+    /* Texte blanc */
+    border: none;
+    /* Supprimer les bordures */
+    padding: 5px 10px;
+    /* Padding pour les boutons */
+    border-radius: 4px;
+    /* Coins arrondis */
+    cursor: pointer;
+    /* Curseur pointer */
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    /* Couleur au survol */
+}
+
+
+
+.document-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title-size {
+    font-size: 2rem;
+    /* Ajustez la taille de la police selon vos besoins */
+}
+
+.document-header h1 {
+    margin-bottom: 0.5rem;
+    /* Espace entre les titres */
+}
+
+.document-header h2 {
+    margin-top: 0;
+    /* Pas de marge supérieure pour le sous-titre */
+}

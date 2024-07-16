@@ -1,6 +1,8 @@
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-3" id="invoice">
   <div class="d-flex align-items-start mb-4 mt-4">
-    <h1 class="text-uppercase fw-bold title-size mt-3 ml-4">DEVIS</h1>
+    <h1 class="text-uppercase fw-bold title-size mt-3 ml-4">
+      {{ "DEVIS" | translate }}
+    </h1>
     <div class="flex-grow-1 ml-4">
       <form
         #invoiceForm="ngForm"
@@ -9,7 +11,9 @@
         novalidate
       >
         <div class="col-md-4">
-          <label for="invoiceNumber" class="form-label">DEVIS N°:</label>
+          <label for="invoiceNumber" class="form-label">{{
+            "DEVIS N°" | translate
+          }}</label>
           <input
             type="text"
             class="form-control"
@@ -31,12 +35,15 @@
             "
             class="invalid-feedback"
           >
-            Le numéro de Devis est requis.
+            {{ "INVOICE_NUMBER_REQUIRED" | translate }}
           </div>
         </div>
 
+        <!-- User ID -->
         <div class="col-md-4">
-          <label for="userId" class="form-label">ID Utilisateur:</label>
+          <label for="userId" class="form-label">{{
+            "USER_ID" | translate
+          }}</label>
           <input
             type="text"
             class="form-control"
@@ -53,12 +60,13 @@
             *ngIf="userId.invalid && (userId.dirty || userId.touched)"
             class="invalid-feedback"
           >
-            L'ID utilisateur est requis.
+            {{ "USER_ID_REQUIRED" | translate }}
           </div>
         </div>
 
+        <!-- Date -->
         <div class="col-md-4">
-          <label for="date" class="form-label">Date:</label>
+          <label for="date" class="form-label">{{ "DATE" | translate }}</label>
           <input
             type="datetime-local"
             class="form-control"
@@ -75,16 +83,18 @@
             *ngIf="date.invalid && (date.dirty || date.touched)"
             class="invalid-feedback"
           >
-            La date est requise.
+            {{ "DATE_REQUIRED" | translate }}
           </div>
         </div>
 
-        <!-- Séparation entre Vendeur et Client -->
-        <div class="row mt-4 mb-4">
-          <div class="col-md-6">
-            <h3 class="section-title text-primary">Vendeur :</h3>
-            <div class="mb-3">
-              <label for="sellerName" class="form-label">Nom:</label>
+        <!-- Vendeur (Seller) Section -->
+        <div class="col-12 mt-4">
+          <h2 class="text-danger fs-5">{{ "SELLER_INFO" | translate }}</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="sellerName" class="form-label">{{
+                "SELLER_NAME" | translate
+              }}</label>
               <input
                 type="text"
                 class="form-control"
@@ -105,11 +115,14 @@
                 "
                 class="invalid-feedback"
               >
-                Le nom du vendeur est requis.
+                {{ "SELLER_NAME_REQUIRED" | translate }}
               </div>
             </div>
-            <div class="mb-3">
-              <label for="sellerAddress" class="form-label">Adresse:</label>
+
+            <div class="col-md-4">
+              <label for="sellerAddress" class="form-label">{{
+                "SELLER_ADDRESS" | translate
+              }}</label>
               <input
                 type="text"
                 class="form-control"
@@ -131,11 +144,14 @@
                 "
                 class="invalid-feedback"
               >
-                L'adresse du vendeur est requise.
+                {{ "SELLER_ADDRESS_REQUIRED" | translate }}
               </div>
             </div>
-            <div class="mb-3">
-              <label for="sellerPhone" class="form-label">Téléphone:</label>
+
+            <div class="col-md-4">
+              <label for="sellerPhone" class="form-label">{{
+                "SELLER_PHONE" | translate
+              }}</label>
               <input
                 type="text"
                 class="form-control"
@@ -143,7 +159,6 @@
                 [(ngModel)]="invoice.clientInfo[0].phone"
                 name="sellerPhone"
                 required
-                pattern="^[0-9]{8}$"
                 #sellerPhone="ngModel"
                 [ngClass]="{
                   'is-invalid':
@@ -158,11 +173,14 @@
                 "
                 class="invalid-feedback"
               >
-                Le numéro de téléphone est requis et doit comporter 8 chiffres.
+                {{ "SELLER_PHONE_REQUIRED" | translate }}
               </div>
             </div>
-            <div class="mb-3">
-              <label for="sellerEmail" class="form-label">Email:</label>
+
+            <div class="col-md-4 mt-3">
+              <label for="sellerEmail" class="form-label">{{
+                "SELLER_EMAIL" | translate
+              }}</label>
               <input
                 type="email"
                 class="form-control"
@@ -184,15 +202,20 @@
                 "
                 class="invalid-feedback"
               >
-                L'email du vendeur est requis et doit être valide.
+                {{ "SELLER_EMAIL_REQUIRED" | translate }}
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-md-6 mt-4 mt-md-0">
-            <h3 class="section-title text-primary">Client :</h3>
-            <div class="mb-3">
-              <label for="clientName" class="form-label">Nom:</label>
+        <!-- Client Section -->
+        <div class="col-12 mt-4">
+          <h2 class="text-danger fs-5">{{ "CLIENT_INFO" | translate }}</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="clientName" class="form-label">{{
+                "CLIENT_NAME" | translate
+              }}</label>
               <input
                 type="text"
                 class="form-control"
@@ -213,11 +236,14 @@
                 "
                 class="invalid-feedback"
               >
-                Le nom du client est requis.
+                {{ "CLIENT_NAME_REQUIRED" | translate }}
               </div>
             </div>
-            <div class="mb-3">
-              <label for="clientAddress" class="form-label">Adresse:</label>
+
+            <div class="col-md-4">
+              <label for="clientAddress" class="form-label">{{
+                "CLIENT_ADDRESS" | translate
+              }}</label>
               <input
                 type="text"
                 class="form-control"
@@ -239,11 +265,14 @@
                 "
                 class="invalid-feedback"
               >
-                L'adresse du client est requise.
+                {{ "CLIENT_ADDRESS_REQUIRED" | translate }}
               </div>
             </div>
-            <div class="mb-3">
-              <label for="clientPhone" class="form-label">Téléphone:</label>
+
+            <div class="col-md-4">
+              <label for="clientPhone" class="form-label">{{
+                "CLIENT_PHONE" | translate
+              }}</label>
               <input
                 type="text"
                 class="form-control"
@@ -251,7 +280,6 @@
                 [(ngModel)]="invoice.clientInfo[1].phone"
                 name="clientPhone"
                 required
-                pattern="^[0-9]{8}$"
                 #clientPhone="ngModel"
                 [ngClass]="{
                   'is-invalid':
@@ -266,11 +294,14 @@
                 "
                 class="invalid-feedback"
               >
-                Le numéro de téléphone est requis et doit comporter 8 chiffres.
+                {{ "CLIENT_PHONE_REQUIRED" | translate }}
               </div>
             </div>
-            <div class="mb-3">
-              <label for="clientEmail" class="form-label">Email:</label>
+
+            <div class="col-md-4 mt-3">
+              <label for="clientEmail" class="form-label">{{
+                "CLIENT_EMAIL" | translate
+              }}</label>
               <input
                 type="email"
                 class="form-control"
@@ -292,192 +323,256 @@
                 "
                 class="invalid-feedback"
               >
-                L'email du client est requis et doit être valide.
+                {{ "CLIENT_EMAIL_REQUIRED" | translate }}
               </div>
             </div>
           </div>
         </div>
 
-        <h2 class="mt-4 text-danger fs-5">Description des articles :</h2>
-        <table class="table table-bordered mt-2 text-center">
-          <thead>
-            <tr>
-              <th>Article</th>
-              <th>Quantité</th>
-              <th>Prix Unitaire</th>
-              <th>Total</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of invoice.invoiceDetails; let i = index">
-              <td>
-                <input
-                  type="text"
-                  class="form-control"
-                  [(ngModel)]="item.description"
-                  name="description{{ i }}"
-                  required
-                  #description="ngModel"
-                  [ngClass]="{
-                    'is-invalid':
+        <div class="col-12 mt-4">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>{{ "ITEM_DESCRIPTION" | translate }}</th>
+                <th>{{ "QUANTITY" | translate }}</th>
+                <th>{{ "UNIT_PRICE" | translate }}</th>
+                <th>{{ "TOTAL" | translate }}</th>
+                <th>{{ "ACTION" | translate }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of invoice.invoiceDetails; let i = index">
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [(ngModel)]="item.description"
+                    name="description{{ i }}"
+                    required
+                    #description="ngModel"
+                    [ngClass]="{
+                      'is-invalid':
+                        description.invalid &&
+                        (description.dirty || description.touched)
+                    }"
+                  />
+                  <div
+                    *ngIf="
                       description.invalid &&
                       (description.dirty || description.touched)
-                  }"
-                />
-                <div
-                  *ngIf="
-                    description.invalid &&
-                    (description.dirty || description.touched)
-                  "
-                  class="invalid-feedback"
-                >
-                  La description de l'article est requise.
-                </div>
-              </td>
-              <td>
-                <input
-                  type="number"
-                  class="form-control"
-                  [(ngModel)]="item.quantity"
-                  name="quantity{{ i }}"
-                  (input)="updateTotal()"
-                  required
-                  min="1"
-                  #quantity="ngModel"
-                  [ngClass]="{
-                    'is-invalid':
+                    "
+                    class="invalid-feedback"
+                  >
+                    {{ "DESCRIPTION_INVALID" | translate }}
+                  </div>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    [(ngModel)]="item.quantity"
+                    name="quantity{{ i }}"
+                    (input)="updateTotal()"
+                    required
+                    min="1"
+                    #quantity="ngModel"
+                    [ngClass]="{
+                      'is-invalid':
+                        quantity.invalid && (quantity.dirty || quantity.touched)
+                    }"
+                  />
+                  <div
+                    *ngIf="
                       quantity.invalid && (quantity.dirty || quantity.touched)
-                  }"
-                />
-                <div
-                  *ngIf="
-                    quantity.invalid && (quantity.dirty || quantity.touched)
-                  "
-                  class="invalid-feedback"
-                >
-                  La quantité doit être un nombre supérieur ou égal à 1.
-                </div>
-              </td>
-              <td>
-                <input
-                  type="number"
-                  class="form-control"
-                  [(ngModel)]="item.unitPrice"
-                  name="unitPrice{{ i }}"
-                  (input)="updateTotal()"
-                  required
-                  min="0"
-                  #unitPrice="ngModel"
-                  [ngClass]="{
-                    'is-invalid':
+                    "
+                    class="invalid-feedback"
+                  >
+                    {{ "QUANTITY_INVALID" | translate }}
+                  </div>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    [(ngModel)]="item.unitPrice"
+                    name="unitPrice{{ i }}"
+                    (input)="updateTotal()"
+                    required
+                    min="0"
+                    #unitPrice="ngModel"
+                    [ngClass]="{
+                      'is-invalid':
+                        unitPrice.invalid &&
+                        (unitPrice.dirty || unitPrice.touched)
+                    }"
+                  />
+                  <div
+                    *ngIf="
                       unitPrice.invalid &&
                       (unitPrice.dirty || unitPrice.touched)
-                  }"
-                />
-                <div
-                  *ngIf="
-                    unitPrice.invalid && (unitPrice.dirty || unitPrice.touched)
-                  "
-                  class="invalid-feedback"
-                >
-                  Le prix unitaire doit être un nombre supérieur ou égal à 0.
-                </div>
-              </td>
-              <td>{{ item.quantity * item.unitPrice }} DT</td>
-              <td>
-                <button
-                  type="button"
-                  class="btn btn-danger"
-                  (click)="removeItem(i)"
-                >
-                  Supprimer
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                    "
+                    class="invalid-feedback"
+                  >
+                    {{ "UNIT_PRICE_INVALID" | translate }}
+                  </div>
+                </td>
+                <td>
+                  {{ item.quantity * item.unitPrice }} {{ invoice.currency }}
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    (click)="removeItem(i)"
+                  >
+                    {{ "REMOVE" | translate }}
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-        <div class="col-12 d-flex justify-content-end mt-3">
-          <button
-            type="button"
-            class="btn btn-secondary btn-add-item mx-3"
-            (click)="addItem()"
-          >
-            Ajouter un article
-          </button>
-        </div>
-        <div class="col-12 mt-4">
-          <label for="terms" class="form-label">Termes et Conditions:</label>
-          <textarea
-            class="form-control"
-            id="terms"
-            [(ngModel)]="invoice.terms"
-            name="terms"
-            placeholder="Termes et conditions"
-            rows="3"
-          ></textarea>
-        </div>
+          <div class="col-12 d-flex justify-content-end mt-3">
+            <button
+              type="button"
+              class="btn btn-secondary btn-add-item mx-3"
+              (click)="addItem()"
+            >
+              {{ "ADD_ITEM" | translate }}
+            </button>
+          </div>
 
-        <div class="col-12 mt-4">
-          <label for="notes" class="form-label">Notes Supplémentaires:</label>
-          <textarea
-            class="form-control"
-            id="notes"
-            [(ngModel)]="invoice.notes"
-            name="notes"
-            placeholder="Notes supplémentaires"
-            rows="3"
-          ></textarea>
-        </div>
+          <!-- Terms and Notes -->
+          <div class="col-12 mt-4">
+            <label for="terms" class="form-label">{{
+              "TERMS" | translate
+            }}</label>
+            <textarea
+              class="form-control"
+              id="terms"
+              [(ngModel)]="invoice.terms"
+              name="terms"
+              rows="3"
+            ></textarea>
+          </div>
 
-        <div class="totals mt-3">
-          <p class="fs-5">Total hors taxes : {{ totalHT }} DT</p>
-          <p class="fs-5">TVA (20%) : {{ tva }} DT</p>
-          <p class="fs-5">Total TTC : {{ totalTTC }} DT</p>
-        </div>
-        <div class="row mt-4 mb-4">
-          <div class="col-12">
-            <h3 class="section-title text-primary">Signature:</h3>
-            <div class="d-flex justify-content-between">
-              <div>
-                <label for="clientSignature" class="form-label"
-                  >Signature du client:</label
-                >
-                <div class="signature-box" id="clientSignature">
-                  <!-- Espace pour la signature -->
+          <div class="col-12 mt-4">
+            <label for="notes" class="form-label">{{
+              "NOTES" | translate
+            }}</label>
+            <textarea
+              class="form-control"
+              id="notes"
+              [(ngModel)]="invoice.notes"
+              name="notes"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <!-- Totals -->
+          <div class="totals mt-3">
+            <p class="fs-5">
+              {{ "TOTAL_HT" | translate }} : {{ totalHT }}
+              {{ invoice.currency }}
+            </p>
+            <p class="fs-5">
+              {{ "TVA" | translate }} ( {{ tva * 100 }} %):
+              {{ invoice.currency }}
+            </p>
+            <p class="fs-5">
+              {{ "TOTAL_TTC" | translate }} : {{ totalTTC }}
+              {{ invoice.currency }}
+            </p>
+          </div>
+          <div class="row mt-4 mb-4">
+            <div class="col-12">
+              <h3 class="section-title text-primary">Signature:</h3>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <label for="clientSignature" class="form-label"
+                    >Signature du client:</label
+                  >
+                  <div class="signature-box" id="clientSignature">
+                    <!-- Espace pour la signature -->
+                  </div>
+                  <div class="signature-date">
+                    Date: {{ invoice.validityDate | date : "dd/MM/yyyy" }}
+                  </div>
                 </div>
-                <div class="signature-date">
-                  Date: {{ invoice.validityDate | date : "dd/MM/yyyy" }}
-                </div>
-              </div>
-              <div>
-                <label for="vendorSignature" class="form-label"
-                  >Signature du vendeur:</label
-                >
-                <div class="signature-box" id="vendorSignature">
-                  <!-- Espace pour la signature -->
-                </div>
-                <div class="signature-date">
-                  Date: {{ invoice.validityDate | date : "dd/MM/yyyy" }}
+                <div>
+                  <label for="vendorSignature" class="form-label"
+                    >Signature du vendeur:</label
+                  >
+                  <div class="signature-box" id="vendorSignature">
+                    <!-- Espace pour la signature -->
+                  </div>
+                  <div class="signature-date">
+                    Date: {{ invoice.validityDate | date : "dd/MM/yyyy" }}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12">
-          <button
-            type="submit"
-            class="btn btn-primary mt-3"
-            [disabled]="invoiceForm.invalid"
-          >
-            Générer Devis
-          </button>
+          <!-- Submit Button -->
+          <div class="col-12">
+            <button
+              type="submit"
+              class="btn btn-primary mt-3"
+              (click)="generatePDF()"
+              [disabled]="invoiceForm.invalid"
+            >
+              {{ "GENERATE_INVOICE" | translate }}
+            </button>
+          </div>
         </div>
       </form>
+
+      <!-- Thank You Message -->
       <div class="col-12 mt-3 text-end">
-        <p class="text-warning fs-4 mx-5 mb-3">Merci de votre confiance</p>
+        <p class="text-warning fs-4 mx-5 mb-3">{{ "THANK_YOU" | translate }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 text-start">
+      <div class="col-md-5">
+        <label for="inputState" class="form-label">Language</label>
+        <select
+          id="inputState"
+          class="form-select"
+          (change)="switchLanguage($event.target.value)"
+        >
+          <option value="fr" selected>Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+
+      <div class="col-md-4 mt-3">
+        <label for="currency" class="form-label">{{
+          "CURRENCY" | translate
+        }}</label>
+        <select
+          id="currency"
+          class="form-select"
+          [(ngModel)]="invoice.currency"
+          name="currency"
+        >
+          <option value="DT">Tunisian Dinar (DT)</option>
+          <option value="USD">US Dollar (USD)</option>
+          <option value="EUR">Euro (EUR)</option>
+        </select>
+      </div>
+      <div class="col-md-4 mt-3">
+        <label for="tva" class="form-label">TVA</label>
+        <input
+          id="tva"
+          class="form-control"
+          type="number"
+          [(ngModel)]="tva"
+          name="tva"
+          step="0.01"
+        />
       </div>
     </div>
   </div>

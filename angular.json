@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "stage-ete-angular-front:build:production"
+              "buildTarget": "stage-ete-angular-front:build:production"
             },
             "development": {
-              "browserTarget": "stage-ete-angular-front:build:development"
+              "buildTarget": "stage-ete-angular-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "stage-ete-angular-front:build"
+            "buildTarget": "stage-ete-angular-front:build"
           }
         },
         "test": {

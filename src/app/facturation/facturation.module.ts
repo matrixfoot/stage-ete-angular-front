@@ -5,9 +5,16 @@ import { FactureProformaComponent } from './facture-proforma/facture-proforma.co
 import { DevisComponent } from './devis/devis.component';
 import { FormsModule } from '@angular/forms';
 import { InvoiceGeneratorComponent } from './invoice-generator/invoice-generator.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 
 
 
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -17,7 +24,16 @@ import { InvoiceGeneratorComponent } from './invoice-generator/invoice-generator
     InvoiceGeneratorComponent
   ],
   imports: [
-    CommonModule,FormsModule
+    CommonModule,FormsModule, HttpClientModule,   TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ]
+
 })
+  
 export class FacturationModule { }
+
