@@ -1,0 +1,572 @@
+<form
+  [formGroup]="bcddetForm"
+  (ngSubmit)="onSubmit()"
+  class="container mt-4 p-4 bg-light rounded"
+>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF00" class="form-label">Type d'enregistrement</label>
+      <input
+        id="DF00"
+        formControlName="DF00"
+        placeholder="Type d'enregistrement"
+        maxlength="2"
+        type="text"
+        class="form-control"
+        title="Zone obligatoire, elle prend la valeur DF."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF00').touched && bcddetForm.get('DF00').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF00').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF00').errors?.maxlength">
+          La longueur maximale est de 2 caractères.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF01" class="form-label">Matricule Fiscal</label>
+      <input
+        id="DF01"
+        formControlName="DF01"
+        placeholder="Matricule Fiscal"
+        maxlength="7"
+        type="text"
+        class="form-control"
+        title="Le format doit être numérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF01').touched && bcddetForm.get('DF01').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF01').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF01').errors?.maxlength">
+          La longueur maximale est de 7 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF01').errors?.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF02" class="form-label">Clé du matricule fiscal</label>
+      <input
+        id="DF02"
+        formControlName="DF02"
+        placeholder="Clé du matricule fiscal"
+        maxlength="1"
+        type="text"
+        class="form-control"
+        title="Le format doit être numérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF02').touched && bcddetForm.get('DF02').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF02').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF02').errors?.maxlength">
+          La longueur maximale est de 1 caractère.
+        </div>
+        <div *ngIf="bcddetForm.get('DF02').errors?.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF03" class="form-label">Catégorie contribuable</label>
+      <input
+        id="DF03"
+        formControlName="DF03"
+        placeholder="Catégorie contribuable"
+        maxlength="1"
+        type="text"
+        class="form-control"
+        title="Le format doit être numérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF03').touched && bcddetForm.get('DF03').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF03').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF03').errors?.maxlength">
+          La longueur maximale est de 1 caractère.
+        </div>
+        <div *ngIf="bcddetForm.get('DF03').errors?.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF04" class="form-label"
+        >Numéro de l’établissement secondaire</label
+      >
+      <input
+        id="DF04"
+        formControlName="DF04"
+        placeholder="Numéro de l’établissement secondaire"
+        maxlength="3"
+        type="text"
+        class="form-control"
+        title="Doit être égal à 000."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF04').touched && bcddetForm.get('DF04').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF04').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF04').errors?.maxlength">
+          La longueur maximale est de 3 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF04').errors?.pattern">
+          Le format doit être égal à 000.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF05" class="form-label">Exercice</label>
+      <input
+        id="DF05"
+        formControlName="DF05"
+        placeholder="Exercice"
+        maxlength="4"
+        type="text"
+        class="form-control"
+        title="Le format doit être numérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF05').touched && bcddetForm.get('DF05').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF05').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF05').errors?.maxlength">
+          La longueur maximale est de 4 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF05').errors?.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF06" class="form-label">Trimestre</label>
+      <select
+        id="DF06"
+        formControlName="DF06"
+        class="form-control"
+        title="Zone obligatoire, elle prend les valeurs: T1 : 1er Trimestre, T2 : 2ème Trimestre, T3 : 3ème Trimestre, T4 : 4ème Trimestre"
+      >
+        <option value="">Sélectionner</option>
+        <option value="T1">T1 : 1er Trimestre</option>
+        <option value="T2">T2 : 2ème Trimestre</option>
+        <option value="T3">T3 : 3ème Trimestre</option>
+        <option value="T4">T4 : 4ème Trimestre</option>
+      </select>
+      <div
+        *ngIf="bcddetForm.get('DF06').touched && bcddetForm.get('DF06').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF06').errors?.required">
+          Ce champ est requis.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF07" class="form-label">Numéro d’ordre</label>
+      <input
+        id="DF07"
+        formControlName="DF07"
+        placeholder="Numéro d’ordre"
+        maxlength="6"
+        type="text"
+        class="form-control"
+        title="Le format doit être numérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF07').touched && bcddetForm.get('DF07').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF07').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF07').errors?.maxlength">
+          La longueur maximale est de 6 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF07').errors?.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF08" class="form-label"
+        >Numéro autorisation d’achat en suspension de TVA</label
+      >
+      <input
+        id="DF08"
+        formControlName="DF08"
+        placeholder="Numéro autorisation d’achat en suspension de TVA"
+        maxlength="30"
+        type="text"
+        class="form-control"
+        title="Le format doit être alphanumérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF08').touched && bcddetForm.get('DF08').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF08').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF08').errors?.maxlength">
+          La longueur maximale est de 30 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF08').errors?.pattern">
+          Le format doit être alphanumérique.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF09" class="form-label">Numéro bon de commandes</label>
+      <input
+        id="DF09"
+        formControlName="DF09"
+        placeholder="Numéro bon de commandes"
+        maxlength="13"
+        type="text"
+        class="form-control"
+        title="Le format doit être numérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF09').touched && bcddetForm.get('DF09').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF09').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF09').errors?.maxlength">
+          La longueur maximale est de 13 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF09').errors?.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF10" class="form-label">Date bon de commandes</label>
+      <input
+        id="DF10"
+        formControlName="DF10"
+        placeholder="Date bon de commandes"
+        maxlength="8"
+        type="text"
+        class="form-control"
+        title="Le format doit être JJMMAAAA."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF10').touched && bcddetForm.get('DF10').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF10').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF10').errors?.maxlength">
+          La longueur maximale est de 8 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF10').errors?.pattern">
+          Le format doit être JJMMAAAA.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF11" class="form-label"
+        >Matricule fiscal du fournisseur</label
+      >
+      <input
+        id="DF11"
+        formControlName="DF11"
+        placeholder="Matricule fiscal du fournisseur"
+        maxlength="13"
+        type="text"
+        class="form-control"
+        title="Le format doit être alphanumérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF11').touched && bcddetForm.get('DF11').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF11').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF11').errors?.maxlength">
+          La longueur maximale est de 13 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF11').errors?.pattern">
+          Le format doit être alphanumérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF12" class="form-label"
+        >Nom et prénom ou raison sociale du fournisseur</label
+      >
+      <input
+        id="DF12"
+        formControlName="DF12"
+        placeholder="Nom et prénom ou raison sociale du fournisseur"
+        maxlength="40"
+        type="text"
+        class="form-control"
+        title="Le format doit être alphanumérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF12').touched && bcddetForm.get('DF12').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF12').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF12').errors?.maxlength">
+          La longueur maximale est de 40 caractères.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF13" class="form-label">Numéro facture</label>
+      <input
+        id="DF13"
+        formControlName="DF13"
+        placeholder="Numéro facture"
+        maxlength="30"
+        type="text"
+        class="form-control"
+        title="Le format doit être alphanumérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF13').touched && bcddetForm.get('DF13').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF13').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF13').errors?.maxlength">
+          La longueur maximale est de 30 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF13').errors?.pattern">
+          Le format doit être alphanumérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF14" class="form-label">Date facture</label>
+      <input
+        id="DF14"
+        formControlName="DF14"
+        placeholder="Date facture"
+        maxlength="8"
+        type="text"
+        class="form-control"
+        title="Le format doit être JJMMAAAA."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF14').touched && bcddetForm.get('DF14').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF14').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF14').errors?.maxlength">
+          La longueur maximale est de 8 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF14').errors?.pattern">
+          Le format doit être JJMMAAAA.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF15" class="form-label">Prix d’achat (HT)</label>
+      <input
+        id="DF15"
+        formControlName="DF15"
+        placeholder="Prix d’achat (HT)"
+        maxlength="15"
+        type="text"
+        class="form-control"
+        title="Le format doit être numérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF15').touched && bcddetForm.get('DF15').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF15').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF15').errors?.maxlength">
+          La longueur maximale est de 15 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF15').errors?.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF16" class="form-label">Montant TVA suspendue</label>
+      <input
+        id="DF16"
+        formControlName="DF16"
+        placeholder="Montant TVA suspendue"
+        maxlength="15"
+        type="text"
+        class="form-control"
+        title="Le format doit être numérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF16').touched && bcddetForm.get('DF16').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF16').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF16').errors?.maxlength">
+          La longueur maximale est de 15 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF16').errors?.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF17" class="form-label"
+        >Délimiteur début de la zone objet facture</label
+      >
+      <input
+        id="DF17"
+        formControlName="DF17"
+        placeholder="Délimiteur début de la zone objet facture"
+        maxlength="1"
+        type="text"
+        class="form-control"
+        title="Zone obligatoire, elle prend la valeur « < »."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF17').touched && bcddetForm.get('DF17').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF17').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF17').errors?.maxlength">
+          La longueur maximale est de 1 caractère.
+        </div>
+        <div *ngIf="bcddetForm.get('DF17').errors?.pattern">
+          Le format doit être « < ».
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-12">
+      <label for="DF18" class="form-label">Objet facture</label>
+      <input
+        id="DF18"
+        formControlName="DF18"
+        placeholder="Objet facture"
+        maxlength="320"
+        type="text"
+        class="form-control"
+        title="Le format doit être alphanumérique."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF18').touched && bcddetForm.get('DF18').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF18').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF18').errors?.maxlength">
+          La longueur maximale est de 320 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF18').errors?.pattern">
+          Le format doit être alphanumérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF19" class="form-label"
+        >Délimiteur fin de la zone objet facture</label
+      >
+      <input
+        id="DF19"
+        formControlName="DF19"
+        placeholder="Délimiteur fin de la zone objet facture"
+        maxlength="2"
+        type="text"
+        class="form-control"
+        title="Zone obligatoire, elle prend la valeur «/> »."
+      />
+      <div
+        *ngIf="bcddetForm.get('DF19').touched && bcddetForm.get('DF19').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddetForm.get('DF19').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddetForm.get('DF19').errors?.maxlength">
+          La longueur maximale est de 2 caractères.
+        </div>
+        <div *ngIf="bcddetForm.get('DF19').errors?.pattern">
+          Le format doit être «/> ».
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Soumettre</button>
+</form>

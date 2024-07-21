@@ -1,0 +1,367 @@
+<form
+  [formGroup]="bcddebForm"
+  (ngSubmit)="onSubmit()"
+  class="container mt-4 p-4 bg-light rounded"
+>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="EF00" class="form-label">Type enregistrement</label>
+      <input
+        id="EF00"
+        formControlName="EF00"
+        placeholder="Type enregistrement"
+        maxlength="2"
+        type="text"
+        class="form-control"
+        title="Zone obligatoire, elle prend la valeur: EF."
+      />
+      <div
+        *ngIf="bcddebForm.get('EF00').touched && bcddebForm.get('EF00').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF00').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF00').errors.maxlength">
+          La longueur maximale est de 2 caractères.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="EF01" class="form-label">Matricule Fiscal</label>
+      <input
+        id="EF01"
+        formControlName="EF01"
+        placeholder="Matricule Fiscal"
+        maxlength="7"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF01').touched && bcddebForm.get('EF01').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF01').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF01').errors.maxlength">
+          La longueur maximale est de 7 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF01').errors.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="EF02" class="form-label">Clé du matricule fiscal</label>
+      <input
+        id="EF02"
+        formControlName="EF02"
+        placeholder="Clé du matricule fiscal"
+        maxlength="1"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF02').touched && bcddebForm.get('EF02').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF02').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF02').errors.maxlength">
+          La longueur maximale est de 1 caractère.
+        </div>
+        <div *ngIf="bcddebForm.get('EF02').errors.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="EF03" class="form-label">Catégorie contribuable</label>
+      <input
+        id="EF03"
+        formControlName="EF03"
+        placeholder="Catégorie contribuable"
+        maxlength="1"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF03').touched && bcddebForm.get('EF03').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF03').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF03').errors.maxlength">
+          La longueur maximale est de 1 caractère.
+        </div>
+        <div *ngIf="bcddebForm.get('EF03').errors.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="EF04" class="form-label"
+        >Numéro de l’établissement secondaire</label
+      >
+      <input
+        id="EF04"
+        formControlName="EF04"
+        placeholder="Numéro de l’établissement secondaire"
+        maxlength="3"
+        type="text"
+        class="form-control"
+        title="Doit être égal à 000."
+      />
+      <div
+        *ngIf="bcddebForm.get('EF04').touched && bcddebForm.get('EF04').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF04').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF04').errors.maxlength">
+          La longueur maximale est de 3 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF04').errors.pattern">
+          Le format doit être égal à 000.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="EF05" class="form-label">Exercice</label>
+      <input
+        id="EF05"
+        formControlName="EF05"
+        placeholder="Exercice"
+        maxlength="4"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF05').touched && bcddebForm.get('EF05').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF05').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF05').errors.maxlength">
+          La longueur maximale est de 4 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF05').errors.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="EF06" class="form-label">Trimestre</label>
+      <select
+        id="EF06"
+        formControlName="EF06"
+        class="form-control"
+        title="Zone obligatoire, elle prend les valeurs: T1 : 1er Trimestre, T2 : 2ème Trimestre, T3 : 3ème Trimestre, T4 : 4ème Trimestre"
+      >
+        <option value="">Sélectionner</option>
+        <option value="T1">T1 : 1er Trimestre</option>
+        <option value="T2">T2 : 2ème Trimestre</option>
+        <option value="T3">T3 : 3ème Trimestre</option>
+        <option value="T4">T4 : 4ème Trimestre</option>
+      </select>
+      <div
+        *ngIf="bcddebForm.get('EF06').touched && bcddebForm.get('EF06').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF06').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF06').errors.pattern">
+          Le format doit être T1, T2, T3, ou T4.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="EF07" class="form-label"
+        >Nom et prénom ou Raison sociale</label
+      >
+      <input
+        id="EF07"
+        formControlName="EF07"
+        placeholder="Nom et prénom ou Raison sociale"
+        maxlength="40"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF07').touched && bcddebForm.get('EF07').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF07').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF07').errors.maxlength">
+          La longueur maximale est de 40 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF07').errors.forbiddenCharacters">
+          Les caractères '<' et '>' sont interdits.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="EF08" class="form-label"
+        >Activité contribuable déclarant</label
+      >
+      <input
+        id="EF08"
+        formControlName="EF08"
+        placeholder="Activité contribuable déclarant"
+        maxlength="40"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF08').touched && bcddebForm.get('EF08').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF08').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF08').errors.maxlength">
+          La longueur maximale est de 40 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF08').errors.forbiddenCharacters">
+          Les caractères '<' et '>' sont interdits.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="EF09" class="form-label">Adresse</label>
+      <input
+        id="EF09"
+        formControlName="EF09"
+        placeholder="Adresse"
+        maxlength="72"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF09').touched && bcddebForm.get('EF09').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF09').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF09').errors.maxlength">
+          La longueur maximale est de 72 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF09').errors.forbiddenCharacters">
+          Les caractères '<' et '>' sont interdits.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="EF10" class="form-label"
+        >Nom et prénom ou raison sociale du fournisseur</label
+      >
+      <input
+        id="EF10"
+        formControlName="EF10"
+        placeholder="Nom et prénom ou raison sociale du fournisseur"
+        maxlength="40"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF10').touched && bcddebForm.get('EF10').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF10').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF10').errors.maxlength">
+          La longueur maximale est de 40 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF10').errors.forbiddenCharacters">
+          Les caractères '<' et '>' sont interdits.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="EF11" class="form-label">Total à payer</label>
+      <input
+        id="EF11"
+        formControlName="EF11"
+        placeholder="Total à payer"
+        maxlength="4"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF11').touched && bcddebForm.get('EF11').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF11').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF11').errors.maxlength">
+          La longueur maximale est de 4 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF11').errors.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="EF12" class="form-label">Total des remises</label>
+      <input
+        id="EF12"
+        formControlName="EF12"
+        placeholder="Total des remises"
+        maxlength="4"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="bcddebForm.get('EF12').touched && bcddebForm.get('EF12').invalid"
+        class="text-danger"
+      >
+        <div *ngIf="bcddebForm.get('EF12').errors.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="bcddebForm.get('EF12').errors.maxlength">
+          La longueur maximale est de 4 caractères.
+        </div>
+        <div *ngIf="bcddebForm.get('EF12').errors.pattern">
+          Le format doit être numérique.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>

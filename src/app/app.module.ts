@@ -114,6 +114,12 @@ import { StatistiquesDernierJourComponent } from './statistiques-dernier-jour/st
 import { StatistiquesDernierMoisComponent } from './statistiques-dernier-mois/statistiques-dernier-mois.component';
 import { ListeTransactionsComponent } from './liste-transactions/liste-transactions.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
+import { Prov1Component } from './prov1/prov1.component';
+import { Prov2Component } from './prov2/prov2.component';
+import { Prov3Component } from './prov3/prov3.component';
+import { Prov4Component } from './prov4/prov4.component';
+import { SaisieProvComponent } from './saisie-prov/saisie-prov.component';
+import { FACDETComponent } from './facdet/facdet.component';
 
 
 
@@ -228,7 +234,7 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
     StatistiquesDetailleesComponent,
     StatistiquesDernierMoisComponent,
     StatistiquesDernierJourComponent, 
-    ListeTransactionsComponent, FormulaireComponent,
+    ListeTransactionsComponent, FormulaireComponent,Prov1Component,Prov2Component,Prov3Component,Prov4Component,SaisieProvComponent
   ],
   imports: [
     BrowserModule,

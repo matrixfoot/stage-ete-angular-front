@@ -91,10 +91,19 @@ import { HomeComponent } from './home/home.component';
 import { UtilisateursConnectesComponent } from './utilisateurs-connectes/utilisateurs-connectes.component';
 import { SaisieAutoBanqueComponent } from './saisie-auto-banque/saisie-auto-banque.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
+import { SaisieProvComponent } from './saisie-prov/saisie-prov.component';
+import { Prov4Component } from './prov4/prov4.component';
+import { Prov3Component } from './prov3/prov3.component';
+import { Prov2Component } from './prov2/prov2.component';
+import { Prov1Component } from './prov1/prov1.component';
+import { BCDDEBComponent } from './bcddeb/bcddeb.component';
+import { BCDDETComponent } from './bcddet/bcddet.component';
+import { FACDETComponent } from './facdet/facdet.component';
 const routes: Routes = [
   {path:'formulaireSprint6',component : FormulaireComponent},
   {path:'saisie-auto-banque',component:SaisieAutoBanqueComponent},
-  {path:'tax-wizard',component:TaxWizardComponentComponent},
+  { path: 'tax-wizard', component: TaxWizardComponentComponent },
+    {path : 'TT',component :TaxWizardComponentComponent },
   {path:'parametrage-admin',component:ParametrageAdminComponent},
   {path:'• Liste des transactions',component:ListeTransactionsComponent},
   {path:'• Statistiques dernier jour',component:StatistiquesDernierJourComponent},
@@ -158,6 +167,15 @@ const routes: Routes = [
   { path: 'montant', component: MontantComponent },
   { path: 'rubrique', component: RubriqueComponent },
   { path: 'tfp', component: TFPComponent },
+    {path:'RS',component:RSComponent},
+   {path:'TFPc',component:TFPCompComponent},
+   {path:'FOPRCOm',component:FOPROLOSCOMPOComponent},
+   {path:'TVA1',component:TVA1Component},
+   {path:'TVA2',component:TVA2Component},
+   {path:'DT',component:DTCOMPComponent},
+   {path:'TCL1',component:TCL1Component},
+   {path:'TCL2',component:TCL2Component},
+   {path:'TCL3',component:TCL3Component},
   { path: 'foprolos', component: FoprolosComponent },
   { path: 'tva', component: TVAComponent },
   { path: 'tcl', component: TclComponent },
@@ -188,7 +206,15 @@ const routes: Routes = [
   { path: '• Clients actifs', component: UtilisateursActifsComponent },
   { path: 'tous-utilisateurs', component: TousUtilisateursComponent },
   { path: '• Liste des clients avec des impayés', component: ClientsAvecImpayesComponent },
-  { path: 'adminDashboard', redirectTo: 'admin-dashboard' }
+  { path: 'adminDashboard', redirectTo: 'admin-dashboard' },
+  { path: 'PR', component:SaisieProvComponent  },
+  { path: 'PR4', component:Prov4Component  },
+  { path: 'PR3', component:Prov3Component  },
+  { path: 'PR2', component:Prov2Component  },
+  { path: 'PR1', component:Prov1Component  },
+  { path: 'BCDDEB', component:BCDDEBComponent  },
+  { path: 'BCDDET', component:BCDDETComponent  },
+  { path: 'FACDET', component:FACDETComponent  },
 ];
 
 @NgModule({

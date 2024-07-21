@@ -1,0 +1,36 @@
+.form-label {
+    font-size: 1.2rem;
+    /* Adjust font size of labels */
+    color: #333;
+    /* Label color */
+}
+
+.form-control {
+    font-size: 1rem;
+    /* Adjust font size of input text */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    /* Space between fields */
+}
+
+.container {
+    background-color: #f8f9fa;
+    /* Background color for form container */
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    /* Primary button color */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    /* Button hover color */
+    border-color: #004085;
+}

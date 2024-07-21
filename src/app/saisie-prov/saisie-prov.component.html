@@ -1,0 +1,12 @@
+<div *ngIf="currentStep === 0">
+  <app-prov1 (nextStep)="next()" (previousStep)="previous()"></app-prov1>
+</div>
+<div *ngIf="currentStep === 1">
+  <app-prov2 (nextStep)="next()" (previousStep)="previous()"></app-prov2>
+</div>
+<div *ngIf="currentStep === 2">
+  <app-prov3 (nextStep)="next()" (previousStep)="previous()"></app-prov3>
+</div>
+<div *ngIf="currentStep === 3">
+  <app-prov4 (nextStep)="next()" (previousStep)="previous()"></app-prov4>
+</div>

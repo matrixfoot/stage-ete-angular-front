@@ -6,9 +6,7 @@ import { Component,Output, EventEmitter  } from '@angular/core';
   styleUrls: ['./page-garde2.component.scss']
 })
 export class PageGarde2Component {
-  
-  
-    @Output() nextStep = new EventEmitter<void>();
+  @Output() nextStep = new EventEmitter<void>();
   @Output() previousStep = new EventEmitter<void>();
 
   // Méthodes pour émettre les événements

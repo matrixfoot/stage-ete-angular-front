@@ -1,0 +1,155 @@
+<div class="container">
+  <h1 class="text-center mt-5 text-danger fs-2">إحتساب القسط الإحتياطي</h1>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-md-8">
+      <table class="table table-bordered mt-5 text-center">
+        <thead>
+          <tr>
+            <th scope="col" class="fs-4">القسط</th>
+            <th scope="col" class="fs-4">السّنة</th>
+            <th scope="col" class="fs-4">رمز التصريح</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <select class="form-select form-select-sm fs-5" name="s1" id="s1">
+                <option value="">01</option>
+              </select>
+            </td>
+            <td>
+              <select class="form-select form-select-sm fs-5" name="s2" id="s2">
+                <option value="">2024</option>
+              </select>
+            </td>
+            <td>
+              <select class="form-select form-select-sm fs-5" name="s3" id="s3">
+                <option value="">أولي</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-bordered mt-5 text-center">
+        <thead>
+          <tr>
+            <th scope="col" class="fs-4">
+              تاريخ ختم السنة المالية السابقة أساس إحتساب الأقساط الإحتياطيّة
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="date" class="form-control fs-5" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-bordered mt-5 text-center">
+        <thead>
+          <tr>
+            <th scope="col" class="fs-4">رقم بطاقة التعريف الوطنيّة</th>
+            <th scope="col" class="fs-4">رمز الصّنف</th>
+            <th scope="col" class="fs-4">معرّف أ.ق.م</th>
+            <th scope="col" class="fs-4">المعرّف الجباني</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="text" class="form-control fs-5" />
+            </td>
+            <td>
+              <input type="text" class="form-control fs-5" value="P" />
+            </td>
+            <td>
+              <input type="text" class="form-control fs-5" value="A" />
+            </td>
+            <td>
+              <select class="form-select form-select-sm fs-5" name="s4" id="s4">
+                <option value="">أولي</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-bordered mt-5 text-center">
+        <thead>
+          <tr>
+            <th scope="col" class="fs-4">الترقيم البريدي</th>
+            <th scope="col" class="fs-4">العنوان أو المقرّ الإجتماعي</th>
+            <th scope="col" class="fs-4">الإسم واللقب أو الإسم الإجتماعي</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="text" class="form-control fs-5" value="2073" />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control fs-5"
+                value="RUE AMDOUN BORJ LOUZIR ,008"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control fs-5"
+                value="NAIMI YOUSSEF B MOYHAMMED"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-bordered mt-5 text-center">
+        <thead>
+          <tr>
+            <th scope="col" class="fs-4">النشاط</th>
+            <th scope="col" class="fs-4">الجنسية</th>
+            <th scope="col" class="fs-4">الصّفة القانونية</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="text" class="form-control fs-5" value="CONSULTANT" />
+            </td>
+            <td>
+              <input type="text" class="form-control fs-5" value="Tunisienne" />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control fs-5"
+                value="Personne Physique"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row wizard-buttons">
+      <div class="col d-flex justify-content-center align-items-center">
+        <button
+          (click)="previous()"
+          type="button"
+          class="btn btn-outline-primary mx-2 fs-4"
+        >
+          السابق
+        </button>
+
+        <button type="button" class="btn btn-outline-primary mx-2 fs-4">
+          موافق
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impôts et Taxes</title>
+    <!-- Include Bootstrap CSS (or other CSS frameworks) -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Optional: Add custom styles here */
+      .header-title {
+        font-size: 2rem;
+        color: #dc3545; /* Bootstrap's danger color */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5 header-title">التّصريح بالقسط الإحتياطي</h1>
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8 mt-5">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td>
+                  <a href="/PR2" class="btn link-secondary fs-4"
+                    >إحتساب الأداءات</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/PR3" class="btn link-secondary fs-4"
+                    >تحيين التّصاريح
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/PR4" class="btn link-secondary fs-4">
+                    تأكيد الإحتساب، إلغاء تأكيد الإحتساب، إطلاع، طباعة وحذف
+                    التصاريح
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col d-flex justify-content-center align-items-center">
+      <button
+        (click)="next()"
+        type="button"
+        class="btn btn-outline-primary mx-2"
+      >
+        الموالي Suivant
+      </button>
+      <button
+        (click)="previous()"
+        type="button"
+        class="btn btn-outline-primary mx-2"
+      >
+        السابق Precedent
+      </button>
+    </div>
+
+    <!-- Include Bootstrap JS (or other JavaScript libraries) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
