@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-facdet',
    standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,CommonModule ],
   templateUrl: './facdet.component.html',
   styleUrl: './facdet.component.scss'
 })
@@ -18,17 +19,19 @@ facdetForm: FormGroup;
     this.facdetForm = this.fb.group({
       DF00: ['DF', [Validators.required, Validators.maxLength(2)]],
       DF01: ['0000000', [Validators.required, Validators.maxLength(7), Validators.pattern('^[0-9]*$')]],
-      DF02: [' '.repeat(40), [Validators.required, Validators.maxLength(1), Validators.pattern('^[A-Za-z0-9 ]*$')]],
-      DF03: [' '.repeat(40), [Validators.required, Validators.maxLength(1), Validators.pattern('^[A-Za-z0-9 ]*$')]],
+      DF02: [' '.repeat(1), [Validators.required, Validators.maxLength(1), Validators.pattern('^[A-Za-z0-9 ]*$')]],
+      DF03: [' '.repeat(1), [Validators.required, Validators.maxLength(1), Validators.pattern('^[A-Za-z0-9 ]*$')]],
       DF04: ['000', [Validators.required, Validators.maxLength(3), Validators.pattern('^[0-9]*$')]],
-      DF05: [' '.repeat(40), [Validators.required, Validators.maxLength(4), Validators.pattern('^[A-Za-z0-9 ]*$')]],
-      DF06: [' '.repeat(40), [Validators.required, Validators.maxLength(2), Validators.pattern('^(T1|T2|T3|T4)$')]],
+      DF05: [' '.repeat(4), [Validators.required, Validators.maxLength(4), Validators.pattern('^[A-Za-z0-9 ]*$')]],
+     
+
+      DF06: [' '.repeat(5), [Validators.required, Validators.maxLength(2), Validators.pattern('^(T1|T2|T3|T4)$')]],
       DF07: ['000000', [Validators.required, Validators.maxLength(6), Validators.pattern('^[0-9]*$')]],
       DF08: [' '.repeat(20), [Validators.required, Validators.maxLength(20), Validators.pattern('^[A-Za-z0-9 ]*$')]],
 DF09: ['00000000', [Validators.required, Validators.maxLength(8), Validators.pattern('^[0-9]{8}$')]],      
-      DF10: ['0', [Validators.required, Validators.maxLength(1), Validators.pattern('^1|2|3|4)$')]],
+      DF10: ['0', [Validators.required, Validators.maxLength(1), Validators.pattern(/^1|2|3|4$/)]],
       DF11: [' '.repeat(13), [Validators.required, Validators.maxLength(13), Validators.pattern('^[A-Za-z0-9 ]*$')]],
-      DF12: [' '.repeat(40), [Validators.required, Validators.maxLength(40)]],
+      DF12: [' '.repeat(40), [Validators.required, Validators.maxLength(40),Validators.pattern('^[A-Za-z0-9 ]*$')]],
       DF13: [' '.repeat(120), [Validators.required, Validators.maxLength(120), Validators.pattern('^[A-Za-z0-9 ]*$'), this.noForbiddenCharacters]],
       DF14: [' '.repeat(20), [Validators.required, Validators.maxLength(20), Validators.pattern('^[A-Za-z0-9 ]*$'), this.noForbiddenCharacters]],
       

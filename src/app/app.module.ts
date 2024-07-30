@@ -42,6 +42,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { ViewCondidateComponent } from './view-condidate/view-condidate.component';
 import { ViewReclamationComponent } from './view-reclamation/view-reclamation.component';
 import { ModifActualiteComponent } from './modif-actualite/modif-actualite.component';
+
 import { AjoutAutreDsComponent } from './ajout-autre-ds/ajout-autre-ds.component';
 import { ViewAutreDsComponent } from './view-autre-ds/view-autre-ds.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';

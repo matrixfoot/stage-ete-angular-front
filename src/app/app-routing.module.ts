@@ -99,6 +99,7 @@ import { Prov1Component } from './prov1/prov1.component';
 import { BCDDEBComponent } from './bcddeb/bcddeb.component';
 import { BCDDETComponent } from './bcddet/bcddet.component';
 import { FACDETComponent } from './facdet/facdet.component';
+import { FACFINComponent } from './facfin/facfin.component';
 const routes: Routes = [
   {path:'formulaireSprint6',component : FormulaireComponent},
   {path:'saisie-auto-banque',component:SaisieAutoBanqueComponent},
@@ -215,6 +216,7 @@ const routes: Routes = [
   { path: 'BCDDEB', component:BCDDEBComponent  },
   { path: 'BCDDET', component:BCDDETComponent  },
   { path: 'FACDET', component:FACDETComponent  },
+  { path: 'FACFIN', component:FACFINComponent  },
 ];
 
 @NgModule({

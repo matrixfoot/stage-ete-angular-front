@@ -1,0 +1,498 @@
+<form
+  [formGroup]="facfinForm"
+  (ngSubmit)="onSubmit()"
+  class="container mt-4 p-4 bg-light rounded"
+>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF09">Type Enregistrement</label>
+      <input
+        type="text"
+        id="TF00"
+        formControlName="TF00"
+        class="form-control"
+        placeholder="Type d'enregistrement"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF00').invalid &&
+          (facfinForm.get('TF00').dirty || facfinForm.get('TF00').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF00').errors?.required">
+          ce champ est obligatoire
+        </div>
+        <div *ngIf="facfinForm.get('TF00').errors?.maxlength">
+          Longueur maximale de 2 caractères.
+        </div>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="TF01" class="form-label">Matricule Fiscal</label>
+      <input
+        type="text"
+        id="TF01"
+        formControlName="TF01"
+        class="form-control"
+        placeholder="Matricule Fiscal"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF01').invalid &&
+          (facfinForm.get('TF01').dirty || facfinForm.get('TF01').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF01').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF01').errors?.maxlength">
+          Longueur maximale de 7 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF01').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF02" class="form-label">Clé du matricule fiscal</label>
+      <input
+        type="text"
+        id="TF02"
+        formControlName="TF02"
+        class="form-control"
+        placeholder=" Clé du matricule fiscal"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF02').invalid &&
+          (facfinForm.get('TF02').dirty || facfinForm.get('TF02').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF02').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF02').errors?.maxlength">
+          Longueur maximale de 1 caractère.
+        </div>
+        <div *ngIf="facfinForm.get('TF02').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="TF03" class="form-label">Catégorie contribuable</label>
+      <input
+        type="text"
+        id="TF03"
+        formControlName="TF03"
+        class="form-control"
+        placeholder="Catégorie contribuable"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF03').invalid &&
+          (facfinForm.get('TF03').dirty || facfinForm.get('TF03').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF03').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF03').errors?.maxlength">
+          Longueur maximale de 1 caractère.
+        </div>
+        <div *ngIf="facfinForm.get('TF03').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF04" class="form-label">
+        Numéro de l’établissement secondaire du contribuable
+      </label>
+      <input
+        type="text"
+        id="TF04"
+        formControlName="TF04"
+        class="form-control"
+        placeholder="Numéro de l’établissement secondaire du contribuable"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF04').invalid &&
+          (facfinForm.get('TF04').dirty || facfinForm.get('TF04').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF04').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF04').errors?.maxlength">
+          Longueur maximale de 3 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF04').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="TF05" class="form-label">Exercice</label>
+      <input
+        type="text"
+        id="TF05"
+        formControlName="TF05"
+        class="form-control"
+        placeholder="Exercice"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF05').invalid &&
+          (facfinForm.get('TF05').dirty || facfinForm.get('TF05').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF05').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF05').errors?.maxlength">
+          Longueur maximale de 4 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF05').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF06" class="form-label">Trimestre</label>
+      <select id="TF06" formControlName="TF06" class="form-control">
+        <option value="">Sélectionner</option>
+        <option value="T1">T1 : 1er Trimestre</option>
+        <option value="T2">T2 : 2ème Trimestre</option>
+        <option value="T3">T3 : 3ème Trimestre</option>
+        <option value="T4">T4 : 4ème Trimestre</option>
+      </select>
+      <div
+        *ngIf="
+          facfinForm.get('TF06').invalid &&
+          (facfinForm.get('TF06').dirty || facfinForm.get('TF06').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF06').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF06').errors?.maxlength">
+          Longueur maximale de 2 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF06').errors?.pattern">
+          Sélectionner un trimestre valide (T1, T2, T3, T4).
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF07">Nombre total de factures</label>
+      <input
+        type="text"
+        class="form-control"
+        id="TF07"
+        placeholder="Nombre total de factures"
+        formControlName="TF07"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF07').invalid &&
+          (facfinForm.get('TF07').dirty || facfinForm.get('TF07').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF07').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF07').errors?.maxlength">
+          Longueur maximale de 6 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF07').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="TF08" class="form-label">Zone Réservée</label>
+      <input
+        type="text"
+        id="TF08"
+        formControlName="TF08"
+        class="form-control"
+        placeholder="Zone Réservée "
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF08').invalid &&
+          (facfinForm.get('TF08').dirty || facfinForm.get('TF08').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF08').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF08').errors?.maxlength">
+          Longueur maximale de 230 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF08').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF09">Total Prix de vente (Hors Taxes)</label>
+      <input
+        type="text"
+        class="form-control"
+        id="TF09"
+        placeholder="Total Prix de vente (Hors Taxes)"
+        formControlName="TF09"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF09').invalid &&
+          (facfinForm.get('TF09').dirty || facfinForm.get('TF09').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF09').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF09').errors?.maxlength">
+          Longueur maximale de 15 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF09').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="TF10" class="form-label">Zone Réservée</label>
+      <input
+        type="text"
+        id="TF10"
+        formControlName="TF10"
+        class="form-control"
+        placeholder="Zone Réservée "
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF10').invalid &&
+          (facfinForm.get('TF10').dirty || facfinForm.get('TF10').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF10').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF10').errors?.maxlength">
+          Longueur maximale de 5 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF10').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF11">Total Montant FODEC</label>
+      <input
+        type="text"
+        class="form-control"
+        id="TF11"
+        placeholder="Total Montant FODEC"
+        formControlName="TF11"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF11').invalid &&
+          (facfinForm.get('TF11').dirty || facfinForm.get('TF11').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF11').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF11').errors?.maxlength">
+          Longueur maximale de 15 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF11').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="TF12" class="form-label">Zone Réservée</label>
+      <input
+        type="text"
+        id="TF12"
+        formControlName="TF12"
+        class="form-control"
+        placeholder="Zone Réservée "
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF12').invalid &&
+          (facfinForm.get('TF12').dirty || facfinForm.get('TF12').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF12').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF12').errors?.maxlength">
+          Longueur maximale de 5 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF12').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF13">Total Montant Droit de Consommation</label>
+      <input
+        type="text"
+        class="form-control"
+        id="TF13"
+        placeholder="Total Montant Droit de 
+Consommation"
+        formControlName="TF13"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF13').invalid &&
+          (facfinForm.get('TF13').dirty || facfinForm.get('TF13').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF13').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF13').errors?.maxlength">
+          Longueur maximale de 15 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF13').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="TF14" class="form-label">Zone Réservée</label>
+      <input
+        type="text"
+        id="TF14"
+        formControlName="TF14"
+        class="form-control"
+        placeholder="Zone Réservée "
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF14').invalid &&
+          (facfinForm.get('TF14').dirty || facfinForm.get('TF14').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF14').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF14').errors?.maxlength">
+          Longueur maximale de 5 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF14').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="TF15"> Total Montant TVA</label>
+      <input
+        type="text"
+        class="form-control"
+        id="TF15"
+        placeholder="Total Montant TVA "
+        formControlName="TF15"
+      />
+      <div
+        *ngIf="
+          facfinForm.get('TF15').invalid &&
+          (facfinForm.get('TF15').dirty || facfinForm.get('TF15').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facfinForm.get('TF15').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facfinForm.get('TF15').errors?.maxlength">
+          Longueur maximale de 15 caractères.
+        </div>
+        <div *ngIf="facfinForm.get('TF15').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#successModal"
+  >
+    Soumettre
+  </button>
+</form>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="successModal"
+  tabindex="-1"
+  aria-labelledby="successModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Confirmation</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">Le formulaire a été bien ajouté.</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Fermer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,21 +9,687 @@
       <input
         type="text"
         id="DF00"
+        maxlength="2"
         formControlName="DF00"
         placeholder="Type d'enregistrement"
         class="form-control"
       />
+      <div
+        *ngIf="
+          facdetForm.get('DF00').invalid &&
+          (facdetForm.get('DF00').dirty || facdetForm.get('DF00').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF00').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF00').errors?.maxlength">
+          Longueur maximale de 2 caractères.
+        </div>
+      </div>
     </div>
 
     <div class="form-group col-md-6">
       <label for="DF01" class="form-label">Matricule Fiscal</label>
-
       <input
         type="text"
         id="DF01"
         formControlName="DF01"
         class="form-control"
+        placeholder="Matricule Fiscal"
       />
+      <div
+        *ngIf="
+          facdetForm.get('DF01').invalid &&
+          (facdetForm.get('DF01').dirty || facdetForm.get('DF01').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF01').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF01').errors?.maxlength">
+          Longueur maximale de 7 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF01').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF02" class="form-label">Clé du matricule fiscal</label>
+      <input
+        type="text"
+        id="DF02"
+        formControlName="DF02"
+        class="form-control"
+        placeholder="Matricule Fiscal"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF02').invalid &&
+          (facdetForm.get('DF02').dirty || facdetForm.get('DF02').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF02').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF02').errors?.maxlength">
+          Longueur maximale de 1 caractère.
+        </div>
+        <div *ngIf="facdetForm.get('DF02').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF03" class="form-label">Catégorie contribuable</label>
+      <input
+        type="text"
+        id="DF03"
+        formControlName="DF03"
+        class="form-control"
+        placeholder="Catégorie contribuable"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF03').invalid &&
+          (facdetForm.get('DF03').dirty || facdetForm.get('DF03').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF03').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF03').errors?.maxlength">
+          Longueur maximale de 1 caractère.
+        </div>
+        <div *ngIf="facdetForm.get('DF03').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF04" class="form-label">
+        Numéro de l’établissement secondaire du contribuable
+      </label>
+      <input
+        type="text"
+        id="DF04"
+        formControlName="DF04"
+        class="form-control"
+        placeholder="Numéro de l’établissement secondaire du contribuable"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF04').invalid &&
+          (facdetForm.get('DF04').dirty || facdetForm.get('DF04').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF04').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF04').errors?.maxlength">
+          Longueur maximale de 3 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF04').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF05" class="form-label">Exercice</label>
+      <input
+        type="text"
+        id="DF05"
+        formControlName="DF05"
+        class="form-control"
+        placeholder="Exercice"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF05').invalid &&
+          (facdetForm.get('DF05').dirty || facdetForm.get('DF05').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF05').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF05').errors?.maxlength">
+          Longueur maximale de 4 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF05').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF06" class="form-label">Trimestre</label>
+      <select id="DF06" formControlName="DF06" class="form-control">
+        <option value="">Sélectionner</option>
+        <option value="T1">T1 : 1er Trimestre</option>
+        <option value="T2">T2 : 2ème Trimestre</option>
+        <option value="T3">T3 : 3ème Trimestre</option>
+        <option value="T4">T4 : 4ème Trimestre</option>
+      </select>
+      <div
+        *ngIf="
+          facdetForm.get('DF06').invalid &&
+          (facdetForm.get('DF06').dirty || facdetForm.get('DF06').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF06').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF06').errors?.maxlength">
+          Longueur maximale de 2 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF06').errors?.pattern">
+          Sélectionner un trimestre valide (T1, T2, T3, T4).
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF07" class="form-label">Numéro d’ordre</label>
+      <input
+        type="text"
+        id="DF07"
+        formControlName="DF07"
+        class="form-control"
+        placeholder="Numéro d’ordre"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF07').invalid &&
+          (facdetForm.get('DF07').dirty || facdetForm.get('DF07').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF07').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF07').errors?.maxlength">
+          Longueur maximale de 6 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF07').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF08" class="form-label">Numéro Facture</label>
+      <input
+        type="text"
+        id="DF08"
+        formControlName="DF08"
+        class="form-control"
+        placeholder="Numéro Facture"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF08').invalid &&
+          (facdetForm.get('DF08').dirty || facdetForm.get('DF08').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF08').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF08').errors?.maxlength">
+          Longueur maximale de 20 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF08').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF09" class="form-label">Date facture</label>
+
+      <input
+        type="text"
+        id="DF09"
+        formControlName="DF09"
+        class="form-control"
+        placeholder="JJMMAAAA"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF09').invalid &&
+          (facdetForm.get('DF09').dirty || facdetForm.get('DF09').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF09').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF09').errors?.maxlength">
+          Longueur maximale de 13 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF09').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF10" class="form-label">Type identifiant du client </label>
+
+      <select id="DF10" formControlName="DF10" class="form-control">
+        <option value="">Sélectionner</option>
+        <option value="1">Matricule Fiscal</option>
+        <option value="2">Numéro de la carte d’identité nationale</option>
+        <option value="3">
+          Numéro de la carte du séjour pour les étrangers
+        </option>
+        <option value="4">
+          Identifiant des personnes non domiciliées ni établies en Tunisie
+        </option>
+      </select>
+      <div
+        *ngIf="
+          facdetForm.get('DF10').invalid &&
+          (facdetForm.get('DF10').dirty || facdetForm.get('DF10').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF10').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF10').errors?.maxlength">
+          Longueur maximale de 8 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF10').errors?.pattern">
+          Format de date invalide. Utiliser JJMMAAAA.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF11" class="form-label"> Identifiant du client</label>
+
+      <input
+        type="text"
+        id="DF11"
+        formControlName="DF11"
+        class="form-control"
+        placeholder="Identifiant du client"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF11').invalid &&
+          (facdetForm.get('DF11').dirty || facdetForm.get('DF11').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF11').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF11').errors?.maxlength">
+          Longueur maximale de 13 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF11').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF12" class="form-label"
+        >Nom et prénom ou raison sociale du fournisseur</label
+      >
+      <input
+        type="text"
+        id="DF12"
+        formControlName="DF12"
+        class="form-control"
+        placeholder="Nom et prénom ou raison sociale du fournisseur"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF12').invalid &&
+          (facdetForm.get('DF12').dirty || facdetForm.get('DF12').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF12').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF12').errors?.maxlength">
+          Longueur maximale de 40 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF12').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF13" class="form-label"> Dernière adresse du client</label>
+
+      <input
+        type="text"
+        id="DF13"
+        formControlName="DF13"
+        class="form-control"
+        placeholder="Dernière adresse du client"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF13').invalid &&
+          (facdetForm.get('DF13').dirty || facdetForm.get('DF13').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF13').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF13').errors?.maxlength">
+          Longueur maximale de 120 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF13').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF14" class="form-label">
+        Numéro de l’autorisation administrative relative à l'opération de
+        vente</label
+      >
+
+      <input
+        type="text"
+        id="DF14"
+        formControlName="DF14"
+        class="form-control"
+        placeholder="Numéro de l’autorisation
+administrative relative à l'opération
+de vente"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF14').invalid &&
+          (facdetForm.get('DF14').dirty || facdetForm.get('DF14').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF14').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF14').errors?.maxlength">
+          Longueur maximale de 20 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF14').errors?.pattern">
+          Format de date invalide. Utiliser JJMMAAAA.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF15" class="form-label">
+        Date de l’autorisation administrative</label
+      >
+
+      <input
+        type="text"
+        id="DF15"
+        formControlName="DF15"
+        class="form-control"
+        placeholder="Date de l’autorisation administrative"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF15').invalid &&
+          (facdetForm.get('DF15').dirty || facdetForm.get('DF15').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF15').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF15').errors?.maxlength">
+          Longueur maximale de 8 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF15').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF16" class="form-label">Prix de vente (Hors Taxes) </label>
+
+      <input
+        type="text"
+        id="DF16"
+        formControlName="DF16"
+        class="form-control"
+        placeholder="Prix de vente (Hors Taxes)"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF16').invalid &&
+          (facdetForm.get('DF16').dirty || facdetForm.get('DF16').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF16').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF16').errors?.maxlength">
+          Longueur maximale de 15 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF16').errors?.pattern">
+          Seulement les chiffres sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF17" class="form-label"> Taux FODEC</label>
+
+      <input
+        type="text"
+        id="DF17"
+        formControlName="DF17"
+        class="form-control"
+        placeholder="Taux FODEC"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF17').invalid &&
+          (facdetForm.get('DF17').dirty || facdetForm.get('DF17').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF17').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF17').errors?.maxlength">
+          Longueur maximale de 5 caractère.
+        </div>
+        <div *ngIf="facdetForm.get('DF17').errors?.pattern">erreur</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF18" class="form-label">Montant FODEC </label>
+
+      <input
+        type="text"
+        id="DF18"
+        formControlName="DF18"
+        class="form-control"
+        placeholder="Montant FODEC"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF18').invalid &&
+          (facdetForm.get('DF18').dirty || facdetForm.get('DF18').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF18').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF18').errors?.maxlength">
+          Longueur maximale de 5 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF18').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF19" class="form-label"> Taux Droit de Consommation</label>
+
+      <input
+        type="text"
+        id="DF19"
+        formControlName="DF19"
+        class="form-control"
+        placeholder="Taux Droit de Consommation"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF19').invalid &&
+          (facdetForm.get('DF19').dirty || facdetForm.get('DF19').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF19').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF19').errors?.maxlength">
+          Longueur maximale de 5 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF19').errors?.pattern">erreur</div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF20" class="form-label"
+        >Montant Droit de Consommation
+      </label>
+
+      <input
+        type="text"
+        id="DF20"
+        formControlName="DF20"
+        class="form-control"
+        placeholder="Montant Droit de Consommation"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF20').invalid &&
+          (facdetForm.get('DF20').dirty || facdetForm.get('DF20').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF20').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF20').errors?.maxlength">
+          Longueur maximale de 15 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF20').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="DF21" class="form-label"> Taux TVA</label>
+
+      <input
+        type="text"
+        id="DF21"
+        formControlName="DF21"
+        class="form-control"
+        placeholder=" Taux TVA"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF21').invalid &&
+          (facdetForm.get('DF21').dirty || facdetForm.get('DF21').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF21').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF21').errors?.maxlength">
+          Longueur maximale de 5 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF21').errors?.pattern">erreur</div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="form-group col-md-6">
+      <label for="DF22" class="form-label"> Montant TVA</label>
+
+      <input
+        type="text"
+        id="DF22"
+        formControlName="DF22"
+        class="form-control"
+        placeholder="Montant TVA"
+      />
+      <div
+        *ngIf="
+          facdetForm.get('DF22').invalid &&
+          (facdetForm.get('DF22').dirty || facdetForm.get('DF22').touched)
+        "
+        class="text-danger"
+      >
+        <div *ngIf="facdetForm.get('DF22').errors?.required">
+          Ce champ est requis.
+        </div>
+        <div *ngIf="facdetForm.get('DF22').errors?.maxlength">
+          Longueur maximale de 15 caractères.
+        </div>
+        <div *ngIf="facdetForm.get('DF22').errors?.pattern">
+          Seulement les caractères alphanumériques et espaces sont autorisés.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Soumettre</button>
 </form>
